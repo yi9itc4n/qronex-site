@@ -1,0 +1,84 @@
+packages:
+  - id: "starter"
+    name: "Starter"
+    subtitle: "On-Site Hızlı Müdahale"
+    description: "Temel kalite problemleri için hızlı çözümler"
+    price: "€2,500"
+    period: "/ay"
+    popular: false
+    features:
+      - "7×5 destek (Pazartesi-Cuma)"
+      - "24-72 saat SLA"
+      - "1 lokasyon kapsamı"
+      - "Temel raporlama (PDF/CSV)"
+      - "Sorting & Containment"
+      - "Görsel kontroller"
+      - "Telefon/e-posta desteği"
+    
+  - id: "growth"
+    name: "Growth"
+    subtitle: "Teknik Temsilcilik"
+    description: "Sürekli kalite desteği ve iyileştirme"
+    price: "€4,500"
+    period: "/ay"
+    popular: true
+    features:
+      - "7×7 destek"
+      - "24 saat SLA"
+      - "2-3 lokasyon kapsamı"
+      - "Resident/Technical Rep."
+      - "Kök neden analizi"
+      - "Haftalık e-rapor"
+      - "QMS önerileri"
+      - "Video konferans desteği"
+    
+  - id: "pro"
+    name: "Pro"
+    subtitle: "Kalite Ortaklığı"
+    description: "Kapsamlı kalite mühendisliği çözümleri"
+    price: "€8,500"
+    period: "/ay"
+    popular: false
+    features:
+      - "24×7 destek"
+      - "<12 saat SLA hedefi"
+      - "Çoklu lokasyon"
+      - "Rework + kalite mühendisliği"
+      - "Tedarikçi hazırlığı"
+      - "Aylık yönetici özeti"
+      - "Süreç optimizasyonu"
+      - "Dedicated project manager"
+    
+  - id: "enterprise"
+    name: "Enterprise"
+    subtitle: "Özel Çözümler"
+    description: "Büyük ölçekli projeler için özelleştirilmiş hizmetler"
+    price: "Özel Fiyat"
+    period: ""
+    popular: false
+    features:
+      - "Sözleşmeli kapasite"
+      - "Yerinde ekip"
+      - "EV/e-mobility uzmanlığı"
+      - "Çok ülke roll-out"
+      - "Sistem entegrasyonları"
+      - "Özel SLA'lar"
+      - "Dedicated account manager"
+      - "Custom reporting dashboard"
+
+addOns:
+  - name: "Acil Müdahale (6 saat)"
+    price: "€500"
+    description: "6 saat içinde yerinde müdahale garantisi"
+    
+  - name: "Hafta Sonu Desteği"
+    price: "€300"
+    description: "Cumartesi-Pazar günleri destek"
+    
+  - name: "Ek Lokasyon"
+    price: "€800"
+    description: "Paketinize ek lokasyon ekleme"
+    
+  - name: "Detaylı Raporlama"
+    price: "€200"
+    description: "Özelleştirilmiş analiz raporları"

@@ -1,0 +1,26 @@
+User-agent: *
+Allow: /
+
+# Disallow admin and private areas
+Disallow: /admin/
+Disallow: /api/
+Disallow: /_next/
+Disallow: /private/
+
+# Allow important pages
+Allow: /tr/
+Allow: /en/
+Allow: /tr/services/
+Allow: /en/services/
+Allow: /tr/contact/
+Allow: /en/contact/
+Allow: /tr/pricing/
+Allow: /en/pricing/
+
+# Sitemap location
+Sitemap: https://qronex.vercel.app/sitemap.xml
+Sitemap: https://qronex.vercel.app/tr/sitemap.xml
+Sitemap: https://qronex.vercel.app/en/sitemap.xml
+
+# Crawl-delay for respectful crawling
+Crawl-delay: 1

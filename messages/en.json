@@ -1,0 +1,219 @@
+{
+  "navigation": {
+    "home": "Home",
+    "services": "Services",
+    "industries": "Industries",
+    "caseStudies": "Case Studies",
+    "about": "About",
+    "careers": "Careers",
+    "contact": "Contact",
+    "pricing": "Pricing",
+    "getQuote": "Get Quote",
+    "startService": "Start Service"
+  },
+  "services": {
+    "title": "Our Services",
+    "subtitle": "Fast solutions to your quality problems with our field engineers based in Europe",
+    "onSiteRapidResponse": {
+      "title": "On-Site Rapid Response",
+      "description": "24/7 field support for immediate response to your quality issues"
+    },
+    "sortingContainment": {
+      "title": "Sorting & Containment",
+      "description": "Separating defective parts to ensure production line continuity"
+    },
+    "rework": {
+      "title": "Rework",
+      "description": "Repairing defective parts to minimize your losses"
+    },
+    "qualityEngineering": {
+      "title": "Quality Engineering",
+      "description": "Optimizing your quality processes"
+    },
+    "supplierReadiness": {
+      "title": "Supplier Readiness",
+      "description": "Elevating your suppliers' quality standards"
+    },
+    "technicalRepresentation": {
+      "title": "Technical Representation",
+      "description": "Providing continuous quality support on-site"
+    },
+    "auditsTraining": {
+      "title": "Audits & Training",
+      "description": "Strengthening your quality systems"
+    },
+    "aftersalesSupport": {
+      "title": "Aftersales Support",
+      "description": "Ensuring quality service delivery to your customers"
+    }
+  },
+  "industries": {
+    "title": "Industries",
+    "subtitle": "Developing customized solutions with our experience across different sectors",
+    "automotiveOem": {
+      "title": "Automotive OEM",
+      "description": "Comprehensive quality solutions for automotive manufacturers"
+    },
+    "tier1": {
+      "title": "Tier 1 Suppliers",
+      "description": "Specialized services for first-tier suppliers"
+    },
+    "eMobility": {
+      "title": "e-Mobility / EV",
+      "description": "Advanced quality processes for electric vehicle technologies"
+    },
+    "heavyTransport": {
+      "title": "Heavy Transport",
+      "description": "Robust solutions for truck and bus sectors"
+    },
+    "aerospace": {
+      "title": "Aerospace",
+      "description": "High-standard quality services for the aerospace sector"
+    }
+  },
+  "home": {
+    "hero": {
+      "title": "Fast Solutions to Quality Problems with Field Engineers Based in Europe",
+      "subtitle": "QroneX provides fast and accurate on-site solutions to quality problems experienced by Tier 1 suppliers with OEMs through its experienced engineering team ready to work in the field, based in Europe.",
+      "cta1": "Get Quote",
+      "cta2": "Start Service"
+    },
+    "values": {
+      "title": "Values We Add",
+      "value1": {
+        "title": "Rapid Response",
+        "description": "On-site within 24-72 hours"
+      },
+      "value2": {
+        "title": "Experienced Team",
+        "description": "15+ years of industry experience"
+      },
+      "value3": {
+        "title": "Europe-wide",
+        "description": "Service across wide geography"
+      },
+      "value4": {
+        "title": "Continuous Support",
+        "description": "24/7 accessible team"
+      }
+    },
+    "whyQronex": {
+      "title": "Why QroneX?",
+      "reason1": "Engineering team based throughout Europe",
+      "reason2": "OEM-approved processes and methodologies",
+      "reason3": "Fast response and solution time",
+      "reason4": "Multilingual communication capacity",
+      "reason5": "Industry-specialized teams",
+      "reason6": "Cost-effective solutions"
+    },
+    "statistics": {
+      "title": "QroneX by Numbers",
+      "responseTime": "Average Response Time",
+      "responseTimeValue": "24 Hours",
+      "engineers": "Active Field Engineers",
+      "engineersValue": "50+",
+      "countries": "Countries Served",
+      "countriesValue": "15",
+      "solutionTime": "Average Solution Time",
+      "solutionTimeValue": "48 Hours"
+    },
+    "contact": {
+      "title": "Regional Managers",
+      "subtitle": "Contact your nearest representative"
+    }
+  },
+  "contact": {
+    "title": "Contact",
+    "regionalManagers": "Regional Managers",
+    "quickQuote": "Quick Quote",
+    "form": {
+      "name": "Full Name",
+      "company": "Company",
+      "email": "Email",
+      "phone": "Phone",
+      "country": "Country",
+      "city": "City",
+      "package": "Package",
+      "urgency": "Urgency",
+      "message": "Message",
+      "submit": "Submit",
+      "success": "Your message has been sent successfully!"
+    },
+    "urgencyOptions": {
+      "asap": "Urgent (ASAP)",
+      "48h": "Within 48 Hours",
+      "thisWeek": "This Week"
+    }
+  },
+  "pricing": {
+    "title": "Pricing",
+    "subtitle": "Choose the package that fits your needs",
+    "monthly": "Monthly",
+    "enterprise": "Enterprise",
+    "contactSales": "Contact Sales Team",
+    "starter": {
+      "title": "Starter",
+      "subtitle": "On-Site Rapid Response",
+      "description": "Fast solutions for basic quality problems",
+      "features": [
+        "7×5 support (Monday-Friday)",
+        "24-72 hour SLA",
+        "1 location coverage",
+        "Basic reporting (PDF/CSV)",
+        "Sorting & Containment",
+        "Visual inspections"
+      ]
+    },
+    "growth": {
+      "title": "Growth",
+      "subtitle": "Technical Representation",
+      "description": "Continuous quality support and improvement",
+      "features": [
+        "7×7 support",
+        "24 hour SLA",
+        "2-3 location coverage",
+        "Resident/Technical Rep.",
+        "Root cause analysis",
+        "Weekly e-reports",
+        "QMS recommendations"
+      ]
+    },
+    "pro": {
+      "title": "Pro",
+      "subtitle": "Quality Partnership",
+      "description": "Comprehensive quality engineering solutions",
+      "features": [
+        "24×7 support",
+        "<12 hour SLA target",
+        "Multi-location",
+        "Rework + quality engineering",
+        "Supplier readiness",
+        "Monthly executive summary",
+        "Process optimization"
+      ]
+    },
+    "enterprise": {
+      "title": "Enterprise",
+      "subtitle": "Custom Solutions",
+      "description": "Customized services for large-scale projects",
+      "features": [
+        "Contracted capacity",
+        "On-site team",
+        "EV/e-mobility expertise",
+        "Multi-country roll-out",
+        "System integrations",
+        "Custom SLAs",
+        "Dedicated account manager"
+      ]
+    }
+  },
+  "footer": {
+    "quickLinks": "Quick Links",
+    "services": "Services",
+    "legal": "Legal",
+    "privacy": "Privacy Policy",
+    "terms": "Terms of Service",
+    "cookies": "Cookie Policy",
+    "copyright": "© 2024 QroneX. All rights reserved."
+  }
+}

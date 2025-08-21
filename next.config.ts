@@ -1,7 +1,26 @@
-import type { NextConfig } from "next";
+import createNextIntlPlugin from 'next-intl/plugin';
+import type { NextConfig } from 'next';
+
+const withNextIntl = createNextIntlPlugin();
 
 const nextConfig: NextConfig = {
-  /* config options here */
+  experimental: {
+    mdxRs: true,
+  },
+  pageExtensions: ['js', 'jsx', 'mdx', 'ts', 'tsx'],
+  images: {
+    domains: ['localhost'],
+    formats: ['image/avif', 'image/webp'],
+  },
+  async redirects() {
+    return [
+      {
+        source: '/',
+        destination: '/tr',
+        permanent: false,
+      },
+    ];
+  },
 };
 
-export default nextConfig;
+export default withNextIntl(nextConfig);

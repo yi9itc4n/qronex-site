@@ -1,0 +1,219 @@
+{
+  "navigation": {
+    "home": "Ana Sayfa",
+    "services": "Hizmetler",
+    "industries": "Sektörler",
+    "caseStudies": "Vaka Çalışmaları",
+    "about": "Hakkımızda",
+    "careers": "Kariyer",
+    "contact": "İletişim",
+    "pricing": "Fiyatlandırma",
+    "getQuote": "Teklif Al",
+    "startService": "Hizmete Başla"
+  },
+  "services": {
+    "title": "Hizmetlerimiz",
+    "subtitle": "Avrupa'da yerleşik saha mühendislerimizle kalite problemlerinize hızlı çözümler sunuyoruz",
+    "onSiteRapidResponse": {
+      "title": "On-Site Hızlı Müdahale",
+      "description": "7/24 saha desteği ile kalite problemlerinize anında müdahale ediyoruz"
+    },
+    "sortingContainment": {
+      "title": "Sorting & Containment",
+      "description": "Hatalı parçaları ayırarak üretim hattınızın devamını sağlıyoruz"
+    },
+    "rework": {
+      "title": "Rework",
+      "description": "Hatalı parçaları düzelterek kayıplarınızı minimize ediyoruz"
+    },
+    "qualityEngineering": {
+      "title": "Kalite Mühendisliği",
+      "description": "Kalite süreçlerinizi optimize ediyoruz"
+    },
+    "supplierReadiness": {
+      "title": "Tedarikçi Hazırlığı",
+      "description": "Tedarikçilerinizin kalite standartlarını yükseltiyoruz"
+    },
+    "technicalRepresentation": {
+      "title": "Teknik Temsilcilik",
+      "description": "Sahanızda sürekli kalite desteği sağlıyoruz"
+    },
+    "auditsTraining": {
+      "title": "Denetim & Eğitim",
+      "description": "Kalite sistemlerinizi güçlendiriyoruz"
+    },
+    "aftersalesSupport": {
+      "title": "Satış Sonrası Destek",
+      "description": "Müşterilerinize kaliteli hizmet sunmanızı sağlıyoruz"
+    }
+  },
+  "industries": {
+    "title": "Sektörler",
+    "subtitle": "Farklı sektörlerdeki deneyimimizle size özel çözümler geliştiriyoruz",
+    "automotiveOem": {
+      "title": "Otomotiv OEM",
+      "description": "Ana otomotiv üreticileri için kapsamlı kalite çözümleri"
+    },
+    "tier1": {
+      "title": "Tier 1 Tedarikçiler",
+      "description": "Birinci kademe tedarikçiler için özelleşmiş hizmetler"
+    },
+    "eMobility": {
+      "title": "e-Mobility / EV",
+      "description": "Elektrikli araç teknolojileri için gelişmiş kalite süreçleri"
+    },
+    "heavyTransport": {
+      "title": "Ağır Nakliye",
+      "description": "Kamyon ve otobüs sektörü için güçlü çözümler"
+    },
+    "aerospace": {
+      "title": "Havacılık",
+      "description": "Havacılık sektörü için yüksek standart kalite hizmetleri"
+    }
+  },
+  "home": {
+    "hero": {
+      "title": "Avrupa'da Yerleşik Saha Mühendisleriyle Kalite Problemlerinize Hızlı Çözümler",
+      "subtitle": "QroneX; Avrupa'da yerleşik, sahada görev almaya hazır tecrübeli mühendis kadrosuyla Tier 1 tedarikçilerin OEM ile yaşadığı kalite problemlerine yerinde hızlı ve doğru çözümler sunar.",
+      "cta1": "Teklif Al",
+      "cta2": "Hizmete Başla"
+    },
+    "values": {
+      "title": "Kattığımız Değerler",
+      "value1": {
+        "title": "Hızlı Müdahale",
+        "description": "24-72 saat içinde sahada"
+      },
+      "value2": {
+        "title": "Deneyimli Ekip",
+        "description": "15+ yıl sektör tecrübesi"
+      },
+      "value3": {
+        "title": "Avrupa Geneli",
+        "description": "Geniş coğrafi kapsamda hizmet"
+      },
+      "value4": {
+        "title": "Sürekli Destek",
+        "description": "7/24 erişilebilir ekip"
+      }
+    },
+    "whyQronex": {
+      "title": "Neden QroneX?",
+      "reason1": "Avrupa genelinde yerleşik mühendis kadrosu",
+      "reason2": "OEM onaylı süreçler ve metodolojiler",
+      "reason3": "Hızlı müdahale ve çözüm süresi",
+      "reason4": "Çok dilli iletişim kapasitesi",
+      "reason5": "Sektör özelinde uzmanlaşmış ekipler",
+      "reason6": "Maliyet etkin çözümler"
+    },
+    "statistics": {
+      "title": "Rakamlarla QroneX",
+      "responseTime": "Ortalama Müdahale Süresi",
+      "responseTimeValue": "24 Saat",
+      "engineers": "Aktif Saha Mühendisi",
+      "engineersValue": "50+",
+      "countries": "Hizmet Verdiğimiz Ülke",
+      "countriesValue": "15",
+      "solutionTime": "Ortalama Çözüm Süresi",
+      "solutionTimeValue": "48 Saat"
+    },
+    "contact": {
+      "title": "Bölge Sorumluları",
+      "subtitle": "Size en yakın temsilcimizle iletişime geçin"
+    }
+  },
+  "contact": {
+    "title": "İletişim",
+    "regionalManagers": "Bölge Sorumluları",
+    "quickQuote": "Hızlı Teklif",
+    "form": {
+      "name": "Ad Soyad",
+      "company": "Şirket",
+      "email": "E-posta",
+      "phone": "Telefon",
+      "country": "Ülke",
+      "city": "Şehir",
+      "package": "Paket",
+      "urgency": "Aciliyet",
+      "message": "Mesaj",
+      "submit": "Gönder",
+      "success": "Mesajınız başarıyla gönderildi!"
+    },
+    "urgencyOptions": {
+      "asap": "Acil (ASAP)",
+      "48h": "48 Saat İçinde",
+      "thisWeek": "Bu Hafta"
+    }
+  },
+  "pricing": {
+    "title": "Fiyatlandırma",
+    "subtitle": "İhtiyacınıza uygun paketi seçin",
+    "monthly": "Aylık",
+    "enterpriseTab": "Kurumsal",
+    "contactSales": "Satış Ekibiyle İletişime Geçin",
+    "starter": {
+      "title": "Starter",
+      "subtitle": "On-Site Hızlı Müdahale",
+      "description": "Temel kalite problemleri için hızlı çözümler",
+      "features": [
+        "7×5 destek (Pazartesi-Cuma)",
+        "24-72 saat SLA",
+        "1 lokasyon kapsamı",
+        "Temel raporlama (PDF/CSV)",
+        "Sorting & Containment",
+        "Görsel kontroller"
+      ]
+    },
+    "growth": {
+      "title": "Growth",
+      "subtitle": "Teknik Temsilcilik",
+      "description": "Sürekli kalite desteği ve iyileştirme",
+      "features": [
+        "7×7 destek",
+        "24 saat SLA",
+        "2-3 lokasyon kapsamı",
+        "Resident/Technical Rep.",
+        "Kök neden analizi",
+        "Haftalık e-rapor",
+        "QMS önerileri"
+      ]
+    },
+    "pro": {
+      "title": "Pro",
+      "subtitle": "Kalite Ortaklığı",
+      "description": "Kapsamlı kalite mühendisliği çözümleri",
+      "features": [
+        "24×7 destek",
+        "<12 saat SLA hedefi",
+        "Çoklu lokasyon",
+        "Rework + kalite mühendisliği",
+        "Tedarikçi hazırlığı",
+        "Aylık yönetici özeti",
+        "Süreç optimizasyonu"
+      ]
+    },
+    "enterprise": {
+      "title": "Enterprise",
+      "subtitle": "Özel Çözümler",
+      "description": "Büyük ölçekli projeler için özelleştirilmiş hizmetler",
+      "features": [
+        "Sözleşmeli kapasite",
+        "Yerinde ekip",
+        "EV/e-mobility uzmanlığı",
+        "Çok ülke roll-out",
+        "Sistem entegrasyonları",
+        "Özel SLA'lar",
+        "Dedicated account manager"
+      ]
+    }
+  },
+  "footer": {
+    "quickLinks": "Hızlı Bağlantılar",
+    "services": "Hizmetler",
+    "legal": "Yasal",
+    "privacy": "Gizlilik Politikası",
+    "terms": "Kullanım Koşulları",
+    "cookies": "Çerez Politikası",
+    "copyright": "© 2024 QroneX. Tüm hakları saklıdır."
+  }
+}
