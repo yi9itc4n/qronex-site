@@ -2,7 +2,7 @@
 
 import { useState } from "react";
 import { useTranslations } from "next-intl";
-import { Link } from "@/i18n";
+import { Link, usePathname } from "@/i18n";
 import { Button } from "@/components/ui/button";
 import {
   NavigationMenu,
@@ -24,6 +24,7 @@ interface HeaderProps {
 export function Header({ locale }: HeaderProps) {
   const t = useTranslations("navigation");
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
+  const pathname = usePathname();
 
   const services = [
     {
@@ -210,7 +211,8 @@ export function Header({ locale }: HeaderProps) {
             {/* Language Toggle */}
             <div className="flex items-center space-x-2">
               <Link
-                href="/tr"
+                href={pathname}
+                locale="tr"
                 className={cn(
                   "text-sm px-2 py-1 rounded",
                   locale === "tr" ? "bg-primary text-primary-foreground" : "hover:bg-muted"
@@ -219,7 +221,8 @@ export function Header({ locale }: HeaderProps) {
                 TR
               </Link>
               <Link
-                href="/en"
+                href={pathname}
+                locale="en"
                 className={cn(
                   "text-sm px-2 py-1 rounded",
                   locale === "en" ? "bg-primary text-primary-foreground" : "hover:bg-muted"
@@ -300,6 +303,32 @@ export function Header({ locale }: HeaderProps) {
                   >
                     {t("contact")}
                   </Link>
+                  
+                  {/* Mobile Language Toggle */}
+                  <div className="flex items-center space-x-2 pt-4">
+                    <Link
+                      href={pathname}
+                      locale="tr"
+                      className={cn(
+                        "text-sm px-3 py-2 rounded flex-1 text-center",
+                        locale === "tr" ? "bg-primary text-primary-foreground" : "bg-muted"
+                      )}
+                      onClick={() => setMobileMenuOpen(false)}
+                    >
+                      Türkçe
+                    </Link>
+                    <Link
+                      href={pathname}
+                      locale="en"
+                      className={cn(
+                        "text-sm px-3 py-2 rounded flex-1 text-center",
+                        locale === "en" ? "bg-primary text-primary-foreground" : "bg-muted"
+                      )}
+                      onClick={() => setMobileMenuOpen(false)}
+                    >
+                      English
+                    </Link>
+                  </div>
                   
                   <div className="flex space-x-2 pt-4">
                     <Button className="flex-1" asChild>
