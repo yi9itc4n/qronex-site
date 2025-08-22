@@ -2,6 +2,7 @@ import { Metadata } from 'next';
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
 import { Badge } from '@/components/ui/badge';
 import { Globe, Users, Award, TrendingUp, Target, Shield, Heart, Lightbulb } from 'lucide-react';
+import { Link } from '@/i18n';
 
 export const metadata: Metadata = {
   title: 'Hakkımızda | QroneX',
@@ -348,18 +349,18 @@ export default function AboutPage() {
               Deneyimli ekibimiz ve kanıtlanmış metodolojilerimizle kalite hedeflerinize ulaşmanızı sağlayalım
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <a
-                href="/tr/contact"
+              <Link
+                href="/contact"
                 className="inline-flex items-center justify-center px-8 py-4 bg-white text-blue-600 font-semibold rounded-lg hover:bg-gray-100 transition-colors"
               >
                 İletişime Geçin
-              </a>
-              <a
-                href="/tr/case-studies"
+              </Link>
+              <Link
+                href="/case-studies"
                 className="inline-flex items-center justify-center px-8 py-4 border-2 border-white text-white font-semibold rounded-lg hover:bg-white hover:text-blue-600 transition-colors"
               >
                 Başarı Hikayelerimizi İnceleyin
-              </a>
+              </Link>
             </div>
           </div>
         </div>

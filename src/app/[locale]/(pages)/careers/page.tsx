@@ -4,7 +4,7 @@ import { useState, useEffect } from 'react';
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
 import { Badge } from '@/components/ui/badge';
 import { Button } from '@/components/ui/button';
-import { Dialog, DialogContent, DialogDescription, DialogHeader, DialogTitle, DialogTrigger } from '@/components/ui/dialog';
+import { Dialog, DialogContent, DialogDescription, DialogHeader, DialogTitle } from '@/components/ui/dialog';
 import { Input } from '@/components/ui/input';
 import { Label } from '@/components/ui/label';
 import { Textarea } from '@/components/ui/textarea';
@@ -13,6 +13,7 @@ import { MapPin, Clock, Users, Briefcase, Heart, TrendingUp, Globe, Award } from
 import { useForm } from 'react-hook-form';
 import { zodResolver } from '@hookform/resolvers/zod';
 import { z } from 'zod';
+import { Link } from '@/i18n';
 
 const applicationSchema = z.object({
   roleId: z.string().min(1, 'Pozisyon seçiniz'),
@@ -650,18 +651,18 @@ export default function CareersPage() {
               CV&apos;nizi gönderin, uygun fırsat çıktığında sizinle iletişime geçelim
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <a
-                href="/tr/contact"
+              <Link
+                href="/contact"
                 className="inline-flex items-center justify-center px-8 py-4 bg-white text-blue-600 font-semibold rounded-lg hover:bg-gray-100 transition-colors"
               >
                 CV Gönderin
-              </a>
-              <a
-                href="/tr/about"
+              </Link>
+              <Link
+                href="/about"
                 className="inline-flex items-center justify-center px-8 py-4 border-2 border-white text-white font-semibold rounded-lg hover:bg-white hover:text-blue-600 transition-colors"
               >
                 Şirket Hakkında
-              </a>
+              </Link>
             </div>
           </div>
         </div>

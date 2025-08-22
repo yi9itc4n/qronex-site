@@ -1,12 +1,12 @@
 "use client";
 
 import { useState } from 'react';
-import { Metadata } from 'next';
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
 import { Badge } from '@/components/ui/badge';
 import { Button } from '@/components/ui/button';
-import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/tabs';
+import { Tabs, TabsList, TabsTrigger } from '@/components/ui/tabs';
 import { Calendar, MapPin, TrendingUp, Users, Clock, CheckCircle } from 'lucide-react';
+import { Link } from '@/i18n';
 
 const caseStudies = [
   {
@@ -332,18 +332,18 @@ export default function CaseStudiesPage() {
               Deneyimli ekibimizle kalite problemlerinizi başarı hikayelerine dönüştürelim
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <a
-                href="/tr/contact"
+              <Link
+                href="/contact"
                 className="inline-flex items-center justify-center px-8 py-4 bg-white text-blue-600 font-semibold rounded-lg hover:bg-gray-100 transition-colors"
               >
                 Projenizi Başlatalım
-              </a>
-              <a
-                href="/tr/services"
+              </Link>
+              <Link
+                href="/services"
                 className="inline-flex items-center justify-center px-8 py-4 border-2 border-white text-white font-semibold rounded-lg hover:bg-white hover:text-blue-600 transition-colors"
               >
                 Hizmetlerimizi İncele
-              </a>
+              </Link>
             </div>
           </div>
         </div>
