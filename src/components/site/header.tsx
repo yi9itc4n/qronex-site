@@ -2,7 +2,7 @@
 
 import { useState } from "react";
 import { useTranslations } from "next-intl";
-import { Link, usePathname } from "@/i18n";
+import { Link } from "@/i18n";
 import { Button } from "@/components/ui/button";
 import {
   NavigationMenu,
@@ -24,66 +24,65 @@ interface HeaderProps {
 export function Header({ locale }: HeaderProps) {
   const t = useTranslations("navigation");
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
-  const pathname = usePathname();
 
   const services = [
     {
-      title: t("onSiteRapidResponse"),
+      title: "On-Site Hızlı Müdahale",
       href: "/services/on-site-rapid-response",
-      description: t("fieldIntervention"),
+      description: "24-72 saat içinde sahada müdahale",
     },
     {
-      title: t("sortingContainment"), 
+      title: "Sorting & Containment", 
       href: "/services/sorting-containment",
-      description: t("defectivePartsSeparation"),
+      description: "Hatalı parçaları ayırma ve kontrol",
     },
     {
-      title: t("qualityEngineering"),
+      title: "Quality Engineering",
       href: "/services/quality-engineering", 
-      description: t("optimizeQualityProcesses"),
+      description: "Kalite süreçlerini optimize etme",
     },
     {
-      title: t("technicalRepresentation"),
+      title: "Technical Representation",
       href: "/services/technical-representation",
-      description: t("onSiteTechnicalRepresentation"),
+      description: "Yerinde teknik temsilcilik",
     },
     {
-      title: t("supplierReadiness"),
+      title: "Supplier Readiness",
       href: "/services/supplier-readiness",
-      description: t("supplierPreparationProcesses"),
+      description: "Tedarikçi hazırlık süreçleri",
     },
     {
-      title: t("auditsTraining"),
+      title: "Audits & Training",
       href: "/services/audits-training",
-      description: t("auditAndTrainingServices"),
+      description: "Denetim ve eğitim hizmetleri",
     },
   ];
 
   const industries = [
     {
-      title: t("automotiveOem"),
+      title: "Automotive OEM",
       href: "/industries/automotive-oem",
-      description: t("mainAutomotiveManufacturers"),
+      description: "Ana otomotiv üreticileri",
     },
     {
-      title: t("tier1Suppliers"),
+      title: "Tier 1 Suppliers",
       href: "/industries/tier-1",
-      description: t("firstTierSuppliers"),
+      description: "Birinci kademe tedarikçiler",
     },
     {
-      title: t("eMobility"),
+      title: "e-Mobility / EV",
       href: "/industries/e-mobility",
-      description: t("electricVehicleTechnologies"),
+      description: "Elektrikli araç teknolojileri",
     },
     {
-      title: t("heavyTransport"),
+      title: "Heavy Transport",
       href: "/industries/heavy-transport", 
-      description: t("truckAndBusSector"),
+      description: "Kamyon ve otobüs sektörü",
     },
     {
-      title: t("aerospace"),
+      title: "Aerospace",
       href: "/industries/aerospace",
-      description: t("aviationSector"),
+      description: "Havacılık sektörü",
     },
   ];
 
@@ -117,10 +116,10 @@ export function Header({ locale }: HeaderProps) {
                             href="/services"
                           >
                             <div className="mb-2 mt-4 text-lg font-medium">
-                              {t("ourServices")}
+                              Hizmetlerimiz
                             </div>
                             <p className="text-sm leading-tight text-muted-foreground">
-                              {t("servicesDescription")}
+                              Avrupa genelinde yerleşik mühendis kadromuzla kalite problemlerinize hızlı çözümler
                             </p>
                           </Link>
                         </NavigationMenuLink>
@@ -211,8 +210,7 @@ export function Header({ locale }: HeaderProps) {
             {/* Language Toggle */}
             <div className="flex items-center space-x-2">
               <Link
-                href={pathname}
-                locale="tr"
+                href="/tr"
                 className={cn(
                   "text-sm px-2 py-1 rounded",
                   locale === "tr" ? "bg-primary text-primary-foreground" : "hover:bg-muted"
@@ -221,8 +219,7 @@ export function Header({ locale }: HeaderProps) {
                 TR
               </Link>
               <Link
-                href={pathname}
-                locale="en"
+                href="/en"
                 className={cn(
                   "text-sm px-2 py-1 rounded",
                   locale === "en" ? "bg-primary text-primary-foreground" : "hover:bg-muted"
@@ -303,32 +300,6 @@ export function Header({ locale }: HeaderProps) {
                   >
                     {t("contact")}
                   </Link>
-                  
-                  {/* Mobile Language Toggle */}
-                  <div className="flex items-center space-x-2 pt-4">
-                    <Link
-                      href={pathname}
-                      locale="tr"
-                      className={cn(
-                        "text-sm px-3 py-2 rounded flex-1 text-center",
-                        locale === "tr" ? "bg-primary text-primary-foreground" : "bg-muted"
-                      )}
-                      onClick={() => setMobileMenuOpen(false)}
-                    >
-{t("turkish")}
-                    </Link>
-                    <Link
-                      href={pathname}
-                      locale="en"
-                      className={cn(
-                        "text-sm px-3 py-2 rounded flex-1 text-center",
-                        locale === "en" ? "bg-primary text-primary-foreground" : "bg-muted"
-                      )}
-                      onClick={() => setMobileMenuOpen(false)}
-                    >
-{t("english")}
-                    </Link>
-                  </div>
                   
                   <div className="flex space-x-2 pt-4">
                     <Button className="flex-1" asChild>
