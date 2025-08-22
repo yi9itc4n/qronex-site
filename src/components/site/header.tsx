@@ -28,62 +28,62 @@ export function Header({ locale }: HeaderProps) {
 
   const services = [
     {
-      title: "On-Site Hızlı Müdahale",
+      title: t("onSiteRapidResponse"),
       href: "/services/on-site-rapid-response",
-      description: "24-72 saat içinde sahada müdahale",
+      description: t("fieldIntervention"),
     },
     {
-      title: "Sorting & Containment", 
+      title: t("sortingContainment"), 
       href: "/services/sorting-containment",
-      description: "Hatalı parçaları ayırma ve kontrol",
+      description: t("defectivePartsSeparation"),
     },
     {
-      title: "Quality Engineering",
+      title: t("qualityEngineering"),
       href: "/services/quality-engineering", 
-      description: "Kalite süreçlerini optimize etme",
+      description: t("optimizeQualityProcesses"),
     },
     {
-      title: "Technical Representation",
+      title: t("technicalRepresentation"),
       href: "/services/technical-representation",
-      description: "Yerinde teknik temsilcilik",
+      description: t("onSiteTechnicalRepresentation"),
     },
     {
-      title: "Supplier Readiness",
+      title: t("supplierReadiness"),
       href: "/services/supplier-readiness",
-      description: "Tedarikçi hazırlık süreçleri",
+      description: t("supplierPreparationProcesses"),
     },
     {
-      title: "Audits & Training",
+      title: t("auditsTraining"),
       href: "/services/audits-training",
-      description: "Denetim ve eğitim hizmetleri",
+      description: t("auditAndTrainingServices"),
     },
   ];
 
   const industries = [
     {
-      title: "Automotive OEM",
+      title: t("automotiveOem"),
       href: "/industries/automotive-oem",
-      description: "Ana otomotiv üreticileri",
+      description: t("mainAutomotiveManufacturers"),
     },
     {
-      title: "Tier 1 Suppliers",
+      title: t("tier1Suppliers"),
       href: "/industries/tier-1",
-      description: "Birinci kademe tedarikçiler",
+      description: t("firstTierSuppliers"),
     },
     {
-      title: "e-Mobility / EV",
+      title: t("eMobility"),
       href: "/industries/e-mobility",
-      description: "Elektrikli araç teknolojileri",
+      description: t("electricVehicleTechnologies"),
     },
     {
-      title: "Heavy Transport",
+      title: t("heavyTransport"),
       href: "/industries/heavy-transport", 
-      description: "Kamyon ve otobüs sektörü",
+      description: t("truckAndBusSector"),
     },
     {
-      title: "Aerospace",
+      title: t("aerospace"),
       href: "/industries/aerospace",
-      description: "Havacılık sektörü",
+      description: t("aviationSector"),
     },
   ];
 
@@ -117,10 +117,10 @@ export function Header({ locale }: HeaderProps) {
                             href="/services"
                           >
                             <div className="mb-2 mt-4 text-lg font-medium">
-                              Hizmetlerimiz
+                              {t("ourServices")}
                             </div>
                             <p className="text-sm leading-tight text-muted-foreground">
-                              Avrupa genelinde yerleşik mühendis kadromuzla kalite problemlerinize hızlı çözümler
+                              {t("servicesDescription")}
                             </p>
                           </Link>
                         </NavigationMenuLink>
@@ -315,7 +315,7 @@ export function Header({ locale }: HeaderProps) {
                       )}
                       onClick={() => setMobileMenuOpen(false)}
                     >
-                      Türkçe
+{t("turkish")}
                     </Link>
                     <Link
                       href={pathname}
@@ -326,7 +326,7 @@ export function Header({ locale }: HeaderProps) {
                       )}
                       onClick={() => setMobileMenuOpen(false)}
                     >
-                      English
+{t("english")}
                     </Link>
                   </div>
                   

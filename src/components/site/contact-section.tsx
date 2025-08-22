@@ -18,7 +18,7 @@ export function ContactSection() {
   const regionalManagers = [
     {
       name: "Mehmet Yılmaz",
-      title: "Türkiye & Balkanlar Bölge Sorumlusu",
+      title: t("turkeyRegionalManager"),
       phone: "+90 532 123 4567",
       email: "mehmet.yilmaz@qronex.com",
       region: "TR, BG, RO, GR",
@@ -27,7 +27,7 @@ export function ContactSection() {
     },
     {
       name: "Hans Müller", 
-      title: "DACH Bölge Sorumlusu",
+      title: t("dachRegionalManager"),
       phone: "+49 170 987 6543",
       email: "hans.mueller@qronex.com",
       region: "DE, AT, CH",
@@ -36,7 +36,7 @@ export function ContactSection() {
     },
     {
       name: "Pierre Dubois",
-      title: "Fransa & BeNeLux Bölge Sorumlusu", 
+      title: t("franceRegionalManager"), 
       phone: "+33 6 12 34 56 78",
       email: "pierre.dubois@qronex.com",
       region: "FR, BE, NL, LU",
@@ -45,7 +45,7 @@ export function ContactSection() {
     },
     {
       name: "Alessandro Rossi",
-      title: "İtalya & İspanya Bölge Sorumlusu",
+      title: t("italyRegionalManager"),
       phone: "+39 333 123 4567", 
       email: "alessandro.rossi@qronex.com",
       region: "IT, ES, PT",
@@ -74,7 +74,7 @@ export function ContactSection() {
               {manager.available && (
                 <Badge className="absolute -top-2 -right-2 bg-green-600">
                   <Clock className="h-3 w-3 mr-1" />
-                  Müsait
+                  {t("available")}
                 </Badge>
               )}
               
@@ -107,7 +107,7 @@ export function ContactSection() {
                 <Button size="sm" className="w-full" asChild>
                   <Link href={`/contact?manager=${manager.name.toLowerCase().replace(' ', '-')}`}>
                     <MessageCircle className="h-4 w-4 mr-2" />
-                    İletişime Geç
+                    {t("getInTouch")}
                   </Link>
                 </Button>
               </CardContent>
@@ -122,12 +122,12 @@ export function ContactSection() {
             <CardHeader>
               <CardTitle className="text-red-800 flex items-center">
                 <Phone className="h-5 w-5 mr-2" />
-                Acil Durum 7/24
+                {t("emergency247")}
               </CardTitle>
             </CardHeader>
             <CardContent className="space-y-4">
               <p className="text-red-700">
-                Kritik kalite problemleri için anında müdahale gerekiyorsa:
+                {t("criticalQualityProblems")}
               </p>
               <div className="space-y-2">
                 <a 
@@ -137,12 +137,12 @@ export function ContactSection() {
                   +49 89 123 456 789
                 </a>
                 <p className="text-sm text-red-600">
-                  Ortalama yanıt süresi: 15 dakika
+                  {t("averageResponseTime")}
                 </p>
               </div>
               <div className="flex space-x-4 text-sm text-red-700">
-                <span>✓ 6-12 saat müdahale</span>
-                <span>✓ Anlık kaynak tahsisi</span>
+                <span>✓ {t("response6to12")}</span>
+                <span>✓ {t("instantResourceAllocation")}</span>
               </div>
             </CardContent>
           </Card>
@@ -152,29 +152,29 @@ export function ContactSection() {
             <CardHeader>
               <CardTitle className="text-blue-800 flex items-center">
                 <MessageCircle className="h-5 w-5 mr-2" />
-                Planlı Proje Desteği
+                {t("plannedProjectSupport")}
               </CardTitle>
             </CardHeader>
             <CardContent className="space-y-4">
               <p className="text-blue-700">
-                Detaylı teklif ve planlama için:
+                {t("detailedQuoteAndPlanning")}
               </p>
               <div className="space-y-3">
                 <Button className="w-full bg-blue-600 hover:bg-blue-700" asChild>
                   <Link href="/contact">
-                    Online Form Doldur
+                    {t("fillOnlineForm")}
                     <ArrowRight className="ml-2 h-4 w-4" />
                   </Link>
                 </Button>
                 <Button variant="outline" className="w-full border-blue-300 text-blue-700" asChild>
                   <Link href="/pricing">
-                    Paket Seçenekleri Gör
+                    {t("viewPackageOptions")}
                   </Link>
                 </Button>
               </div>
               <div className="flex space-x-4 text-sm text-blue-700">
-                <span>✓ 24h içinde yanıt</span>
-                <span>✓ Ücretsiz ön değerlendirme</span>
+                <span>✓ {t("response24h")}</span>
+                <span>✓ {t("freeInitialAssessment")}</span>
               </div>
             </CardContent>
           </Card>
@@ -182,12 +182,12 @@ export function ContactSection() {
 
         {/* Office locations */}
         <div className="mt-16 bg-white rounded-2xl p-8">
-          <h3 className="text-2xl font-bold text-center mb-8">Ofis Lokasyonlarımız</h3>
+          <h3 className="text-2xl font-bold text-center mb-8">{t("officeLocations")}</h3>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
             <div className="flex items-start space-x-4">
               <MapPin className="h-6 w-6 text-blue-600 flex-shrink-0 mt-1" />
               <div>
-                <h4 className="font-semibold text-lg mb-2">München Merkez Ofis</h4>
+                <h4 className="font-semibold text-lg mb-2">{t("munichHeadOffice")}</h4>
                 <p className="text-gray-600 mb-2">
                   Maximilianstraße 35<br />
                   80539 München, Germany
@@ -206,7 +206,7 @@ export function ContactSection() {
             <div className="flex items-start space-x-4">
               <MapPin className="h-6 w-6 text-blue-600 flex-shrink-0 mt-1" />
               <div>
-                <h4 className="font-semibold text-lg mb-2">Paris Ofis</h4>
+                <h4 className="font-semibold text-lg mb-2">{t("parisOffice")}</h4>
                 <p className="text-gray-600 mb-2">
                   25 Avenue des Champs-Élysées<br />
                   75008 Paris, France

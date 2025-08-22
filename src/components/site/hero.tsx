@@ -26,7 +26,7 @@ export function Hero() {
             {/* Badge */}
             <Badge variant="secondary" className="bg-blue-600/20 text-blue-300 border-blue-600/30">
               <Users className="h-3 w-3 mr-1" />
-              50+ Saha Mühendisi Avrupa Genelinde
+              {t("fieldEngineersEurope")}
             </Badge>
 
             {/* Main heading */}
@@ -43,15 +43,15 @@ export function Hero() {
             <div className="grid grid-cols-1 sm:grid-cols-3 gap-4">
               <div className="flex items-center space-x-2">
                 <CheckCircle className="h-5 w-5 text-green-400 flex-shrink-0" />
-                <span className="text-sm">24-72 saat müdahale</span>
+                <span className="text-sm">{t("responseTime24")}</span>
               </div>
               <div className="flex items-center space-x-2">
                 <CheckCircle className="h-5 w-5 text-green-400 flex-shrink-0" />
-                <span className="text-sm">15 ülke kapsamı</span>
+                <span className="text-sm">{t("countryCoverage")}</span>
               </div>
               <div className="flex items-center space-x-2">
                 <CheckCircle className="h-5 w-5 text-green-400 flex-shrink-0" />
-                <span className="text-sm">%98 başarı oranı</span>
+                <span className="text-sm">{t("successRate")}</span>
               </div>
             </div>
 
@@ -74,7 +74,7 @@ export function Hero() {
             <div className="flex items-center space-x-4 p-4 bg-red-900/20 border border-red-800 rounded-lg">
               <Phone className="h-5 w-5 text-red-400 flex-shrink-0" />
               <div>
-                <p className="text-sm text-red-300 font-medium">Acil Durum 7/24</p>
+                <p className="text-sm text-red-300 font-medium">{t("emergency24")}</p>
                 <a href="tel:+498912345678" className="text-red-200 hover:text-white transition-colors">
                   +49 89 123 456 789
                 </a>
@@ -88,28 +88,28 @@ export function Hero() {
             <div className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20">
               <Clock className="h-8 w-8 text-blue-400 mb-4" />
               <div className="text-3xl font-bold mb-2">24h</div>
-              <div className="text-sm text-slate-300">Ortalama Müdahale Süresi</div>
+              <div className="text-sm text-slate-300">{t("responseTimeAvg")}</div>
             </div>
 
             {/* Stat 2 */}
             <div className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20">
               <Users className="h-8 w-8 text-green-400 mb-4" />
               <div className="text-3xl font-bold mb-2">50+</div>
-              <div className="text-sm text-slate-300">Aktif Saha Mühendisi</div>
+              <div className="text-sm text-slate-300">{t("activeFieldEngineers")}</div>
             </div>
 
             {/* Stat 3 */}
             <div className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20">
               <Globe className="h-8 w-8 text-purple-400 mb-4" />
               <div className="text-3xl font-bold mb-2">15</div>
-              <div className="text-sm text-slate-300">Hizmet Verdiğimiz Ülke</div>
+              <div className="text-sm text-slate-300">{t("countriesServed")}</div>
             </div>
 
             {/* Stat 4 */}
             <div className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20">
               <CheckCircle className="h-8 w-8 text-yellow-400 mb-4" />
               <div className="text-3xl font-bold mb-2">48h</div>
-              <div className="text-sm text-slate-300">Ortalama Çözüm Süresi</div>
+              <div className="text-sm text-slate-300">{t("solutionTimeAvg")}</div>
             </div>
           </div>
         </div>

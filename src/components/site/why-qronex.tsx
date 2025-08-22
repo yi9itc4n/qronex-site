@@ -16,42 +16,42 @@ export function WhyQronex() {
     {
       icon: Users,
       title: t("reason1"),
-      description: "50+ deneyimli mühendis 15 ülkede sizin için hazır",
+      description: t("description1"),
       color: "text-blue-600",
       bgColor: "bg-blue-50",
     },
     {
       icon: Award,
       title: t("reason2"),
-      description: "BMW, Mercedes, Audi onaylı kalite metodolojileri",
+      description: t("description2"),
       color: "text-green-600", 
       bgColor: "bg-green-50",
     },
     {
       icon: Clock,
       title: t("reason3"),
-      description: "24-72 saat müdahale, 48 saat ortalama çözüm süresi",
+      description: t("description3"),
       color: "text-red-600",
       bgColor: "bg-red-50",
     },
     {
       icon: Globe,
       title: t("reason4"),
-      description: "Almanca, İngilizce, Türkçe, Fransızca dil desteği",
+      description: t("description4"),
       color: "text-purple-600",
       bgColor: "bg-purple-50",
     },
     {
       icon: Target,
       title: t("reason5"),
-      description: "Otomotiv, havacılık, e-mobility sektör uzmanlığı",
+      description: t("description5"),
       color: "text-orange-600",
       bgColor: "bg-orange-50",
     },
     {
       icon: TrendingDown,
       title: t("reason6"),
-      description: "Maliyet etkin çözümlerle %90'a varan tasarruf",
+      description: t("description6"),
       color: "text-teal-600",
       bgColor: "bg-teal-50",
     },
@@ -66,7 +66,7 @@ export function WhyQronex() {
             {t("title")}
           </h2>
           <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-            15 yıllık deneyimimiz ve Avrupa genelindeki güçlü ağımızla size sunduğumuz benzersiz avantajları keşfedin.
+            {t("experienceDescription")}
           </p>
         </div>
 
@@ -99,7 +99,7 @@ export function WhyQronex() {
 
         {/* Trust indicators */}
         <div className="mt-20 text-center">
-          <p className="text-gray-500 mb-8">Güvenilen ortağımız olan markalar</p>
+          <p className="text-gray-500 mb-8">{t("trustedPartnerBrands")}</p>
           <div className="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-6 gap-8 items-center opacity-60">
             {/* Placeholder for client logos */}
             <div className="h-12 bg-gray-200 rounded flex items-center justify-center">
@@ -125,35 +125,35 @@ export function WhyQronex() {
 
         {/* Certifications */}
         <div className="mt-16 bg-gray-50 rounded-2xl p-8">
-          <h3 className="text-2xl font-bold text-center mb-8">Sertifikalarımız & Standartlarımız</h3>
+          <h3 className="text-2xl font-bold text-center mb-8">{t("certificationsStandards")}</h3>
           <div className="grid grid-cols-2 md:grid-cols-4 gap-6 text-center">
             <div className="space-y-2">
               <div className="w-16 h-16 bg-blue-100 rounded-full flex items-center justify-center mx-auto">
                 <Award className="h-8 w-8 text-blue-600" />
               </div>
               <p className="font-medium">ISO 9001:2015</p>
-              <p className="text-sm text-gray-600">Kalite Yönetim Sistemi</p>
+              <p className="text-sm text-gray-600">{t("qualityManagementSystem")}</p>
             </div>
             <div className="space-y-2">
               <div className="w-16 h-16 bg-green-100 rounded-full flex items-center justify-center mx-auto">
                 <Award className="h-8 w-8 text-green-600" />
               </div>
               <p className="font-medium">IATF 16949</p>
-              <p className="text-sm text-gray-600">Otomotiv Kalite Standardı</p>
+              <p className="text-sm text-gray-600">{t("automotiveQualityStandard")}</p>
             </div>
             <div className="space-y-2">
               <div className="w-16 h-16 bg-purple-100 rounded-full flex items-center justify-center mx-auto">
                 <Award className="h-8 w-8 text-purple-600" />
               </div>
               <p className="font-medium">AS9100</p>
-              <p className="text-sm text-gray-600">Havacılık Kalite Standardı</p>
+              <p className="text-sm text-gray-600">{t("aviationQualityStandard")}</p>
             </div>
             <div className="space-y-2">
               <div className="w-16 h-16 bg-orange-100 rounded-full flex items-center justify-center mx-auto">
                 <Award className="h-8 w-8 text-orange-600" />
               </div>
               <p className="font-medium">IPC-A-610</p>
-              <p className="text-sm text-gray-600">Elektronik Montaj Standardı</p>
+              <p className="text-sm text-gray-600">{t("electronicAssemblyStandard")}</p>
             </div>
           </div>
         </div>
