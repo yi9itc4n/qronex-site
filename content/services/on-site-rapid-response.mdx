@@ -15,31 +15,13 @@ seo:
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card"
 import { Badge } from "@/components/ui/badge"
 import { Button } from "@/components/ui/button"
-import { 
-  Clock, 
-  Zap, 
-  Shield, 
-  TrendingUp, 
-  Users, 
-  Wrench, 
-  Phone, 
-  Mail,
-  CheckCircle,
-  Target,
-  Award,
-  Timer,
-  Settings,
-  Microscope,
-  Cpu
-} from "lucide-react"
 
 <div className="relative min-h-screen bg-gradient-to-br from-blue-50 via-white to-red-50">
   {/* Hero Section */}
   <section className="relative py-20 px-4">
     <div className="container mx-auto text-center">
       <Badge className="mb-6 bg-red-100 text-red-700 border-red-200 text-lg px-4 py-2">
-        <Zap className="w-4 h-4 mr-2" />
-        7/24 Acil Müdahale
+        ⚡ 7/24 Acil Müdahale
       </Badge>
       
       <h1 className="text-4xl lg:text-6xl font-bold text-gray-900 mb-6">
@@ -55,32 +37,32 @@ import {
 
       <div className="mt-12 grid grid-cols-2 lg:grid-cols-4 gap-6 max-w-4xl mx-auto">
         <div className="text-center">
-          <div className="w-16 h-16 bg-blue-100 rounded-full flex items-center justify-center mx-auto mb-3">
-            <Clock className="w-8 h-8 text-blue-600" />
+          <div className="w-16 h-16 bg-blue-100 rounded-full flex items-center justify-center mx-auto mb-3 text-3xl">
+            ⏰
           </div>
           <div className="text-2xl font-bold text-blue-600">24-72h</div>
           <div className="text-sm text-gray-600">Müdahale Süresi</div>
         </div>
         
         <div className="text-center">
-          <div className="w-16 h-16 bg-green-100 rounded-full flex items-center justify-center mx-auto mb-3">
-            <Users className="w-8 h-8 text-green-600" />
+          <div className="w-16 h-16 bg-green-100 rounded-full flex items-center justify-center mx-auto mb-3 text-3xl">
+            👥
           </div>
           <div className="text-2xl font-bold text-green-600">50+</div>
           <div className="text-sm text-gray-600">Uzman Mühendis</div>
         </div>
         
         <div className="text-center">
-          <div className="w-16 h-16 bg-purple-100 rounded-full flex items-center justify-center mx-auto mb-3">
-            <Shield className="w-8 h-8 text-purple-600" />
+          <div className="w-16 h-16 bg-purple-100 rounded-full flex items-center justify-center mx-auto mb-3 text-3xl">
+            🛡️
           </div>
           <div className="text-2xl font-bold text-purple-600">%98</div>
           <div className="text-sm text-gray-600">Başarı Oranı</div>
         </div>
         
         <div className="text-center">
-          <div className="w-16 h-16 bg-orange-100 rounded-full flex items-center justify-center mx-auto mb-3">
-            <Target className="w-8 h-8 text-orange-600" />
+          <div className="w-16 h-16 bg-orange-100 rounded-full flex items-center justify-center mx-auto mb-3 text-3xl">
+            🎯
           </div>
           <div className="text-2xl font-bold text-orange-600">15</div>
           <div className="text-sm text-gray-600">Ülke Kapsamı</div>
@@ -101,8 +83,8 @@ import {
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
         <Card className="border-red-200 hover:shadow-lg transition-shadow bg-gradient-to-br from-red-50 to-white">
           <CardHeader className="text-center pb-4">
-            <div className="w-12 h-12 bg-red-100 rounded-full flex items-center justify-center mx-auto mb-4">
-              <Clock className="w-6 h-6 text-red-600" />
+            <div className="w-12 h-12 bg-red-100 rounded-full flex items-center justify-center mx-auto mb-4 text-2xl">
+              ⚠️
             </div>
             <CardTitle className="text-red-800">Üretim Durma Süresi</CardTitle>
           </CardHeader>
@@ -115,8 +97,8 @@ import {
 
         <Card className="border-blue-200 hover:shadow-lg transition-shadow bg-gradient-to-br from-blue-50 to-white">
           <CardHeader className="text-center pb-4">
-            <div className="w-12 h-12 bg-blue-100 rounded-full flex items-center justify-center mx-auto mb-4">
-              <TrendingUp className="w-6 h-6 text-blue-600" />
+            <div className="w-12 h-12 bg-blue-100 rounded-full flex items-center justify-center mx-auto mb-4 text-2xl">
+              📈
             </div>
             <CardTitle className="text-blue-800">Müşteri Memnuniyeti</CardTitle>
           </CardHeader>
@@ -129,8 +111,8 @@ import {
 
         <Card className="border-green-200 hover:shadow-lg transition-shadow bg-gradient-to-br from-green-50 to-white">
           <CardHeader className="text-center pb-4">
-            <div className="w-12 h-12 bg-green-100 rounded-full flex items-center justify-center mx-auto mb-4">
-              <Shield className="w-6 h-6 text-green-600" />
+            <div className="w-12 h-12 bg-green-100 rounded-full flex items-center justify-center mx-auto mb-4 text-2xl">
+              💰
             </div>
             <CardTitle className="text-green-800">Maliyet Kontrolü</CardTitle>
           </CardHeader>
@@ -143,8 +125,8 @@ import {
 
         <Card className="border-purple-200 hover:shadow-lg transition-shadow bg-gradient-to-br from-purple-50 to-white">
           <CardHeader className="text-center pb-4">
-            <div className="w-12 h-12 bg-purple-100 rounded-full flex items-center justify-center mx-auto mb-4">
-              <Award className="w-6 h-6 text-purple-600" />
+            <div className="w-12 h-12 bg-purple-100 rounded-full flex items-center justify-center mx-auto mb-4 text-2xl">
+              🏆
             </div>
             <CardTitle className="text-purple-800">Kalite Garantisi</CardTitle>
           </CardHeader>
@@ -177,8 +159,8 @@ import {
                 <Card className="bg-gradient-to-r from-red-500 to-red-600 text-white">
                   <CardHeader>
                     <div className="flex items-center justify-center lg:justify-end mb-4">
-                      <div className="w-12 h-12 bg-white/20 rounded-full flex items-center justify-center mr-4">
-                        <Timer className="w-6 h-6" />
+                      <div className="w-12 h-12 bg-white/20 rounded-full flex items-center justify-center mr-4 text-2xl">
+                        ⏱️
                       </div>
                       <div>
                         <CardTitle className="text-2xl">İlk Değerlendirme</CardTitle>
@@ -189,20 +171,16 @@ import {
                   <CardContent>
                     <ul className="space-y-2 text-red-100">
                       <li className="flex items-center">
-                        <CheckCircle className="w-4 h-4 mr-2 flex-shrink-0" />
-                        Problemin tanımlanması ve risk değerlendirmesi
+                        ✅ Problemin tanımlanması ve risk değerlendirmesi
                       </li>
                       <li className="flex items-center">
-                        <CheckCircle className="w-4 h-4 mr-2 flex-shrink-0" />
-                        Acil containment aksiyonlarının belirlenmesi
+                        ✅ Acil containment aksiyonlarının belirlenmesi
                       </li>
                       <li className="flex items-center">
-                        <CheckCircle className="w-4 h-4 mr-2 flex-shrink-0" />
-                        Müdahale ekibinin ve kaynakların planlanması
+                        ✅ Müdahale ekibinin ve kaynakların planlanması
                       </li>
                       <li className="flex items-center">
-                        <CheckCircle className="w-4 h-4 mr-2 flex-shrink-0" />
-                        Müşteri ile iletişim protokolünün kurulması
+                        ✅ Müşteri ile iletişim protokolünün kurulması
                       </li>
                     </ul>
                   </CardContent>
@@ -218,8 +196,8 @@ import {
                 <Card className="bg-gradient-to-r from-blue-500 to-blue-600 text-white">
                   <CardHeader>
                     <div className="flex items-center mb-4">
-                      <div className="w-12 h-12 bg-white/20 rounded-full flex items-center justify-center mr-4">
-                        <Wrench className="w-6 h-6" />
+                      <div className="w-12 h-12 bg-white/20 rounded-full flex items-center justify-center mr-4 text-2xl">
+                        🔧
                       </div>
                       <div>
                         <CardTitle className="text-2xl">Sahada Müdahale</CardTitle>
@@ -230,20 +208,16 @@ import {
                   <CardContent>
                     <ul className="space-y-2 text-blue-100">
                       <li className="flex items-center">
-                        <CheckCircle className="w-4 h-4 mr-2 flex-shrink-0" />
-                        Deneyimli mühendislerimizin sahaya ulaşması
+                        ✅ Deneyimli mühendislerimizin sahaya ulaşması
                       </li>
                       <li className="flex items-center">
-                        <CheckCircle className="w-4 h-4 mr-2 flex-shrink-0" />
-                        Problemin detaylı analizi ve kök neden araştırması
+                        ✅ Problemin detaylı analizi ve kök neden araştırması
                       </li>
                       <li className="flex items-center">
-                        <CheckCircle className="w-4 h-4 mr-2 flex-shrink-0" />
-                        Geçici çözümlerin uygulanması (containment)
+                        ✅ Geçici çözümlerin uygulanması (containment)
                       </li>
                       <li className="flex items-center">
-                        <CheckCircle className="w-4 h-4 mr-2 flex-shrink-0" />
-                        Sürekli durum raporlaması
+                        ✅ Sürekli durum raporlaması
                       </li>
                     </ul>
                   </CardContent>
@@ -259,8 +233,8 @@ import {
                 <Card className="bg-gradient-to-r from-green-500 to-green-600 text-white">
                   <CardHeader>
                     <div className="flex items-center justify-center lg:justify-end mb-4">
-                      <div className="w-12 h-12 bg-white/20 rounded-full flex items-center justify-center mr-4">
-                        <Settings className="w-6 h-6" />
+                      <div className="w-12 h-12 bg-white/20 rounded-full flex items-center justify-center mr-4 text-2xl">
+                        ⚙️
                       </div>
                       <div>
                         <CardTitle className="text-2xl">Çözüm Uygulama</CardTitle>
@@ -271,20 +245,16 @@ import {
                   <CardContent>
                     <ul className="space-y-2 text-green-100">
                       <li className="flex items-center">
-                        <CheckCircle className="w-4 h-4 mr-2 flex-shrink-0" />
-                        Kalıcı çözümlerin geliştirilmesi
+                        ✅ Kalıcı çözümlerin geliştirilmesi
                       </li>
                       <li className="flex items-center">
-                        <CheckCircle className="w-4 h-4 mr-2 flex-shrink-0" />
-                        Uygulama planının hazırlanması
+                        ✅ Uygulama planının hazırlanması
                       </li>
                       <li className="flex items-center">
-                        <CheckCircle className="w-4 h-4 mr-2 flex-shrink-0" />
-                        Çözümün test edilmesi ve doğrulanması
+                        ✅ Çözümün test edilmesi ve doğrulanması
                       </li>
                       <li className="flex items-center">
-                        <CheckCircle className="w-4 h-4 mr-2 flex-shrink-0" />
-                        Personel eğitimi ve bilgi transferi
+                        ✅ Personel eğitimi ve bilgi transferi
                       </li>
                     </ul>
                   </CardContent>
@@ -310,7 +280,7 @@ import {
       <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 max-w-4xl mx-auto">
         <Card className="bg-white/10 backdrop-blur border-white/20">
           <CardContent className="p-8 text-center">
-            <Phone className="w-12 h-12 text-white mx-auto mb-4" />
+            <div className="text-6xl mb-4">📞</div>
             <h3 className="text-2xl font-bold mb-4">Acil Hat</h3>
             <a href="tel:+498912345678" className="text-3xl font-bold hover:text-red-200 transition-colors block">
               +49 89 123 456 789
@@ -321,7 +291,7 @@ import {
 
         <Card className="bg-white/10 backdrop-blur border-white/20">
           <CardContent className="p-8 text-center">
-            <Mail className="w-12 h-12 text-white mx-auto mb-4" />
+            <div className="text-6xl mb-4">📧</div>
             <h3 className="text-2xl font-bold mb-4">E-posta</h3>
             <a href="mailto:emergency@qronex.com" className="text-xl font-semibold hover:text-red-200 transition-colors block">
               emergency@qronex.com
@@ -336,16 +306,13 @@ import {
 
       <div className="mt-12 flex flex-wrap justify-center gap-4 text-red-100">
         <div className="flex items-center">
-          <CheckCircle className="w-5 h-5 mr-2" />
-          6-12 saat müdahale
+          ✅ 6-12 saat müdahale
         </div>
         <div className="flex items-center">
-          <CheckCircle className="w-5 h-5 mr-2" />
-          Anlık kaynak tahsisi
+          ✅ Anlık kaynak tahsisi
         </div>
         <div className="flex items-center">
-          <CheckCircle className="w-5 h-5 mr-2" />
-          %100 garanti
+          ✅ %100 garanti
         </div>
       </div>
     </div>
