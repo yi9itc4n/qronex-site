@@ -1,50 +1,41 @@
-import { Metadata } from 'next';
+"use client";
+
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
 import { Badge } from '@/components/ui/badge';
 import { Globe, Users, Award, TrendingUp, Target, Shield, Heart, Lightbulb } from 'lucide-react';
 import { Link } from '@/i18n';
-
-export const metadata: Metadata = {
-  title: 'Hakkımızda | QroneX',
-  description: 'QroneX; Avrupa\'da yerleşik saha mühendisleriyle Tier 1 tedarikçilerin kalite problemlerine hızlı ve doğru çözümler sunan lider kalite danışmanlık şirketidir.',
-};
+import { useState } from 'react';
 
 const teamMembers = [
   {
-    name: 'Dr. Mehmet Yılmaz',
-    position: 'CEO & Kurucu',
-    location: 'München, Almanya',
-    experience: '20+ yıl',
-    expertise: ['Automotive OEM', 'Quality Management', 'Strategic Leadership'],
-    description: 'BMW ve Mercedes-Benz\'de 15 yıl üst düzey kalite yönetimi deneyimi.',
-    image: '/api/placeholder/150/150'
+    name: 'Senih DİNÇ',
+    position: 'Co-founder CEO',
+    location: 'Nürnberg, Almanya',
+    experience: '30+ yıl',
+    expertise: ['Quality Management', 'Valeo Germany', 'Casting & Materials'],
+    description: 'Valeo Germany PWT Country Quality Director, Valeo Turkey Country Quality Director. 30 yıl deneyimle kalite mükemmelliği konusunda uzman.',
+    image: '/images/team/senih-dinc.jpg',
+    bio: 'Senih DINC, 1965 Türkiye doğumlu, İstanbul Teknik Üniversitesi Metalurji Mühendisliği mezunu. Valeo Germany PWT Country Quality Director, Valeo Turkey Country Quality Director ve Valeo Turkey SQA Manager pozisyonlarında görev yaptı. Döküm ve malzeme uzmanlığı ile 30 yıl deneyim sahibi. QRQC, PDCA, FTA, Global 8D ve problem çözme araçları konusunda Role Model seviyesinde deneyim. Nürnberg\'de yaşıyor.'
   },
   {
-    name: 'Hans Müller',
-    position: 'CTO & Operasyon Direktörü',
-    location: 'Stuttgart, Almanya',
-    experience: '18+ yıl',
-    expertise: ['Technical Operations', 'Process Optimization', 'Team Management'],
-    description: 'Bosch ve Continental\'de kritik projelerin başarılı yönetimi.',
-    image: '/api/placeholder/150/150'
+    name: 'Aysu KAYAN',
+    position: 'Co-founder COO',
+    location: 'Lyon, Fransa',
+    experience: '15+ yıl',
+    expertise: ['Customer Quality', 'OEM Management', 'Project Quality'],
+    description: 'Valeo Group\'ta 15 yıl kalite deneyimi. Ford, Daimler, Renault (RSA) ve Stellantis (STLA) ile müşteri kalite yönetimi uzmanı.',
+    image: '/images/team/aysu-kayan.jpg',
+    bio: 'Aysu KAYAN, 1988 Türkiye doğumlu, Bursa Uludağ Üniversitesi Makine Mühendisliği mezunu. Valeo Group\'ta 15 yıl kalite deneyimi. Ford, Daimler, Renault (RSA) ve Stellantis (STLA) gibi büyük OEM\'lerle 10 yıl müşteri kalite yönetimi deneyimi. Üretim kalite ekiplerinin yönetimi ve ürün geliştirme ile proje kalite yönetimi konularında uzman. Lyon\'da yaşıyor.'
   },
   {
-    name: 'Pierre Dubois',
-    position: 'Quality Engineering Director',
+    name: 'Zafer SEYMEN',
+    position: 'Founding Advisor',
     location: 'Paris, Fransa',
-    experience: '16+ yıl',
-    expertise: ['Aerospace Quality', 'AS9100', 'Six Sigma'],
-    description: 'Airbus tedarik zincirinde kalite sistemleri uzmanlığı.',
-    image: '/api/placeholder/150/150'
-  },
-  {
-    name: 'Alessandro Rossi',
-    position: 'e-Mobility Specialist',
-    location: 'Milano, İtalya',
-    experience: '12+ yıl',
-    expertise: ['EV Systems', 'Battery Technology', 'Innovation'],
-    description: 'Tesla ve VW Group\'ta elektrikli araç kalite süreçleri deneyimi.',
-    image: '/api/placeholder/150/150'
+    experience: '25+ yıl',
+    expertise: ['Manufacturing Operations', 'Global Leadership', 'Operational Excellence'],
+    description: 'Valeo\'da Global Industrial Director, 30+ tesiste 15+ ülkede üretim operasyonları yönetimi. İki greenfield üretim tesisi kurulumu.',
+    image: '/images/team/zafer-seymen.jpg',
+    bio: 'Zafer SEYMEN, 1975 Türkiye doğumlu, İstanbul Yıldız Teknik Üniversitesi Makine Mühendisliği mezunu. Valeo\'da Global Industrial Director olarak 30+ tesiste 15+ ülkede üretim operasyonlarını yönetti. Valeo Turkey Plant Manager olarak görev yaptı. İki greenfield üretim tesisi kurdu ve tam operasyona geçirdi. 25 yıl deneyimle önde gelen global otomotiv şirketlerinde kilit operasyonel ve yönetici roller üstlendi. Üretim, süreç mühendisliği, tedarik zinciri yönetimi, performans yönetimi ve operasyonel mükemmellik konularında uzman. Paris\'te yaşıyor.'
   }
 ];
 
@@ -122,15 +113,21 @@ const milestones = [
 
 const getColorClasses = (color: string) => {
   const colors = {
-    blue: 'text-blue-600 bg-blue-50',
-    green: 'text-green-600 bg-green-50',
-    purple: 'text-purple-600 bg-purple-50',
-    orange: 'text-orange-600 bg-orange-50'
+    blue: 'text-blue-green bg-blue-green-light',
+    green: 'text-blue-green bg-teal-light',
+    purple: 'text-blue-green bg-blue-green-light',
+    orange: 'text-blue-green bg-teal-light'
   };
   return colors[color as keyof typeof colors] || colors.blue;
 };
 
 export default function AboutPage() {
+  const [imageErrors, setImageErrors] = useState<{[key: string]: boolean}>({});
+
+  const handleImageError = (memberName: string) => {
+    setImageErrors(prev => ({ ...prev, [memberName]: true }));
+  };
+
   return (
     <div className="min-h-screen">
       {/* Hero Section */}
@@ -138,10 +135,13 @@ export default function AboutPage() {
         <div className="container mx-auto container-padding">
           <div className="text-center">
             <h1 className="text-4xl lg:text-5xl font-bold mb-6">
-              Hakkımızda
+              QroneX
             </h1>
+            <h2 className="text-2xl lg:text-3xl font-semibold mb-6 text-blue-100">
+              Who are we !
+            </h2>
             <p className="text-xl lg:text-2xl text-blue-100 max-w-4xl mx-auto leading-relaxed">
-              QroneX; Avrupa&apos;da yerleşik saha mühendisleriyle Tier 1 tedarikçilerin kalite problemlerine hızlı ve doğru çözümler sunan lider kalite danışmanlık şirketidir.
+              Avrupa&apos;da yerleşik saha mühendisleriyle Tier 1 tedarikçilerin kalite problemlerine hızlı ve doğru çözümler sunan lider kalite danışmanlık şirketidir.
             </p>
           </div>
         </div>
@@ -247,41 +247,60 @@ export default function AboutPage() {
             </p>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+          <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
             {teamMembers.map((member, index) => (
               <Card key={index} className="text-center card-hover">
                 <CardHeader>
-                  <div className="w-24 h-24 bg-gray-200 rounded-full mx-auto mb-4 flex items-center justify-center">
-                    <Users className="h-12 w-12 text-gray-400" />
+                  <div className="w-32 h-32 bg-blue-green-gradient rounded-full mx-auto mb-6 flex items-center justify-center overflow-hidden">
+                    {imageErrors[member.name] ? (
+                      <Users className="h-16 w-16 text-white" />
+                    ) : (
+                      <img 
+                        src={member.image} 
+                        alt={member.name}
+                        className="w-full h-full object-cover rounded-full"
+                        onError={() => handleImageError(member.name)}
+                      />
+                    )}
                   </div>
-                  <CardTitle className="text-lg font-bold text-gray-900">
+                  <CardTitle className="text-xl font-bold text-gray-900 mb-2">
                     {member.name}
                   </CardTitle>
-                  <CardDescription className="text-blue-600 font-semibold">
+                  <CardDescription className="text-blue-600 font-semibold text-lg">
                     {member.position}
                   </CardDescription>
                 </CardHeader>
 
-                <CardContent className="space-y-4">
+                <CardContent className="space-y-6">
                   <div className="text-sm text-gray-600">
-                    <p className="flex items-center justify-center mb-1">
+                    <p className="flex items-center justify-center mb-2">
                       <Globe className="h-4 w-4 mr-2" />
                       {member.location}
                     </p>
-                    <p>{member.experience} deneyim</p>
+                    <p className="font-semibold text-blue-600">{member.experience} deneyim</p>
                   </div>
 
-                  <div className="flex flex-wrap gap-1 justify-center">
+                  <div className="flex flex-wrap gap-2 justify-center">
                     {member.expertise.map((skill) => (
-                      <Badge key={skill} variant="secondary" className="text-xs">
+                      <Badge key={skill} variant="secondary" className="text-xs bg-blue-50 text-blue-700">
                         {skill}
                       </Badge>
                     ))}
                   </div>
 
-                  <p className="text-sm text-gray-600 leading-relaxed">
-                    {member.description}
-                  </p>
+                  <div className="text-sm text-gray-600 leading-relaxed space-y-3">
+                    <p className="font-medium text-gray-800">
+                      {member.description}
+                    </p>
+                    <details className="group">
+                      <summary className="cursor-pointer text-blue-600 hover:text-blue-700 font-medium">
+                        Detaylı Biyografi
+                      </summary>
+                      <p className="mt-3 text-gray-600 leading-relaxed">
+                        {member.bio}
+                      </p>
+                    </details>
+                  </div>
                 </CardContent>
               </Card>
             ))}
@@ -303,7 +322,7 @@ export default function AboutPage() {
 
           <div className="relative">
             {/* Timeline Line */}
-            <div className="absolute left-1/2 transform -translate-x-1/2 w-1 h-full bg-blue-200 hidden lg:block"></div>
+            <div className="absolute left-1/2 transform -translate-x-1/2 w-1 h-full bg-blue-green-light hidden lg:block"></div>
 
             <div className="space-y-12">
               {milestones.map((milestone, index) => (
@@ -311,10 +330,10 @@ export default function AboutPage() {
                   <div className={`flex-1 ${index % 2 === 0 ? 'lg:pr-12' : 'lg:pl-12'}`}>
                     <Card className="p-6">
                       <div className="flex items-center space-x-4 mb-4">
-                        <Badge className="bg-blue-600 text-white font-bold text-lg px-3 py-1">
+                        <Badge className="bg-blue-green-gradient text-white font-bold text-lg px-3 py-1">
                           {milestone.year}
                         </Badge>
-                        <Badge variant="outline" className="text-blue-600">
+                        <Badge variant="outline" className="text-blue-green border-blue-green">
                           {milestone.achievement}
                         </Badge>
                       </div>
@@ -328,7 +347,7 @@ export default function AboutPage() {
                   </div>
 
                   {/* Timeline Dot */}
-                  <div className="hidden lg:flex w-4 h-4 bg-blue-600 rounded-full border-4 border-white shadow-lg relative z-10"></div>
+                  <div className="hidden lg:flex w-4 h-4 bg-blue-green-gradient rounded-full border-4 border-white shadow-lg relative z-10"></div>
 
                   <div className="flex-1"></div>
                 </div>
@@ -341,7 +360,7 @@ export default function AboutPage() {
       {/* CTA Section */}
       <section className="section-padding bg-white">
         <div className="container mx-auto container-padding">
-          <div className="bg-gradient-to-r from-blue-600 to-purple-600 rounded-2xl p-8 lg:p-12 text-center text-white">
+          <div className="bg-blue-green-gradient rounded-2xl p-8 lg:p-12 text-center text-white">
             <h2 className="text-3xl lg:text-4xl font-bold mb-4">
               Birlikte Başarıya Ulaşalım
             </h2>

@@ -1,6 +1,6 @@
 "use client";
 
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { useTranslations } from "next-intl";
 import { Link } from "@/i18n";
 import { Button } from "@/components/ui/button";
@@ -13,8 +13,7 @@ import {
   NavigationMenuTrigger,
 } from "@/components/ui/navigation-menu";
 import { Sheet, SheetContent, SheetTrigger } from "@/components/ui/sheet";
-import { Badge } from "@/components/ui/badge";
-import { Menu, Phone, Mail } from "lucide-react";
+import { Menu, ArrowRight } from "lucide-react";
 import { cn } from "@/lib/utils";
 
 interface HeaderProps {
@@ -24,227 +23,181 @@ interface HeaderProps {
 export function Header({ locale }: HeaderProps) {
   const t = useTranslations("navigation");
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
+  const [isHeaderVisible, setIsHeaderVisible] = useState(true);
+  const [lastScrollY, setLastScrollY] = useState(0);
 
   const services = [
     {
-      title: "On-Site Hızlı Müdahale",
-      href: "/services/on-site-rapid-response",
-      description: "24-72 saat içinde sahada müdahale",
+      title: "Resident Engineering",
+      description: "Customer Quick Response Activities, 8D Management, and Steering Problem-Solving Process",
+      href: "/services/resident-engineering"
     },
     {
-      title: "Sorting & Containment", 
-      href: "/services/sorting-containment",
-      description: "Hatalı parçaları ayırma ve kontrol",
+      title: "Quality Inspection & Rework @ Customer",
+      description: "Comprehensive quality inspection and rework services at customer locations",
+      href: "/services/quality-inspection-customer"
     },
     {
-      title: "Quality Engineering",
-      href: "/services/quality-engineering", 
-      description: "Kalite süreçlerini optimize etme",
+      title: "Quality Inspection & Rework @ Tier1",
+      description: "Quality inspection and rework services at Tier1 supplier locations",
+      href: "/services/quality-inspection-tier1"
     },
     {
-      title: "Technical Representation",
-      href: "/services/technical-representation",
-      description: "Yerinde teknik temsilcilik",
+      title: "Consulting & Training",
+      description: "Professional consulting and training services for quality improvement",
+      href: "/services/consulting-training"
     },
     {
-      title: "Supplier Readiness",
-      href: "/services/supplier-readiness",
-      description: "Tedarikçi hazırlık süreçleri",
-    },
-    {
-      title: "Audits & Training",
-      href: "/services/audits-training",
-      description: "Denetim ve eğitim hizmetleri",
-    },
+      title: "Advanced Phase & Launch Services",
+      description: "Advanced phase support and launch services for new products and processes",
+      href: "/services/advanced-phase-launch"
+    }
   ];
 
-  const industries = [
-    {
-      title: "Automotive OEM",
-      href: "/industries/automotive-oem",
-      description: "Ana otomotiv üreticileri",
-    },
-    {
-      title: "Tier 1 Suppliers",
-      href: "/industries/tier-1",
-      description: "Birinci kademe tedarikçiler",
-    },
-    {
-      title: "e-Mobility / EV",
-      href: "/industries/e-mobility",
-      description: "Elektrikli araç teknolojileri",
-    },
-    {
-      title: "Heavy Transport",
-      href: "/industries/heavy-transport", 
-      description: "Kamyon ve otobüs sektörü",
-    },
-    {
-      title: "Aerospace",
-      href: "/industries/aerospace",
-      description: "Havacılık sektörü",
-    },
-  ];
+  useEffect(() => {
+    const handleScroll = () => {
+      const currentScrollY = window.scrollY;
+      
+      // Show header when scrolling up, hide when scrolling down
+      if (currentScrollY > lastScrollY && currentScrollY > 100) {
+        // Scrolling down and past 100px - hide header
+        setIsHeaderVisible(false);
+      } else if (currentScrollY < lastScrollY) {
+        // Scrolling up - show header
+        setIsHeaderVisible(true);
+      }
+      
+      setLastScrollY(currentScrollY);
+    };
+
+    window.addEventListener('scroll', handleScroll, { passive: true });
+    
+    return () => {
+      window.removeEventListener('scroll', handleScroll);
+    };
+  }, [lastScrollY]);
+
+
 
   return (
-    <header className="sticky top-0 z-50 w-full border-b bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60">
+    <header className={cn(
+      "sticky top-0 z-50 w-full border-b bg-gradient-to-r from-slate-900 via-blue-900 to-teal-900 text-white transition-transform duration-300 ease-in-out",
+      isHeaderVisible ? "translate-y-0" : "-translate-y-full"
+    )}>
       <div className="container mx-auto px-4">
-        <div className="flex h-16 items-center justify-between">
+        <div className="flex h-20 items-center justify-between">
           {/* Logo */}
-          <Link href="/" className="flex items-center space-x-2">
-            <div className="h-8 w-8 rounded bg-primary text-primary-foreground flex items-center justify-center font-bold">
-              Q
+          <Link href="/" className="flex items-center space-x-4">
+            <div className="relative">
+              {/* Cinematic lighting effect */}
+              <div className="absolute inset-0 bg-gradient-to-r from-cyan-400/20 via-transparent to-emerald-400/20 rounded-xl blur-xl animate-pulse"></div>
+              <div className="absolute inset-0 bg-gradient-to-br from-blue-500/10 via-transparent to-teal-500/10 rounded-xl blur-lg"></div>
+              
+              {/* Logo container with glow effect */}
+              <div className="relative bg-gradient-to-br from-blue-600/20 to-teal-600/20 rounded-xl p-1 backdrop-blur-sm">
+                <img 
+                  src="/images/logo.jpg" 
+                  alt="QroneX Logo" 
+                  className="h-16 w-16 rounded-xl object-cover shadow-2xl ring-2 ring-white/20"
+                  onError={(e) => {
+                    // Fallback to text if image fails to load
+                    const target = e.target as HTMLImageElement;
+                    target.style.display = 'none';
+                    target.nextElementSibling?.classList.remove('hidden');
+                  }}
+                />
+                <div className="hidden h-16 w-16 rounded-xl bg-gradient-to-br from-blue-600 to-teal-600 flex items-center justify-center text-white font-bold text-2xl ring-2 ring-white/20">
+                  Q
+                </div>
+              </div>
             </div>
-            <span className="text-xl font-bold">QroneX</span>
+            <div className="flex flex-col justify-center">
+              <span className="text-2xl font-bold text-white leading-tight">QroneX</span>
+              <span className="text-xs text-gray-300 font-light tracking-wider mt-1 opacity-80">
+                Precision in Motion
+              </span>
+            </div>
           </Link>
 
-          {/* Desktop Navigation */}
-          <div className="hidden lg:flex lg:items-center lg:space-x-6">
+          {/* Desktop Navigation - Simplified */}
+          <div className="hidden lg:flex lg:items-center lg:space-x-8">
+            {/* Simple Navigation Links */}
+            <Link href="/about" className="text-white hover:text-gray-300 transition-colors duration-200 font-medium">
+              Company
+            </Link>
             <NavigationMenu>
               <NavigationMenuList>
-                {/* Services Mega Menu */}
                 <NavigationMenuItem>
-                  <NavigationMenuTrigger className="nav-link">
-                    {t("services")}
+                  <NavigationMenuTrigger className="text-white hover:text-gray-300 transition-colors duration-200 font-medium bg-transparent border-none p-0 h-auto text-base">
+                    Services
                   </NavigationMenuTrigger>
                   <NavigationMenuContent>
-                    <div className="grid w-[600px] gap-3 p-4 lg:grid-cols-2">
-                      <div className="row-span-3">
-                        <NavigationMenuLink asChild>
+                    <div className="w-[450px] p-4 bg-white rounded-lg shadow-xl border border-gray-200">
+                      <div className="space-y-2">
+                        {services.map((service) => (
                           <Link
-                            className="flex h-full w-full select-none flex-col justify-end rounded-md bg-gradient-to-b from-muted/50 to-muted p-6 no-underline outline-none focus:shadow-md"
-                            href="/services"
-                          >
-                            <div className="mb-2 mt-4 text-lg font-medium">
-                              Hizmetlerimiz
-                            </div>
-                            <p className="text-sm leading-tight text-muted-foreground">
-                              Avrupa genelinde yerleşik mühendis kadromuzla kalite problemlerinize hızlı çözümler
-                            </p>
-                          </Link>
-                        </NavigationMenuLink>
-                      </div>
-                      {services.slice(0, 5).map((service) => (
-                        <NavigationMenuLink key={service.href} asChild>
-                          <Link
+                            key={service.href}
                             href={service.href}
-                            className="block select-none space-y-1 rounded-md p-3 leading-none no-underline outline-none transition-colors hover:bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground"
+                            className="group block p-3 rounded-md border border-gray-200 hover:border-blue-300 hover:bg-blue-50 transition-all duration-200"
                           >
-                            <div className="text-sm font-medium leading-none">
-                              {service.title}
+                            <div className="flex items-center justify-between">
+                              <div className="flex-1">
+                                <h3 className="font-medium text-gray-900 group-hover:text-blue-600 transition-colors text-sm">
+                                  {service.title}
+                                </h3>
+                                <p className="text-xs text-gray-600 mt-1 leading-relaxed">
+                                  {service.description}
+                                </p>
+                              </div>
+                              <ArrowRight className="h-3 w-3 text-gray-400 group-hover:text-blue-600 group-hover:translate-x-1 transition-all ml-2" />
                             </div>
-                            <p className="line-clamp-2 text-sm leading-snug text-muted-foreground">
-                              {service.description}
-                            </p>
                           </Link>
-                        </NavigationMenuLink>
-                      ))}
+                        ))}
+                      </div>
+                      <div className="mt-4 pt-3 border-t border-gray-200 text-center">
+                        <Link 
+                          href="/services"
+                          className="text-blue-600 hover:text-blue-700 font-medium text-xs inline-flex items-center"
+                        >
+                          Tüm Hizmetleri Görüntüle
+                          <ArrowRight className="ml-1 h-3 w-3" />
+                        </Link>
+                      </div>
                     </div>
                   </NavigationMenuContent>
-                </NavigationMenuItem>
-
-                {/* Industries */}
-                <NavigationMenuItem>
-                  <NavigationMenuTrigger className="nav-link">
-                    {t("industries")}
-                  </NavigationMenuTrigger>
-                  <NavigationMenuContent>
-                    <div className="grid w-[500px] gap-3 p-4 lg:grid-cols-1">
-                      {industries.map((industry) => (
-                        <NavigationMenuLink key={industry.href} asChild>
-                          <Link
-                            href={industry.href}
-                            className="block select-none space-y-1 rounded-md p-3 leading-none no-underline outline-none transition-colors hover:bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground"
-                          >
-                            <div className="text-sm font-medium leading-none">
-                              {industry.title}
-                            </div>
-                            <p className="line-clamp-2 text-sm leading-snug text-muted-foreground">
-                              {industry.description}
-                            </p>
-                          </Link>
-                        </NavigationMenuLink>
-                      ))}
-                    </div>
-                  </NavigationMenuContent>
-                </NavigationMenuItem>
-
-                {/* Simple Links */}
-                <NavigationMenuItem>
-                  <NavigationMenuLink asChild>
-                    <Link href="/case-studies" className="nav-link">
-                      {t("caseStudies")}
-                    </Link>
-                  </NavigationMenuLink>
-                </NavigationMenuItem>
-
-                <NavigationMenuItem>
-                  <NavigationMenuLink asChild>
-                    <Link href="/about" className="nav-link">
-                      {t("about")}
-                    </Link>
-                  </NavigationMenuLink>
-                </NavigationMenuItem>
-
-                <NavigationMenuItem>
-                  <NavigationMenuLink asChild>
-                    <Link href="/careers" className="nav-link">
-                      {t("careers")}
-                      <Badge variant="secondary" className="ml-1 text-xs">
-                        5
-                      </Badge>
-                    </Link>
-                  </NavigationMenuLink>
-                </NavigationMenuItem>
-
-                <NavigationMenuItem>
-                  <NavigationMenuLink asChild>
-                    <Link href="/pricing" className="nav-link">
-                      {t("pricing")}
-                    </Link>
-                  </NavigationMenuLink>
                 </NavigationMenuItem>
               </NavigationMenuList>
             </NavigationMenu>
+            <Link href="/industries" className="text-white hover:text-gray-300 transition-colors duration-200 font-medium">
+              Competencies
+            </Link>
+            <Link href="/news" className="text-white hover:text-gray-300 transition-colors duration-200 font-medium">
+              News
+            </Link>
+            <Link href="/careers" className="text-white hover:text-gray-300 transition-colors duration-200 font-medium">
+              Career
+            </Link>
+            <Link href="/pricing" className="text-white hover:text-gray-300 transition-colors duration-200 font-medium">
+              Pricing
+            </Link>
+            <Link href="/contact" className="text-white hover:text-gray-300 transition-colors duration-200 font-medium">
+              Contact
+            </Link>
 
             {/* Language Toggle */}
-            <div className="flex items-center space-x-2">
-              <Link
-                href="/tr"
-                className={cn(
-                  "text-sm px-2 py-1 rounded",
-                  locale === "tr" ? "bg-primary text-primary-foreground" : "hover:bg-muted"
-                )}
-              >
-                TR
-              </Link>
-              <Link
-                href="/en"
-                className={cn(
-                  "text-sm px-2 py-1 rounded",
-                  locale === "en" ? "bg-primary text-primary-foreground" : "hover:bg-muted"
-                )}
-              >
-                EN
-              </Link>
-            </div>
-
-            {/* CTA Buttons */}
-            <div className="flex items-center space-x-2">
-              <Button variant="outline" size="sm" asChild>
-                <Link href="/contact">{t("getQuote")}</Link>
-              </Button>
-              <Button size="sm" asChild>
-                <Link href="/contact?service=start">{t("startService")}</Link>
-              </Button>
-            </div>
+            <Link
+              href={locale === "en" ? "/tr" : "/en"}
+              className="text-white hover:text-gray-300 transition-colors duration-200 font-medium"
+            >
+              {locale === "en" ? "TR" : "EN"}
+            </Link>
           </div>
 
           {/* Mobile menu toggle */}
           <div className="lg:hidden">
             <Sheet open={mobileMenuOpen} onOpenChange={setMobileMenuOpen}>
               <SheetTrigger asChild>
-                <Button variant="ghost" size="icon">
+                <Button variant="ghost" size="icon" className="text-white hover:bg-gray-700">
                   <Menu className="h-6 w-6" />
                   <span className="sr-only">Open menu</span>
                 </Button>
@@ -252,84 +205,67 @@ export function Header({ locale }: HeaderProps) {
               <SheetContent side="right" className="w-[300px] sm:w-[400px]">
                 <nav className="flex flex-col space-y-4">
                   <Link
-                    href="/services"
+                    href="/about"
                     className="text-lg font-medium"
                     onClick={() => setMobileMenuOpen(false)}
                   >
-                    {t("services")}
+                    Company
                   </Link>
+                  <div className="space-y-2">
+                    <div className="text-lg font-medium text-gray-900">Services</div>
+                    {services.map((service) => (
+                      <Link
+                        key={service.href}
+                        href={service.href}
+                        className="block pl-4 text-base text-gray-600 hover:text-blue-600 transition-colors"
+                        onClick={() => setMobileMenuOpen(false)}
+                      >
+                        {service.title}
+                      </Link>
+                    ))}
+                  </div>
                   <Link
                     href="/industries"
                     className="text-lg font-medium"
                     onClick={() => setMobileMenuOpen(false)}
                   >
-                    {t("industries")}
+                    Competencies
                   </Link>
                   <Link
-                    href="/case-studies"
+                    href="/news"
                     className="text-lg font-medium"
                     onClick={() => setMobileMenuOpen(false)}
                   >
-                    {t("caseStudies")}
-                  </Link>
-                  <Link
-                    href="/about"
-                    className="text-lg font-medium"
-                    onClick={() => setMobileMenuOpen(false)}
-                  >
-                    {t("about")}
+                    News
                   </Link>
                   <Link
                     href="/careers"
                     className="text-lg font-medium"
                     onClick={() => setMobileMenuOpen(false)}
                   >
-                    {t("careers")}
+                    Career
                   </Link>
                   <Link
                     href="/pricing"
                     className="text-lg font-medium"
                     onClick={() => setMobileMenuOpen(false)}
                   >
-                    {t("pricing")}
+                    Pricing
                   </Link>
                   <Link
                     href="/contact"
                     className="text-lg font-medium"
                     onClick={() => setMobileMenuOpen(false)}
                   >
-                    {t("contact")}
+                    Contact
                   </Link>
-                  
-                  <div className="flex space-x-2 pt-4">
-                    <Button className="flex-1" asChild>
-                      <Link href="/contact">{t("getQuote")}</Link>
-                    </Button>
-                  </div>
                 </nav>
               </SheetContent>
             </Sheet>
           </div>
         </div>
 
-        {/* Top contact bar */}
-        <div className="hidden lg:flex items-center justify-between py-2 text-sm text-muted-foreground border-b">
-          <div className="flex items-center space-x-6">
-            <div className="flex items-center space-x-1">
-              <Phone className="h-3 w-3" />
-              <span>+49 89 123 456 789</span>
-            </div>
-            <div className="flex items-center space-x-1">
-              <Mail className="h-3 w-3" />
-              <span>info@qronex.com</span>
-            </div>
-          </div>
-          <div className="flex items-center space-x-4">
-            <span>🇩🇪 Munich</span>
-            <span>🇫🇷 Paris</span>
-            <span>🇹🇷 Istanbul</span>
-          </div>
-        </div>
+
       </div>
     </header>
   );

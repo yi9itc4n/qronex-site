@@ -283,5 +283,37 @@
     "terms": "Kullanım Koşulları",
     "cookies": "Çerez Politikası",
     "copyright": "© 2024 QroneX. Tüm hakları saklıdır."
+  },
+  "news": {
+    "title": "Haberler & İçgörüler",
+    "subtitle": "QroneX'ten en son sektör trendleri, vaka çalışmaları ve içgörülerle güncel kalın",
+    "featured": "Öne Çıkan",
+    "readMore": "Devamını Oku",
+    "readFullArticle": "Tam Makaleyi Oku",
+    "backToNews": "Haberlere Dön",
+    "share": "Paylaş",
+    "bookmark": "Yer İmi Ekle",
+    "aboutAuthor": "Yazar Hakkında",
+    "relatedArticles": "İlgili Makaleler",
+    "stayUpdated": "Güncel Kalın",
+    "subscribeNewsletter": "Bülten Aboneliği",
+    "viewAllServices": "Tüm Hizmetleri Görüntüle",
+    "readyToTransform": "Kalite Yönetiminizi Dönüştürmeye Hazır mısınız?",
+    "getStartedToday": "Bugün Başlayın",
+    "viewOurServices": "Hizmetlerimizi Görüntüleyin",
+    "latestArticles": "Son Makaleler",
+    "tags": "Etiketler",
+    "author": "Yazar",
+    "publishDate": "Yayın Tarihi",
+    "readTime": "Okuma Süresi",
+    "categories": {
+      "all": "Tümü",
+      "caseStudy": "Vaka Çalışması",
+      "industryNews": "Sektör Haberleri",
+      "industryInsights": "Sektör İçgörüleri",
+      "technology": "Teknoloji",
+      "sustainability": "Sürdürülebilirlik",
+      "eMobility": "E-Mobilite"
+    }
   }
 }

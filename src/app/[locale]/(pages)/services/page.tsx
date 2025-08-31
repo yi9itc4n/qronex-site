@@ -34,107 +34,93 @@ export default function ServicesPage() {
 
   const services = [
     {
-      id: "on-site-rapid-response",
-      slug: "on-site-hizli-mudahale",
+      id: "resident-engineering",
+      slug: "resident-engineering",
       icon: "zap" as keyof typeof serviceIcons,
-      title: t("onSiteRapidResponse.title"),
-      description: t("onSiteRapidResponse.description"),
-      features: ["24-72h müdahale", "7/24 destek", "Acil müdahale", "Anlık kaynak tahsisi"],
-      sla: "6-24 saat",
-      color: "text-red-600",
-      bgColor: "bg-red-50",
-      borderColor: "border-red-200",
-      featured: true,
-    },
-    {
-      id: "sorting-containment",
-      slug: "sorting-containment", 
-      icon: "filter" as keyof typeof serviceIcons,
-      title: t("sortingContainment.title"),
-      description: t("sortingContainment.description"),
-      features: ["%100 kontrol", "Hızlı ayırma", "Risk yönetimi", "Dokümantasyon"],
-      sla: "12-48 saat",
+      title: "Resident Engineering",
+      description: "Customer Quick Response Activities, 8D Management, and Steering Problem-Solving Process",
+      features: [
+        "Customer Quick Response Activities",
+        "8D Management", 
+        "Steering Problem-Solving Process",
+        "Daily quality routines on production floor"
+      ],
+      sla: "Sürekli",
       color: "text-blue-600",
-      bgColor: "bg-blue-50", 
+      bgColor: "bg-blue-50",
       borderColor: "border-blue-200",
       featured: true,
     },
     {
-      id: "rework",
-      slug: "rework",
-      icon: "wrench" as keyof typeof serviceIcons,
-      title: t("rework.title"),
-      description: t("rework.description"),
-      features: ["Parça kurtarma", "Maliyet tasarrufu", "Hızlı çözüm", "Kalite garantisi"],
-      sla: "24-72 saat",
+      id: "quality-inspection-customer",
+      slug: "quality-inspection-customer",
+      icon: "shield" as keyof typeof serviceIcons,
+      title: "Quality Inspection & Rework @ Customer",
+      description: "Comprehensive quality inspection and rework services at customer locations",
+      features: [
+        "On-site quality inspection",
+        "Customer location rework",
+        "Quality control procedures",
+        "Immediate response to quality issues"
+      ],
+      sla: "24-48 saat",
       color: "text-green-600",
       bgColor: "bg-green-50",
       borderColor: "border-green-200",
-      featured: false,
+      featured: true,
     },
     {
-      id: "quality-engineering",
-      slug: "quality-engineering",
-      icon: "shield" as keyof typeof serviceIcons,
-      title: t("qualityEngineering.title"),
-      description: t("qualityEngineering.description"),
-      features: ["Süreç iyileştirme", "Kalite sistemleri", "Analiz", "Metodoloji geliştirme"],
-      sla: "1-2 hafta",
+      id: "quality-inspection-tier1",
+      slug: "quality-inspection-tier1",
+      icon: "filter" as keyof typeof serviceIcons,
+      title: "Quality Inspection & Rework @ Tier1",
+      description: "Quality inspection and rework services at Tier1 supplier locations",
+      features: [
+        "Tier1 supplier quality inspection",
+        "Supplier location rework",
+        "Quality assurance procedures",
+        "Supplier development support"
+      ],
+      sla: "24-72 saat",
       color: "text-purple-600",
       bgColor: "bg-purple-50",
       borderColor: "border-purple-200",
       featured: false,
     },
     {
-      id: "supplier-readiness",
-      slug: "supplier-readiness",
-      icon: "userCheck" as keyof typeof serviceIcons,
-      title: t("supplierReadiness.title"),
-      description: t("supplierReadiness.description"),
-      features: ["Tedarikçi geliştirme", "Hazırlık süreçleri", "Sertifikasyon", "Eğitim"],
-      sla: "2-4 hafta",
+      id: "consulting-training",
+      slug: "consulting-training",
+      icon: "graduationCap" as keyof typeof serviceIcons,
+      title: "Consulting & Training",
+      description: "Professional consulting and training services for quality improvement",
+      features: [
+        "Quality consulting services",
+        "Professional training programs",
+        "Process improvement guidance",
+        "Best practices implementation"
+      ],
+      sla: "1-4 hafta",
       color: "text-orange-600",
       bgColor: "bg-orange-50",
       borderColor: "border-orange-200",
       featured: false,
     },
     {
-      id: "technical-representation",
-      slug: "technical-representation",
-      icon: "building" as keyof typeof serviceIcons,
-      title: t("technicalRepresentation.title"),
-      description: t("technicalRepresentation.description"),
-      features: ["Yerinde destek", "Sürekli izleme", "Danışmanlık", "Raporlama"],
-      sla: "Sürekli",
+      id: "advanced-phase-launch",
+      slug: "advanced-phase-launch",
+      icon: "userCheck" as keyof typeof serviceIcons,
+      title: "Advanced Phase & Launch Services",
+      description: "Advanced phase support and launch services for new products and processes",
+      features: [
+        "Advanced phase support",
+        "Product launch services",
+        "Process validation",
+        "Launch readiness assessment"
+      ],
+      sla: "2-8 hafta",
       color: "text-teal-600",
       bgColor: "bg-teal-50",
       borderColor: "border-teal-200",
-      featured: true,
-    },
-    {
-      id: "audits-training",
-      slug: "audits-training",
-      icon: "graduationCap" as keyof typeof serviceIcons,
-      title: t("auditsTraining.title"),
-      description: t("auditsTraining.description"),
-      features: ["Sistem denetimi", "Personel eğitimi", "Sertifikasyon", "İyileştirme"],
-      sla: "1-3 hafta",
-      color: "text-indigo-600",
-      bgColor: "bg-indigo-50",
-      borderColor: "border-indigo-200",
-      featured: false,
-    },
-    {
-      id: "aftersales-support",
-      slug: "aftersales-support",
-      icon: "headphones" as keyof typeof serviceIcons,
-      title: t("aftersalesSupport.title"),
-      description: t("aftersalesSupport.description"),
-      features: ["Müşteri desteği", "Sorun çözme", "Sürekli iyileştirme", "İzleme"],
-      sla: "7/24",
-      color: "text-pink-600",
-      bgColor: "bg-pink-50",
-      borderColor: "border-pink-200",
       featured: false,
     },
   ];
@@ -152,13 +138,13 @@ export default function ServicesPage() {
               {t("subtitle")}
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Button size="lg" className="bg-blue-600 hover:bg-blue-700" asChild>
+              <Button size="lg" className="btn-blue-green" asChild>
                 <Link href="/contact">
                   Hemen Teklif Al
                   <ArrowRight className="ml-2 h-4 w-4" />
                 </Link>
               </Button>
-              <Button size="lg" variant="outline" className="bg-transparent border-white text-white hover:bg-white hover:text-slate-900" asChild>
+              <Button size="lg" variant="outline" className="btn-outline-blue-green border-white text-white hover:bg-white hover:text-slate-900" asChild>
                 <Link href="/pricing">
                   Paket Seçenekleri
                 </Link>
@@ -176,16 +162,16 @@ export default function ServicesPage() {
               const IconComponent = serviceIcons[service.icon];
               
               return (
-                <Card key={service.id} className={`card-hover relative ${service.borderColor} border-2 h-full`}>
+                <Card key={service.id} className={`card-hover relative border-2 h-full bg-blue-green-subtle border-blue-green`}>
                   {service.featured && (
-                    <Badge className="absolute -top-3 left-6 bg-gradient-to-r from-blue-600 to-purple-600">
+                    <Badge className="absolute -top-3 left-6 bg-blue-green-gradient">
                       Popüler
                     </Badge>
                   )}
                   
                   <CardHeader>
-                    <div className={`w-12 h-12 ${service.bgColor} rounded-lg flex items-center justify-center mb-4`}>
-                      <IconComponent className={`h-6 w-6 ${service.color}`} />
+                    <div className="w-12 h-12 bg-blue-green-gradient rounded-lg flex items-center justify-center mb-4">
+                      <IconComponent className="h-6 w-6 text-white" />
                     </div>
                     <CardTitle className="text-xl mb-2">{service.title}</CardTitle>
                     <div className="flex items-center space-x-2 mb-2">
@@ -239,32 +225,32 @@ export default function ServicesPage() {
 
           <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
             <div className="text-center">
-              <div className="w-16 h-16 bg-blue-100 rounded-full flex items-center justify-center mx-auto mb-4">
-                <span className="text-2xl font-bold text-blue-600">1</span>
+              <div className="w-16 h-16 bg-blue-green-subtle rounded-full flex items-center justify-center mx-auto mb-4">
+                <span className="text-2xl font-bold text-blue-green">1</span>
               </div>
               <h3 className="font-semibold mb-2">İlk Değerlendirme</h3>
               <p className="text-sm text-gray-600">Problem analizi ve acil aksiyonların belirlenmesi</p>
             </div>
             
             <div className="text-center">
-              <div className="w-16 h-16 bg-green-100 rounded-full flex items-center justify-center mx-auto mb-4">
-                <span className="text-2xl font-bold text-green-600">2</span>
+              <div className="w-16 h-16 bg-blue-green-subtle rounded-full flex items-center justify-center mx-auto mb-4">
+                <span className="text-2xl font-bold text-blue-green">2</span>
               </div>
               <h3 className="font-semibold mb-2">Ekip Mobilizasyonu</h3>
               <p className="text-sm text-gray-600">Uzman ekip ve kaynakların sahaya sevkiyatı</p>
             </div>
             
             <div className="text-center">
-              <div className="w-16 h-16 bg-purple-100 rounded-full flex items-center justify-center mx-auto mb-4">
-                <span className="text-2xl font-bold text-purple-600">3</span>
+              <div className="w-16 h-16 bg-blue-green-subtle rounded-full flex items-center justify-center mx-auto mb-4">
+                <span className="text-2xl font-bold text-blue-green">3</span>
               </div>
               <h3 className="font-semibold mb-2">Çözüm Uygulama</h3>
               <p className="text-sm text-gray-600">Sistematik yaklaşımla problemin çözümü</p>
             </div>
             
             <div className="text-center">
-              <div className="w-16 h-16 bg-orange-100 rounded-full flex items-center justify-center mx-auto mb-4">
-                <span className="text-2xl font-bold text-orange-600">4</span>
+              <div className="w-16 h-16 bg-blue-green-subtle rounded-full flex items-center justify-center mx-auto mb-4">
+                <span className="text-2xl font-bold text-blue-green">4</span>
               </div>
               <h3 className="font-semibold mb-2">Raporlama & İyileştirme</h3>
               <p className="text-sm text-gray-600">Detaylı rapor ve gelecek önerileri</p>
@@ -274,7 +260,7 @@ export default function ServicesPage() {
       </section>
 
       {/* CTA section */}
-      <section className="section-padding bg-gradient-to-r from-blue-600 to-purple-600 text-white">
+      <section className="section-padding bg-blue-green-gradient text-white">
         <div className="container mx-auto container-padding text-center">
           <h2 className="text-3xl lg:text-4xl font-bold mb-4">
             Hangi Hizmete İhtiyacınız Var?
@@ -284,14 +270,14 @@ export default function ServicesPage() {
             Ücretsiz ön değerlendirme ile başlayın.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Button size="lg" className="bg-white text-blue-600 hover:bg-gray-100" asChild>
+            <Button size="lg" className="bg-white text-blue-green hover:bg-gray-100" asChild>
               <Link href="/contact">
                 <Users className="mr-2 h-4 w-4" />
                 Uzmanlarla Konuş
               </Link>
             </Button>
-            <Button size="lg" variant="outline" className="border-white text-white hover:bg-white hover:text-blue-600" asChild>
-              <Link href="/case-studies">
+            <Button size="lg" variant="outline" className="border-white text-white hover:bg-white hover:text-blue-green" asChild>
+              <Link href="/news">
                 Başarı Hikayelerini Gör
               </Link>
             </Button>
@@ -301,3 +287,7 @@ export default function ServicesPage() {
     </main>
   );
 }
+
+
+
+

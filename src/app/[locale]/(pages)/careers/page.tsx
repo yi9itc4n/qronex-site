@@ -339,7 +339,7 @@ export default function CareersPage() {
       </section>
 
       {/* Benefits Section */}
-      <section className="section-padding bg-gray-50">
+      <section className="section-padding bg-slate-100">
         <div className="container mx-auto container-padding">
           <div className="text-center mb-16">
             <h2 className="text-3xl lg:text-4xl font-bold text-gray-900 mb-4">
@@ -354,7 +354,7 @@ export default function CareersPage() {
             {benefits.map((benefit, index) => {
               const Icon = benefit.icon;
               return (
-                <Card key={index} className="text-center p-6 card-hover bg-white">
+                <Card key={index} className="text-center p-6 card-hover bg-white shadow-md border-gray-200">
                   <CardHeader>
                     <div className="w-16 h-16 bg-blue-50 rounded-full flex items-center justify-center mx-auto mb-4">
                       <Icon className="h-8 w-8 text-blue-600" />
@@ -376,7 +376,7 @@ export default function CareersPage() {
       </section>
 
       {/* Open Positions */}
-      <section className="section-padding bg-white">
+      <section className="section-padding bg-slate-100">
         <div className="container mx-auto container-padding">
           <div className="text-center mb-16">
             <h2 className="text-3xl lg:text-4xl font-bold text-gray-900 mb-4">
@@ -389,7 +389,7 @@ export default function CareersPage() {
 
           <div className="space-y-6">
             {jobs.map((job) => (
-              <Card key={job.id} className={`p-6 card-hover ${job.featured ? 'border-blue-500 border-2' : ''}`}>
+              <Card key={job.id} className={`p-6 card-hover bg-white shadow-md border-gray-200 ${job.featured ? 'border-blue-500 border-2' : ''}`}>
                 <div className="flex flex-col lg:flex-row lg:items-center lg:justify-between">
                   <div className="flex-1">
                     <div className="flex items-start justify-between mb-4">
