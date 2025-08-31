@@ -1,5 +1,6 @@
 "use client";
 
+import { useState, useEffect } from "react";
 import { useTranslations } from "next-intl";
 import { Link } from "@/i18n";
 import { Card, CardContent } from "@/components/ui/card";
@@ -19,13 +20,24 @@ import {
 } from "lucide-react";
 
 interface ArticlePageProps {
-  params: {
+  params: Promise<{
     slug: string;
-  };
+  }>;
 }
 
 export default function ArticlePage({ params }: ArticlePageProps) {
   const t = useTranslations("news");
+  const [slug, setSlug] = useState<string>("");
+  const [isLoading, setIsLoading] = useState(true);
+
+  useEffect(() => {
+    const getParams = async () => {
+      const resolvedParams = await params;
+      setSlug(resolvedParams.slug);
+      setIsLoading(false);
+    };
+    getParams();
+  }, [params]);
 
   // This would typically come from a CMS or API
   const articles = [
@@ -129,7 +141,17 @@ export default function ArticlePage({ params }: ArticlePageProps) {
     }
   ];
 
-  const article = articles.find(a => a.slug === params.slug);
+  const article = articles.find(a => a.slug === slug);
+
+  if (isLoading) {
+    return (
+      <div className="min-h-screen flex items-center justify-center">
+        <div className="text-center">
+          <div className="animate-pulse text-lg text-gray-600">Loading...</div>
+        </div>
+      </div>
+    );
+  }
 
   if (!article) {
     return (
