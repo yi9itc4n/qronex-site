@@ -26,6 +26,7 @@ interface ArticlePageProps {
 
 export default function ArticlePage({ params }: ArticlePageProps) {
   const t = useTranslations("news");
+  const { slug } = params;
 
   // This would typically come from a CMS or API
   const articles = [
@@ -129,7 +130,7 @@ export default function ArticlePage({ params }: ArticlePageProps) {
     }
   ];
 
-  const article = articles.find(a => a.slug === params.slug);
+  const article = articles.find(a => a.slug === slug);
 
   if (!article) {
     return (
