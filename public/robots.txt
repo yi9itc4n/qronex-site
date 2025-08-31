@@ -24,3 +24,7 @@ Sitemap: https://qronex.vercel.app/en/sitemap.xml
 
 # Crawl-delay for respectful crawling
 Crawl-delay: 1
+
+
+
+

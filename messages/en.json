@@ -284,5 +284,37 @@
     "terms": "Terms of Service",
     "cookies": "Cookie Policy",
     "copyright": "© 2024 QroneX. All rights reserved."
+  },
+  "news": {
+    "title": "News & Insights",
+    "subtitle": "Stay updated with the latest industry trends, case studies, and insights from QroneX",
+    "featured": "Featured",
+    "readMore": "Read More",
+    "readFullArticle": "Read Full Article",
+    "backToNews": "Back to News",
+    "share": "Share",
+    "bookmark": "Bookmark",
+    "aboutAuthor": "About the Author",
+    "relatedArticles": "Related Articles",
+    "stayUpdated": "Stay Updated",
+    "subscribeNewsletter": "Subscribe to Newsletter",
+    "viewAllServices": "View All Services",
+    "readyToTransform": "Ready to Transform Your Quality Management?",
+    "getStartedToday": "Get Started Today",
+    "viewOurServices": "View Our Services",
+    "latestArticles": "Latest Articles",
+    "tags": "Tags",
+    "author": "Author",
+    "publishDate": "Publish Date",
+    "readTime": "Read Time",
+    "categories": {
+      "all": "All",
+      "caseStudy": "Case Study",
+      "industryNews": "Industry News",
+      "industryInsights": "Industry Insights",
+      "technology": "Technology",
+      "sustainability": "Sustainability",
+      "eMobility": "E-Mobility"
+    }
   }
 }
