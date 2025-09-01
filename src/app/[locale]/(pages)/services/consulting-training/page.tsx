@@ -1,6 +1,5 @@
 "use client";
 
-import { useTranslations } from "next-intl";
 import { Link } from "@/i18n";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
@@ -12,7 +11,9 @@ import {
   ArrowRight,
   BookOpen,
   Lightbulb,
-  Award
+  Award,
+  Target,
+  TrendingUp
 } from "lucide-react";
 
 export default function ConsultingTrainingPage() {
