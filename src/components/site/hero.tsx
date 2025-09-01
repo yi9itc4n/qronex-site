@@ -29,7 +29,7 @@ export function Hero() {
   const slides = [
     {
       id: 1,
-      title: "On-Site Hızlı Müdahale",
+      title: "Yerinde Hızlı Müdahale",
       description: "24-72 saat içinde sahada müdahale ile kalite problemlerinizi hızla çözün",
       icon: Wrench,
       link: "/services/on-site-rapid-response",

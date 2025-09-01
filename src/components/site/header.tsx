@@ -180,7 +180,7 @@ export function Header({ locale }: HeaderProps) {
               Career
             </Link>
             <Link href="/pricing" className="text-white hover:text-gray-300 transition-colors duration-200 font-medium">
-              Pricing
+              Get Offer
             </Link>
             <Link href="/contact" className="text-white hover:text-gray-300 transition-colors duration-200 font-medium">
               Contact
@@ -252,7 +252,7 @@ export function Header({ locale }: HeaderProps) {
                     className="text-lg font-medium"
                     onClick={() => setMobileMenuOpen(false)}
                   >
-                    Pricing
+                    Get Offer
                   </Link>
                   <Link
                     href="/contact"
