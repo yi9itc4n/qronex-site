@@ -12,7 +12,8 @@ import {
   ArrowRight,
   Eye,
   Wrench,
-  Building
+  Building,
+  BarChart3
 } from "lucide-react";
 
 export default function QualityInspectionTier1Page() {
