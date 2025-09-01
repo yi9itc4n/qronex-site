@@ -10,9 +10,6 @@ import {
   Clock,
   User,
   ArrowRight,
-  TrendingUp,
-  Award,
-  Globe,
   Factory
 } from "lucide-react";
 

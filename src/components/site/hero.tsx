@@ -15,7 +15,6 @@ import {
   ChevronRight,
   Wrench,
   Factory,
-  Users2,
   Award,
   TrendingUp,
   Shield
@@ -97,7 +96,7 @@ export function Hero() {
       setAnimationKey(prev => prev + 1);
     }, 5000);
     return () => clearInterval(timer);
-  }, []);
+  }, [slides.length]);
 
   return (
     <>
@@ -121,7 +120,7 @@ export function Hero() {
               className="flex transition-transform duration-500 ease-in-out"
               style={{ transform: `translateX(-${currentSlide * 100}%)` }}
             >
-                            {slides.map((slide, index) => (
+                            {slides.map((slide) => (
                 <div key={`${slide.id}-${currentSlide}`} className="w-full flex-shrink-0">
                   <div className={`relative p-8 lg:p-16 bg-gradient-to-br ${slide.color} border-y border-white/20`}>
                     <div className="container mx-auto">

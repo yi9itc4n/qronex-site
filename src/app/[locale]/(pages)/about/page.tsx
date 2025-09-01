@@ -5,6 +5,7 @@ import { Badge } from '@/components/ui/badge';
 import { Globe, Users, Award, TrendingUp, Target, Shield, Heart, Lightbulb } from 'lucide-react';
 import { Link } from '@/i18n';
 import { useState } from 'react';
+import Image from 'next/image';
 
 const teamMembers = [
   {
@@ -255,9 +256,11 @@ export default function AboutPage() {
                     {imageErrors[member.name] ? (
                       <Users className="h-16 w-16 text-white" />
                     ) : (
-                      <img 
+                      <Image 
                         src={member.image} 
                         alt={member.name}
+                        width={128}
+                        height={128}
                         className="w-full h-full object-cover rounded-full"
                         onError={() => handleImageError(member.name)}
                       />

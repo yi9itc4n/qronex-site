@@ -13,13 +13,10 @@ import {
   ArrowRight,
   Target,
   TrendingUp,
-  Shield,
-  Wrench,
-  BarChart3
+  Wrench
 } from "lucide-react";
 
 export default function ResidentEngineeringPage() {
-  const t = useTranslations("services");
 
   const features = [
     {

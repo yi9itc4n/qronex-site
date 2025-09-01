@@ -3,12 +3,12 @@
 import { useState, useEffect } from "react";
 import { useTranslations } from "next-intl";
 import { Link } from "@/i18n";
+import Image from "next/image";
 import { Button } from "@/components/ui/button";
 import {
   NavigationMenu,
   NavigationMenuContent,
   NavigationMenuItem,
-  NavigationMenuLink,
   NavigationMenuList,
   NavigationMenuTrigger,
 } from "@/components/ui/navigation-menu";
@@ -21,7 +21,6 @@ interface HeaderProps {
 }
 
 export function Header({ locale }: HeaderProps) {
-  const t = useTranslations("navigation");
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   const [isHeaderVisible, setIsHeaderVisible] = useState(true);
   const [lastScrollY, setLastScrollY] = useState(0);
@@ -95,9 +94,11 @@ export function Header({ locale }: HeaderProps) {
               
               {/* Logo container with glow effect */}
               <div className="relative bg-gradient-to-br from-blue-600/20 to-teal-600/20 rounded-xl p-1 backdrop-blur-sm">
-                <img 
+                <Image 
                   src="/images/logo.jpg" 
                   alt="QroneX Logo" 
+                  width={64}
+                  height={64}
                   className="h-16 w-16 rounded-xl object-cover shadow-2xl ring-2 ring-white/20"
                   onError={(e) => {
                     // Fallback to text if image fails to load

@@ -13,10 +13,7 @@ import {
   ArrowLeft,
   Share2,
   Bookmark,
-  Factory,
-  TrendingUp,
-  Award,
-  Globe
+  Factory
 } from "lucide-react";
 
 interface ArticlePageProps {

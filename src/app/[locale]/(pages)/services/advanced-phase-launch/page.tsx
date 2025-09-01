@@ -11,16 +11,12 @@ import {
   Users,
   CheckCircle,
   ArrowRight,
-  Target,
-  TrendingUp,
   Zap,
   Settings,
-  BarChart3,
   Star
 } from "lucide-react";
 
 export default function AdvancedPhaseLaunchPage() {
-  const t = useTranslations("services");
 
   const services = [
     {

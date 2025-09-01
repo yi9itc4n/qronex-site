@@ -11,16 +11,12 @@ import {
   Users,
   CheckCircle,
   ArrowRight,
-  Target,
-  TrendingUp,
   Eye,
   Wrench,
-  BarChart3,
   MapPin
 } from "lucide-react";
 
 export default function QualityInspectionCustomerPage() {
-  const t = useTranslations("services");
 
   const services = [
     {

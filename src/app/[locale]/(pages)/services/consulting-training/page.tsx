@@ -7,20 +7,15 @@ import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
 import { 
   GraduationCap,
-  Clock,
   Users,
   CheckCircle,
   ArrowRight,
-  Target,
-  TrendingUp,
   BookOpen,
   Lightbulb,
-  BarChart3,
   Award
 } from "lucide-react";
 
 export default function ConsultingTrainingPage() {
-  const t = useTranslations("services");
 
   const services = [
     {
@@ -240,7 +235,7 @@ export default function ConsultingTrainingPage() {
                   </div>
                   <div>
                     <h3 className="text-xl font-semibold text-gray-900 mb-2">Customized Approach</h3>
-                    <p className="text-gray-600">Tailored solutions designed specifically for your organization's needs</p>
+                    <p className="text-gray-600">Tailored solutions designed specifically for your organization&apos;s needs</p>
                   </div>
                 </div>
                 <div className="flex items-start space-x-4">
