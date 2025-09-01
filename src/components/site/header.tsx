@@ -129,7 +129,9 @@ export function Header({ locale }: HeaderProps) {
               <NavigationMenuList>
                 <NavigationMenuItem>
                   <NavigationMenuTrigger className="text-white hover:text-gray-300 transition-colors duration-200 font-medium bg-transparent border-none p-0 h-auto text-base">
-                    Services
+                    <Link href="/services" className="hover:text-gray-300 transition-colors duration-200">
+                      Services
+                    </Link>
                   </NavigationMenuTrigger>
                   <NavigationMenuContent>
                     <div className="w-[450px] p-4 bg-white rounded-lg shadow-xl border border-gray-200">
