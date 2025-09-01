@@ -12,7 +12,8 @@ import {
   ArrowRight,
   Eye,
   Wrench,
-  MapPin
+  MapPin,
+  BarChart3
 } from "lucide-react";
 
 export default function QualityInspectionCustomerPage() {
