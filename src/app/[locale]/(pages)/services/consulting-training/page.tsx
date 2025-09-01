@@ -178,7 +178,7 @@ export default function ConsultingTrainingPage() {
               Training Programs
             </h2>
             <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-              Professional training programs designed to develop your team's quality management expertise
+              Professional training programs designed to develop your team&apos;s quality management expertise
             </p>
           </div>
 
