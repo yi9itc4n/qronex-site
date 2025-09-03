@@ -56,6 +56,8 @@
   "services": {
     "title": "Our Services",
     "subtitle": "Fast solutions to your quality problems with our field engineers based in Europe",
+    "processTitle": "Our Process",
+    "processSubtitle": "The steps we follow to deliver consistent, high-quality results",
     "onSiteRapidResponse": {
       "title": "On-Site Rapid Response",
       "description": "24/7 field support for immediate response to your quality issues",
@@ -134,6 +136,25 @@
     "aerospace": {
       "title": "Aerospace",
       "description": "High-standard quality services for the aerospace sector"
+    },
+    "hero": {
+      "title": "Industries",
+      "subtitle": "We develop tailored quality solutions with our experience across sectors"
+    },
+    "sections": {
+      "expertiseTitle": "Our Expertise Areas",
+      "servicesHighlight": "Featured Services",
+      "stats": {
+        "projects": "Projects",
+        "clients": "Clients",
+        "locations": "Locations"
+      },
+      "cta": {
+        "title": "Looking for a Solution for Your Industry?",
+        "subtitle": "Let our experienced team develop quality solutions tailored to your industry's specific needs",
+        "primary": "Get Free Consultation",
+        "secondary": "Explore Our Services"
+      }
     }
   },
   "home": {
@@ -335,7 +356,138 @@
         "Custom SLAs",
         "Dedicated account manager"
       ]
+    },
+    "hero": {
+      "title": "Enterprise Solutions",
+      "subtitle": "Customized quality engineering services for large-scale projects",
+      "ctaPrimary": "Get Custom Quote",
+      "ctaSecondary": "Talk to Experts"
+    },
+    "packages": {
+      "title": "Enterprise Solution Packages",
+      "subtitle": "Three enterprise package options tailored to your needs",
+      "included": "Included Services:",
+      "cta": "Request Quote"
+    },
+    "why": {
+      "title": "Why Enterprise Solutions?",
+      "subtitle": "Learn why we are the right choice for large-scale projects",
+      "expertise": "Proven Expertise",
+      "expertiseBullets": [
+        "15+ years of industry experience with automotive quality standards",
+        "Experience working with Fortune 500 companies",
+        "International certifications and accreditations"
+      ],
+      "team": "Dedicated Team",
+      "teamBullets": [
+        "Expert team assigned to your project",
+        "24/7 customer service and support",
+        "Project manager assignment and regular reporting"
+      ],
+      "ctaTitle": "Get Your Custom Offer",
+      "ctaSubtitle": "We develop custom solutions for every enterprise customer. Let's analyze your needs and prepare a tailored offer.",
+      "ctaRequest": "Request Detailed Quote",
+      "ctaSchedule": "Schedule a Call"
+    },
+    "addOns": {
+      "title": "Enterprise Add-on Services",
+      "subtitle": "Special services to complement your enterprise package",
+      "priceOnRequest": "Price on Request"
+    },
+    "faq": {
+      "title": "FAQ About Enterprise Solutions",
+      "q1": "How are enterprise solutions priced?",
+      "a1": "Every enterprise project is unique. We prepare a custom price offer based on your project scope, duration, location and needs. Minimum investment levels apply.",
+      "q2": "What is the minimum contract duration?",
+      "a2": "For enterprise projects, the minimum contract duration is 24 months. For large projects, longer-term strategic partnerships are possible.",
+      "q3": "Which countries do you serve?",
+      "a3": "We operate across Europe. We can deploy on-site teams in Turkey, Germany, France, Italy, Spain and other EU countries.",
+      "q4": "How soon can a project start?",
+      "a4": "After contract signing, we can assemble your project team and start operations within 2-4 weeks. For urgent projects, faster starts are possible."
+    },
+    "cta": {
+      "title": "Let's Launch Your Enterprise Project",
+      "subtitle": "We are ready to develop custom solutions for your large-scale quality projects. Let's plan your project with our expert team.",
+      "ctaPrimary": "Request Enterprise Quote",
+      "ctaPhone": "+49 89 123 456 789"
     }
+  },
+  "careers": {
+    "hero": {
+      "title": "Career Opportunities",
+      "subtitle": "Join the QroneX family and shape your career in quality engineering"
+    },
+    "stats": {
+      "team": "Team Members",
+      "countries": "Countries",
+      "satisfaction": "Employee Satisfaction",
+      "glassdoor": "Glassdoor Rating"
+    },
+    "benefits": {
+      "title": "Why QroneX?",
+      "subtitle": "Comprehensive benefits for our employees' growth and happiness",
+      "items": [
+        {"title": "Health & Wellness", "description": "Comprehensive health insurance, fitness membership and mental health support"},
+        {"title": "Career Development", "description": "Training programs, certification support and mentorship opportunities"},
+        {"title": "International Opportunities", "description": "Project experience across Europe and multicultural work environment"},
+        {"title": "Rewards & Recognition", "description": "Performance bonus, achievement awards and recognition programs"}
+      ]
+    },
+    "positions": {
+      "title": "Open Positions",
+      "subtitle": "Find the right position for you and open a new page in your career",
+      "featured": "Featured",
+      "more": "+{count} more",
+      "apply": "Apply"
+    },
+    "dialog": {
+      "title": "{role} - Application Form",
+      "defaultTitle": "Job Application",
+      "subtitle": "Please fill out the form below completely. You can send your CV by email.",
+      "successTitle": "✅ Your application has been sent successfully!",
+      "successSubtitle": "We will get back to you as soon as possible.",
+      "fields": {
+        "role": "Position *",
+        "rolePlaceholder": "Select a position",
+        "firstName": "First Name *",
+        "firstNamePlaceholder": "Your first name",
+        "lastName": "Last Name *",
+        "lastNamePlaceholder": "Your last name",
+        "email": "Email *",
+        "phone": "Phone *",
+        "linkedin": "LinkedIn Profile",
+        "linkedinPlaceholder": "https://linkedin.com/in/yourprofile",
+        "experience": "Experience Level *",
+        "experiencePlaceholder": "Experience level",
+        "availability": "Start Date *",
+        "availabilityPlaceholder": "Start date",
+        "coverLetter": "Cover Letter *",
+        "coverLetterPlaceholder": "Briefly explain why you are suitable for this position and what you can bring to QroneX..."
+      },
+      "experienceOptions": {
+        "entry": "Entry Level (0-2 years)",
+        "mid": "Mid-level (3-5 years)",
+        "senior": "Senior (5+ years)"
+      },
+      "availabilityOptions": {
+        "asap": "ASAP",
+        "1month": "Within 1 Month",
+        "2months": "Within 2 Months",
+        "3months": "Within 3 Months"
+      },
+      "actions": {
+        "cancel": "Cancel",
+        "submit": "Submit Application",
+        "submitting": "Submitting..."
+      }
+    },
+    "cta": {
+      "title": "Didn't find the position you're looking for?",
+      "subtitle": "Send your CV and we'll contact you when a suitable opportunity arises",
+      "primary": "Send CV",
+      "secondary": "About Company"
+    },
+    "loading": "Loading..."
   },
   "common": {
     "getQuote": "Get Quote",

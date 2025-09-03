@@ -152,21 +152,7 @@ export function Footer() {
               </div>
             </div>
 
-            {/* Emergency Contact */}
-            <div className="bg-red-900/20 border border-red-800 rounded-lg p-4">
-              <h4 className="font-medium mb-2 flex items-center text-red-400">
-                <Clock className="h-4 w-4 mr-2" />
-                {t("home.contact.emergency247")}
-              </h4>
-              <div className="text-sm">
-                <a href="tel:+498912345678" className="text-red-300 hover:text-red-200 transition-colors font-medium">
-                  +49 89 123 456 789
-                </a>
-                <p className="text-red-400 text-xs mt-1">
-                  {t("home.contact.criticalQualityProblems")}
-                </p>
-              </div>
-            </div>
+            {/* Emergency Contact removed as requested */}
           </div>
         </div>
       </div>

@@ -32,7 +32,7 @@ export function ServicesOverview() {
   const services = [
     {
       id: "on-site-rapid-response",
-      slug: "on-site-hizli-mudahale",
+      slug: "on-site-rapid-response",
       icon: "zap" as keyof typeof serviceIcons,
       title: t("onSiteRapidResponse.title"),
       description: t("onSiteRapidResponse.description"),
@@ -180,9 +180,10 @@ export function ServicesOverview() {
                 <ArrowRight className="ml-2 h-4 w-4" />
               </Link>
             </Button>
-            <Button size="lg" variant="outline" className="border-white text-white hover:bg-white hover:text-blue-600" asChild>
-              <Link href="/services">
-                {t("ctaSecondary")}
+            <Button size="lg" className="bg-white text-blue-600 hover:bg-gray-100" asChild>
+            <Link href="/services">
+            {t("ctaSecondary")}
+                <ArrowRight className="ml-2 h-4 w-4" />
               </Link>
             </Button>
           </div>

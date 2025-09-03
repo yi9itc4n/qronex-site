@@ -168,8 +168,8 @@ export default function ResidentEngineeringPage() {
                     <Clock className="h-6 w-6 text-white" />
                   </div>
                   <div>
-                    <h3 className="text-xl font-semibold text-gray-900 mb-2">24/7 Availability</h3>
-                    <p className="text-gray-600">Round-the-clock support for critical quality issues and emergencies</p>
+                    <h3 className="text-xl font-semibold text-gray-900 mb-2">{t("benefits.b1Title")}</h3>
+                    <p className="text-gray-600">{t("benefits.b1Desc")}</p>
                   </div>
                 </div>
                 <div className="flex items-start space-x-4">
@@ -177,8 +177,8 @@ export default function ResidentEngineeringPage() {
                     <Users className="h-6 w-6 text-white" />
                   </div>
                   <div>
-                    <h3 className="text-xl font-semibold text-gray-900 mb-2">Expert Team</h3>
-                    <p className="text-gray-600">Experienced engineers with deep industry knowledge and problem-solving expertise</p>
+                    <h3 className="text-xl font-semibold text-gray-900 mb-2">{t("benefits.b2Title")}</h3>
+                    <p className="text-gray-600">{t("benefits.b2Desc")}</p>
                   </div>
                 </div>
                 <div className="flex items-start space-x-4">
@@ -186,8 +186,8 @@ export default function ResidentEngineeringPage() {
                     <TrendingUp className="h-6 w-6 text-white" />
                   </div>
                   <div>
-                    <h3 className="text-xl font-semibold text-gray-900 mb-2">Continuous Improvement</h3>
-                    <p className="text-gray-600">Ongoing optimization of processes and quality systems</p>
+                    <h3 className="text-xl font-semibold text-gray-900 mb-2">{t("benefits.b3Title")}</h3>
+                    <p className="text-gray-600">{t("benefits.b3Desc")}</p>
                   </div>
                 </div>
               </div>

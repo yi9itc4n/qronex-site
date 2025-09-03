@@ -367,31 +367,6 @@ export default function ContactPage() {
 
           {/* Contact info sidebar */}
           <div className="space-y-8">
-            {/* Emergency contact */}
-            <Card className="border-red-200 bg-red-50">
-              <CardHeader>
-                <CardTitle className="text-red-800 flex items-center">
-                  <Phone className="h-5 w-5 mr-2" />
-                  Acil Durum 7/24
-                </CardTitle>
-              </CardHeader>
-              <CardContent className="space-y-4">
-                <p className="text-red-700 text-sm">
-                  Kritik kalite problemleri için:
-                </p>
-                <div className="space-y-2">
-                  <a 
-                    href="tel:+498912345678"
-                    className="text-2xl font-bold text-red-800 hover:text-red-900 block"
-                  >
-                    +49 89 123 456 789
-                  </a>
-                  <p className="text-xs text-red-600">
-                    Ortalama yanıt süresi: 15 dakika
-                  </p>
-                </div>
-              </CardContent>
-            </Card>
 
             {/* Office info */}
             <Card>

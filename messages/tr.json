@@ -56,6 +56,8 @@
   "services": {
     "title": "Hizmetlerimiz",
     "subtitle": "Avrupa'da yerleşik saha mühendislerimizle kalite problemlerinize hızlı çözümler sunuyoruz",
+    "processTitle": "Sürecimiz",
+    "processSubtitle": "Tutarlı ve yüksek kaliteli sonuçlar için izlediğimiz adımlar",
     "onSiteRapidResponse": {
       "title": "On-Site Hızlı Müdahale",
       "description": "7/24 saha desteği ile kalite problemlerinize anında müdahale ediyoruz",
@@ -134,6 +136,25 @@
     "aerospace": {
       "title": "Havacılık",
       "description": "Havacılık sektörü için yüksek standart kalite hizmetleri"
+    },
+    "hero": {
+      "title": "Sektörler",
+      "subtitle": "Farklı sektörlerdeki deneyimimizle sektörünüze özel kalite çözümleri geliştiriyoruz"
+    },
+    "sections": {
+      "expertiseTitle": "Uzmanlık Alanlarımız",
+      "servicesHighlight": "Öne Çıkan Hizmetler",
+      "stats": {
+        "projects": "Proje",
+        "clients": "Müşteri",
+        "locations": "Lokasyon"
+      },
+      "cta": {
+        "title": "Sektörünüze Özel Çözüm Arıyorsunuz?",
+        "subtitle": "Deneyimli ekibimizle sektörünüzün özel ihtiyaçlarına yönelik kalite çözümleri geliştirelim",
+        "primary": "Ücretsiz Danışmanlık Al",
+        "secondary": "Hizmetlerimizi İncele"
+      }
     }
   },
   "home": {
@@ -335,7 +356,138 @@
         "Özel SLA'lar",
         "Dedicated account manager"
       ]
+    },
+    "hero": {
+      "title": "Enterprise Çözümler",
+      "subtitle": "Büyük ölçekli projeler için özelleştirilmiş kalite mühendisliği hizmetleri",
+      "ctaPrimary": "Özel Teklif Al",
+      "ctaSecondary": "Uzmanlarla Konuş"
+    },
+    "packages": {
+      "title": "Enterprise Çözüm Paketleri",
+      "subtitle": "İhtiyaçlarınıza göre özelleştirilmiş üç farklı enterprise paket seçeneği",
+      "included": "Dahil Olan Hizmetler:",
+      "cta": "Teklif Talep Et"
+    },
+    "why": {
+      "title": "Neden Enterprise Çözümler?",
+      "subtitle": "Büyük ölçekli projelerde sizin için neden doğru seçim olduğumuzu öğrenin",
+      "expertise": "Kanutlanmış Uzmanlık",
+      "expertiseBullets": [
+        "15+ yıllık sektör deneyimi ile otomotiv kalite standartlarında uzmanız",
+        "Fortune 500 şirketleri ile çalışma tecrübesi",
+        "Uluslararası sertifikalar ve akreditasyonlar"
+      ],
+      "team": "Dedicated Ekip",
+      "teamBullets": [
+        "Projenize özel atanmış uzman ekip",
+        "24/7 müşteri hizmetleri ve destek",
+        "Proje yöneticisi ataması ve düzenli raporlama"
+      ],
+      "ctaTitle": "Özel Teklifinizi Alalım",
+      "ctaSubtitle": "Her enterprise müşterimiz için özel çözümler geliştiriyoruz. İhtiyaçlarınızı analiz edip size özel bir teklif hazırlayalım.",
+      "ctaRequest": "Detaylı Teklif Talep Et",
+      "ctaSchedule": "Görüşme Planlayın"
+    },
+    "addOns": {
+      "title": "Enterprise Ek Hizmetler",
+      "subtitle": "Enterprise paketinizi tamamlayacak özel hizmetler",
+      "priceOnRequest": "Özel Fiyat"
+    },
+    "faq": {
+      "title": "Enterprise Çözümler Hakkında SSS",
+      "q1": "Enterprise çözümler nasıl fiyatlandırılır?",
+      "a1": "Her enterprise projesi özeldir. Proje kapsamı, süre, lokasyon ve ihtiyaçlarınıza göre özel fiyat teklifi hazırlanır. Minimum yatırım seviyeleri mevcuttur.",
+      "q2": "Minimum sözleşme süresi nedir?",
+      "a2": "Enterprise projeler için minimum 24 ay sözleşme süresi bulunmaktadır. Büyük projeler için daha uzun süreli stratejik ortaklıklar da mümkündür.",
+      "q3": "Hangi ülkelerde hizmet veriyorsunuz?",
+      "a3": "Avrupa genelinde hizmet vermekteyiz. Türkiye, Almanya, Fransa, İtalya, İspanya ve diğer AB ülkelerinde yerinde ekip konuşlandırma imkanımız bulunmaktadır.",
+      "q4": "Proje başlangıç süresi ne kadar?",
+      "a4": "Sözleşme imzalandıktan sonra 2-4 hafta içinde proje ekibinizi oluşturup operasyonlara başlayabiliriz. Acil projeler için daha hızlı başlangıç da mümkündür."
+    },
+    "cta": {
+      "title": "Enterprise Projenizi Başlatalım",
+      "subtitle": "Büyük ölçekli kalite projeleriniz için özel çözümler geliştirmeye hazırız. Uzman ekibimizle projenizi planlayalım.",
+      "ctaPrimary": "Enterprise Teklif Talep Et",
+      "ctaPhone": "+49 89 123 456 789"
     }
+  },
+  "careers": {
+    "hero": {
+      "title": "Kariyer Fırsatları",
+      "subtitle": "QroneX ailesine katılın ve kalite mühendisliği alanında kariyerinizi şekillendirin"
+    },
+    "stats": {
+      "team": "Takım Üyesi",
+      "countries": "Farklı Ülke",
+      "satisfaction": "Çalışan Memnuniyeti",
+      "glassdoor": "Glassdoor Puanı"
+    },
+    "benefits": {
+      "title": "Neden QroneX?",
+      "subtitle": "Çalışanlarımızın gelişimi ve mutluluğu için sunduğumuz kapsamlı imkanlar",
+      "items": [
+        {"title": "Sağlık & Refah", "description": "Kapsamlı sağlık sigortası, fitness üyeliği ve mental sağlık desteği"},
+        {"title": "Kariyer Gelişimi", "description": "Eğitim programları, sertifikasyon desteği ve mentorship fırsatları"},
+        {"title": "Uluslararası Fırsatlar", "description": "Avrupa genelinde proje deneyimi ve kültürlerarası çalışma ortamı"},
+        {"title": "Ödüller & Tanınma", "description": "Performans bonusu, başarı ödülleri ve takdir programları"}
+      ]
+    },
+    "positions": {
+      "title": "Açık Pozisyonlar",
+      "subtitle": "Size uygun pozisyonu bulun ve kariyerinizde yeni bir sayfa açın",
+      "featured": "Öne Çıkan",
+      "more": "+{count} daha",
+      "apply": "Başvur"
+    },
+    "dialog": {
+      "title": "{role} - Başvuru Formu",
+      "defaultTitle": "İş Başvurusu",
+      "subtitle": "Lütfen aşağıdaki formu eksiksiz doldurunuz. CV'nizi e-posta ile gönderebilirsiniz.",
+      "successTitle": "✅ Başvurunuz başarıyla gönderildi!",
+      "successSubtitle": "En kısa sürede size dönüş yapacağız.",
+      "fields": {
+        "role": "Pozisyon *",
+        "rolePlaceholder": "Pozisyon seçiniz",
+        "firstName": "Ad *",
+        "firstNamePlaceholder": "Adınız",
+        "lastName": "Soyad *",
+        "lastNamePlaceholder": "Soyadınız",
+        "email": "E-posta *",
+        "phone": "Telefon *",
+        "linkedin": "LinkedIn Profili",
+        "linkedinPlaceholder": "https://linkedin.com/in/profiliniz",
+        "experience": "Deneyim Seviyesi *",
+        "experiencePlaceholder": "Deneyim seviyesi",
+        "availability": "Başlama Tarihi *",
+        "availabilityPlaceholder": "Başlama tarihi",
+        "coverLetter": "Ön Yazı *",
+        "coverLetterPlaceholder": "Neden bu pozisyon için uygun olduğunuzu ve QroneX'e neler katabileceğinizi kısaca açıklayın..."
+      },
+      "experienceOptions": {
+        "entry": "Entry Level (0-2 yıl)",
+        "mid": "Mid-level (3-5 yıl)",
+        "senior": "Senior (5+ yıl)"
+      },
+      "availabilityOptions": {
+        "asap": "Hemen",
+        "1month": "1 Ay İçinde",
+        "2months": "2 Ay İçinde",
+        "3months": "3 Ay İçinde"
+      },
+      "actions": {
+        "cancel": "İptal",
+        "submit": "Başvuru Gönder",
+        "submitting": "Gönderiliyor..."
+      }
+    },
+    "cta": {
+      "title": "Aradığınız Pozisyonu Bulamadınız mı?",
+      "subtitle": "CV'nizi gönderin, uygun fırsat çıktığında sizinle iletişime geçelim",
+      "primary": "CV Gönderin",
+      "secondary": "Şirket Hakkında"
+    },
+    "loading": "Yükleniyor..."
   },
   "common": {
     "getQuote": "Teklif Al",

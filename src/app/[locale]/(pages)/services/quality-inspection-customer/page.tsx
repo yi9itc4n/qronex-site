@@ -200,8 +200,8 @@ export default function QualityInspectionCustomerPage() {
                     <MapPin className="h-6 w-6 text-white" />
                   </div>
                   <div>
-                    <h3 className="text-xl font-semibold text-gray-900 mb-2">On-Site Service</h3>
-                    <p className="text-gray-600">We come to your customer locations, minimizing disruption and travel costs</p>
+                    <h3 className="text-xl font-semibold text-gray-900 mb-2">{t("benefits.b1Title")}</h3>
+                    <p className="text-gray-600">{t("benefits.b1Desc")}</p>
                   </div>
                 </div>
                 <div className="flex items-start space-x-4">
@@ -209,8 +209,8 @@ export default function QualityInspectionCustomerPage() {
                     <Clock className="h-6 w-6 text-white" />
                   </div>
                   <div>
-                    <h3 className="text-xl font-semibold text-gray-900 mb-2">Rapid Response</h3>
-                    <p className="text-gray-600">Quick deployment and immediate problem resolution to minimize downtime</p>
+                    <h3 className="text-xl font-semibold text-gray-900 mb-2">{t("benefits.b2Title")}</h3>
+                    <p className="text-gray-600">{t("benefits.b2Desc")}</p>
                   </div>
                 </div>
                 <div className="flex items-start space-x-4">
@@ -218,8 +218,8 @@ export default function QualityInspectionCustomerPage() {
                     <Users className="h-6 w-6 text-white" />
                   </div>
                   <div>
-                    <h3 className="text-xl font-semibold text-gray-900 mb-2">Expert Team</h3>
-                    <p className="text-gray-600">Skilled technicians and quality engineers with extensive experience</p>
+                    <h3 className="text-xl font-semibold text-gray-900 mb-2">{t("benefits.b3Title")}</h3>
+                    <p className="text-gray-600">{t("benefits.b3Desc")}</p>
                   </div>
                 </div>
               </div>

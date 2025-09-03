@@ -215,8 +215,8 @@ export default function ConsultingTrainingPage() {
                     <Users className="h-6 w-6 text-white" />
                   </div>
                   <div>
-                    <h3 className="text-xl font-semibold text-gray-900 mb-2">Expert Consultants</h3>
-                    <p className="text-gray-600">Experienced professionals with deep industry knowledge and proven track records</p>
+                    <h3 className="text-xl font-semibold text-gray-900 mb-2">{t("benefits.b1Title")}</h3>
+                    <p className="text-gray-600">{t("benefits.b1Desc")}</p>
                   </div>
                 </div>
                 <div className="flex items-start space-x-4">
@@ -224,8 +224,8 @@ export default function ConsultingTrainingPage() {
                     <Target className="h-6 w-6 text-white" />
                   </div>
                   <div>
-                    <h3 className="text-xl font-semibold text-gray-900 mb-2">Customized Approach</h3>
-                    <p className="text-gray-600">Tailored solutions designed specifically for your organization&apos;s needs</p>
+                    <h3 className="text-xl font-semibold text-gray-900 mb-2">{t("benefits.b2Title")}</h3>
+                    <p className="text-gray-600">{t("benefits.b2Desc")}</p>
                   </div>
                 </div>
                 <div className="flex items-start space-x-4">
@@ -233,8 +233,8 @@ export default function ConsultingTrainingPage() {
                     <TrendingUp className="h-6 w-6 text-white" />
                   </div>
                   <div>
-                    <h3 className="text-xl font-semibold text-gray-900 mb-2">Measurable Results</h3>
-                    <p className="text-gray-600">Focus on delivering tangible improvements and measurable outcomes</p>
+                    <h3 className="text-xl font-semibold text-gray-900 mb-2">{t("benefits.b3Title")}</h3>
+                    <p className="text-gray-600">{t("benefits.b3Desc")}</p>
                   </div>
                 </div>
               </div>

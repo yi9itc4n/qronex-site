@@ -182,18 +182,22 @@ export function Header({ locale }: HeaderProps) {
             <Link href="/careers" className="text-white hover:text-gray-300 transition-colors duration-200 font-medium">
               {t("career")}
             </Link>
-            <Link href="/pricing" className="text-white hover:text-gray-300 transition-colors duration-200 font-medium">
-              {t("getOffer")}
-            </Link>
             <Link href="/contact" className="text-white hover:text-gray-300 transition-colors duration-200 font-medium">
               {t("contact")}
             </Link>
 
-            {/* Language Toggle */}
+            {/* Get Offer CTA Button - left of language toggle */}
+            <Button asChild variant="outline" className="ml-4 border-2 border-white text-white bg-transparent hover:bg-white hover:text-slate-900">
+              <Link href="/pricing">
+                {t("getOffer")}
+              </Link>
+            </Button>
+
+            {/* Language Toggle - rightmost */}
             <Link
               href={pathname}
               locale={locale === "en" ? "tr" : "en"}
-              className="text-white hover:text-gray-300 transition-colors duration-200 font-medium"
+              className="ml-3 text-white hover:text-gray-300 transition-colors duration-200 font-medium"
             >
               {locale === "en" ? "TR" : "EN"}
             </Link>
@@ -251,13 +255,16 @@ export function Header({ locale }: HeaderProps) {
                   >
                     {t("career")}
                   </Link>
-                  <Link
-                    href="/pricing"
-                    className="text-lg font-medium"
-                    onClick={() => setMobileMenuOpen(false)}
-                  >
-                    {t("getOffer")}
-                  </Link>
+                  <div className="pt-4">
+                    <Button asChild variant="outline" className="w-full border-2 border-white text-white bg-transparent hover:bg-white hover:text-slate-900">
+                      <Link
+                        href="/pricing"
+                        onClick={() => setMobileMenuOpen(false)}
+                      >
+                        {t("getOffer")}
+                      </Link>
+                    </Button>
+                  </div>
                   <Link
                     href="/contact"
                     className="text-lg font-medium"

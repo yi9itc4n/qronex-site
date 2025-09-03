@@ -121,7 +121,7 @@ export default function PricingPage() {
                   <ArrowRight className="ml-2 h-4 w-4" />
                 </Link>
               </Button>
-              <Button size="lg" variant="outline" className="bg-transparent border-white text-white hover:bg-white hover:text-slate-900" asChild>
+              <Button size="lg" className="bg-white text-orange-600 hover:bg-gray-100" asChild>
                 <a href="tel:+498912345678">
                   Uzmanlarla Konuş
                 </a>
@@ -353,7 +353,7 @@ export default function PricingPage() {
                 Enterprise Teklif Talep Et
               </Link>
             </Button>
-            <Button size="lg" variant="outline" className="border-white text-white hover:bg-white hover:text-orange-600" asChild>
+            <Button size="lg" className="bg-white text-orange-600 hover:bg-gray-100" asChild>
               <a href="tel:+498912345678">
                 <Phone className="mr-2 h-4 w-4" />
                 +49 89 123 456 789

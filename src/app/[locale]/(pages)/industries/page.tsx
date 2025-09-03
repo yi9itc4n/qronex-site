@@ -3,6 +3,7 @@ import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/com
 import { Badge } from '@/components/ui/badge';
 import { Building2, Car, Truck, Plane, Zap, Factory } from 'lucide-react';
 import { Link } from '@/i18n';
+import { useTranslations } from 'next-intl';
 
 export const metadata: Metadata = {
   title: 'Sektörler | QroneX',
@@ -12,80 +13,80 @@ export const metadata: Metadata = {
 const industries = [
   {
     id: 'automotive-oem',
-    title: 'Otomotiv OEM',
-    description: 'Ana otomotiv üreticileri için kapsamlı kalite çözümleri. BMW, Mercedes, Audi ve diğer premium markalarla çalışma deneyimi.',
+    title: 'industries.automotiveOem.title',
+    description: 'industries.automotiveOem.description',
     icon: Car,
-    services: ['On-Site Müdahale', 'Sorting & Containment', 'Kalite Mühendisliği'],
+    services: ['navigation.onSiteRapidResponse', 'navigation.sortingContainment', 'navigation.qualityEngineering'],
     color: 'blue',
     stats: {
       projects: '150+',
       clients: '25',
-      locations: '8 Ülke'
+      locations: '8'
     }
   },
   {
     id: 'tier1',
-    title: 'Tier 1 Tedarikçiler',
-    description: 'Birinci kademe tedarikçiler için özelleşmiş hizmetler. Bosch, Continental, ZF gibi büyük tedarikçilerle partnership.',
+    title: 'industries.tier1.title',
+    description: 'industries.tier1.description',
     icon: Factory,
-    services: ['Tedarikçi Hazırlığı', 'Teknik Temsilcilik', 'Süreç Optimizasyonu'],
+    services: ['navigation.supplierReadiness', 'navigation.technicalRepresentation', 'services.qualityEngineering.title'],
     color: 'green',
     stats: {
       projects: '200+',
       clients: '35',
-      locations: '12 Ülke'
+      locations: '12'
     }
   },
   {
     id: 'e-mobility',
-    title: 'e-Mobility / EV',
-    description: 'Elektrikli araç teknolojileri için gelişmiş kalite süreçleri. Tesla, VW ID serisi, BMW i serisi projeleri.',
+    title: 'industries.eMobility.title',
+    description: 'industries.eMobility.description',
     icon: Zap,
-    services: ['Battery QC', 'Charging Systems', 'EV Components'],
+    services: ['services.rework.title', 'services.supplierReadiness.title', 'services.qualityEngineering.title'],
     color: 'purple',
     stats: {
       projects: '75+',
       clients: '15',
-      locations: '6 Ülke'
+      locations: '6'
     }
   },
   {
     id: 'heavy-transport',
-    title: 'Ağır Nakliye',
-    description: 'Kamyon ve otobüs sektörü için güçlü çözümler. MAN, Scania, Volvo trucks ile uzun dönemli projeler.',
+    title: 'industries.heavyTransport.title',
+    description: 'industries.heavyTransport.description',
     icon: Truck,
-    services: ['Heavy Duty Testing', 'Reliability Analysis', 'Fleet Support'],
+    services: ['services.auditsTraining.title', 'services.aftersalesSupport.title', 'services.qualityEngineering.title'],
     color: 'orange',
     stats: {
       projects: '90+',
       clients: '18',
-      locations: '5 Ülke'
+      locations: '5'
     }
   },
   {
     id: 'aerospace',
-    title: 'Havacılık',
-    description: 'Havacılık sektörü için yüksek standart kalite hizmetleri. Airbus, Boeing tedarikçileri ile kritik projeler.',
+    title: 'industries.aerospace.title',
+    description: 'industries.aerospace.description',
     icon: Plane,
-    services: ['AS9100 Compliance', 'Critical Components', 'Aerospace Testing'],
+    services: ['services.consulting.title', 'services.auditsTraining.title', 'services.qualityEngineering.title'],
     color: 'indigo',
     stats: {
       projects: '45+',
       clients: '12',
-      locations: '4 Ülke'
+      locations: '4'
     }
   },
   {
     id: 'industrial',
-    title: 'Endüstriyel Üretim',
-    description: 'Genel endüstriyel üretim için kapsamlı kalite hizmetleri. Makine, ekipman ve komponent üreticileri.',
+    title: 'industries.title',
+    description: 'industries.subtitle',
     icon: Building2,
-    services: ['Production Support', 'Quality Systems', 'Certification'],
+    services: ['services.technicalRepresentation.title', 'services.qualityEngineering.title', 'services.supplierReadiness.title'],
     color: 'teal',
     stats: {
       projects: '120+',
       clients: '40',
-      locations: '10 Ülke'
+      locations: '10'
     }
   }
 ];
@@ -133,6 +134,9 @@ const getColorClasses = (color: string) => {
 };
 
 export default function IndustriesPage() {
+  const t = useTranslations();
+  const ti = useTranslations('industries');
+  const ts = useTranslations('industries.sections');
   return (
     <div className="min-h-screen">
       {/* Hero Section */}
@@ -140,10 +144,10 @@ export default function IndustriesPage() {
         <div className="container mx-auto container-padding">
           <div className="text-center">
             <h1 className="text-4xl lg:text-5xl font-bold mb-6">
-              Sektörler
+              {ti('hero.title')}
             </h1>
             <p className="text-xl lg:text-2xl text-blue-100 max-w-3xl mx-auto leading-relaxed">
-              Farklı sektörlerdeki deneyimimizle size özel kalite çözümleri geliştiriyoruz
+              {ti('hero.subtitle')}
             </p>
           </div>
         </div>
@@ -154,10 +158,10 @@ export default function IndustriesPage() {
         <div className="container mx-auto container-padding">
           <div className="text-center mb-16">
             <h2 className="text-3xl lg:text-4xl font-bold text-gray-900 mb-4">
-              Uzmanlık Alanlarımız
+              {ts('expertiseTitle')}
             </h2>
             <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-              Her sektörün kendine özgü ihtiyaçlarını anlıyor ve bu doğrultuda özelleştirilmiş çözümler sunuyoruz
+              {ti('subtitle')}
             </p>
           </div>
 
@@ -175,23 +179,23 @@ export default function IndustriesPage() {
                       </div>
                       <div>
                         <CardTitle className="text-xl font-bold text-gray-900">
-                          {industry.title}
+                          {t(industry.title)}
                         </CardTitle>
                       </div>
                     </div>
                     <CardDescription className="text-gray-600 leading-relaxed">
-                      {industry.description}
+                      {t(industry.description)}
                     </CardDescription>
                   </CardHeader>
                   
                   <CardContent className="space-y-6">
                     {/* Services */}
                     <div>
-                      <h4 className="font-semibold text-gray-900 mb-3">Öne Çıkan Hizmetler</h4>
+                      <h4 className="font-semibold text-gray-900 mb-3">{ts('servicesHighlight')}</h4>
                       <div className="flex flex-wrap gap-2">
-                        {industry.services.map((service) => (
-                          <Badge key={service} className={colors.badge}>
-                            {service}
+                        {industry.services.map((serviceKey) => (
+                          <Badge key={serviceKey} className={colors.badge}>
+                            {t(serviceKey)}
                           </Badge>
                         ))}
                       </div>
@@ -203,19 +207,19 @@ export default function IndustriesPage() {
                         <div className={`text-lg font-bold ${colors.icon}`}>
                           {industry.stats.projects}
                         </div>
-                        <div className="text-xs text-gray-500">Proje</div>
+                        <div className="text-xs text-gray-500">{ts('stats.projects')}</div>
                       </div>
                       <div className="text-center">
                         <div className={`text-lg font-bold ${colors.icon}`}>
                           {industry.stats.clients}
                         </div>
-                        <div className="text-xs text-gray-500">Müşteri</div>
+                        <div className="text-xs text-gray-500">{ts('stats.clients')}</div>
                       </div>
                       <div className="text-center">
                         <div className={`text-lg font-bold ${colors.icon}`}>
                           {industry.stats.locations}
                         </div>
-                        <div className="text-xs text-gray-500">Lokasyon</div>
+                        <div className="text-xs text-gray-500">{ts('stats.locations')}</div>
                       </div>
                     </div>
                   </CardContent>
@@ -231,23 +235,23 @@ export default function IndustriesPage() {
         <div className="container mx-auto container-padding">
           <div className="bg-gradient-to-r from-blue-600 to-purple-600 rounded-2xl p-8 lg:p-12 text-center text-white">
             <h2 className="text-3xl lg:text-4xl font-bold mb-4">
-              Sektörünüze Özel Çözüm Arıyorsunuz?
+              {ts('cta.title')}
             </h2>
             <p className="text-xl text-blue-100 mb-8 max-w-2xl mx-auto">
-              Deneyimli ekibimizle sektörünüzün özel ihtiyaçlarına yönelik kalite çözümleri geliştirelim
+              {ts('cta.subtitle')}
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Link
                 href="/contact"
                 className="inline-flex items-center justify-center px-8 py-4 bg-white text-blue-600 font-semibold rounded-lg hover:bg-gray-100 transition-colors"
               >
-                Ücretsiz Danışmanlık Al
+                {ts('cta.primary')}
               </Link>
               <Link
                 href="/services"
                 className="inline-flex items-center justify-center px-8 py-4 border-2 border-white text-white font-semibold rounded-lg hover:bg-white hover:text-blue-600 transition-colors"
               >
-                Hizmetlerimizi İncele
+                {ts('cta.secondary')}
               </Link>
             </div>
           </div>

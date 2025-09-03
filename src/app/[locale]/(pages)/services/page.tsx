@@ -217,10 +217,10 @@ export default function ServicesPage() {
         <div className="container mx-auto container-padding">
           <div className="text-center mb-16">
             <h2 className="text-3xl lg:text-4xl font-bold text-gray-900 mb-4">
-              Çalışma Sürecimiz
+              {t("processTitle")}
             </h2>
             <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-              Her proje için standart süreçlerimizle hızlı ve etkili çözümler sunuyoruz
+              {t("processSubtitle")}
             </p>
           </div>
 
@@ -264,22 +264,22 @@ export default function ServicesPage() {
       <section className="section-padding bg-blue-green-gradient text-white">
         <div className="container mx-auto container-padding text-center">
           <h2 className="text-3xl lg:text-4xl font-bold mb-4">
-            Hangi Hizmete İhtiyacınız Var?
+            {t("ctaTitle")}
           </h2>
           <p className="text-xl text-blue-100 mb-8 max-w-3xl mx-auto">
-            Uzman ekibimiz size en uygun çözümü belirlemek için 7/24 hazır. 
-            Ücretsiz ön değerlendirme ile başlayın.
+            {t("ctaSubtitle")}
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Button size="lg" className="bg-white text-blue-green hover:bg-gray-100" asChild>
               <Link href="/contact">
                 <Users className="mr-2 h-4 w-4" />
-                Uzmanlarla Konuş
+                {t("ctaPrimary")}
               </Link>
             </Button>
-            <Button size="lg" variant="outline" className="border-white text-white hover:bg-white hover:text-blue-green" asChild>
+            <Button size="lg" className="bg-white text-blue-green hover:bg-gray-100" asChild>
               <Link href="/news">
-                Başarı Hikayelerini Gör
+                <Users className="mr-2 h-4 w-4" />
+                {t("ctaSecondary")}
               </Link>
             </Button>
           </div>

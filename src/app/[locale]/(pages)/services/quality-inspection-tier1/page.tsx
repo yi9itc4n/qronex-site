@@ -69,31 +69,11 @@ export default function QualityInspectionTier1Page() {
   ];
 
   const processSteps = [
-    {
-      step: "01",
-      title: "Supplier Assessment",
-      description: "Comprehensive evaluation of supplier quality capabilities and processes"
-    },
-    {
-      step: "02",
-      title: "Quality Inspection",
-      description: "Detailed inspection and quality control at supplier locations"
-    },
-    {
-      step: "03",
-      title: "Issue Identification",
-      description: "Identification and classification of quality issues and defects"
-    },
-    {
-      step: "04",
-      title: "Rework & Improvement",
-      description: "Execution of rework and implementation of improvement measures"
-    },
-    {
-      step: "05",
-      title: "Verification & Support",
-      description: "Quality verification and ongoing supplier development support"
-    }
+    { step: "01", title: t("process.s1Title"), description: t("process.s1Desc") },
+    { step: "02", title: t("process.s2Title"), description: t("process.s2Desc") },
+    { step: "03", title: t("process.s3Title"), description: t("process.s3Desc") },
+    { step: "04", title: t("process.s4Title"), description: t("process.s4Desc") },
+    { step: "05", title: t("process.s5Title"), description: t("process.s5Desc") }
   ];
 
   return (
@@ -200,8 +180,8 @@ export default function QualityInspectionTier1Page() {
                     <Building className="h-6 w-6 text-white" />
                   </div>
                   <div>
-                    <h3 className="text-xl font-semibold text-gray-900 mb-2">Supplier Expertise</h3>
-                    <p className="text-gray-600">Deep understanding of Tier1 supplier operations and quality challenges</p>
+                    <h3 className="text-xl font-semibold text-gray-900 mb-2">{t("benefits.b1Title")}</h3>
+                    <p className="text-gray-600">{t("benefits.b1Desc")}</p>
                   </div>
                 </div>
                 <div className="flex items-start space-x-4">
@@ -209,8 +189,8 @@ export default function QualityInspectionTier1Page() {
                     <Clock className="h-6 w-6 text-white" />
                   </div>
                   <div>
-                    <h3 className="text-xl font-semibold text-gray-900 mb-2">Rapid Response</h3>
-                    <p className="text-gray-600">Quick deployment and immediate problem resolution at supplier sites</p>
+                    <h3 className="text-xl font-semibold text-gray-900 mb-2">{t("benefits.b2Title")}</h3>
+                    <p className="text-gray-600">{t("benefits.b2Desc")}</p>
                   </div>
                 </div>
                 <div className="flex items-start space-x-4">
@@ -218,8 +198,8 @@ export default function QualityInspectionTier1Page() {
                     <Users className="h-6 w-6 text-white" />
                   </div>
                   <div>
-                    <h3 className="text-xl font-semibold text-gray-900 mb-2">Development Focus</h3>
-                    <p className="text-gray-600">Focus on supplier development and long-term improvement</p>
+                    <h3 className="text-xl font-semibold text-gray-900 mb-2">{t("benefits.b3Title")}</h3>
+                    <p className="text-gray-600">{t("benefits.b3Desc")}</p>
                   </div>
                 </div>
               </div>

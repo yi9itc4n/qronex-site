@@ -256,16 +256,7 @@ export function Hero() {
               </Button>
             </div>
 
-            {/* Emergency contact */}
-            <div className="flex items-center space-x-4 p-4 bg-red-900/20 border border-red-800 rounded-lg">
-              <Phone className="h-5 w-5 text-red-400 flex-shrink-0" />
-              <div>
-                <p className="text-sm text-red-300 font-medium">{t("emergency24")}</p>
-                <a href="tel:+498912345678" className="text-red-200 hover:text-white transition-colors">
-                  +49 89 123 456 789
-                </a>
-              </div>
-            </div>
+            {/* Emergency contact removed as requested */}
           </div>
 
           {/* Right content - Stats */}

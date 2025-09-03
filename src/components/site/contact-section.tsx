@@ -61,70 +61,7 @@ export function ContactSection() {
 
         
 
-        {/* Quick contact options */}
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
-          {/* Emergency contact */}
-          <Card className="border-red-200 bg-red-50">
-            <CardHeader>
-              <CardTitle className="text-red-800 flex items-center">
-                <Phone className="h-5 w-5 mr-2" />
-                {t("emergency247")}
-              </CardTitle>
-            </CardHeader>
-            <CardContent className="space-y-4">
-              <p className="text-red-700">
-                {t("criticalQualityProblems")}
-              </p>
-              <div className="space-y-2">
-                <a 
-                  href="tel:+498912345678"
-                  className="text-2xl font-bold text-red-800 hover:text-red-900 block"
-                >
-                  +49 89 123 456 789
-                </a>
-                <p className="text-sm text-red-600">
-                  {t("averageResponseTime")}
-                </p>
-              </div>
-              <div className="flex space-x-4 text-sm text-red-700">
-                <span>✓ {t("response6to12")}</span>
-                <span>✓ {t("instantResourceAllocation")}</span>
-              </div>
-            </CardContent>
-          </Card>
-
-          {/* Standard contact */}
-          <Card className="border-blue-200 bg-blue-50">
-            <CardHeader>
-              <CardTitle className="text-blue-800 flex items-center">
-                <MessageCircle className="h-5 w-5 mr-2" />
-                {t("plannedProjectSupport")}
-              </CardTitle>
-            </CardHeader>
-            <CardContent className="space-y-4">
-              <p className="text-blue-700">
-                {t("detailedQuoteAndPlanning")}
-              </p>
-              <div className="space-y-3">
-                <Button className="w-full bg-blue-600 hover:bg-blue-700" asChild>
-                  <Link href="/contact">
-                    {t("fillOnlineForm")}
-                    <ArrowRight className="ml-2 h-4 w-4" />
-                  </Link>
-                </Button>
-                <Button variant="outline" className="w-full border-blue-300 text-blue-700" asChild>
-                  <Link href="/pricing">
-                    {t("viewPackageOptions")}
-                  </Link>
-                </Button>
-              </div>
-              <div className="flex space-x-4 text-sm text-blue-700">
-                <span>✓ {t("response24h")}</span>
-                <span>✓ {t("freeInitialAssessment")}</span>
-              </div>
-            </CardContent>
-          </Card>
-        </div>
+        {/* Quick contact options removed as requested */}
 
         {/* Office locations */}
         <div className="mt-16 bg-white rounded-2xl p-8">
