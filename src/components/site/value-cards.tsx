@@ -31,7 +31,7 @@ export function ValueCards() {
       icon: "speed" as keyof typeof valueIcons,
       title: t("value1.title"),
       description: t("value1.description"),
-      stats: "24-72h",
+      stats: t("value1.stats"),
       color: "text-blue-600",
       bgColor: "bg-blue-50",
     },
@@ -40,7 +40,7 @@ export function ValueCards() {
       icon: "experience" as keyof typeof valueIcons,
       title: t("value2.title"),
       description: t("value2.description"),
-      stats: "15+ yıl",
+      stats: t("value2.stats"),
       color: "text-green-600",
       bgColor: "bg-green-50",
     },
@@ -49,7 +49,7 @@ export function ValueCards() {
       icon: "coverage" as keyof typeof valueIcons,
       title: t("value3.title"),
       description: t("value3.description"),
-      stats: "15 ülke",
+      stats: t("value3.stats"),
       color: "text-purple-600",
       bgColor: "bg-purple-50",
     },
@@ -58,7 +58,7 @@ export function ValueCards() {
       icon: "support" as keyof typeof valueIcons,
       title: t("value4.title"), 
       description: t("value4.description"),
-      stats: "7/24",
+      stats: t("value4.stats"),
       color: "text-orange-600",
       bgColor: "bg-orange-50",
     },
@@ -107,20 +107,20 @@ export function ValueCards() {
         {/* Additional stats section */}
         <div className="mt-20 grid grid-cols-2 lg:grid-cols-4 gap-8">
           <div className="text-center">
-            <div className="text-4xl font-bold text-blue-600 mb-2">500+</div>
-            <div className="text-gray-600">Tamamlanan Proje</div>
+            <div className="text-4xl font-bold text-blue-600 mb-2">{t("extraStats.completedProjectsValue")}</div>
+            <div className="text-gray-600">{t("extraStats.completedProjects")}</div>
           </div>
           <div className="text-center">
-            <div className="text-4xl font-bold text-green-600 mb-2">%98.5</div>
-            <div className="text-gray-600">Müşteri Memnuniyeti</div>
+            <div className="text-4xl font-bold text-green-600 mb-2">{t("extraStats.customerSatisfactionValue")}</div>
+            <div className="text-gray-600">{t("extraStats.customerSatisfaction")}</div>
           </div>
           <div className="text-center">
-            <div className="text-4xl font-bold text-purple-600 mb-2">100+</div>
-            <div className="text-gray-600">Aktif Müşteri</div>
+            <div className="text-4xl font-bold text-purple-600 mb-2">{t("extraStats.activeCustomersValue")}</div>
+            <div className="text-gray-600">{t("extraStats.activeCustomers")}</div>
           </div>
           <div className="text-center">
-            <div className="text-4xl font-bold text-orange-600 mb-2">€50M+</div>
-            <div className="text-gray-600">Önlenen Kayıp</div>
+            <div className="text-4xl font-bold text-orange-600 mb-2">{t("extraStats.preventedLossValue")}</div>
+            <div className="text-gray-600">{t("extraStats.preventedLoss")}</div>
           </div>
         </div>
       </div>

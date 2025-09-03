@@ -31,6 +31,7 @@ const serviceIcons = {
 
 export default function ServicesPage() {
   const t = useTranslations("services");
+  const c = useTranslations("common");
 
   const services = [
     {
@@ -140,13 +141,13 @@ export default function ServicesPage() {
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Button size="lg" className="btn-blue-green" asChild>
                 <Link href="/contact">
-                  Hemen Teklif Al
+                  {c("getQuote")}
                   <ArrowRight className="ml-2 h-4 w-4" />
                 </Link>
               </Button>
               <Button size="lg" variant="outline" className="btn-outline-blue-green border-white text-white hover:bg-white hover:text-slate-900" asChild>
                 <Link href="/pricing">
-                  Paket Seçenekleri
+                  {c("viewPackages")}
                 </Link>
               </Button>
             </div>
@@ -165,7 +166,7 @@ export default function ServicesPage() {
                 <Card key={service.id} className={`card-hover relative border-2 h-full bg-blue-green-subtle border-blue-green`}>
                   {service.featured && (
                     <Badge className="absolute -top-3 left-6 bg-blue-green-gradient">
-                      Popüler
+                      {c("popular")}
                     </Badge>
                   )}
                   
@@ -176,7 +177,7 @@ export default function ServicesPage() {
                     <CardTitle className="text-xl mb-2">{service.title}</CardTitle>
                     <div className="flex items-center space-x-2 mb-2">
                       <Clock className="h-4 w-4 text-gray-500" />
-                      <span className="text-sm text-gray-600">SLA: {service.sla}</span>
+                      <span className="text-sm text-gray-600">{c("sla")}: {service.sla}</span>
                     </div>
                   </CardHeader>
                   
@@ -187,7 +188,7 @@ export default function ServicesPage() {
                     
                     {/* Features */}
                     <div className="space-y-2">
-                      <h4 className="font-medium text-sm text-gray-900">Temel Özellikler:</h4>
+                      <h4 className="font-medium text-sm text-gray-900">{c("keyFeatures")}:</h4>
                       {service.features.map((feature, index) => (
                         <div key={index} className="flex items-center text-sm text-gray-600">
                           <CheckCircle className="h-3 w-3 text-green-600 mr-2 flex-shrink-0" />
@@ -199,7 +200,7 @@ export default function ServicesPage() {
                     {/* CTA */}
                     <Button variant="outline" className="w-full group mt-auto" asChild>
                       <Link href={`/services/${service.slug}`}>
-                        Detayları Gör
+                        {t("viewDetails")}
                         <ArrowRight className="ml-2 h-4 w-4 group-hover:translate-x-1 transition-transform" />
                       </Link>
                     </Button>

@@ -2,128 +2,76 @@ import { useTranslations } from "next-intl";
 import { Link } from "@/i18n";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
-import { Badge } from "@/components/ui/badge";
-import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import { 
   CheckCircle,
-  X,
-  Star,
   Phone,
   Mail,
   ArrowRight,
   Clock,
   Users,
   Shield,
-  Zap
+  Zap,
+  Settings,
+  Globe,
+  Award
 } from "lucide-react";
 
 export default function PricingPage() {
   const t = useTranslations("pricing");
 
-  const packages = [
+  const enterpriseSolutions = [
     {
-      id: "starter",
-      name: t("starter.title"),
-      subtitle: t("starter.subtitle"),
-      description: t("starter.description"),
-      price: "€2,500",
-      period: "/ay",
-      popular: false,
-      color: "border-gray-200",
-      buttonColor: "bg-gray-900 hover:bg-gray-800",
+      id: "enterprise-premium",
+      name: "Enterprise Premium",
+      subtitle: "Kapsamlı Kalite Çözümleri",
+      description: "Büyük ölçekli projeler için tam kapsamlı kalite mühendisliği hizmetleri",
+      icon: Award,
       features: [
-        "7×5 destek (Pazartesi-Cuma)",
-        "24-72 saat SLA",
-        "1 lokasyon kapsamı",
-        "Temel raporlama (PDF/CSV)",
-        "Sorting & Containment",
-        "Görsel kontroller",
-        "Telefon/e-posta desteği"
-      ],
-      notIncluded: [
-        "Hafta sonu desteği",
-        "Acil müdahale garantisi",
-        "Yerinde ekip",
-        "Özel raporlar"
-      ]
-    },
-    {
-      id: "growth",
-      name: t("growth.title"),
-      subtitle: t("growth.subtitle"), 
-      description: t("growth.description"),
-      price: "€4,500",
-      period: "/ay",
-      popular: true,
-      color: "border-blue-500",
-      buttonColor: "bg-blue-600 hover:bg-blue-700",
-      features: [
-        "7×7 destek",
-        "24 saat SLA",
-        "2-3 lokasyon kapsamı",
-        "Resident/Technical Rep.",
-        "Kök neden analizi",
-        "Haftalık e-rapor",
-        "QMS önerileri",
-        "Video konferans desteği",
-        "Acil müdahale dahil"
-      ],
-      notIncluded: [
-        "24/7 destek",
-        "Çoklu ülke kapsamı",
-        "Özel SLA'lar"
-      ]
-    },
-    {
-      id: "pro",
-      name: t("pro.title"),
-      subtitle: t("pro.subtitle"),
-      description: t("pro.description"),
-      price: "€8,500",
-      period: "/ay",
-      popular: false,
-      color: "border-purple-500",
-      buttonColor: "bg-purple-600 hover:bg-purple-700",
-      features: [
-        "24×7 destek",
-        "<12 saat SLA hedefi",
-        "Çoklu lokasyon",
-        "Rework + kalite mühendisliği",
-        "Tedarikçi hazırlığı",
-        "Aylık yönetici özeti",
-        "Süreç optimizasyonu",
-        "Dedicated project manager",
-        "Özel raporlar",
-        "API entegrasyonu"
-      ],
-      notIncluded: [
-        "Sözleşmeli kapasite",
-        "Yerinde ekip"
-      ]
-    },
-    {
-      id: "enterprise",
-      name: t("enterprise.title"),
-      subtitle: t("enterprise.subtitle"),
-      description: t("enterprise.description"),
-      price: "Özel Fiyat",
-      period: "",
-      popular: false,
-      color: "border-orange-500",
-      buttonColor: "bg-orange-600 hover:bg-orange-700",
-      features: [
-        "Sözleşmeli kapasite",
-        "Yerinde ekip",
+        "24×7 destek ve acil müdahale",
+        "Sözleşmeli kapasite garantisi",
+        "Yerinde ekip konuşlandırma",
+        "Çok ülke roll-out desteği",
         "EV/e-mobility uzmanlığı",
-        "Çok ülke roll-out",
         "Sistem entegrasyonları",
         "Özel SLA'lar",
         "Dedicated account manager",
         "Custom reporting dashboard",
-        "Priority support",
-        "Training & certification"
-      ],
-      notIncluded: []
+        "Priority support"
+      ]
+    },
+    {
+      id: "enterprise-global",
+      name: "Enterprise Global",
+      subtitle: "Küresel Operasyonlar",
+      description: "Uluslararası projeler ve çok lokasyonlu operasyonlar için özelleştirilmiş çözümler",
+      icon: Globe,
+      features: [
+        "Çok ülke koordinasyonu",
+        "Küresel standart uygulamaları",
+        "Yerel ekip koordinasyonu",
+        "24/7 global destek",
+        "Çoklu dil desteği",
+        "Kültürel adaptasyon",
+        "Uluslararası compliance",
+        "Global raporlama"
+      ]
+    },
+    {
+      id: "enterprise-custom",
+      name: "Enterprise Custom",
+      subtitle: "Özelleştirilmiş Çözümler",
+      description: "Özel ihtiyaçlarınıza göre tamamen özelleştirilmiş kalite mühendisliği hizmetleri",
+      icon: Settings,
+      features: [
+        "Tam özelleştirilebilir hizmet paketi",
+        "İhtiyaca özel SLA tasarımı",
+        "Özel teknoloji entegrasyonları",
+        "Sektörel uzmanlık",
+        "Training ve sertifikasyon",
+        "Stratejik ortaklık",
+        "Innovation support",
+        "Future-ready solutions"
+      ]
     }
   ];
 
@@ -161,10 +109,10 @@ export default function PricingPage() {
         <div className="container mx-auto container-padding">
           <div className="max-w-4xl mx-auto text-center">
             <h1 className="text-4xl lg:text-6xl font-bold mb-6">
-              {t("title")}
+              Enterprise Çözümler
             </h1>
             <p className="text-xl lg:text-2xl text-slate-200 mb-8">
-              {t("subtitle")}
+              Büyük ölçekli projeler için özelleştirilmiş kalite mühendisliği hizmetleri
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Button size="lg" className="bg-blue-600 hover:bg-blue-700" asChild>
@@ -183,172 +131,129 @@ export default function PricingPage() {
         </div>
       </section>
 
-      {/* Pricing tabs */}
+      {/* Enterprise Solutions */}
       <section className="section-padding">
         <div className="container mx-auto container-padding">
-          <Tabs defaultValue="monthly" className="w-full">
-            <TabsList className="grid w-full max-w-md mx-auto grid-cols-2 mb-16">
-              <TabsTrigger value="monthly">{t("monthly")}</TabsTrigger>
-              <TabsTrigger value="enterprise">{t("enterpriseTab")}</TabsTrigger>
-            </TabsList>
-            
-            <TabsContent value="monthly">
-              <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-                {packages.map((pkg) => (
-                  <Card key={pkg.id} className={`relative ${pkg.color} border-2 ${pkg.popular ? 'shadow-2xl transform scale-105' : 'shadow-lg'}`}>
-                    {pkg.popular && (
-                      <Badge className="absolute -top-3 left-1/2 transform -translate-x-1/2 bg-gradient-to-r from-blue-600 to-purple-600">
-                        <Star className="h-3 w-3 mr-1" />
-                        En Popüler
-                      </Badge>
-                    )}
-                    
-                    <CardHeader className="text-center pb-8">
-                      <CardTitle className="text-2xl mb-2">{pkg.name}</CardTitle>
-                      <CardDescription className="text-lg font-medium text-gray-700">
-                        {pkg.subtitle}
-                      </CardDescription>
-                      <div className="pt-4">
-                        <div className="text-4xl font-bold text-gray-900">
-                          {pkg.price}
-                          {pkg.period && <span className="text-lg text-gray-600">{pkg.period}</span>}
-                        </div>
-                      </div>
-                      <p className="text-sm text-gray-600 mt-2">{pkg.description}</p>
-                    </CardHeader>
-                    
-                    <CardContent className="space-y-6">
-                      {/* Features */}
-                      <div className="space-y-3">
-                        <h4 className="font-semibold text-sm uppercase tracking-wide text-gray-700">Dahil Olan:</h4>
-                        {pkg.features.map((feature, index) => (
-                          <div key={index} className="flex items-start text-sm">
-                            <CheckCircle className="h-4 w-4 text-green-600 mr-3 flex-shrink-0 mt-0.5" />
-                            <span>{feature}</span>
-                          </div>
-                        ))}
-                      </div>
-                      
-                      {/* Not included */}
-                      {pkg.notIncluded.length > 0 && (
-                        <div className="space-y-3">
-                          <h4 className="font-semibold text-sm uppercase tracking-wide text-gray-700">Dahil Olmayan:</h4>
-                          {pkg.notIncluded.map((feature, index) => (
-                            <div key={index} className="flex items-start text-sm text-gray-500">
-                              <X className="h-4 w-4 text-gray-400 mr-3 flex-shrink-0 mt-0.5" />
-                              <span>{feature}</span>
-                            </div>
-                          ))}
-                        </div>
-                      )}
-                      
-                      {/* CTA */}
-                      <Button className={`w-full ${pkg.buttonColor} text-white`} asChild>
-                        <Link href={`/contact?package=${pkg.id}`}>
-                          {pkg.id === 'enterprise' ? t("contactSales") : 'Başlayın'}
-                          <ArrowRight className="ml-2 h-4 w-4" />
-                        </Link>
-                      </Button>
-                    </CardContent>
-                  </Card>
-                ))}
-              </div>
-            </TabsContent>
-            
-            <TabsContent value="enterprise">
-              <div className="max-w-4xl mx-auto text-center space-y-8">
-                <Card className="border-orange-500 border-2">
-                  <CardHeader className="text-center pb-8">
-                    <CardTitle className="text-3xl mb-4">Enterprise Çözümler</CardTitle>
-                    <CardDescription className="text-lg">
-                      Büyük ölçekli projeler ve özel ihtiyaçlar için özelleştirilmiş paketler
+          <div className="text-center mb-16">
+            <h2 className="text-3xl lg:text-4xl font-bold text-gray-900 mb-4">
+              Enterprise Çözüm Paketleri
+            </h2>
+            <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+              İhtiyaçlarınıza göre özelleştirilmiş üç farklı enterprise paket seçeneği
+            </p>
+          </div>
+
+          <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
+            {enterpriseSolutions.map((solution) => {
+              const IconComponent = solution.icon;
+              return (
+                <Card key={solution.id} className="border-2 border-orange-200 hover:border-orange-400 transition-all duration-200 shadow-lg hover:shadow-xl">
+                  <CardHeader className="text-center pb-6">
+                    <div className="w-16 h-16 bg-orange-100 rounded-lg flex items-center justify-center mx-auto mb-4">
+                      <IconComponent className="h-8 w-8 text-orange-600" />
+                    </div>
+                    <CardTitle className="text-2xl mb-2">{solution.name}</CardTitle>
+                    <CardDescription className="text-lg font-medium text-gray-700">
+                      {solution.subtitle}
                     </CardDescription>
+                    <p className="text-sm text-gray-600 mt-3">{solution.description}</p>
                   </CardHeader>
-                  <CardContent className="space-y-8">
-                    <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-                      <div className="space-y-4">
-                        <h3 className="font-semibold text-lg">Özelleştirilmiş Hizmetler</h3>
-                        <div className="space-y-2 text-sm">
-                          <div className="flex items-center">
-                            <CheckCircle className="h-4 w-4 text-green-600 mr-2" />
-                            <span>Özel SLA&apos;lar ve kapsamlar</span>
-                          </div>
-                          <div className="flex items-center">
-                            <CheckCircle className="h-4 w-4 text-green-600 mr-2" />
-                            <span>Dedicated account management</span>
-                          </div>
-                          <div className="flex items-center">
-                            <CheckCircle className="h-4 w-4 text-green-600 mr-2" />
-                            <span>Custom reporting ve dashboard</span>
-                          </div>
-                          <div className="flex items-center">
-                            <CheckCircle className="h-4 w-4 text-green-600 mr-2" />
-                            <span>API entegrasyonları</span>
-                          </div>
+                  
+                  <CardContent className="space-y-6">
+                    <div className="space-y-3">
+                      <h4 className="font-semibold text-sm uppercase tracking-wide text-gray-700">Dahil Olan Hizmetler:</h4>
+                      {solution.features.map((feature, index) => (
+                        <div key={index} className="flex items-start text-sm">
+                          <CheckCircle className="h-4 w-4 text-green-600 mr-3 flex-shrink-0 mt-0.5" />
+                          <span>{feature}</span>
                         </div>
-                      </div>
-                      
-                      <div className="space-y-4">
-                        <h3 className="font-semibold text-lg">Global Projeler</h3>
-                        <div className="space-y-2 text-sm">
-                          <div className="flex items-center">
-                            <CheckCircle className="h-4 w-4 text-green-600 mr-2" />
-                            <span>Çok ülke roll-out desteği</span>
-                          </div>
-                          <div className="flex items-center">
-                            <CheckCircle className="h-4 w-4 text-green-600 mr-2" />
-                            <span>Yerinde ekip konuşlandırma</span>
-                          </div>
-                          <div className="flex items-center">
-                            <CheckCircle className="h-4 w-4 text-green-600 mr-2" />
-                            <span>Training ve sertifikasyon</span>
-                          </div>
-                          <div className="flex items-center">
-                            <CheckCircle className="h-4 w-4 text-green-600 mr-2" />
-                            <span>Stratejik ortaklık</span>
-                          </div>
-                        </div>
-                      </div>
+                      ))}
                     </div>
                     
-                    <div className="bg-orange-50 rounded-lg p-6">
-                      <h4 className="font-semibold mb-4">Özel Teklifinizi Alalım</h4>
-                      <p className="text-sm text-gray-600 mb-4">
-                        Her enterprise müşterimiz için özel çözümler geliştiriyoruz. 
-                        İhtiyaçlarınızı analiz edip size özel bir teklif hazırlayalım.
-                      </p>
-                      <div className="flex flex-col sm:flex-row gap-4">
-                        <Button className="bg-orange-600 hover:bg-orange-700" asChild>
-                          <Link href="/contact?type=enterprise">
-                            <Mail className="h-4 w-4 mr-2" />
-                            Teklif Talep Et
-                          </Link>
-                        </Button>
-                        <Button variant="outline" asChild>
-                          <a href="tel:+498912345678">
-                            <Phone className="h-4 w-4 mr-2" />
-                            Görüşme Planlayın
-                          </a>
-                        </Button>
-                      </div>
-                    </div>
+                    <Button className="w-full bg-orange-600 hover:bg-orange-700 text-white" asChild>
+                      <Link href={`/contact?package=${solution.id}`}>
+                        Teklif Talep Et
+                        <ArrowRight className="ml-2 h-4 w-4" />
+                      </Link>
+                    </Button>
                   </CardContent>
                 </Card>
-              </div>
-            </TabsContent>
-          </Tabs>
+              );
+            })}
+          </div>
+
+          {/* Additional Enterprise Info */}
+          <div className="mt-16 max-w-4xl mx-auto">
+            <Card className="border-orange-500 border-2">
+              <CardHeader className="text-center pb-6">
+                <CardTitle className="text-3xl mb-4">Neden Enterprise Çözümler?</CardTitle>
+                <CardDescription className="text-lg">
+                  Büyük ölçekli projelerde sizin için neden doğru seçim olduğumuzu öğrenin
+                </CardDescription>
+              </CardHeader>
+              <CardContent className="space-y-8">
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+                  <div className="space-y-4">
+                    <h3 className="font-semibold text-lg flex items-center">
+                      <Shield className="h-5 w-5 text-orange-600 mr-2" />
+                      Kanıtlanmış Uzmanlık
+                    </h3>
+                    <div className="space-y-2 text-sm text-gray-600">
+                      <p>15+ yıllık sektör deneyimi ile otomotiv kalite standartlarında uzmanız</p>
+                      <p>Fortune 500 şirketleri ile çalışma tecrübesi</p>
+                      <p>Uluslararası sertifikalar ve akreditasyonlar</p>
+                    </div>
+                  </div>
+                  
+                  <div className="space-y-4">
+                    <h3 className="font-semibold text-lg flex items-center">
+                      <Users className="h-5 w-5 text-orange-600 mr-2" />
+                      Dedicated Ekip
+                    </h3>
+                    <div className="space-y-2 text-sm text-gray-600">
+                      <p>Projenize özel atanmış uzman ekip</p>
+                      <p>24/7 müşteri hizmetleri ve destek</p>
+                      <p>Proje yöneticisi ataması ve düzenli raporlama</p>
+                    </div>
+                  </div>
+                </div>
+                
+                <div className="bg-orange-50 rounded-lg p-6 text-center">
+                  <h4 className="font-semibold mb-4">Özel Teklifinizi Alalım</h4>
+                  <p className="text-sm text-gray-600 mb-6">
+                    Her enterprise müşterimiz için özel çözümler geliştiriyoruz. 
+                    İhtiyaçlarınızı analiz edip size özel bir teklif hazırlayalım.
+                  </p>
+                  <div className="flex flex-col sm:flex-row gap-4 justify-center">
+                    <Button className="bg-orange-600 hover:bg-orange-700" asChild>
+                      <Link href="/contact?type=enterprise">
+                        <Mail className="h-4 w-4 mr-2" />
+                        Detaylı Teklif Talep Et
+                      </Link>
+                    </Button>
+                    <Button variant="outline" asChild>
+                      <a href="tel:+498912345678">
+                        <Phone className="h-4 w-4 mr-2" />
+                        Görüşme Planlayın
+                      </a>
+                    </Button>
+                  </div>
+                </div>
+              </CardContent>
+            </Card>
+          </div>
         </div>
       </section>
 
-      {/* Add-ons section */}
+      {/* Enterprise Services section */}
       <section className="section-padding bg-gray-50">
         <div className="container mx-auto container-padding">
           <div className="text-center mb-16">
             <h2 className="text-3xl lg:text-4xl font-bold text-gray-900 mb-4">
-              Ek Hizmetler
+              Enterprise Ek Hizmetler
             </h2>
             <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-              Paketinizi özel ihtiyaçlarınıza göre özelleştirin
+              Enterprise paketinizi tamamlayacak özel hizmetler
             </p>
           </div>
 
@@ -356,13 +261,13 @@ export default function PricingPage() {
             {addOns.map((addon, index) => {
               const IconComponent = addon.icon;
               return (
-                <Card key={index} className="card-hover">
+                <Card key={index} className="card-hover border-orange-200 hover:border-orange-400 transition-all duration-200">
                   <CardHeader className="text-center">
-                    <div className="w-12 h-12 bg-blue-100 rounded-lg flex items-center justify-center mx-auto mb-4">
-                      <IconComponent className="h-6 w-6 text-blue-600" />
+                    <div className="w-12 h-12 bg-orange-100 rounded-lg flex items-center justify-center mx-auto mb-4">
+                      <IconComponent className="h-6 w-6 text-orange-600" />
                     </div>
                     <CardTitle className="text-lg">{addon.name}</CardTitle>
-                    <div className="text-2xl font-bold text-blue-600">{addon.price}</div>
+                    <div className="text-lg font-semibold text-orange-600">Özel Fiyat</div>
                   </CardHeader>
                   <CardContent>
                     <p className="text-sm text-gray-600 text-center">{addon.description}</p>
@@ -379,40 +284,51 @@ export default function PricingPage() {
         <div className="container mx-auto container-padding">
           <div className="text-center mb-16">
             <h2 className="text-3xl lg:text-4xl font-bold text-gray-900 mb-4">
-              Fiyatlandırma Hakkında SSS
+              Enterprise Çözümler Hakkında SSS
             </h2>
           </div>
 
           <div className="max-w-3xl mx-auto space-y-6">
             <Card>
               <CardHeader>
-                <CardTitle>Fiyatlara KDV dahil mi?</CardTitle>
+                <CardTitle>Enterprise çözümler nasıl fiyatlandırılır?</CardTitle>
               </CardHeader>
               <CardContent>
                 <p className="text-gray-600">
-                  Belirtilen fiyatlar KDV hariçtir. Faturalandırma ülkenize göre geçerli KDV oranı eklenecektir.
+                  Her enterprise projesi özeldir. Proje kapsamı, süre, lokasyon ve ihtiyaçlarınıza göre özel fiyat teklifi hazırlanır. Minimum yatırım seviyeleri mevcuttur.
                 </p>
               </CardContent>
             </Card>
 
             <Card>
               <CardHeader>
-                <CardTitle>Sözleşme süresi ne kadar?</CardTitle>
+                <CardTitle>Minimum sözleşme süresi nedir?</CardTitle>
               </CardHeader>
               <CardContent>
                 <p className="text-gray-600">
-                  Minimum 12 ay sözleşme süresi bulunmaktadır. Enterprise paketlerde özel süreler belirlenebilir.
+                  Enterprise projeler için minimum 24 ay sözleşme süresi bulunmaktadır. Büyük projeler için daha uzun süreli stratejik ortaklıklar da mümkündür.
                 </p>
               </CardContent>
             </Card>
 
             <Card>
               <CardHeader>
-                <CardTitle>Paket değişikliği yapabilir miyim?</CardTitle>
+                <CardTitle>Hangi ülkelerde hizmet veriyorsunuz?</CardTitle>
               </CardHeader>
               <CardContent>
                 <p className="text-gray-600">
-                  Evet, ihtiyaçlarınıza göre paketinizi yükseltebilir veya düşürebilirsiniz. Değişiklik bir sonraki fatura döneminde geçerli olur.
+                  Avrupa genelinde hizmet vermekteyiz. Türkiye, Almanya, Fransa, İtalya, İspanya ve diğer AB ülkelerinde yerinde ekip konuşlandırma imkanımız bulunmaktadır.
+                </p>
+              </CardContent>
+            </Card>
+
+            <Card>
+              <CardHeader>
+                <CardTitle>Proje başlangıç süresi ne kadar?</CardTitle>
+              </CardHeader>
+              <CardContent>
+                <p className="text-gray-600">
+                  Sözleşme imzalandıktan sonra 2-4 hafta içinde proje ekibinizi oluşturup operasyonlara başlayabiliriz. Acil projeler için daha hızlı başlangıç da mümkündür.
                 </p>
               </CardContent>
             </Card>
@@ -421,23 +337,23 @@ export default function PricingPage() {
       </section>
 
       {/* CTA section */}
-      <section className="section-padding bg-gradient-to-r from-blue-600 to-purple-600 text-white">
+      <section className="section-padding bg-gradient-to-r from-orange-600 to-red-600 text-white">
         <div className="container mx-auto container-padding text-center">
           <h2 className="text-3xl lg:text-4xl font-bold mb-4">
-            Hangi Paket Size Uygun?
+            Enterprise Projenizi Başlatalım
           </h2>
-          <p className="text-xl text-blue-100 mb-8 max-w-3xl mx-auto">
-            Emin değil misiniz? Uzman ekibimiz ihtiyaçlarınızı analiz ederek 
-            size en uygun paketi önerir.
+          <p className="text-xl text-orange-100 mb-8 max-w-3xl mx-auto">
+            Büyük ölçekli kalite projeleriniz için özel çözümler geliştirmeye hazırız. 
+            Uzman ekibimizle projenizi planlayalım.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Button size="lg" className="bg-white text-blue-600 hover:bg-gray-100" asChild>
-              <Link href="/contact">
-                <Users className="mr-2 h-4 w-4" />
-                Ücretsiz Danışmanlık
+            <Button size="lg" className="bg-white text-orange-600 hover:bg-gray-100" asChild>
+              <Link href="/contact?type=enterprise">
+                <Mail className="mr-2 h-4 w-4" />
+                Enterprise Teklif Talep Et
               </Link>
             </Button>
-            <Button size="lg" variant="outline" className="border-white text-white hover:bg-white hover:text-blue-600" asChild>
+            <Button size="lg" variant="outline" className="border-white text-white hover:bg-white hover:text-orange-600" asChild>
               <a href="tel:+498912345678">
                 <Phone className="mr-2 h-4 w-4" />
                 +49 89 123 456 789

@@ -413,8 +413,8 @@ export default function ContactPage() {
                   <a href="tel:+4989123456789" className="text-blue-600 hover:underline text-sm block">
                     +49 89 123 456 789
                   </a>
-                  <a href="mailto:info@qronex.com" className="text-blue-600 hover:underline text-sm block">
-                    info@qronex.com
+                  <a href="mailto:info@qronex.net" className="text-blue-600 hover:underline text-sm block">
+                    info@qronex.net
                   </a>
                 </div>
                 <div className="flex items-center text-sm text-gray-600">
@@ -450,49 +450,7 @@ export default function ContactPage() {
           </div>
         </div>
 
-        {/* Regional managers */}
-        <div className="mt-20">
-          <h2 className="text-3xl font-bold text-center mb-12">{t("regionalManagers")}</h2>
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-            {regionalManagers.map((manager, index) => (
-              <Card key={index} className="card-hover relative">
-                {manager.available && (
-                  <Badge className="absolute -top-2 -right-2 bg-green-600">
-                    <Clock className="h-3 w-3 mr-1" />
-                    Müsait
-                  </Badge>
-                )}
-                
-                <CardHeader className="text-center pb-4">
-                  <div className="text-4xl mb-2">{manager.flag}</div>
-                  <CardTitle className="text-lg">{manager.name}</CardTitle>
-                  <p className="text-sm text-gray-600">{manager.title}</p>
-                  <Badge variant="outline" className="text-xs">
-                    {manager.region}
-                  </Badge>
-                </CardHeader>
-                
-                <CardContent className="space-y-3">
-                  <a 
-                    href={`tel:${manager.phone}`}
-                    className="flex items-center space-x-2 text-sm hover:text-blue-600 transition-colors"
-                  >
-                    <Phone className="h-4 w-4 flex-shrink-0" />
-                    <span>{manager.phone}</span>
-                  </a>
-                  
-                  <a 
-                    href={`mailto:${manager.email}`}
-                    className="flex items-center space-x-2 text-sm hover:text-blue-600 transition-colors"
-                  >
-                    <Mail className="h-4 w-4 flex-shrink-0" />
-                    <span className="truncate">{manager.email}</span>
-                  </a>
-                </CardContent>
-              </Card>
-            ))}
-          </div>
-        </div>
+        
       </div>
     </main>
   );

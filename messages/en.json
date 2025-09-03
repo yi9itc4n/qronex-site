@@ -34,36 +34,69 @@
     "aviationSector": "Aviation sector",
     "ourServices": "Our Services",
     "servicesDescription": "Fast solutions to your quality problems with our field engineers based in Europe",
-    "contact": "Contact",
     "turkish": "Turkish",
-    "english": "English"
+    "english": "English",
+    "company": "Company",
+    "competencies": "Competencies",
+    "news": "News",
+    "career": "Career",
+    "getOffer": "Get Offer",
+    "viewAllServices": "View All Services",
+    "residentEngineering": "Resident Engineering",
+    "residentEngineeringDesc": "Customer Quick Response Activities, 8D Management, and Steering Problem-Solving Process",
+    "qualityInspectionCustomer": "Quality Inspection & Rework @ Customer",
+    "qualityInspectionCustomerDesc": "Comprehensive quality inspection and rework services at customer locations",
+    "qualityInspectionTier1": "Quality Inspection & Rework @ Tier1",
+    "qualityInspectionTier1Desc": "Quality inspection and rework services at Tier1 supplier locations",
+    "consultingTraining": "Consulting & Training",
+    "consultingTrainingDesc": "Professional consulting and training services for quality improvement",
+    "advancedPhaseLaunch": "Advanced Phase & Launch Services",
+    "advancedPhaseLaunchDesc": "Advanced phase support and launch services for new products and processes"
   },
   "services": {
     "title": "Our Services",
     "subtitle": "Fast solutions to your quality problems with our field engineers based in Europe",
     "onSiteRapidResponse": {
       "title": "On-Site Rapid Response",
-      "description": "24/7 field support for immediate response to your quality issues"
+      "description": "24/7 field support for immediate response to your quality issues",
+      "feature1": "24-72h response",
+      "feature2": "24/7 support",
+      "feature3": "Emergency intervention"
     },
     "sortingContainment": {
       "title": "Sorting & Containment",
-      "description": "Separating defective parts to ensure production line continuity"
+      "description": "Separating defective parts to ensure production line continuity",
+      "feature1": "100% inspection",
+      "feature2": "Fast sorting",
+      "feature3": "Risk management"
     },
     "rework": {
       "title": "Rework",
-      "description": "Repairing defective parts to minimize your losses"
+      "description": "Repairing defective parts to minimize your losses",
+      "feature1": "Part recovery",
+      "feature2": "Cost saving",
+      "feature3": "Quick solution"
     },
     "qualityEngineering": {
       "title": "Quality Engineering",
-      "description": "Optimizing your quality processes"
+      "description": "Optimizing your quality processes",
+      "feature1": "Process improvement",
+      "feature2": "Quality systems",
+      "feature3": "Analysis"
     },
     "supplierReadiness": {
       "title": "Supplier Readiness",
-      "description": "Elevating your suppliers' quality standards"
+      "description": "Elevating your suppliers' quality standards",
+      "feature1": "Supplier development",
+      "feature2": "Readiness processes",
+      "feature3": "Certification"
     },
     "technicalRepresentation": {
       "title": "Technical Representation",
-      "description": "Providing continuous quality support on-site"
+      "description": "Providing continuous quality support on-site",
+      "feature1": "On-site support",
+      "feature2": "Continuous monitoring",
+      "feature3": "Consultancy"
     },
     "auditsTraining": {
       "title": "Audits & Training",
@@ -72,7 +105,12 @@
     "aftersalesSupport": {
       "title": "Aftersales Support",
       "description": "Ensuring quality service delivery to your customers"
-    }
+    },
+    "viewDetails": "View Details",
+    "ctaTitle": "Get Immediate Support for Your Quality Problem",
+    "ctaSubtitle": "Our expert team is ready 24/7. Immediate intervention for emergencies and detailed consultancy for planned projects.",
+    "ctaPrimary": "Get Free Quote",
+    "ctaSecondary": "View All Services"
   },
   "industries": {
     "title": "Industries",
@@ -118,20 +156,35 @@
       "title": "Values We Add",
       "value1": {
         "title": "Rapid Response",
-        "description": "On-site within 24-72 hours"
+        "description": "On-site within 24-72 hours",
+        "stats": "24-72h"
       },
       "value2": {
         "title": "Experienced Team",
-        "description": "15+ years of industry experience"
+        "description": "15+ years of industry experience",
+        "stats": "15+ years"
       },
       "value3": {
         "title": "Europe-wide",
-        "description": "Service across wide geography"
+        "description": "Service across wide geography",
+        "stats": "15 countries"
       },
       "value4": {
         "title": "Continuous Support",
-        "description": "24/7 accessible team"
+        "description": "24/7 accessible team",
+        "stats": "24/7"
       }
+    ,
+    "extraStats": {
+      "completedProjectsValue": "500+",
+      "completedProjects": "Completed Projects",
+      "customerSatisfactionValue": "98.5%",
+      "customerSatisfaction": "Customer Satisfaction",
+      "activeCustomersValue": "100+",
+      "activeCustomers": "Active Customers",
+      "preventedLossValue": "€50M+",
+      "preventedLoss": "Prevented Loss"
+    }
     },
     "whyQronex": {
       "title": "Why QroneX?",
@@ -189,6 +242,16 @@
       "officeLocations": "Office Locations",
       "munichHeadOffice": "Munich Head Office",
       "parisOffice": "Paris Office"
+    },
+    "slideshow": {
+      "title": "Explore Our Services",
+      "subtitle": "Comprehensive services and industry experience to solve your quality problems",
+      "viewDetails": "View Details",
+      "s1": { "title": "On-Site Rapid Response", "description": "Resolve quality problems quickly with field intervention within 24-72 hours" },
+      "s2": { "title": "Sorting & Containment", "description": "Secure your production with defective part sorting and inspection" },
+      "s3": { "title": "Automotive Industry", "description": "Experience working with premium brands like BMW and Mercedes" },
+      "s4": { "title": "Quality Engineering", "description": "Increase your efficiency with process optimization and quality management" },
+      "s5": { "title": "Case Studies", "description": "Discover how we solve our customers’ quality problems" }
     }
   },
   "contact": {
@@ -215,10 +278,8 @@
     }
   },
   "pricing": {
-    "title": "Pricing",
-    "subtitle": "Choose the package that fits your needs",
-    "monthly": "Monthly",
-    "enterprise": "Enterprise",
+    "title": "Enterprise Solutions",
+    "subtitle": "Customized quality engineering services for large-scale projects",
     "contactSales": "Contact Sales Team",
     "starter": {
       "title": "Starter",
@@ -276,9 +337,21 @@
       ]
     }
   },
+  "common": {
+    "getQuote": "Get Quote",
+    "viewPackages": "View Packages",
+    "popular": "Popular",
+    "sla": "SLA",
+    "keyFeatures": "Key Features",
+    "getStarted": "Get Started",
+    "requestQuote": "Request Quote",
+    "contactUsToday": "Contact Us Today",
+    "viewAllServices": "View All Services"
+  },
   "footer": {
     "quickLinks": "Quick Links",
     "services": "Services",
+    "companyDescription": "We provide fast and effective solutions to your quality problems with field engineers based in Europe. The trusted quality partner of Tier 1 suppliers.",
     "legal": "Legal",
     "privacy": "Privacy Policy",
     "terms": "Terms of Service",
@@ -315,6 +388,432 @@
       "technology": "Technology",
       "sustainability": "Sustainability",
       "eMobility": "E-Mobility"
+    }
+  }
+  ,
+  "about": {
+    "heroTitle": "Who are we!",
+    "heroSubtitle": "QroneX is a leading quality consultancy providing fast and accurate on-site solutions to quality problems experienced by Tier 1 suppliers with OEMs, with field-ready engineers based in Europe.",
+    "visionMission": "Our Vision and Mission",
+    "visionTitle": "Our Vision",
+    "visionText": "To be the most trusted quality consulting partner in Europe, an indispensable guide in our customers' journey to quality excellence.",
+    "missionTitle": "Our Mission",
+    "missionText": "With the deep expertise of our field engineers and up-to-date technological solutions, we enable our customers to achieve their quality goals and support sustainable success.",
+    "stats": {
+      "countries": "Countries Served",
+      "engineers": "Field Engineers",
+      "projects": "Successful Projects",
+      "satisfaction": "Customer Satisfaction"
+    },
+    "values": {
+      "title": "Our Values",
+      "subtitle": "The core values that shape our work culture and customer relationships at QroneX",
+      "items": {
+        "excellence": { "title": "Excellence", "description": "We aim for the highest quality standards in every project and focus on exceeding our customers' expectations." },
+        "reliability": { "title": "Reliability", "description": "We provide consistent, timely, and effective solutions to earn our customers' trust." },
+        "innovation": { "title": "Innovation", "description": "We ensure continuous improvement by using the latest technologies and methodologies." },
+        "customerFocus": { "title": "Customer Focus", "description": "Our customers' success is our success. Understanding their needs is our priority." }
+      }
+    },
+    "leadership": {
+      "title": "Our Leadership Team",
+      "subtitle": "Our leaders who carry QroneX to success with years of industry experience",
+      "readMore": "Read Full Bio"
+    },
+    "team": {
+      "senih": {
+        "location": "Nuremberg, Germany",
+        "experience": "30+ years",
+        "description": "Former Valeo Germany PWT Country Quality Director and Valeo Turkey Country Quality Director. Expert in quality excellence with 30 years of experience.",
+        "bio": "Born in 1965, graduate of Istanbul Technical University Metallurgical Engineering. Held roles as Valeo Germany PWT Country Quality Director, Valeo Turkey Country Quality Director, and Valeo Turkey SQA Manager. With 30 years of experience and expertise in casting and materials. Role model level experience in QRQC, PDCA, FTA, Global 8D and problem-solving tools. Lives in Nuremberg."
+      },
+      "aysu": {
+        "location": "Lyon, France",
+        "experience": "15+ years",
+        "description": "15 years of quality experience at Valeo Group. Expert in customer quality management with Ford, Daimler, Renault (RSA) and Stellantis (STLA).",
+        "bio": "Born in 1988, graduate of Bursa Uludağ University Mechanical Engineering. 15 years of quality experience at Valeo Group. 10 years of customer quality management experience with major OEMs such as Ford, Daimler, Renault (RSA) and Stellantis (STLA). Expert in managing production quality teams and project quality management with product development. Lives in Lyon."
+      },
+      "zafer": {
+        "location": "Paris, France",
+        "experience": "25+ years",
+        "description": "Global Industrial Director at Valeo; managed manufacturing operations across 30+ plants in 15+ countries. Established two greenfield manufacturing plants.",
+        "bio": "Born in 1975, graduate of Istanbul Yıldız Technical University Mechanical Engineering. Managed operations in 30+ plants across 15+ countries as Global Industrial Director at Valeo. Served as Valeo Turkey Plant Manager. Built two greenfield production plants to full operation. 25 years of experience in key operational and leadership roles. Expert in manufacturing, process engineering, supply chain management, performance management, and operational excellence. Lives in Paris."
+      }
+    },
+    "cta": {
+      "title": "Let's Achieve Success Together",
+      "subtitle": "Let us help you achieve your quality goals with our experienced team and proven methodologies",
+      "primary": "Contact Us",
+      "secondary": "Explore Our Success Stories"
+    }
+  }
+  ,
+  "servicesDetails": {
+    "resident": {
+      "heroTitle": "Resident Engineering",
+      "heroSubtitle": "Customer Quick Response Activities, 8D Management, and Steering Problem-Solving Process",
+      "featuresTitle": "Our Resident Engineering Services",
+      "featuresSubtitle": "Comprehensive on-site engineering support to ensure your quality processes run smoothly",
+      "featuresBenefitTitle": "Key Benefits:",
+      "processTitle": "Our Process",
+      "processSubtitle": "Systematic approach to resident engineering and problem resolution",
+      "benefitsTitle": "Why Choose Resident Engineering?",
+      "highlightsTitle": "Service Highlights",
+      "highlights": {
+        "responseTime": "Response Time",
+        "availability": "Availability",
+        "teamSize": "Team Size",
+        "methodology": "Methodology",
+        "immediate": "Immediate",
+        "a247": "24/7",
+        "teamSizeValue": "2-5 Engineers",
+        "methodologyValue": "8D Process"
+      },
+      "feature1": {
+        "title": "Customer Quick Response Activities",
+        "description": "Lead daily quality routines on the production floor to ensure adherence to procedures and immediate response to non-conformities.",
+        "benefit1": "24/7 on-site presence",
+        "benefit2": "Immediate problem identification",
+        "benefit3": "Real-time quality monitoring",
+        "benefit4": "Proactive issue prevention"
+      },
+      "feature2": {
+        "title": "8D Management",
+        "description": "Facilitate 8D-based root cause analysis and resolution to ensure long-term corrective and preventive actions.",
+        "benefit1": "Systematic problem solving",
+        "benefit2": "Root cause identification",
+        "benefit3": "Preventive action implementation",
+        "benefit4": "Long-term solution development"
+      },
+      "feature3": {
+        "title": "Steering Problem-Solving Process",
+        "description": "Lead and coordinate cross-functional teams to solve complex issues quickly and systematically.",
+        "benefit1": "Cross-functional collaboration",
+        "benefit2": "Expert team coordination",
+        "benefit3": "Systematic approach",
+        "benefit4": "Rapid resolution"
+      },
+      "process": {
+        "s1Title": "Initial Assessment",
+        "s1Desc": "Quick evaluation of the situation and immediate containment actions",
+        "s2Title": "Team Formation",
+        "s2Desc": "Assemble cross-functional team with appropriate expertise",
+        "s3Title": "Root Cause Analysis",
+        "s3Desc": "Systematic investigation using 8D methodology",
+        "s4Title": "Solution Implementation",
+        "s4Desc": "Execute corrective and preventive actions",
+        "s5Title": "Verification & Monitoring",
+        "s5Desc": "Validate effectiveness and establish ongoing monitoring"
+      },
+      "benefits": {
+        "b1Title": "24/7 Availability",
+        "b1Desc": "Round-the-clock support for critical quality issues and emergencies",
+        "b2Title": "Expert Team",
+        "b2Desc": "Experienced engineers with deep industry knowledge and problem-solving expertise",
+        "b3Title": "Continuous Improvement",
+        "b3Desc": "Ongoing optimization of processes and quality systems"
+      }
+    },
+    "qic": {
+      "heroTitle": "Quality Inspection & Rework @ Customer",
+      "heroSubtitle": "Comprehensive quality inspection and rework services at customer locations",
+      "servicesTitle": "Our Quality Services",
+      "servicesSubtitle": "Professional quality inspection and rework services delivered at your customer locations",
+      "featuresTitle": "Key Features:",
+      "processTitle": "Our Process",
+      "processSubtitle": "Systematic approach to quality inspection and rework at customer locations",
+      "benefitsTitle": "Why Choose Our Quality Services?",
+      "highlightsTitle": "Service Highlights",
+      "highlights": {
+        "responseTime": "Response Time",
+        "serviceLocation": "Service Location",
+        "teamSize": "Team Size",
+        "qualityStandards": "Quality Standards",
+        "responseTimeValue": "24-48 Hours",
+        "serviceLocationValue": "Customer Site",
+        "teamSizeValue": "2-4 Technicians",
+        "qualityStandardsValue": "ISO Certified"
+      },
+      "service1": {
+        "title": "On-Site Quality Inspection",
+        "description": "Comprehensive quality control and inspection services at your customer locations",
+        "f1": "Real-time quality assessment",
+        "f2": "Defect identification and classification",
+        "f3": "Quality metrics reporting",
+        "f4": "Immediate containment actions"
+      },
+      "service2": {
+        "title": "Customer Location Rework",
+        "description": "Professional rework and repair services to restore product quality",
+        "f1": "Skilled rework technicians",
+        "f2": "Quality restoration processes",
+        "f3": "Cost-effective solutions",
+        "f4": "Minimal production disruption"
+      },
+      "service3": {
+        "title": "Quality Control Procedures",
+        "description": "Implementation and optimization of quality control systems",
+        "f1": "Standardized procedures",
+        "f2": "Quality documentation",
+        "f3": "Process optimization",
+        "f4": "Continuous improvement"
+      },
+      "service4": {
+        "title": "Immediate Response",
+        "description": "Rapid response to quality issues to minimize downtime",
+        "f1": "24/7 emergency response",
+        "f2": "Quick problem resolution",
+        "f3": "Minimal production impact",
+        "f4": "Customer satisfaction focus"
+      },
+      "process": {
+        "s1Title": "Issue Identification",
+        "s1Desc": "Quick assessment of quality problems and immediate containment",
+        "s2Title": "Team Deployment",
+        "s2Desc": "Rapid deployment of quality inspection and rework teams",
+        "s3Title": "Quality Assessment",
+        "s3Desc": "Comprehensive inspection and defect classification",
+        "s4Title": "Rework Execution",
+        "s4Desc": "Professional rework and quality restoration",
+        "s5Title": "Verification & Handover",
+        "s5Desc": "Quality verification and customer handover"
+      },
+      "benefits": {
+        "b1Title": "On-Site Service",
+        "b1Desc": "We come to your customer locations, minimizing disruption and travel costs",
+        "b2Title": "Rapid Response",
+        "b2Desc": "Quick deployment and immediate problem resolution to minimize downtime",
+        "b3Title": "Expert Team",
+        "b3Desc": "Skilled technicians and quality engineers with extensive experience"
+      }
+    },
+    "qit1": {
+      "heroTitle": "Quality Inspection & Rework @ Tier1",
+      "heroSubtitle": "Quality inspection and rework services at Tier1 supplier locations",
+      "servicesTitle": "Our Tier1 Quality Services",
+      "servicesSubtitle": "Professional quality inspection and rework services delivered at Tier1 supplier locations",
+      "featuresTitle": "Key Features:",
+      "processTitle": "Our Process",
+      "processSubtitle": "Systematic approach to quality inspection and rework at Tier1 supplier locations",
+      "benefitsTitle": "Why Choose Our Tier1 Services?",
+      "highlightsTitle": "Service Highlights",
+      "highlights": {
+        "responseTime": "Response Time",
+        "serviceLocation": "Service Location",
+        "teamSize": "Team Size",
+        "focusArea": "Focus Area",
+        "responseTimeValue": "24-72 Hours",
+        "serviceLocationValue": "Supplier Site",
+        "teamSizeValue": "2-4 Technicians",
+        "focusAreaValue": "Supplier Development"
+      },
+      "service1": {
+        "title": "Tier1 Supplier Quality Inspection",
+        "description": "Comprehensive quality control and inspection services at Tier1 supplier locations",
+        "f1": "Supplier quality assessment",
+        "f2": "Defect identification and classification",
+        "f3": "Quality metrics reporting",
+        "f4": "Supplier development support"
+      },
+      "service2": {
+        "title": "Supplier Location Rework",
+        "description": "Professional rework and repair services to restore product quality at supplier sites",
+        "f1": "On-site rework services",
+        "f2": "Quality restoration processes",
+        "f3": "Supplier training and support",
+        "f4": "Process improvement guidance"
+      },
+      "service3": {
+        "title": "Quality Assurance Procedures",
+        "description": "Implementation and optimization of quality assurance systems for suppliers",
+        "f1": "Quality system development",
+        "f2": "Process standardization",
+        "f3": "Supplier certification support",
+        "f4": "Continuous improvement programs"
+      },
+      "service4": {
+        "title": "Supplier Development Support",
+        "description": "Comprehensive support for supplier development and improvement initiatives",
+        "f1": "Supplier capability assessment",
+        "f2": "Development program design",
+        "f3": "Training and mentoring",
+        "f4": "Performance monitoring"
+      },
+      "process": {
+        "s1Title": "Supplier Assessment",
+        "s1Desc": "Comprehensive evaluation of supplier quality capabilities and processes",
+        "s2Title": "Quality Inspection",
+        "s2Desc": "Detailed inspection and quality control at supplier locations",
+        "s3Title": "Issue Identification",
+        "s3Desc": "Identification and classification of quality issues and defects",
+        "s4Title": "Rework & Improvement",
+        "s4Desc": "Execution of rework and implementation of improvement measures",
+        "s5Title": "Verification & Support",
+        "s5Desc": "Quality verification and ongoing supplier development support"
+      },
+      "benefits": {
+        "b1Title": "Supplier Expertise",
+        "b1Desc": "Deep understanding of Tier1 supplier operations and quality challenges",
+        "b2Title": "Rapid Response",
+        "b2Desc": "Quick deployment and immediate problem resolution at supplier sites",
+        "b3Title": "Development Focus",
+        "b3Desc": "Focus on supplier development and long-term improvement"
+      }
+    },
+    "consulting": {
+      "heroTitle": "Consulting & Training",
+      "heroSubtitle": "Expert consulting and professional training to elevate your quality management capabilities",
+      "servicesTitle": "Our Consulting & Training Services",
+      "servicesSubtitle": "Comprehensive consulting and training solutions to transform your quality management approach",
+      "featuresTitle": "Key Features:",
+      "programsTitle": "Training Programs",
+      "programsSubtitle": "Professional training programs designed to develop your team's quality management expertise",
+      "benefitsTitle": "Why Choose Our Consulting & Training?",
+      "highlightsTitle": "Service Highlights",
+      "highlights": {
+        "consultingDuration": "Consulting Duration",
+        "trainingFormat": "Training Format",
+        "teamSize": "Team Size",
+        "certification": "Certification",
+        "consultingDurationValue": "Flexible",
+        "trainingFormatValue": "On-site/Remote",
+        "teamSizeValue": "1-50+ People",
+        "certificationValue": "ISO Support"
+      },
+      "service1": {
+        "title": "Quality Consulting",
+        "description": "Expert consulting services to optimize your quality management systems and processes",
+        "f1": "Quality system assessment",
+        "f2": "Process optimization",
+        "f3": "Best practice implementation",
+        "f4": "Performance improvement"
+      },
+      "service2": {
+        "title": "Professional Training",
+        "description": "Comprehensive training programs to develop your team's quality management skills",
+        "f1": "Quality management training",
+        "f2": "Process improvement workshops",
+        "f3": "Leadership development",
+        "f4": "Certification programs"
+      },
+      "service3": {
+        "title": "Customized Programs",
+        "description": "Tailored consulting and training programs designed for your specific needs",
+        "f1": "Needs assessment",
+        "f2": "Custom curriculum design",
+        "f3": "Industry-specific training",
+        "f4": "Ongoing support"
+      },
+      "service4": {
+        "title": "Certification Support",
+        "description": "Support for quality management certifications and compliance requirements",
+        "f1": "ISO certification support",
+        "f2": "Audit preparation",
+        "f3": "Documentation assistance",
+        "f4": "Compliance guidance"
+      },
+      "programs": {
+        "p1Title": "Quality Management Fundamentals",
+        "p1Duration": "3 Days",
+        "p1Level": "Beginner",
+        "p1Desc": "Essential quality management principles and practices",
+        "p2Title": "Advanced Process Improvement",
+        "p2Duration": "5 Days",
+        "p2Level": "Advanced",
+        "p2Desc": "Advanced methodologies for process optimization",
+        "p3Title": "Leadership in Quality",
+        "p3Duration": "2 Days",
+        "p3Level": "Management",
+        "p3Desc": "Leadership skills for quality management",
+        "p4Title": "ISO 9001 Implementation",
+        "p4Duration": "4 Days",
+        "p4Level": "Intermediate",
+        "p4Desc": "Complete ISO 9001 implementation guidance"
+      },
+      "benefits": {
+        "b1Title": "Expert Consultants",
+        "b1Desc": "Experienced professionals with deep industry knowledge and proven track records",
+        "b2Title": "Customized Approach",
+        "b2Desc": "Tailored solutions designed specifically for your organization's needs",
+        "b3Title": "Measurable Results",
+        "b3Desc": "Focus on delivering tangible improvements and measurable outcomes"
+      },
+      "learnMore": "Learn More"
+    },
+    "launch": {
+      "heroTitle": "Advanced Phase & Launch Services",
+      "heroSubtitle": "Expert support for advanced development phases and successful product launches",
+      "servicesTitle": "Our Advanced Services",
+      "servicesSubtitle": "Comprehensive support for advanced development phases and successful product launches",
+      "featuresTitle": "Key Features:",
+      "phasesTitle": "Our Process Phases",
+      "phasesSubtitle": "Systematic approach to advanced phase management and product launch",
+      "benefitsTitle": "Why Choose Our Advanced Services?",
+      "highlightsTitle": "Service Highlights",
+      "highlights": {
+        "projectDuration": "Project Duration",
+        "teamSize": "Team Size",
+        "successRate": "Success Rate",
+        "supportLevel": "Support Level",
+        "projectDurationValue": "3-12 Months",
+        "teamSizeValue": "3-8 Experts",
+        "successRateValue": "95%+",
+        "supportLevelValue": "Full-Service"
+      },
+      "service1": {
+        "title": "Product Launch Support",
+        "description": "Comprehensive support for successful product launches and market introduction",
+        "f1": "Launch planning and strategy",
+        "f2": "Quality validation",
+        "f3": "Risk assessment",
+        "f4": "Market readiness support"
+      },
+      "service2": {
+        "title": "Advanced Phase Management",
+        "description": "Expert management of advanced development phases and production ramp-up",
+        "f1": "Phase transition management",
+        "f2": "Production ramp-up support",
+        "f3": "Quality system implementation",
+        "f4": "Performance optimization"
+      },
+      "service3": {
+        "title": "Rapid Deployment",
+        "description": "Accelerated deployment of quality systems and processes for time-critical projects",
+        "f1": "Fast-track implementation",
+        "f2": "Critical path management",
+        "f3": "Resource optimization",
+        "f4": "Risk mitigation"
+      },
+      "service4": {
+        "title": "Excellence Programs",
+        "description": "Implementation of excellence programs to achieve operational and quality excellence",
+        "f1": "Excellence framework design",
+        "f2": "Performance benchmarking",
+        "f3": "Continuous improvement",
+        "f4": "Best practice implementation"
+      },
+      "phases": {
+        "p1": "Phase 1",
+        "p1Title": "Planning & Strategy",
+        "p1Desc": "Comprehensive planning and strategic development for successful launch",
+        "p2": "Phase 2",
+        "p2Title": "Development & Validation",
+        "p2Desc": "Product development and quality validation processes",
+        "p3": "Phase 3",
+        "p3Title": "Production Ramp-up",
+        "p3Desc": "Managed production ramp-up with quality assurance",
+        "p4": "Phase 4",
+        "p4Title": "Launch & Optimization",
+        "p4Desc": "Successful launch and ongoing optimization"
+      },
+      "benefits": {
+        "b1Title": "Launch Excellence",
+        "b1Desc": "Proven track record of successful product launches and market introductions",
+        "b2Title": "Time Optimization",
+        "b2Desc": "Accelerated processes and rapid deployment for time-critical projects",
+        "b3Title": "Expert Team",
+        "b3Desc": "Experienced professionals with deep expertise in advanced phase management"
+      }
     }
   }
 }

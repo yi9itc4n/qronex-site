@@ -1,7 +1,8 @@
 "use client";
 
 import { useState, useEffect } from "react";
-import { Link } from "@/i18n";
+import { Link, usePathname } from "@/i18n";
+import { useTranslations } from "next-intl";
 import Image from "next/image";
 import { Button } from "@/components/ui/button";
 import {
@@ -23,31 +24,33 @@ export function Header({ locale }: HeaderProps) {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   const [isHeaderVisible, setIsHeaderVisible] = useState(true);
   const [lastScrollY, setLastScrollY] = useState(0);
+  const pathname = usePathname();
+  const t = useTranslations("navigation");
 
   const services = [
     {
-      title: "Resident Engineering",
-      description: "Customer Quick Response Activities, 8D Management, and Steering Problem-Solving Process",
+      title: t("residentEngineering"),
+      description: t("residentEngineeringDesc"),
       href: "/services/resident-engineering"
     },
     {
-      title: "Quality Inspection & Rework @ Customer",
-      description: "Comprehensive quality inspection and rework services at customer locations",
+      title: t("qualityInspectionCustomer"),
+      description: t("qualityInspectionCustomerDesc"),
       href: "/services/quality-inspection-customer"
     },
     {
-      title: "Quality Inspection & Rework @ Tier1",
-      description: "Quality inspection and rework services at Tier1 supplier locations",
+      title: t("qualityInspectionTier1"),
+      description: t("qualityInspectionTier1Desc"),
       href: "/services/quality-inspection-tier1"
     },
     {
-      title: "Consulting & Training",
-      description: "Professional consulting and training services for quality improvement",
+      title: t("consultingTraining"),
+      description: t("consultingTrainingDesc"),
       href: "/services/consulting-training"
     },
     {
-      title: "Advanced Phase & Launch Services",
-      description: "Advanced phase support and launch services for new products and processes",
+      title: t("advancedPhaseLaunch"),
+      description: t("advancedPhaseLaunchDesc"),
       href: "/services/advanced-phase-launch"
     }
   ];
@@ -123,14 +126,14 @@ export function Header({ locale }: HeaderProps) {
           <div className="hidden lg:flex lg:items-center lg:space-x-8">
             {/* Simple Navigation Links */}
             <Link href="/about" className="text-white hover:text-gray-300 transition-colors duration-200 font-medium">
-              Company
+              {t("company")}
             </Link>
             <NavigationMenu>
               <NavigationMenuList>
                 <NavigationMenuItem>
                   <NavigationMenuTrigger className="text-white hover:text-gray-300 transition-colors duration-200 font-medium bg-transparent border-none p-0 h-auto text-base">
                     <Link href="/services" className="hover:text-gray-300 transition-colors duration-200">
-                      Services
+                      {t("services")}
                     </Link>
                   </NavigationMenuTrigger>
                   <NavigationMenuContent>
@@ -161,7 +164,7 @@ export function Header({ locale }: HeaderProps) {
                           href="/services"
                           className="text-blue-600 hover:text-blue-700 font-medium text-xs inline-flex items-center"
                         >
-                          Tüm Hizmetleri Görüntüle
+                          {t("viewAllServices")}
                           <ArrowRight className="ml-1 h-3 w-3" />
                         </Link>
                       </div>
@@ -171,24 +174,25 @@ export function Header({ locale }: HeaderProps) {
               </NavigationMenuList>
             </NavigationMenu>
             <Link href="/industries" className="text-white hover:text-gray-300 transition-colors duration-200 font-medium">
-              Competencies
+              {t("competencies")}
             </Link>
             <Link href="/news" className="text-white hover:text-gray-300 transition-colors duration-200 font-medium">
-              News
+              {t("news")}
             </Link>
             <Link href="/careers" className="text-white hover:text-gray-300 transition-colors duration-200 font-medium">
-              Career
+              {t("career")}
             </Link>
             <Link href="/pricing" className="text-white hover:text-gray-300 transition-colors duration-200 font-medium">
-              Get Offer
+              {t("getOffer")}
             </Link>
             <Link href="/contact" className="text-white hover:text-gray-300 transition-colors duration-200 font-medium">
-              Contact
+              {t("contact")}
             </Link>
 
             {/* Language Toggle */}
             <Link
-              href={locale === "en" ? "/tr" : "/en"}
+              href={pathname}
+              locale={locale === "en" ? "tr" : "en"}
               className="text-white hover:text-gray-300 transition-colors duration-200 font-medium"
             >
               {locale === "en" ? "TR" : "EN"}
@@ -211,10 +215,10 @@ export function Header({ locale }: HeaderProps) {
                     className="text-lg font-medium"
                     onClick={() => setMobileMenuOpen(false)}
                   >
-                    Company
+                    {t("company")}
                   </Link>
                   <div className="space-y-2">
-                    <div className="text-lg font-medium text-gray-900">Services</div>
+                    <div className="text-lg font-medium text-gray-900">{t("services")}</div>
                     {services.map((service) => (
                       <Link
                         key={service.href}
@@ -231,35 +235,35 @@ export function Header({ locale }: HeaderProps) {
                     className="text-lg font-medium"
                     onClick={() => setMobileMenuOpen(false)}
                   >
-                    Competencies
+                    {t("competencies")}
                   </Link>
                   <Link
                     href="/news"
                     className="text-lg font-medium"
                     onClick={() => setMobileMenuOpen(false)}
                   >
-                    News
+                    {t("news")}
                   </Link>
                   <Link
                     href="/careers"
                     className="text-lg font-medium"
                     onClick={() => setMobileMenuOpen(false)}
                   >
-                    Career
+                    {t("career")}
                   </Link>
                   <Link
                     href="/pricing"
                     className="text-lg font-medium"
                     onClick={() => setMobileMenuOpen(false)}
                   >
-                    Get Offer
+                    {t("getOffer")}
                   </Link>
                   <Link
                     href="/contact"
                     className="text-lg font-medium"
                     onClick={() => setMobileMenuOpen(false)}
                   >
-                    Contact
+                    {t("contact")}
                   </Link>
                 </nav>
               </SheetContent>

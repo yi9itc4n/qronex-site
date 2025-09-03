@@ -1,6 +1,5 @@
 import { NextIntlClientProvider } from 'next-intl';
 import { getMessages } from 'next-intl/server';
-import { Inter } from 'next/font/google';
 import { notFound } from 'next/navigation';
 import { ReactNode } from 'react';
 
@@ -12,11 +11,6 @@ import '../globals.css';
 // Force CSS to be included
 console.log('CSS imported in layout');
 
-const inter = Inter({ 
-  subsets: ['latin'],
-  variable: '--font-inter',
-  display: 'swap',
-});
 
 type Props = {
   children: ReactNode;
@@ -39,14 +33,10 @@ export default async function LocaleLayout({ children, params }: Props) {
   const messages = await getMessages();
 
   return (
-    <html lang={locale} suppressHydrationWarning>
-      <body className={`${inter.variable} font-sans antialiased`} suppressHydrationWarning>
-        <NextIntlClientProvider messages={messages}>
-          <Header locale={locale} />
-          {children}
-          <Footer />
-        </NextIntlClientProvider>
-      </body>
-    </html>
+    <NextIntlClientProvider messages={messages}>
+      <Header locale={locale} />
+      {children}
+      <Footer />
+    </NextIntlClientProvider>
   );
 }

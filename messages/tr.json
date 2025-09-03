@@ -35,34 +35,68 @@
     "ourServices": "Hizmetlerimiz",
     "servicesDescription": "Avrupa genelinde yerleşik mühendis kadromuzla kalite problemlerinize hızlı çözümler",
     "turkish": "Türkçe",
-    "english": "English"
+    "english": "English",
+    "company": "Şirket",
+    "competencies": "Yeterlilikler",
+    "news": "Haberler",
+    "career": "Kariyer",
+    "getOffer": "Teklif Al",
+    "viewAllServices": "Tüm Hizmetleri Görüntüle",
+    "residentEngineering": "Yerleşik Mühendislik",
+    "residentEngineeringDesc": "Müşteri Hızlı Yanıt Faaliyetleri, 8D Yönetimi ve Problem Çözme Sürecini Yönlendirme",
+    "qualityInspectionCustomer": "Kalite Kontrolü ve Düzeltme @ Müşteri",
+    "qualityInspectionCustomerDesc": "Müşteri lokasyonlarında kapsamlı kalite kontrolü ve düzeltme hizmetleri",
+    "qualityInspectionTier1": "Kalite Kontrolü ve Düzeltme @ Tier1",
+    "qualityInspectionTier1Desc": "Tier1 tedarikçi lokasyonlarında kalite kontrolü ve düzeltme hizmetleri",
+    "consultingTraining": "Danışmanlık ve Eğitim",
+    "consultingTrainingDesc": "Kalite iyileştirme için profesyonel danışmanlık ve eğitim hizmetleri",
+    "advancedPhaseLaunch": "Gelişmiş Faz ve Lansman Hizmetleri",
+    "advancedPhaseLaunchDesc": "Yeni ürünler ve süreçler için gelişmiş faz desteği ve lansman hizmetleri"
   },
   "services": {
     "title": "Hizmetlerimiz",
     "subtitle": "Avrupa'da yerleşik saha mühendislerimizle kalite problemlerinize hızlı çözümler sunuyoruz",
     "onSiteRapidResponse": {
       "title": "On-Site Hızlı Müdahale",
-      "description": "7/24 saha desteği ile kalite problemlerinize anında müdahale ediyoruz"
+      "description": "7/24 saha desteği ile kalite problemlerinize anında müdahale ediyoruz",
+      "feature1": "24-72h müdahale",
+      "feature2": "7/24 destek",
+      "feature3": "Acil müdahale"
     },
     "sortingContainment": {
       "title": "Sorting & Containment",
-      "description": "Hatalı parçaları ayırarak üretim hattınızın devamını sağlıyoruz"
+      "description": "Hatalı parçaları ayırarak üretim hattınızın devamını sağlıyoruz",
+      "feature1": "%100 kontrol",
+      "feature2": "Hızlı ayırma",
+      "feature3": "Risk yönetimi"
     },
     "rework": {
       "title": "Rework",
-      "description": "Hatalı parçaları düzelterek kayıplarınızı minimize ediyoruz"
+      "description": "Hatalı parçaları düzelterek kayıplarınızı minimize ediyoruz",
+      "feature1": "Parça kurtarma",
+      "feature2": "Maliyet tasarrufu",
+      "feature3": "Hızlı çözüm"
     },
     "qualityEngineering": {
       "title": "Kalite Mühendisliği",
-      "description": "Kalite süreçlerinizi optimize ediyoruz"
+      "description": "Kalite süreçlerinizi optimize ediyoruz",
+      "feature1": "Süreç iyileştirme",
+      "feature2": "Kalite sistemleri",
+      "feature3": "Analiz"
     },
     "supplierReadiness": {
       "title": "Tedarikçi Hazırlığı",
-      "description": "Tedarikçilerinizin kalite standartlarını yükseltiyoruz"
+      "description": "Tedarikçilerinizin kalite standartlarını yükseltiyoruz",
+      "feature1": "Tedarikçi geliştirme",
+      "feature2": "Hazırlık süreçleri",
+      "feature3": "Sertifikasyon"
     },
     "technicalRepresentation": {
       "title": "Teknik Temsilcilik",
-      "description": "Sahanızda sürekli kalite desteği sağlıyoruz"
+      "description": "Sahanızda sürekli kalite desteği sağlıyoruz",
+      "feature1": "Yerinde destek",
+      "feature2": "Sürekli izleme",
+      "feature3": "Danışmanlık"
     },
     "auditsTraining": {
       "title": "Denetim & Eğitim",
@@ -71,7 +105,12 @@
     "aftersalesSupport": {
       "title": "Satış Sonrası Destek",
       "description": "Müşterilerinize kaliteli hizmet sunmanızı sağlıyoruz"
-    }
+    },
+    "viewDetails": "Detayları Gör",
+    "ctaTitle": "Kalite Probleminiz için Hemen Destek Alın",
+    "ctaSubtitle": "Uzman ekibimiz 7/24 sizin için hazır. Acil durumlar için anında müdahale, planlı projeler için detaylı danışmanlık sağlıyoruz.",
+    "ctaPrimary": "Ücretsiz Teklif Al",
+    "ctaSecondary": "Tüm Hizmetleri Gör"
   },
   "industries": {
     "title": "Sektörler",
@@ -117,20 +156,35 @@
       "title": "Kattığımız Değerler",
       "value1": {
         "title": "Hızlı Müdahale",
-        "description": "24-72 saat içinde sahada"
+        "description": "24-72 saat içinde sahada",
+        "stats": "24-72h"
       },
       "value2": {
         "title": "Deneyimli Ekip",
-        "description": "15+ yıl sektör tecrübesi"
+        "description": "15+ yıl sektör tecrübesi",
+        "stats": "15+ yıl"
       },
       "value3": {
         "title": "Avrupa Geneli",
-        "description": "Geniş coğrafi kapsamda hizmet"
+        "description": "Geniş coğrafi kapsamda hizmet",
+        "stats": "15 ülke"
       },
       "value4": {
         "title": "Sürekli Destek",
-        "description": "7/24 erişilebilir ekip"
+        "description": "7/24 erişilebilir ekip",
+        "stats": "7/24"
       }
+    ,
+    "extraStats": {
+      "completedProjectsValue": "500+",
+      "completedProjects": "Tamamlanan Proje",
+      "customerSatisfactionValue": "%98.5",
+      "customerSatisfaction": "Müşteri Memnuniyeti",
+      "activeCustomersValue": "100+",
+      "activeCustomers": "Aktif Müşteri",
+      "preventedLossValue": "€50M+",
+      "preventedLoss": "Önlenen Kayıp"
+    }
     },
     "whyQronex": {
       "title": "Neden QroneX?",
@@ -188,6 +242,16 @@
       "officeLocations": "Ofis Lokasyonlarımız",
       "munichHeadOffice": "München Merkez Ofis",
       "parisOffice": "Paris Ofis"
+    },
+    "slideshow": {
+      "title": "Hizmetlerimizi Keşfedin",
+      "subtitle": "Kalite problemlerinizi çözmek için sunduğumuz kapsamlı hizmetler ve sektör deneyimimiz",
+      "viewDetails": "Detayları Gör",
+      "s1": { "title": "Yerinde Hızlı Müdahale", "description": "24-72 saat içinde sahada müdahale ile kalite problemlerinizi hızla çözün" },
+      "s2": { "title": "Sorting & Containment", "description": "Hatalı parçaları ayırma ve kontrol ile üretim süreçlerinizi güvenli hale getirin" },
+      "s3": { "title": "Otomotiv Sektörü", "description": "BMW, Mercedes gibi premium markalarla çalışma deneyimi" },
+      "s4": { "title": "Kalite Mühendisliği", "description": "Süreç optimizasyonu ve kalite yönetimi ile verimliliğinizi artırın" },
+      "s5": { "title": "Başarı Hikayeleri", "description": "Müşterilerimizin kalite problemlerini nasıl çözdüğümüzü keşfedin" }
     }
   },
   "contact": {
@@ -214,10 +278,8 @@
     }
   },
   "pricing": {
-    "title": "Fiyatlandırma",
-    "subtitle": "İhtiyacınıza uygun paketi seçin",
-    "monthly": "Aylık",
-    "enterpriseTab": "Kurumsal",
+    "title": "Enterprise Çözümler",
+    "subtitle": "Büyük ölçekli projeler için özelleştirilmiş kalite mühendisliği hizmetleri",
     "contactSales": "Satış Ekibiyle İletişime Geçin",
     "starter": {
       "title": "Starter",
@@ -275,9 +337,21 @@
       ]
     }
   },
+  "common": {
+    "getQuote": "Teklif Al",
+    "viewPackages": "Paket Seçenekleri",
+    "popular": "Popüler",
+    "sla": "SLA",
+    "keyFeatures": "Temel Özellikler",
+    "getStarted": "Hemen Başla",
+    "requestQuote": "Teklif İste",
+    "contactUsToday": "Bugün İletişime Geçin",
+    "viewAllServices": "Tüm Hizmetleri Gör"
+  },
   "footer": {
     "quickLinks": "Hızlı Bağlantılar",
     "services": "Hizmetler",
+    "companyDescription": "Avrupa'da yerleşik saha mühendisleriyle kalite problemlerinize hızlı ve etkili çözümler sunuyoruz. Tier 1 tedarikçilerin güvendiği kalite ortağı.",
     "legal": "Yasal",
     "privacy": "Gizlilik Politikası",
     "terms": "Kullanım Koşulları",
@@ -314,6 +388,432 @@
       "technology": "Teknoloji",
       "sustainability": "Sürdürülebilirlik",
       "eMobility": "E-Mobilite"
+    }
+  }
+  ,
+  "about": {
+    "heroTitle": "Biz kimiz!",
+    "heroSubtitle": "QroneX; Avrupa'da yerleşik, sahada görev almaya hazır tecrübeli mühendis kadrosuyla Tier 1 tedarikçilerin OEM ile yaşadığı kalite problemlerine yerinde hızlı ve doğru çözümler sunan lider kalite danışmanlık şirketidir.",
+    "visionMission": "Vizyonumuz ve Misyonumuz",
+    "visionTitle": "Vizyonumuz",
+    "visionText": "Avrupa'nın en güvenilir kalite danışmanlık partneri olarak, müşterilerimizin kalite mükemmeliyeti yolculuğunda vazgeçilmez bir rehber olmak.",
+    "missionTitle": "Misyonumuz",
+    "missionText": "Saha mühendislerimizin derin uzmanlığı ve güncel teknolojik çözümlerle, müşterilerimizin kalite hedeflerine ulaşmalarını sağlamak ve sürdürülebilir başarı elde etmelerini desteklemek.",
+    "stats": {
+      "countries": "Ülkede Hizmet",
+      "engineers": "Saha Mühendisi",
+      "projects": "Başarılı Proje",
+      "satisfaction": "Müşteri Memnuniyeti"
+    },
+    "values": {
+      "title": "Değerlerimiz",
+      "subtitle": "QroneX olarak çalışma kültürümüzü ve müşteri ilişkilerimizi şekillendiren temel değerlerimiz",
+      "items": {
+        "excellence": { "title": "Mükemmellik", "description": "Her projede en yüksek kalite standartlarını hedefliyoruz ve müşterilerimizin beklentilerini aşmaya odaklanıyoruz." },
+        "reliability": { "title": "Güvenilirlik", "description": "Müşterilerimizin güvenini kazanmak için tutarlı, zamanında ve etkili çözümler sunuyoruz." },
+        "innovation": { "title": "İnovasyon", "description": "Sektördeki en son teknolojileri ve metodolojileri kullanarak sürekli gelişim sağlıyoruz." },
+        "customerFocus": { "title": "Müşteri Odaklılık", "description": "Müşterilerimizin başarısı bizim başarımızdır. Onların ihtiyaçlarını anlamak önceliğimizdir." }
+      }
+    },
+    "leadership": {
+      "title": "Liderlik Ekibimiz",
+      "subtitle": "Sektörde uzun yıllar deneyim sahibi, uzmanlıklarıyla QroneX'i başarıya taşıyan liderlerimiz",
+      "readMore": "Detaylı Biyografi"
+    },
+    "team": {
+      "senih": {
+        "location": "Nürnberg, Almanya",
+        "experience": "30+ yıl",
+        "description": "Valeo Germany PWT Country Quality Director, Valeo Turkey Country Quality Director. 30 yıl deneyimle kalite mükemmelliği konusunda uzman.",
+        "bio": "1965 Türkiye doğumlu, İstanbul Teknik Üniversitesi Metalurji Mühendisliği mezunu. Valeo Germany PWT Country Quality Director, Valeo Turkey Country Quality Director ve Valeo Turkey SQA Manager pozisyonlarında görev yaptı. Döküm ve malzeme uzmanlığı ile 30 yıl deneyim sahibi. QRQC, PDCA, FTA, Global 8D ve problem çözme araçları konusunda Role Model seviyesinde deneyim. Nürnberg'de yaşıyor."
+      },
+      "aysu": {
+        "location": "Lyon, Fransa",
+        "experience": "15+ yıl",
+        "description": "Valeo Group'ta 15 yıl kalite deneyimi. Ford, Daimler, Renault (RSA) ve Stellantis (STLA) ile müşteri kalite yönetimi uzmanı.",
+        "bio": "1988 Türkiye doğumlu, Bursa Uludağ Üniversitesi Makine Mühendisliği mezunu. Valeo Group'ta 15 yıl kalite deneyimi. Ford, Daimler, Renault (RSA) ve Stellantis (STLA) gibi büyük OEM'lerle 10 yıl müşteri kalite yönetimi deneyimi. Üretim kalite ekiplerinin yönetimi ve ürün geliştirme ile proje kalite yönetimi konularında uzman. Lyon'da yaşıyor."
+      },
+      "zafer": {
+        "location": "Paris, Fransa",
+        "experience": "25+ yıl",
+        "description": "Valeo'da Global Industrial Director, 30+ tesiste 15+ ülkede üretim operasyonları yönetimi. İki greenfield üretim tesisi kurulumu.",
+        "bio": "1975 Türkiye doğumlu, İstanbul Yıldız Teknik Üniversitesi Makine Mühendisliği mezunu. Valeo'da Global Industrial Director olarak 30+ tesiste 15+ ülkede üretim operasyonlarını yönetti. Valeo Turkey Plant Manager olarak görev yaptı. İki greenfield üretim tesisi kurdu ve tam operasyona geçirdi. 25 yıl deneyimle önde gelen global otomotiv şirketlerinde kilit operasyonel ve yönetici roller üstlendi. Üretim, süreç mühendisliği, tedarik zinciri yönetimi, performans yönetimi ve operasyonel mükemmellik konularında uzman. Paris'te yaşıyor."
+      }
+    },
+    "cta": {
+      "title": "Birlikte Başarıya Ulaşalım",
+      "subtitle": "Deneyimli ekibimiz ve kanıtlanmış metodolojilerimizle kalite hedeflerinize ulaşmanızı sağlayalım",
+      "primary": "İletişime Geçin",
+      "secondary": "Başarı Hikayelerimizi İnceleyin"
+    }
+  }
+  ,
+  "servicesDetails": {
+    "resident": {
+      "heroTitle": "Yerleşik Mühendislik",
+      "heroSubtitle": "Müşteri Hızlı Yanıt Faaliyetleri, 8D Yönetimi ve Problem Çözme Sürecini Yönlendirme",
+      "featuresTitle": "Yerleşik Mühendislik Hizmetlerimiz",
+      "featuresSubtitle": "Kalite süreçlerinizin sorunsuz ilerlemesi için kapsamlı sahada mühendislik desteği",
+      "featuresBenefitTitle": "Temel Faydalar:",
+      "processTitle": "Sürecimiz",
+      "processSubtitle": "Yerleşik mühendislik ve problem çözümünde sistematik yaklaşım",
+      "benefitsTitle": "Neden Yerleşik Mühendislik?",
+      "highlightsTitle": "Hizmet Öne Çıkanlar",
+      "highlights": {
+        "responseTime": "Yanıt Süresi",
+        "availability": "Erişilebilirlik",
+        "teamSize": "Ekip Büyüklüğü",
+        "methodology": "Metodoloji",
+        "immediate": "Anında",
+        "a247": "7/24",
+        "teamSizeValue": "2-5 Mühendis",
+        "methodologyValue": "8D Süreci"
+      },
+      "feature1": {
+        "title": "Müşteri Hızlı Yanıt Faaliyetleri",
+        "description": "Üretim sahasında günlük kalite rutinlerini yöneterek prosedürlere uyumu ve uygunsuzluklara anında müdahaleyi sağlar.",
+        "benefit1": "7/24 sahada bulunma",
+        "benefit2": "Anında problem tespiti",
+        "benefit3": "Gerçek zamanlı kalite izleme",
+        "benefit4": "Proaktif sorun önleme"
+      },
+      "feature2": {
+        "title": "8D Yönetimi",
+        "description": "Uzun vadeli düzeltici ve önleyici aksiyonları garanti altına almak için 8D tabanlı kök neden analizi ve çözüm sürecini yürütür.",
+        "benefit1": "Sistematik problem çözme",
+        "benefit2": "Kök neden tespiti",
+        "benefit3": "Önleyici aksiyon uygulama",
+        "benefit4": "Uzun vadeli çözüm geliştirme"
+      },
+      "feature3": {
+        "title": "Problem Çözme Sürecini Yönlendirme",
+        "description": "Fonksiyonlar arası ekipleri hızlı ve sistematik şekilde koordine ederek karmaşık sorunların çözümünü sağlar.",
+        "benefit1": "Fonksiyonlar arası işbirliği",
+        "benefit2": "Uzman ekip koordinasyonu",
+        "benefit3": "Sistematik yaklaşım",
+        "benefit4": "Hızlı çözüm"
+      },
+      "process": {
+        "s1Title": "İlk Değerlendirme",
+        "s1Desc": "Durumun hızlı değerlendirmesi ve anında kontrol altına alma aksiyonları",
+        "s2Title": "Ekip Kurulumu",
+        "s2Desc": "Uygun uzmanlığa sahip fonksiyonlar arası ekip oluşturma",
+        "s3Title": "Kök Neden Analizi",
+        "s3Desc": "8D metodolojisi ile sistematik inceleme",
+        "s4Title": "Çözüm Uygulama",
+        "s4Desc": "Düzeltici ve önleyici aksiyonların uygulanması",
+        "s5Title": "Doğrulama ve İzleme",
+        "s5Desc": "Etkililiğin doğrulanması ve sürekli izleme kurulması"
+      },
+      "benefits": {
+        "b1Title": "7/24 Erişilebilirlik",
+        "b1Desc": "Kritik kalite sorunları ve acil durumlar için kesintisiz destek",
+        "b2Title": "Uzman Ekip",
+        "b2Desc": "Derin sektör bilgisi ve problem çözme yetkinliği olan deneyimli mühendisler",
+        "b3Title": "Sürekli İyileştirme",
+        "b3Desc": "Süreçlerin ve kalite sistemlerinin sürekli optimizasyonu"
+      }
+    },
+    "qic": {
+      "heroTitle": "Kalite Kontrolü ve Düzeltme @ Müşteri",
+      "heroSubtitle": "Müşteri lokasyonlarında kapsamlı kalite kontrolü ve düzeltme hizmetleri",
+      "servicesTitle": "Kalite Hizmetlerimiz",
+      "servicesSubtitle": "Müşteri lokasyonlarınızda sunulan profesyonel kalite kontrol ve düzeltme hizmetleri",
+      "featuresTitle": "Temel Özellikler:",
+      "processTitle": "Sürecimiz",
+      "processSubtitle": "Müşteri lokasyonlarında kalite kontrolü ve düzeltme için sistematik yaklaşım",
+      "benefitsTitle": "Neden Kalite Hizmetlerimizi Tercih Etmelisiniz?",
+      "highlightsTitle": "Hizmet Öne Çıkanlar",
+      "highlights": {
+        "responseTime": "Yanıt Süresi",
+        "serviceLocation": "Hizmet Lokasyonu",
+        "teamSize": "Ekip Büyüklüğü",
+        "qualityStandards": "Kalite Standartları",
+        "responseTimeValue": "24-48 Saat",
+        "serviceLocationValue": "Müşteri Sahası",
+        "teamSizeValue": "2-4 Teknisyen",
+        "qualityStandardsValue": "ISO Sertifikalı"
+      },
+      "service1": {
+        "title": "Yerinde Kalite Kontrol",
+        "description": "Müşteri lokasyonlarınızda kapsamlı kalite kontrol ve denetim hizmetleri",
+        "f1": "Gerçek zamanlı kalite değerlendirmesi",
+        "f2": "Hata tespiti ve sınıflandırma",
+        "f3": "Kalite metrik raporlama",
+        "f4": "Anında kontrol altına alma"
+      },
+      "service2": {
+        "title": "Müşteri Lokasyonunda Düzeltme",
+        "description": "Ürün kalitesini geri kazandırmak için profesyonel düzeltme ve onarım hizmetleri",
+        "f1": "Uzman düzeltme teknisyenleri",
+        "f2": "Kaliteyi geri kazandırma süreçleri",
+        "f3": "Maliyet etkin çözümler",
+        "f4": "Minimum üretim kesintisi"
+      },
+      "service3": {
+        "title": "Kalite Kontrol Prosedürleri",
+        "description": "Kalite kontrol sistemlerinin kurulumu ve optimizasyonu",
+        "f1": "Standartlaştırılmış prosedürler",
+        "f2": "Kalite dokümantasyonu",
+        "f3": "Süreç optimizasyonu",
+        "f4": "Sürekli iyileştirme"
+      },
+      "service4": {
+        "title": "Anında Müdahale",
+        "description": "Duraksamayı en aza indirmek için kalite sorunlarına hızlı müdahale",
+        "f1": "7/24 acil müdahale",
+        "f2": "Hızlı problem çözümü",
+        "f3": "Minimum üretim etkisi",
+        "f4": "Müşteri memnuniyeti odaklı"
+      },
+      "process": {
+        "s1Title": "Sorun Tespiti",
+        "s1Desc": "Kalite problemlerinin hızlı değerlendirilmesi ve anında kontrol",
+        "s2Title": "Ekip Görevlendirme",
+        "s2Desc": "Kalite kontrol ve düzeltme ekiplerinin hızlı saha görevlendirmesi",
+        "s3Title": "Kalite Değerlendirmesi",
+        "s3Desc": "Kapsamlı denetim ve hata sınıflandırması",
+        "s4Title": "Düzeltme Uygulaması",
+        "s4Desc": "Profesyonel düzeltme ve kalite geri kazandırma",
+        "s5Title": "Doğrulama ve Teslim",
+        "s5Desc": "Kalite doğrulaması ve müşteriye teslim"
+      },
+      "benefits": {
+        "b1Title": "Yerinde Hizmet",
+        "b1Desc": "Sizin müşteri lokasyonlarınıza gelerek kesintiyi ve seyahat maliyetlerini azaltırız",
+        "b2Title": "Hızlı Müdahale",
+        "b2Desc": "Duraksamayı en aza indirmek için hızlı görevlendirme ve anında çözüm",
+        "b3Title": "Uzman Ekip",
+        "b3Desc": "Geniş deneyime sahip teknisyenler ve kalite mühendisleri"
+      }
+    },
+    "qit1": {
+      "heroTitle": "Kalite Kontrolü ve Düzeltme @ Tier1",
+      "heroSubtitle": "Tier1 tedarikçi lokasyonlarında kalite kontrolü ve düzeltme hizmetleri",
+      "servicesTitle": "Tier1 Kalite Hizmetlerimiz",
+      "servicesSubtitle": "Tier1 tedarikçi lokasyonlarında sunulan profesyonel kalite kontrol ve düzeltme hizmetleri",
+      "featuresTitle": "Temel Özellikler:",
+      "processTitle": "Sürecimiz",
+      "processSubtitle": "Tier1 tedarikçi lokasyonlarında kalite kontrolü ve düzeltme için sistematik yaklaşım",
+      "benefitsTitle": "Neden Tier1 Hizmetlerimizi Tercih Etmelisiniz?",
+      "highlightsTitle": "Hizmet Öne Çıkanlar",
+      "highlights": {
+        "responseTime": "Yanıt Süresi",
+        "serviceLocation": "Hizmet Lokasyonu",
+        "teamSize": "Ekip Büyüklüğü",
+        "focusArea": "Odak Alanı",
+        "responseTimeValue": "24-72 Saat",
+        "serviceLocationValue": "Tedarikçi Sahası",
+        "teamSizeValue": "2-4 Teknisyen",
+        "focusAreaValue": "Tedarikçi Geliştirme"
+      },
+      "service1": {
+        "title": "Tier1 Tedarikçi Kalite Kontrolü",
+        "description": "Tier1 tedarikçi lokasyonlarında kapsamlı kalite kontrol ve denetim hizmetleri",
+        "f1": "Tedarikçi kalite değerlendirmesi",
+        "f2": "Hata tespiti ve sınıflandırma",
+        "f3": "Kalite metrik raporlama",
+        "f4": "Tedarikçi geliştirme desteği"
+      },
+      "service2": {
+        "title": "Tedarikçi Lokasyonunda Düzeltme",
+        "description": "Tedarikçi sahalarında ürün kalitesini geri kazandırmak için profesyonel düzeltme ve onarım hizmetleri",
+        "f1": "Yerinde düzeltme hizmetleri",
+        "f2": "Kaliteyi geri kazandırma süreçleri",
+        "f3": "Tedarikçi eğitimi ve destek",
+        "f4": "Süreç iyileştirme rehberliği"
+      },
+      "service3": {
+        "title": "Kalite Güvence Prosedürleri",
+        "description": "Tedarikçiler için kalite güvence sistemlerinin kurulumu ve optimizasyonu",
+        "f1": "Kalite sistemi geliştirme",
+        "f2": "Süreç standardizasyonu",
+        "f3": "Tedarikçi sertifikasyon desteği",
+        "f4": "Sürekli iyileştirme programları"
+      },
+      "service4": {
+        "title": "Tedarikçi Geliştirme Desteği",
+        "description": "Tedarikçi geliştirme ve iyileştirme girişimleri için kapsamlı destek",
+        "f1": "Tedarikçi yetkinlik değerlendirmesi",
+        "f2": "Geliştirme programı tasarımı",
+        "f3": "Eğitim ve mentorluk",
+        "f4": "Performans izleme"
+      },
+      "process": {
+        "s1Title": "Tedarikçi Değerlendirmesi",
+        "s1Desc": "Tedarikçi kalite yetkinliklerinin ve süreçlerinin kapsamlı değerlendirmesi",
+        "s2Title": "Kalite Kontrolü",
+        "s2Desc": "Tedarikçi lokasyonlarında detaylı denetim ve kalite kontrol",
+        "s3Title": "Sorun Tespiti",
+        "s3Desc": "Kalite sorunlarının ve hataların tespiti ve sınıflandırılması",
+        "s4Title": "Düzeltme ve İyileştirme",
+        "s4Desc": "Düzeltme uygulamalarının yürütülmesi ve iyileştirme önlemlerinin uygulanması",
+        "s5Title": "Doğrulama ve Destek",
+        "s5Desc": "Kalite doğrulaması ve sürekli tedarikçi geliştirme desteği"
+      },
+      "benefits": {
+        "b1Title": "Tedarikçi Uzmanlığı",
+        "b1Desc": "Tier1 tedarikçi operasyonları ve kalite zorlukları konusunda derin anlayış",
+        "b2Title": "Hızlı Müdahale",
+        "b2Desc": "Tedarikçi sahalarında hızlı görevlendirme ve anında problem çözümü",
+        "b3Title": "Gelişim Odaklılık",
+        "b3Desc": "Tedarikçi geliştirme ve uzun vadeli iyileştirmeye odaklanma"
+      }
+    },
+    "consulting": {
+      "heroTitle": "Danışmanlık ve Eğitim",
+      "heroSubtitle": "Kalite yönetimi yetkinliklerinizi geliştirmek için uzman danışmanlık ve profesyonel eğitim",
+      "servicesTitle": "Danışmanlık ve Eğitim Hizmetlerimiz",
+      "servicesSubtitle": "Kalite yönetimi yaklaşımınızı dönüştürmek için kapsamlı danışmanlık ve eğitim çözümleri",
+      "featuresTitle": "Temel Özellikler:",
+      "programsTitle": "Eğitim Programları",
+      "programsSubtitle": "Ekibinizin kalite yönetimi uzmanlığını geliştirmek için tasarlanmış profesyonel eğitim programları",
+      "benefitsTitle": "Neden Danışmanlık ve Eğitim Hizmetlerimiz?",
+      "highlightsTitle": "Hizmet Öne Çıkanlar",
+      "highlights": {
+        "consultingDuration": "Danışmanlık Süresi",
+        "trainingFormat": "Eğitim Formatı",
+        "teamSize": "Ekip Büyüklüğü",
+        "certification": "Sertifikasyon",
+        "consultingDurationValue": "Esnek",
+        "trainingFormatValue": "Yerinde/Uzaktan",
+        "teamSizeValue": "1-50+ Kişi",
+        "certificationValue": "ISO Desteği"
+      },
+      "service1": {
+        "title": "Kalite Danışmanlığı",
+        "description": "Kalite yönetim sistemlerinizi ve süreçlerinizi optimize etmek için uzman danışmanlık hizmetleri",
+        "f1": "Kalite sistemi değerlendirmesi",
+        "f2": "Süreç optimizasyonu",
+        "f3": "En iyi uygulamaların hayata geçirilmesi",
+        "f4": "Performans iyileştirme"
+      },
+      "service2": {
+        "title": "Profesyonel Eğitim",
+        "description": "Ekibinizin kalite yönetimi becerilerini geliştirmek için kapsamlı eğitim programları",
+        "f1": "Kalite yönetimi eğitimi",
+        "f2": "Süreç iyileştirme atölyeleri",
+        "f3": "Liderlik gelişimi",
+        "f4": "Sertifikasyon programları"
+      },
+      "service3": {
+        "title": "Özelleştirilmiş Programlar",
+        "description": "İhtiyaçlarınıza özel tasarlanmış danışmanlık ve eğitim programları",
+        "f1": "İhtiyaç analizi",
+        "f2": "Özel müfredat tasarımı",
+        "f3": "Sektöre özel eğitim",
+        "f4": "Sürekli destek"
+      },
+      "service4": {
+        "title": "Sertifikasyon Desteği",
+        "description": "Kalite yönetimi sertifikasyonları ve uyum gereklilikleri için destek",
+        "f1": "ISO sertifikasyon desteği",
+        "f2": "Denetim hazırlığı",
+        "f3": "Dokümantasyon desteği",
+        "f4": "Uyum rehberliği"
+      },
+      "programs": {
+        "p1Title": "Kalite Yönetimi Temelleri",
+        "p1Duration": "3 Gün",
+        "p1Level": "Başlangıç",
+        "p1Desc": "Temel kalite yönetimi prensipleri ve uygulamaları",
+        "p2Title": "İleri Düzey Süreç İyileştirme",
+        "p2Duration": "5 Gün",
+        "p2Level": "İleri",
+        "p2Desc": "Süreç optimizasyonu için ileri metodolojiler",
+        "p3Title": "Kalitede Liderlik",
+        "p3Duration": "2 Gün",
+        "p3Level": "Yönetim",
+        "p3Desc": "Kalite yönetimi için liderlik becerileri",
+        "p4Title": "ISO 9001 Uygulama",
+        "p4Duration": "4 Gün",
+        "p4Level": "Orta",
+        "p4Desc": "ISO 9001 uygulamasına yönelik kapsamlı rehberlik"
+      },
+      "benefits": {
+        "b1Title": "Uzman Danışmanlar",
+        "b1Desc": "Derin sektör bilgisine ve kanıtlanmış başarılara sahip deneyimli profesyoneller",
+        "b2Title": "Özelleştirilmiş Yaklaşım",
+        "b2Desc": "Kuruluşunuza özel tasarlanmış çözümler",
+        "b3Title": "Ölçülebilir Sonuçlar",
+        "b3Desc": "Somut iyileştirmeler ve ölçülebilir çıktılara odaklanma"
+      },
+      "learnMore": "Detaylı Bilgi"
+    },
+    "launch": {
+      "heroTitle": "Gelişmiş Faz ve Lansman Hizmetleri",
+      "heroSubtitle": "Gelişmiş geliştirme fazları ve başarılı ürün lansmanları için uzman destek",
+      "servicesTitle": "Gelişmiş Hizmetlerimiz",
+      "servicesSubtitle": "Gelişmiş geliştirme fazları ve başarılı ürün lansmanları için kapsamlı destek",
+      "featuresTitle": "Temel Özellikler:",
+      "phasesTitle": "Süreç Fazlarımız",
+      "phasesSubtitle": "Gelişmiş faz yönetimi ve ürün lansmanı için sistematik yaklaşım",
+      "benefitsTitle": "Neden Gelişmiş Hizmetlerimiz?",
+      "highlightsTitle": "Hizmet Öne Çıkanlar",
+      "highlights": {
+        "projectDuration": "Proje Süresi",
+        "teamSize": "Ekip Büyüklüğü",
+        "successRate": "Başarı Oranı",
+        "supportLevel": "Destek Seviyesi",
+        "projectDurationValue": "3-12 Ay",
+        "teamSizeValue": "3-8 Uzman",
+        "successRateValue": "%95+",
+        "supportLevelValue": "Uçtan Uca"
+      },
+      "service1": {
+        "title": "Ürün Lansman Desteği",
+        "description": "Başarılı ürün lansmanları ve pazara giriş için kapsamlı destek",
+        "f1": "Lansman planlama ve strateji",
+        "f2": "Kalite doğrulama",
+        "f3": "Risk değerlendirme",
+        "f4": "Pazar hazırlık desteği"
+      },
+      "service2": {
+        "title": "Gelişmiş Faz Yönetimi",
+        "description": "Gelişmiş geliştirme fazları ve üretim ramp-up sürecinin uzman yönetimi",
+        "f1": "Faz geçiş yönetimi",
+        "f2": "Üretim ramp-up desteği",
+        "f3": "Kalite sistemi uygulama",
+        "f4": "Performans optimizasyonu"
+      },
+      "service3": {
+        "title": "Hızlı Devreye Alma",
+        "description": "Zaman kritik projeler için kalite sistemlerinin ve süreçlerin hızlandırılmış devreye alınması",
+        "f1": "Hızlandırılmış uygulama",
+        "f2": "Kritik yol yönetimi",
+        "f3": "Kaynak optimizasyonu",
+        "f4": "Risk azaltma"
+      },
+      "service4": {
+        "title": "Mükemmellik Programları",
+        "description": "Operasyonel ve kalite mükemmelliğini sağlamak için mükemmellik programlarının uygulanması",
+        "f1": "Mükemmellik çerçevesi tasarımı",
+        "f2": "Performans kıyaslama",
+        "f3": "Sürekli iyileştirme",
+        "f4": "En iyi uygulamaların hayata geçirilmesi"
+      },
+      "phases": {
+        "p1": "Faz 1",
+        "p1Title": "Planlama ve Strateji",
+        "p1Desc": "Başarılı lansman için kapsamlı planlama ve stratejik hazırlık",
+        "p2": "Faz 2",
+        "p2Title": "Geliştirme ve Doğrulama",
+        "p2Desc": "Ürün geliştirme ve kalite doğrulama süreçleri",
+        "p3": "Faz 3",
+        "p3Title": "Üretim Ramp-up",
+        "p3Desc": "Kalite güvencesi ile yönetilen üretim ramp-up",
+        "p4": "Faz 4",
+        "p4Title": "Lansman ve Optimizasyon",
+        "p4Desc": "Başarılı lansman ve sürekli optimizasyon"
+      },
+      "benefits": {
+        "b1Title": "Lansman Mükemmelliği",
+        "b1Desc": "Başarılı ürün lansmanları ve pazara girişlerde kanıtlanmış başarı",
+        "b2Title": "Zaman Optimizasyonu",
+        "b2Desc": "Zaman kritik projeler için hızlandırılmış süreçler ve hızlı devreye alma",
+        "b3Title": "Uzman Ekip",
+        "b3Desc": "Gelişmiş faz yönetimi konusunda derin uzmanlığa sahip deneyimli profesyoneller"
+      }
     }
   }
 }

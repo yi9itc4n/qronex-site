@@ -97,66 +97,7 @@ export function WhyQronex() {
           })}
         </div>
 
-        {/* Trust indicators */}
-        <div className="mt-20 text-center">
-          <p className="text-gray-500 mb-8">{t("trustedPartnerBrands")}</p>
-          <div className="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-6 gap-8 items-center opacity-60">
-            {/* Placeholder for client logos */}
-            <div className="h-12 bg-gray-200 rounded flex items-center justify-center">
-              <span className="text-gray-500 font-bold">BMW</span>
-            </div>
-            <div className="h-12 bg-gray-200 rounded flex items-center justify-center">
-              <span className="text-gray-500 font-bold">Mercedes</span>
-            </div>
-            <div className="h-12 bg-gray-200 rounded flex items-center justify-center">
-              <span className="text-gray-500 font-bold">Audi</span>
-            </div>
-            <div className="h-12 bg-gray-200 rounded flex items-center justify-center">
-              <span className="text-gray-500 font-bold">VW</span>
-            </div>
-            <div className="h-12 bg-gray-200 rounded flex items-center justify-center">
-              <span className="text-gray-500 font-bold">Bosch</span>
-            </div>
-            <div className="h-12 bg-gray-200 rounded flex items-center justify-center">
-              <span className="text-gray-500 font-bold">Continental</span>
-            </div>
-          </div>
-        </div>
-
-        {/* Certifications */}
-        <div className="mt-16 bg-gray-50 rounded-2xl p-8">
-          <h3 className="text-2xl font-bold text-center mb-8">{t("certificationsStandards")}</h3>
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-6 text-center">
-            <div className="space-y-2">
-              <div className="w-16 h-16 bg-blue-100 rounded-full flex items-center justify-center mx-auto">
-                <Award className="h-8 w-8 text-blue-600" />
-              </div>
-              <p className="font-medium">ISO 9001:2015</p>
-              <p className="text-sm text-gray-600">{t("qualityManagementSystem")}</p>
-            </div>
-            <div className="space-y-2">
-              <div className="w-16 h-16 bg-green-100 rounded-full flex items-center justify-center mx-auto">
-                <Award className="h-8 w-8 text-green-600" />
-              </div>
-              <p className="font-medium">IATF 16949</p>
-              <p className="text-sm text-gray-600">{t("automotiveQualityStandard")}</p>
-            </div>
-            <div className="space-y-2">
-              <div className="w-16 h-16 bg-purple-100 rounded-full flex items-center justify-center mx-auto">
-                <Award className="h-8 w-8 text-purple-600" />
-              </div>
-              <p className="font-medium">AS9100</p>
-              <p className="text-sm text-gray-600">{t("aviationQualityStandard")}</p>
-            </div>
-            <div className="space-y-2">
-              <div className="w-16 h-16 bg-orange-100 rounded-full flex items-center justify-center mx-auto">
-                <Award className="h-8 w-8 text-orange-600" />
-              </div>
-              <p className="font-medium">IPC-A-610</p>
-              <p className="text-sm text-gray-600">{t("electronicAssemblyStandard")}</p>
-            </div>
-          </div>
-        </div>
+        
       </div>
     </section>
   );

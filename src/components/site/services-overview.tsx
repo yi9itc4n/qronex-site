@@ -36,7 +36,7 @@ export function ServicesOverview() {
       icon: "zap" as keyof typeof serviceIcons,
       title: t("onSiteRapidResponse.title"),
       description: t("onSiteRapidResponse.description"),
-      features: ["24-72h müdahale", "7/24 destek", "Acil müdahale"],
+      features: [t("onSiteRapidResponse.feature1"), t("onSiteRapidResponse.feature2"), t("onSiteRapidResponse.feature3")],
       color: "text-red-600",
       bgColor: "bg-red-50",
       borderColor: "border-red-200",
@@ -48,7 +48,7 @@ export function ServicesOverview() {
       icon: "filter" as keyof typeof serviceIcons,
       title: t("sortingContainment.title"),
       description: t("sortingContainment.description"),
-      features: ["%100 kontrol", "Hızlı ayırma", "Risk yönetimi"],
+      features: [t("sortingContainment.feature1"), t("sortingContainment.feature2"), t("sortingContainment.feature3")],
       color: "text-blue-600",
       bgColor: "bg-blue-50", 
       borderColor: "border-blue-200",
@@ -60,7 +60,7 @@ export function ServicesOverview() {
       icon: "wrench" as keyof typeof serviceIcons,
       title: t("rework.title"),
       description: t("rework.description"),
-      features: ["Parça kurtarma", "Maliyet tasarrufu", "Hızlı çözüm"],
+      features: [t("rework.feature1"), t("rework.feature2"), t("rework.feature3")],
       color: "text-green-600",
       bgColor: "bg-green-50",
       borderColor: "border-green-200",
@@ -72,7 +72,7 @@ export function ServicesOverview() {
       icon: "shield" as keyof typeof serviceIcons,
       title: t("qualityEngineering.title"),
       description: t("qualityEngineering.description"),
-      features: ["Süreç iyileştirme", "Kalite sistemleri", "Analiz"],
+      features: [t("qualityEngineering.feature1"), t("qualityEngineering.feature2"), t("qualityEngineering.feature3")],
       color: "text-purple-600",
       bgColor: "bg-purple-50",
       borderColor: "border-purple-200",
@@ -84,7 +84,7 @@ export function ServicesOverview() {
       icon: "userCheck" as keyof typeof serviceIcons,
       title: t("supplierReadiness.title"),
       description: t("supplierReadiness.description"),
-      features: ["Tedarikçi geliştirme", "Hazırlık süreçleri", "Sertifikasyon"],
+      features: [t("supplierReadiness.feature1"), t("supplierReadiness.feature2"), t("supplierReadiness.feature3")],
       color: "text-orange-600",
       bgColor: "bg-orange-50",
       borderColor: "border-orange-200",
@@ -96,7 +96,7 @@ export function ServicesOverview() {
       icon: "building" as keyof typeof serviceIcons,
       title: t("technicalRepresentation.title"),
       description: t("technicalRepresentation.description"),
-      features: ["Yerinde destek", "Sürekli izleme", "Danışmanlık"],
+      features: [t("technicalRepresentation.feature1"), t("technicalRepresentation.feature2"), t("technicalRepresentation.feature3")],
       color: "text-teal-600",
       bgColor: "bg-teal-50",
       borderColor: "border-teal-200",
@@ -155,7 +155,7 @@ export function ServicesOverview() {
                   {/* CTA */}
                   <Button variant="outline" className="w-full group" asChild>
                     <Link href={`/services/${service.slug}`}>
-                      Detayları Gör
+                      {t("viewDetails")}
                       <ArrowRight className="ml-2 h-4 w-4 group-hover:translate-x-1 transition-transform" />
                     </Link>
                   </Button>
@@ -168,22 +168,21 @@ export function ServicesOverview() {
         {/* CTA section */}
         <div className="text-center bg-gradient-to-r from-blue-600 to-purple-600 rounded-2xl p-8 text-white">
           <h3 className="text-2xl font-bold mb-4">
-            Kalite Probleminiz için Hemen Destek Alın
+            {t("ctaTitle")}
           </h3>
           <p className="text-blue-100 mb-6 max-w-2xl mx-auto">
-            Uzman ekibimiz 7/24 sizin için hazır. Acil durumlar için anında müdahale, 
-            planlı projeler için detaylı danışmanlık sağlıyoruz.
+            {t("ctaSubtitle")}
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Button size="lg" className="bg-white text-blue-600 hover:bg-gray-100" asChild>
               <Link href="/contact">
-                Ücretsiz Teklif Al
+                {t("ctaPrimary")}
                 <ArrowRight className="ml-2 h-4 w-4" />
               </Link>
             </Button>
             <Button size="lg" variant="outline" className="border-white text-white hover:bg-white hover:text-blue-600" asChild>
               <Link href="/services">
-                Tüm Hizmetleri Gör
+                {t("ctaSecondary")}
               </Link>
             </Button>
           </div>

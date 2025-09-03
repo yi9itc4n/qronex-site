@@ -57,63 +57,9 @@ export function ContactSection() {
   return (
     <section className="section-padding bg-gray-50">
       <div className="container mx-auto container-padding">
-        {/* Section header */}
-        <div className="text-center mb-16">
-          <h2 className="text-3xl lg:text-4xl font-bold text-gray-900 mb-4">
-            {t("title")}
-          </h2>
-          <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-            {t("subtitle")}
-          </p>
-        </div>
+        
 
-        {/* Regional managers grid */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mb-16">
-          {regionalManagers.map((manager, index) => (
-            <Card key={index} className="card-hover relative">
-              {manager.available && (
-                <Badge className="absolute -top-2 -right-2 bg-green-600">
-                  <Clock className="h-3 w-3 mr-1" />
-                  {t("available")}
-                </Badge>
-              )}
-              
-              <CardHeader className="text-center pb-4">
-                <div className="text-4xl mb-2">{manager.flag}</div>
-                <CardTitle className="text-lg">{manager.name}</CardTitle>
-                <p className="text-sm text-gray-600">{manager.title}</p>
-                <Badge variant="outline" className="text-xs">
-                  {manager.region}
-                </Badge>
-              </CardHeader>
-              
-              <CardContent className="space-y-3">
-                <a 
-                  href={`tel:${manager.phone}`}
-                  className="flex items-center space-x-2 text-sm hover:text-blue-600 transition-colors"
-                >
-                  <Phone className="h-4 w-4 flex-shrink-0" />
-                  <span>{manager.phone}</span>
-                </a>
-                
-                <a 
-                  href={`mailto:${manager.email}`}
-                  className="flex items-center space-x-2 text-sm hover:text-blue-600 transition-colors"
-                >
-                  <Mail className="h-4 w-4 flex-shrink-0" />
-                  <span className="truncate">{manager.email}</span>
-                </a>
-                
-                <Button size="sm" className="w-full" asChild>
-                  <Link href={`/contact?manager=${manager.name.toLowerCase().replace(' ', '-')}`}>
-                    <MessageCircle className="h-4 w-4 mr-2" />
-                    {t("getInTouch")}
-                  </Link>
-                </Button>
-              </CardContent>
-            </Card>
-          ))}
-        </div>
+        
 
         {/* Quick contact options */}
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">

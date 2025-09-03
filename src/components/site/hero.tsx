@@ -23,14 +23,15 @@ import { useState, useEffect } from "react";
 
 export function Hero() {
   const t = useTranslations("home.hero");
+  const s = useTranslations("home.slideshow");
   const [currentSlide, setCurrentSlide] = useState(0);
   const [animationKey, setAnimationKey] = useState(0);
 
   const slides = [
     {
       id: 1,
-      title: "Yerinde Hızlı Müdahale",
-      description: "24-72 saat içinde sahada müdahale ile kalite problemlerinizi hızla çözün",
+      title: s("s1.title"),
+      description: s("s1.description"),
       icon: Wrench,
       link: "/services/on-site-rapid-response",
       color: "from-blue-600/20 to-blue-800/20",
@@ -38,8 +39,8 @@ export function Hero() {
     },
     {
       id: 2,
-      title: "Sorting & Containment",
-      description: "Hatalı parçaları ayırma ve kontrol ile üretim süreçlerinizi güvenli hale getirin",
+      title: s("s2.title"),
+      description: s("s2.description"),
       icon: Shield,
       link: "/services/sorting-containment",
       color: "from-teal-600/20 to-teal-800/20",
@@ -47,8 +48,8 @@ export function Hero() {
     },
     {
       id: 3,
-      title: "Otomotiv Sektörü",
-      description: "BMW, Mercedes gibi premium markalarla çalışma deneyimi",
+      title: s("s3.title"),
+      description: s("s3.description"),
       icon: Factory,
       link: "/industries/automotive-oem",
       color: "from-cyan-600/20 to-cyan-800/20",
@@ -56,8 +57,8 @@ export function Hero() {
     },
     {
       id: 4,
-      title: "Kalite Mühendisliği",
-      description: "Süreç optimizasyonu ve kalite yönetimi ile verimliliğinizi artırın",
+      title: s("s4.title"),
+      description: s("s4.description"),
       icon: Award,
       link: "/services/quality-engineering",
       color: "from-emerald-600/20 to-emerald-800/20",
@@ -65,8 +66,8 @@ export function Hero() {
     },
     {
       id: 5,
-      title: "Başarı Hikayeleri",
-      description: "Müşterilerimizin kalite problemlerini nasıl çözdüğümüzü keşfedin",
+      title: s("s5.title"),
+      description: s("s5.description"),
       icon: TrendingUp,
       link: "/case-studies",
       color: "from-sky-600/20 to-sky-800/20",
@@ -105,10 +106,10 @@ export function Hero() {
         <div className="w-full">
           <div className="text-center py-8">
             <h2 className="text-3xl lg:text-4xl font-bold text-white mb-4">
-              Hizmetlerimizi Keşfedin
+              {s("title")}
             </h2>
             <p className="text-lg text-gray-300 max-w-2xl mx-auto px-4">
-              Kalite problemlerinizi çözmek için sunduğumuz kapsamlı hizmetler ve sektör deneyimimiz
+              {s("subtitle")}
             </p>
           </div>
 
@@ -143,7 +144,7 @@ export function Hero() {
                               asChild
                             >
                               <Link href={slide.link} className="flex items-center">
-                                Detayları Gör
+                                {s("viewDetails")}
                                 <ArrowRight className="ml-2 h-4 w-4" />
                               </Link>
                             </Button>

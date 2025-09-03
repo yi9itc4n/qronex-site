@@ -1,6 +1,7 @@
 "use client";
 
 import { Link } from "@/i18n";
+import { useTranslations } from "next-intl";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
@@ -17,50 +18,52 @@ import {
 } from "lucide-react";
 
 export default function QualityInspectionTier1Page() {
+  const c = useTranslations("common");
+  const t = useTranslations("servicesDetails.qit1");
 
   const services = [
     {
       icon: Eye,
-      title: "Tier1 Supplier Quality Inspection",
-      description: "Comprehensive quality control and inspection services at Tier1 supplier locations",
+      title: t("service1.title"),
+      description: t("service1.description"),
       features: [
-        "Supplier quality assessment",
-        "Defect identification and classification",
-        "Quality metrics reporting",
-        "Supplier development support"
+        t("service1.f1"),
+        t("service1.f2"),
+        t("service1.f3"),
+        t("service1.f4")
       ]
     },
     {
       icon: Wrench,
-      title: "Supplier Location Rework",
-      description: "Professional rework and repair services to restore product quality at supplier sites",
+      title: t("service2.title"),
+      description: t("service2.description"),
       features: [
-        "On-site rework services",
-        "Quality restoration processes",
-        "Supplier training and support",
-        "Process improvement guidance"
+        t("service2.f1"),
+        t("service2.f2"),
+        t("service2.f3"),
+        t("service2.f4")
       ]
     },
     {
       icon: BarChart3,
-      title: "Quality Assurance Procedures",
-      description: "Implementation and optimization of quality assurance systems for suppliers",
+      title: t("service3.title"),
+      description: t("service3.description"),
       features: [
-        "Quality system development",
-        "Process standardization",
-        "Supplier certification support",
-        "Continuous improvement programs"
+        t("service3.f1"),
+        t("service3.f2"),
+        t("service3.f3"),
+        t("service3.f4")
       ]
     },
     {
       icon: Building,
-      title: "Supplier Development Support",
-      description: "Comprehensive support for supplier development and improvement initiatives",
+      title: t("service4.title"),
+      description: t("service4.description"),
       features: [
-        "Supplier capability assessment",
-        "Development program design",
-        "Training and mentoring",
-        "Performance monitoring"
+        t("service4.f1"),
+        t("service4.f2"),
+        t("service4.f3"),
+        t("service4.f4")
       ]
     }
   ];
@@ -102,22 +105,18 @@ export default function QualityInspectionTier1Page() {
             <div className="w-20 h-20 bg-white/10 rounded-full flex items-center justify-center mx-auto mb-6">
               <Filter className="h-10 w-10 text-white" />
             </div>
-            <h1 className="text-4xl lg:text-6xl font-bold mb-6">
-              Quality Inspection & Rework @ Tier1
-            </h1>
-            <p className="text-xl lg:text-2xl text-slate-200 mb-8">
-              Quality inspection and rework services at Tier1 supplier locations
-            </p>
+            <h1 className="text-4xl lg:text-6xl font-bold mb-6">{t("heroTitle")}</h1>
+            <p className="text-xl lg:text-2xl text-slate-200 mb-8">{t("heroSubtitle")}</p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Button size="lg" className="btn-blue-green" asChild>
                 <Link href="/contact">
-                  Get Started
+                  {c("getStarted")}
                   <ArrowRight className="ml-2 h-4 w-4" />
                 </Link>
               </Button>
               <Button size="lg" variant="outline" className="btn-outline-blue-green border-white text-white hover:bg-white hover:text-slate-900" asChild>
                 <Link href="/contact">
-                  Request Quote
+                  {c("requestQuote")}
                 </Link>
               </Button>
             </div>
@@ -129,12 +128,8 @@ export default function QualityInspectionTier1Page() {
       <section className="section-padding bg-slate-100">
         <div className="container mx-auto container-padding">
           <div className="text-center mb-16">
-            <h2 className="text-3xl lg:text-4xl font-bold text-gray-900 mb-4">
-              Our Tier1 Quality Services
-            </h2>
-            <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-              Professional quality inspection and rework services delivered at Tier1 supplier locations
-            </p>
+            <h2 className="text-3xl lg:text-4xl font-bold text-gray-900 mb-4">{t("servicesTitle")}</h2>
+            <p className="text-xl text-gray-600 max-w-3xl mx-auto">{t("servicesSubtitle")}</p>
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
@@ -155,7 +150,7 @@ export default function QualityInspectionTier1Page() {
                   </CardHeader>
                   <CardContent>
                     <div className="space-y-3">
-                      <h4 className="font-semibold text-gray-900">Key Features:</h4>
+                      <h4 className="font-semibold text-gray-900">{t("featuresTitle")}</h4>
                       {service.features.map((feature, featureIndex) => (
                         <div key={featureIndex} className="flex items-center text-sm text-gray-600">
                           <CheckCircle className="h-4 w-4 text-green-600 mr-2 flex-shrink-0" />
@@ -175,12 +170,8 @@ export default function QualityInspectionTier1Page() {
       <section className="section-padding bg-white">
         <div className="container mx-auto container-padding">
           <div className="text-center mb-16">
-            <h2 className="text-3xl lg:text-4xl font-bold text-gray-900 mb-4">
-              Our Process
-            </h2>
-            <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-              Systematic approach to quality inspection and rework at Tier1 supplier locations
-            </p>
+            <h2 className="text-3xl lg:text-4xl font-bold text-gray-900 mb-4">{t("processTitle")}</h2>
+            <p className="text-xl text-gray-600 max-w-3xl mx-auto">{t("processSubtitle")}</p>
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-5 gap-8">
@@ -202,9 +193,7 @@ export default function QualityInspectionTier1Page() {
         <div className="container mx-auto container-padding">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
             <div>
-              <h2 className="text-3xl lg:text-4xl font-bold text-gray-900 mb-6">
-                Why Choose Our Tier1 Services?
-              </h2>
+              <h2 className="text-3xl lg:text-4xl font-bold text-gray-900 mb-6">{t("benefitsTitle")}</h2>
               <div className="space-y-6">
                 <div className="flex items-start space-x-4">
                   <div className="w-12 h-12 bg-blue-green-gradient rounded-lg flex items-center justify-center flex-shrink-0">
@@ -236,23 +225,23 @@ export default function QualityInspectionTier1Page() {
               </div>
             </div>
             <div className="bg-white p-8 rounded-lg shadow-lg">
-              <h3 className="text-2xl font-bold text-gray-900 mb-6">Service Highlights</h3>
+              <h3 className="text-2xl font-bold text-gray-900 mb-6">{t("highlightsTitle")}</h3>
               <div className="space-y-4">
                 <div className="flex items-center justify-between">
-                  <span className="text-gray-600">Response Time</span>
-                  <Badge className="bg-green-100 text-green-800">24-72 Hours</Badge>
+                  <span className="text-gray-600">{t("highlights.responseTime")}</span>
+                  <Badge className="bg-green-100 text-green-800">{t("highlights.responseTimeValue")}</Badge>
                 </div>
                 <div className="flex items-center justify-between">
-                  <span className="text-gray-600">Service Location</span>
-                  <Badge className="bg-blue-100 text-blue-800">Supplier Site</Badge>
+                  <span className="text-gray-600">{t("highlights.serviceLocation")}</span>
+                  <Badge className="bg-blue-100 text-blue-800">{t("highlights.serviceLocationValue")}</Badge>
                 </div>
                 <div className="flex items-center justify-between">
-                  <span className="text-gray-600">Team Size</span>
-                  <Badge className="bg-purple-100 text-purple-800">2-4 Technicians</Badge>
+                  <span className="text-gray-600">{t("highlights.teamSize")}</span>
+                  <Badge className="bg-purple-100 text-purple-800">{t("highlights.teamSizeValue")}</Badge>
                 </div>
                 <div className="flex items-center justify-between">
-                  <span className="text-gray-600">Focus Area</span>
-                  <Badge className="bg-orange-100 text-orange-800">Supplier Development</Badge>
+                  <span className="text-gray-600">{t("highlights.focusArea")}</span>
+                  <Badge className="bg-orange-100 text-orange-800">{t("highlights.focusAreaValue")}</Badge>
                 </div>
               </div>
             </div>

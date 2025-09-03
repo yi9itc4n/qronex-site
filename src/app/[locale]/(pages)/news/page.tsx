@@ -1,5 +1,6 @@
 "use client";
 
+import { useState } from "react";
 import { useTranslations } from "next-intl";
 import { Link } from "@/i18n";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
@@ -15,6 +16,7 @@ import {
 
 export default function NewsPage() {
   const t = useTranslations("news");
+  const [selectedCategory, setSelectedCategory] = useState("All");
 
   const newsArticles = [
     {
@@ -113,6 +115,19 @@ export default function NewsPage() {
     { name: "E-Mobility", count: newsArticles.filter(article => article.category === "E-Mobility").length }
   ];
 
+  // Filter articles based on selected category
+  const filteredArticles = selectedCategory === "All" 
+    ? newsArticles 
+    : newsArticles.filter(article => article.category === selectedCategory);
+
+  // Separate featured and non-featured articles from filtered results
+  const featuredArticles = filteredArticles.filter(article => article.featured);
+  const nonFeaturedArticles = filteredArticles.filter(article => !article.featured);
+
+  const handleCategoryClick = (categoryName: string) => {
+    setSelectedCategory(categoryName);
+  };
+
   return (
     <main className="min-h-screen">
       {/* Hero section */}
@@ -150,7 +165,12 @@ export default function NewsPage() {
               <Badge 
                 key={category.name}
                 variant="outline" 
-                className="px-4 py-2 text-sm cursor-pointer hover:bg-blue-green-light hover:border-blue-green transition-colors bg-white"
+                className={`px-4 py-2 text-sm cursor-pointer transition-colors ${
+                  selectedCategory === category.name
+                    ? "bg-blue-green text-white border-blue-green"
+                    : "bg-white hover:bg-blue-green-light hover:border-blue-green"
+                }`}
+                onClick={() => handleCategoryClick(category.name)}
               >
                 {category.name} ({category.count})
               </Badge>
@@ -160,9 +180,10 @@ export default function NewsPage() {
       </section>
 
       {/* Featured article */}
-      <section className="section-padding">
-        <div className="container mx-auto container-padding">
-          {newsArticles.filter(article => article.featured).map((article) => (
+      {featuredArticles.length > 0 && (
+        <section className="section-padding">
+          <div className="container mx-auto container-padding">
+            {featuredArticles.map((article) => (
             <Card key={article.id} className="mb-12 overflow-hidden bg-white shadow-lg border-gray-200">
               <div className="grid grid-cols-1 lg:grid-cols-2 gap-0">
                 <div className="bg-gray-200 h-64 lg:h-full flex items-center justify-center">
@@ -213,18 +234,20 @@ export default function NewsPage() {
                 </div>
               </div>
             </Card>
-          ))}
-        </div>
-      </section>
+            ))}
+          </div>
+        </section>
+      )}
 
             {/* News grid */}
       <section className="section-padding bg-slate-100">
         <div className="container mx-auto container-padding">
           <h2 className="text-3xl lg:text-4xl font-bold text-gray-900 mb-12 text-center">
-            {t("latestArticles")}
+            {selectedCategory === "All" ? t("latestArticles") : `${selectedCategory} Articles`}
           </h2>
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {newsArticles.filter(article => !article.featured).map((article) => (
+          {nonFeaturedArticles.length > 0 ? (
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+              {nonFeaturedArticles.map((article) => (
               <Card key={article.id} className="card-hover h-full bg-white shadow-md border-gray-200">
                 <CardHeader>
                   <div className="bg-gray-200 h-48 rounded-lg flex items-center justify-center mb-4">
@@ -268,8 +291,26 @@ export default function NewsPage() {
                    </Button>
                 </CardContent>
               </Card>
-            ))}
-          </div>
+              ))}
+            </div>
+          ) : (
+            <div className="text-center py-12">
+              <Factory className="h-16 w-16 text-gray-400 mx-auto mb-4" />
+              <h3 className="text-xl font-semibold text-gray-600 mb-2">
+                No articles found in this category
+              </h3>
+              <p className="text-gray-500 mb-4">
+                Try selecting a different category or check back later for new content.
+              </p>
+              <Button 
+                variant="outline" 
+                className="btn-outline-blue-green"
+                onClick={() => setSelectedCategory("All")}
+              >
+                View All Articles
+              </Button>
+            </div>
+          )}
         </div>
       </section>
 

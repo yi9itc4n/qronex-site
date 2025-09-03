@@ -1,6 +1,7 @@
 "use client";
 
 import { Link } from "@/i18n";
+import { useTranslations } from "next-intl";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
@@ -16,69 +17,51 @@ import {
 } from "lucide-react";
 
 export default function ResidentEngineeringPage() {
+  const c = useTranslations("common");
+  const t = useTranslations("servicesDetails.resident");
 
   const features = [
     {
       icon: Target,
-      title: "Customer Quick Response Activities",
-      description: "Lead daily quality routines on the production floor to ensure adherence to procedures and immediate response to non-conformities.",
+      title: t("feature1.title"),
+      description: t("feature1.description"),
       benefits: [
-        "24/7 on-site presence",
-        "Immediate problem identification",
-        "Real-time quality monitoring",
-        "Proactive issue prevention"
+        t("feature1.benefit1"),
+        t("feature1.benefit2"),
+        t("feature1.benefit3"),
+        t("feature1.benefit4")
       ]
     },
     {
       icon: Wrench,
-      title: "8D Management",
-      description: "Facilitate 8D-based root cause analysis and resolution to ensure long-term corrective and preventive actions.",
+      title: t("feature2.title"),
+      description: t("feature2.description"),
       benefits: [
-        "Systematic problem solving",
-        "Root cause identification",
-        "Preventive action implementation",
-        "Long-term solution development"
+        t("feature2.benefit1"),
+        t("feature2.benefit2"),
+        t("feature2.benefit3"),
+        t("feature2.benefit4")
       ]
     },
     {
       icon: Users,
-      title: "Steering Problem-Solving Process",
-      description: "Lead and coordinate cross-functional teams to solve complex issues quickly and systematically.",
+      title: t("feature3.title"),
+      description: t("feature3.description"),
       benefits: [
-        "Cross-functional collaboration",
-        "Expert team coordination",
-        "Systematic approach",
-        "Rapid resolution"
+        t("feature3.benefit1"),
+        t("feature3.benefit2"),
+        t("feature3.benefit3"),
+        t("feature3.benefit4")
       ]
     }
   ];
 
   const processSteps = [
-    {
-      step: "01",
-      title: "Initial Assessment",
-      description: "Quick evaluation of the situation and immediate containment actions"
-    },
-    {
-      step: "02",
-      title: "Team Formation",
-      description: "Assemble cross-functional team with appropriate expertise"
-    },
-    {
-      step: "03",
-      title: "Root Cause Analysis",
-      description: "Systematic investigation using 8D methodology"
-    },
-    {
-      step: "04",
-      title: "Solution Implementation",
-      description: "Execute corrective and preventive actions"
-    },
-    {
-      step: "05",
-      title: "Verification & Monitoring",
-      description: "Validate effectiveness and establish ongoing monitoring"
-    }
+    { step: "01", title: t("process.s1Title"), description: t("process.s1Desc") },
+    { step: "02", title: t("process.s2Title"), description: t("process.s2Desc") },
+    { step: "03", title: t("process.s3Title"), description: t("process.s3Desc") },
+    { step: "04", title: t("process.s4Title"), description: t("process.s4Desc") },
+    { step: "05", title: t("process.s5Title"), description: t("process.s5Desc") }
   ];
 
   return (
@@ -90,22 +73,18 @@ export default function ResidentEngineeringPage() {
             <div className="w-20 h-20 bg-white/10 rounded-full flex items-center justify-center mx-auto mb-6">
               <Zap className="h-10 w-10 text-white" />
             </div>
-            <h1 className="text-4xl lg:text-6xl font-bold mb-6">
-              Resident Engineering
-            </h1>
-            <p className="text-xl lg:text-2xl text-slate-200 mb-8">
-              Customer Quick Response Activities, 8D Management, and Steering Problem-Solving Process
-            </p>
+            <h1 className="text-4xl lg:text-6xl font-bold mb-6">{t("heroTitle")}</h1>
+            <p className="text-xl lg:text-2xl text-slate-200 mb-8">{t("heroSubtitle")}</p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Button size="lg" className="btn-blue-green" asChild>
                 <Link href="/contact">
-                  Get Started
+                  {c("getStarted")}
                   <ArrowRight className="ml-2 h-4 w-4" />
                 </Link>
               </Button>
               <Button size="lg" variant="outline" className="btn-outline-blue-green border-white text-white hover:bg-white hover:text-slate-900" asChild>
                 <Link href="/contact">
-                  Request Quote
+                  {c("requestQuote")}
                 </Link>
               </Button>
             </div>
@@ -117,12 +96,8 @@ export default function ResidentEngineeringPage() {
       <section className="section-padding bg-slate-100">
         <div className="container mx-auto container-padding">
           <div className="text-center mb-16">
-            <h2 className="text-3xl lg:text-4xl font-bold text-gray-900 mb-4">
-              Our Resident Engineering Services
-            </h2>
-            <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-              Comprehensive on-site engineering support to ensure your quality processes run smoothly
-            </p>
+            <h2 className="text-3xl lg:text-4xl font-bold text-gray-900 mb-4">{t("featuresTitle")}</h2>
+            <p className="text-xl text-gray-600 max-w-3xl mx-auto">{t("featuresSubtitle")}</p>
           </div>
 
           <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
@@ -143,7 +118,7 @@ export default function ResidentEngineeringPage() {
                   </CardHeader>
                   <CardContent>
                     <div className="space-y-3">
-                      <h4 className="font-semibold text-gray-900">Key Benefits:</h4>
+                      <h4 className="font-semibold text-gray-900">{t("featuresBenefitTitle")}</h4>
                       {feature.benefits.map((benefit, benefitIndex) => (
                         <div key={benefitIndex} className="flex items-center text-sm text-gray-600">
                           <CheckCircle className="h-4 w-4 text-green-600 mr-2 flex-shrink-0" />
@@ -163,12 +138,8 @@ export default function ResidentEngineeringPage() {
       <section className="section-padding bg-white">
         <div className="container mx-auto container-padding">
           <div className="text-center mb-16">
-            <h2 className="text-3xl lg:text-4xl font-bold text-gray-900 mb-4">
-              Our Process
-            </h2>
-            <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-              Systematic approach to resident engineering and problem resolution
-            </p>
+            <h2 className="text-3xl lg:text-4xl font-bold text-gray-900 mb-4">{t("processTitle")}</h2>
+            <p className="text-xl text-gray-600 max-w-3xl mx-auto">{t("processSubtitle")}</p>
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-5 gap-8">
@@ -190,9 +161,7 @@ export default function ResidentEngineeringPage() {
         <div className="container mx-auto container-padding">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
             <div>
-              <h2 className="text-3xl lg:text-4xl font-bold text-gray-900 mb-6">
-                Why Choose Resident Engineering?
-              </h2>
+              <h2 className="text-3xl lg:text-4xl font-bold text-gray-900 mb-6">{t("benefitsTitle")}</h2>
               <div className="space-y-6">
                 <div className="flex items-start space-x-4">
                   <div className="w-12 h-12 bg-blue-green-gradient rounded-lg flex items-center justify-center flex-shrink-0">
@@ -224,23 +193,23 @@ export default function ResidentEngineeringPage() {
               </div>
             </div>
             <div className="bg-white p-8 rounded-lg shadow-lg">
-              <h3 className="text-2xl font-bold text-gray-900 mb-6">Service Highlights</h3>
+              <h3 className="text-2xl font-bold text-gray-900 mb-6">{t("highlightsTitle")}</h3>
               <div className="space-y-4">
                 <div className="flex items-center justify-between">
-                  <span className="text-gray-600">Response Time</span>
-                  <Badge className="bg-green-100 text-green-800">Immediate</Badge>
+                  <span className="text-gray-600">{t("highlights.responseTime")}</span>
+                  <Badge className="bg-green-100 text-green-800">{t("highlights.immediate")}</Badge>
                 </div>
                 <div className="flex items-center justify-between">
-                  <span className="text-gray-600">Availability</span>
-                  <Badge className="bg-blue-100 text-blue-800">24/7</Badge>
+                  <span className="text-gray-600">{t("highlights.availability")}</span>
+                  <Badge className="bg-blue-100 text-blue-800">{t("highlights.a247")}</Badge>
                 </div>
                 <div className="flex items-center justify-between">
-                  <span className="text-gray-600">Team Size</span>
-                  <Badge className="bg-purple-100 text-purple-800">2-5 Engineers</Badge>
+                  <span className="text-gray-600">{t("highlights.teamSize")}</span>
+                  <Badge className="bg-purple-100 text-purple-800">{t("highlights.teamSizeValue")}</Badge>
                 </div>
                 <div className="flex items-center justify-between">
-                  <span className="text-gray-600">Methodology</span>
-                  <Badge className="bg-orange-100 text-orange-800">8D Process</Badge>
+                  <span className="text-gray-600">{t("highlights.methodology")}</span>
+                  <Badge className="bg-orange-100 text-orange-800">{t("highlights.methodologyValue")}</Badge>
                 </div>
               </div>
             </div>

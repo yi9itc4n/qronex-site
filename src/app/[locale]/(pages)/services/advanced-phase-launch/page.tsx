@@ -1,6 +1,7 @@
 "use client";
 
 import { Link } from "@/i18n";
+import { useTranslations } from "next-intl";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
@@ -16,74 +17,76 @@ import {
 } from "lucide-react";
 
 export default function AdvancedPhaseLaunchPage() {
+  const c = useTranslations("common");
+  const t = useTranslations("servicesDetails.launch");
 
   const services = [
     {
       icon: Rocket,
-      title: "Product Launch Support",
-      description: "Comprehensive support for successful product launches and market introduction",
+      title: t("service1.title"),
+      description: t("service1.description"),
       features: [
-        "Launch planning and strategy",
-        "Quality validation",
-        "Risk assessment",
-        "Market readiness support"
+        t("service1.f1"),
+        t("service1.f2"),
+        t("service1.f3"),
+        t("service1.f4")
       ]
     },
     {
       icon: Settings,
-      title: "Advanced Phase Management",
-      description: "Expert management of advanced development phases and production ramp-up",
+      title: t("service2.title"),
+      description: t("service2.description"),
       features: [
-        "Phase transition management",
-        "Production ramp-up support",
-        "Quality system implementation",
-        "Performance optimization"
+        t("service2.f1"),
+        t("service2.f2"),
+        t("service2.f3"),
+        t("service2.f4")
       ]
     },
     {
       icon: Zap,
-      title: "Rapid Deployment",
-      description: "Accelerated deployment of quality systems and processes for time-critical projects",
+      title: t("service3.title"),
+      description: t("service3.description"),
       features: [
-        "Fast-track implementation",
-        "Critical path management",
-        "Resource optimization",
-        "Risk mitigation"
+        t("service3.f1"),
+        t("service3.f2"),
+        t("service3.f3"),
+        t("service3.f4")
       ]
     },
     {
       icon: Star,
-      title: "Excellence Programs",
-      description: "Implementation of excellence programs to achieve operational and quality excellence",
+      title: t("service4.title"),
+      description: t("service4.description"),
       features: [
-        "Excellence framework design",
-        "Performance benchmarking",
-        "Continuous improvement",
-        "Best practice implementation"
+        t("service4.f1"),
+        t("service4.f2"),
+        t("service4.f3"),
+        t("service4.f4")
       ]
     }
   ];
 
   const phases = [
     {
-      phase: "Phase 1",
-      title: "Planning & Strategy",
-      description: "Comprehensive planning and strategic development for successful launch"
+      phase: t("phases.p1"),
+      title: t("phases.p1Title"),
+      description: t("phases.p1Desc")
     },
     {
-      phase: "Phase 2",
-      title: "Development & Validation",
-      description: "Product development and quality validation processes"
+      phase: t("phases.p2"),
+      title: t("phases.p2Title"),
+      description: t("phases.p2Desc")
     },
     {
-      phase: "Phase 3",
-      title: "Production Ramp-up",
-      description: "Managed production ramp-up with quality assurance"
+      phase: t("phases.p3"),
+      title: t("phases.p3Title"),
+      description: t("phases.p3Desc")
     },
     {
-      phase: "Phase 4",
-      title: "Launch & Optimization",
-      description: "Successful launch and ongoing optimization"
+      phase: t("phases.p4"),
+      title: t("phases.p4Title"),
+      description: t("phases.p4Desc")
     }
   ];
 
@@ -96,22 +99,18 @@ export default function AdvancedPhaseLaunchPage() {
             <div className="w-20 h-20 bg-white/10 rounded-full flex items-center justify-center mx-auto mb-6">
               <Rocket className="h-10 w-10 text-white" />
             </div>
-            <h1 className="text-4xl lg:text-6xl font-bold mb-6">
-              Advanced Phase & Launch Services
-            </h1>
-            <p className="text-xl lg:text-2xl text-slate-200 mb-8">
-              Expert support for advanced development phases and successful product launches
-            </p>
+            <h1 className="text-4xl lg:text-6xl font-bold mb-6">{t("heroTitle")}</h1>
+            <p className="text-xl lg:text-2xl text-slate-200 mb-8">{t("heroSubtitle")}</p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Button size="lg" className="btn-blue-green" asChild>
                 <Link href="/contact">
-                  Get Started
+                  {c("getStarted")}
                   <ArrowRight className="ml-2 h-4 w-4" />
                 </Link>
               </Button>
               <Button size="lg" variant="outline" className="btn-outline-blue-green border-white text-white hover:bg-white hover:text-slate-900" asChild>
                 <Link href="/contact">
-                  Request Quote
+                  {c("requestQuote")}
                 </Link>
               </Button>
             </div>
@@ -123,12 +122,8 @@ export default function AdvancedPhaseLaunchPage() {
       <section className="section-padding bg-slate-100">
         <div className="container mx-auto container-padding">
           <div className="text-center mb-16">
-            <h2 className="text-3xl lg:text-4xl font-bold text-gray-900 mb-4">
-              Our Advanced Services
-            </h2>
-            <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-              Comprehensive support for advanced development phases and successful product launches
-            </p>
+            <h2 className="text-3xl lg:text-4xl font-bold text-gray-900 mb-4">{t("servicesTitle")}</h2>
+            <p className="text-xl text-gray-600 max-w-3xl mx-auto">{t("servicesSubtitle")}</p>
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
@@ -149,7 +144,7 @@ export default function AdvancedPhaseLaunchPage() {
                   </CardHeader>
                   <CardContent>
                     <div className="space-y-3">
-                      <h4 className="font-semibold text-gray-900">Key Features:</h4>
+                      <h4 className="font-semibold text-gray-900">{t("featuresTitle")}</h4>
                       {service.features.map((feature, featureIndex) => (
                         <div key={featureIndex} className="flex items-center text-sm text-gray-600">
                           <CheckCircle className="h-4 w-4 text-green-600 mr-2 flex-shrink-0" />
@@ -169,12 +164,8 @@ export default function AdvancedPhaseLaunchPage() {
       <section className="section-padding bg-white">
         <div className="container mx-auto container-padding">
           <div className="text-center mb-16">
-            <h2 className="text-3xl lg:text-4xl font-bold text-gray-900 mb-4">
-              Our Process Phases
-            </h2>
-            <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-              Systematic approach to advanced phase management and product launch
-            </p>
+            <h2 className="text-3xl lg:text-4xl font-bold text-gray-900 mb-4">{t("phasesTitle")}</h2>
+            <p className="text-xl text-gray-600 max-w-3xl mx-auto">{t("phasesSubtitle")}</p>
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
@@ -196,9 +187,7 @@ export default function AdvancedPhaseLaunchPage() {
         <div className="container mx-auto container-padding">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
             <div>
-              <h2 className="text-3xl lg:text-4xl font-bold text-gray-900 mb-6">
-                Why Choose Our Advanced Services?
-              </h2>
+              <h2 className="text-3xl lg:text-4xl font-bold text-gray-900 mb-6">{t("benefitsTitle")}</h2>
               <div className="space-y-6">
                 <div className="flex items-start space-x-4">
                   <div className="w-12 h-12 bg-blue-green-gradient rounded-lg flex items-center justify-center flex-shrink-0">
@@ -230,23 +219,23 @@ export default function AdvancedPhaseLaunchPage() {
               </div>
             </div>
             <div className="bg-white p-8 rounded-lg shadow-lg">
-              <h3 className="text-2xl font-bold text-gray-900 mb-6">Service Highlights</h3>
+              <h3 className="text-2xl font-bold text-gray-900 mb-6">{t("highlightsTitle")}</h3>
               <div className="space-y-4">
                 <div className="flex items-center justify-between">
-                  <span className="text-gray-600">Project Duration</span>
-                  <Badge className="bg-green-100 text-green-800">3-12 Months</Badge>
+                  <span className="text-gray-600">{t("highlights.projectDuration")}</span>
+                  <Badge className="bg-green-100 text-green-800">{t("highlights.projectDurationValue")}</Badge>
                 </div>
                 <div className="flex items-center justify-between">
-                  <span className="text-gray-600">Team Size</span>
-                  <Badge className="bg-blue-100 text-blue-800">3-8 Experts</Badge>
+                  <span className="text-gray-600">{t("highlights.teamSize")}</span>
+                  <Badge className="bg-blue-100 text-blue-800">{t("highlights.teamSizeValue")}</Badge>
                 </div>
                 <div className="flex items-center justify-between">
-                  <span className="text-gray-600">Success Rate</span>
-                  <Badge className="bg-purple-100 text-purple-800">95%+</Badge>
+                  <span className="text-gray-600">{t("highlights.successRate")}</span>
+                  <Badge className="bg-purple-100 text-purple-800">{t("highlights.successRateValue")}</Badge>
                 </div>
                 <div className="flex items-center justify-between">
-                  <span className="text-gray-600">Support Level</span>
-                  <Badge className="bg-orange-100 text-orange-800">Full-Service</Badge>
+                  <span className="text-gray-600">{t("highlights.supportLevel")}</span>
+                  <Badge className="bg-orange-100 text-orange-800">{t("highlights.supportLevelValue")}</Badge>
                 </div>
               </div>
             </div>
@@ -257,21 +246,19 @@ export default function AdvancedPhaseLaunchPage() {
       {/* CTA section */}
       <section className="section-padding bg-blue-green-gradient text-white">
         <div className="container mx-auto container-padding text-center">
-          <h2 className="text-3xl lg:text-4xl font-bold mb-4">
-            Ready to Launch Your Success?
-          </h2>
+          <h2 className="text-3xl lg:text-4xl font-bold mb-4">{t("heroSubtitle")}</h2>
           <p className="text-xl text-blue-100 mb-8 max-w-3xl mx-auto">
             Let our advanced phase and launch services help you achieve successful product launches and operational excellence
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Button size="lg" className="bg-white text-blue-green hover:bg-gray-100" asChild>
               <Link href="/contact">
-                Contact Us Today
+                {c("contactUsToday")}
               </Link>
             </Button>
             <Button size="lg" variant="outline" className="border-white text-white hover:bg-white hover:text-blue-green" asChild>
               <Link href="/services">
-                View All Services
+                {c("viewAllServices")}
               </Link>
             </Button>
           </div>

@@ -35,8 +35,7 @@ export function Footer() {
               </Link>
             </div>
             <p className="text-slate-300 mb-6 leading-relaxed">
-              Avrupa&apos;da yerleşik saha mühendisleriyle kalite problemlerinize hızlı ve etkili çözümler sunuyoruz. 
-              Tier 1 tedarikçilerin güvendiği kalite ortağı.
+              {t("footer.companyDescription")}
             </p>
             
             {/* Social Links */}
@@ -133,7 +132,7 @@ export function Footer() {
             <div className="mb-6">
               <h4 className="font-medium mb-3 flex items-center">
                 <MapPin className="h-4 w-4 mr-2" />
-                München Merkez Ofis
+                {t("home.contact.munichHeadOffice")}
               </h4>
               <div className="text-slate-300 space-y-2 text-sm">
                 <p>Maximilianstraße 35</p>
@@ -146,8 +145,8 @@ export function Footer() {
                 </div>
                 <div className="flex items-center space-x-2">
                   <Mail className="h-3 w-3" />
-                  <a href="mailto:info@qronex.com" className="hover:text-white transition-colors">
-                    info@qronex.com
+                  <a href="mailto:info@qronex.net" className="hover:text-white transition-colors">
+                    info@qronex.net
                   </a>
                 </div>
               </div>
@@ -157,14 +156,14 @@ export function Footer() {
             <div className="bg-red-900/20 border border-red-800 rounded-lg p-4">
               <h4 className="font-medium mb-2 flex items-center text-red-400">
                 <Clock className="h-4 w-4 mr-2" />
-                7/24 Acil Hat
+                {t("home.contact.emergency247")}
               </h4>
               <div className="text-sm">
                 <a href="tel:+498912345678" className="text-red-300 hover:text-red-200 transition-colors font-medium">
                   +49 89 123 456 789
                 </a>
                 <p className="text-red-400 text-xs mt-1">
-                  Kritik kalite problemleri için
+                  {t("home.contact.criticalQualityProblems")}
                 </p>
               </div>
             </div>
@@ -195,9 +194,9 @@ export function Footer() {
           {/* Global Presence */}
           <div className="flex items-center space-x-4 text-sm text-slate-400">
             <Globe className="h-4 w-4" />
-            <span>15 ülkede hizmet</span>
+            <span>{t("home.statistics.countriesValue")} {t("home.statistics.countries")}</span>
             <span>•</span>
-            <span>50+ saha mühendisi</span>
+            <span>{t("home.statistics.engineersValue")} {t("home.statistics.engineers")}</span>
           </div>
         </div>
       </div>
