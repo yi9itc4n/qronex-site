@@ -104,14 +104,6 @@ export function Hero() {
           {/* Slideshow Section - Top Position */}
     <section className="bg-gradient-to-br from-slate-900 via-blue-900 to-teal-900">
         <div className="w-full">
-          <div className="text-center py-8">
-            <h2 className="text-3xl lg:text-4xl font-bold text-white mb-4">
-              {s("title")}
-            </h2>
-            <p className="text-lg text-gray-300 max-w-2xl mx-auto px-4">
-              {s("subtitle")}
-            </p>
-          </div>
 
           {/* Slideshow Container - Full Width */}
           <div className="relative w-full">
@@ -123,9 +115,9 @@ export function Hero() {
             >
                             {slides.map((slide) => (
                 <div key={`${slide.id}-${currentSlide}`} className="w-full flex-shrink-0">
-                  <div className={`relative p-8 lg:p-16 bg-gradient-to-br ${slide.color} border-y border-white/20`}>
-                    <div className="container mx-auto">
-                      <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-16 items-center">
+                  <div className={`relative p-8 lg:p-12 bg-gradient-to-br ${slide.color} border-y border-white/20 min-h-[420px] lg:min-h-[560px]`}>
+                    <div className="container mx-auto min-h-[420px] lg:min-h-[560px] flex items-center">
+                      <div className="grid grid-cols-1 lg:grid-cols-2 gap-10 lg:gap-16 items-center w-full">
                         {/* Content - Left Side */}
                         <div className="space-y-6 lg:pr-8">
                           <div key={`icon-${animationKey}`} className={`inline-flex p-3 rounded-xl bg-white/10 ${slide.iconColor} animate-fadeIn`}>
@@ -165,24 +157,29 @@ export function Hero() {
               </div>
             </div>
 
-            {/* Navigation Buttons - Positioned outside content area */}
-            <button
-              onClick={prevSlide}
-              className="absolute left-8 top-1/2 transform -translate-y-1/2 p-4 rounded-full bg-white/20 hover:bg-white/30 text-white transition-colors backdrop-blur-sm z-10"
-              aria-label="Previous slide"
-            >
-              <ChevronLeft className="h-8 w-8" />
-            </button>
-            
-            <button
-              onClick={nextSlide}
-              className="absolute right-8 top-1/2 transform -translate-y-1/2 p-4 rounded-full bg-white/20 hover:bg-white/30 text-white transition-colors backdrop-blur-sm z-10"
-              aria-label="Next slide"
-            >
-              <ChevronRight className="h-8 w-8" />
-            </button>
-
-            {/* Slide Indicators */}
+            {/* Side gutters with controls (avoid overlaying text) */}
+            <div className="hidden md:flex absolute inset-y-0 left-0 w-10 md:w-12 z-10">
+              <div className="flex-1 flex items-center justify-center">
+                <button
+                  onClick={prevSlide}
+                  className="flex items-center justify-center p-2 rounded-full bg-white/10 hover:bg-white/20 text-white transition-colors backdrop-blur-sm"
+                  aria-label="Previous slide"
+                >
+                  <ChevronLeft className="h-6 w-6" />
+                </button>
+              </div>
+            </div>
+            <div className="hidden md:flex absolute inset-y-0 right-0 w-10 md:w-12 z-10">
+              <div className="flex-1 flex items-center justify-center">
+                <button
+                  onClick={nextSlide}
+                  className="flex items-center justify-center p-2 rounded-full bg-white/10 hover:bg-white/20 text-white transition-colors backdrop-blur-sm"
+                  aria-label="Next slide"
+                >
+                  <ChevronRight className="h-6 w-6" />
+                </button>
+              </div>
+            </div>
             <div className="flex justify-center space-x-3 py-6">
               {slides.map((_, index) => (
                 <button

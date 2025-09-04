@@ -54,23 +54,92 @@
     "advancedPhaseLaunchDesc": "Yeni ürünler ve süreçler için gelişmiş faz desteği ve lansman hizmetleri"
   },
   "services": {
+    "relatedTitle": "İlgili Hizmetler",
     "title": "Hizmetlerimiz",
     "subtitle": "Avrupa'da yerleşik saha mühendislerimizle kalite problemlerinize hızlı çözümler sunuyoruz",
     "processTitle": "Sürecimiz",
     "processSubtitle": "Tutarlı ve yüksek kaliteli sonuçlar için izlediğimiz adımlar",
     "onSiteRapidResponse": {
       "title": "On-Site Hızlı Müdahale",
-      "description": "7/24 saha desteği ile kalite problemlerinize anında müdahale ediyoruz",
-      "feature1": "24-72h müdahale",
-      "feature2": "7/24 destek",
-      "feature3": "Acil müdahale"
+      "description": "Kalite problemleriniz için 7/24 hızlı müdahale saha desteği",
+      "intro": "Üretim hattınızda beklenmedik kalite problemleri ortaya çıktığında, zamanla yarışırsınız. QroneX'in On‑Site Hızlı Müdahale hizmeti ile 24–72 saat içinde deneyimli mühendislerimiz sahanızda olur ve problemi yerinde çözer.",
+      "whyTitle": "Neden Hızlı Müdahale Kritik?",
+      "why": {
+        "downtime": {"t": "Üretim Durma Süresi", "d": "Her saat önemlidir"},
+        "customer": {"t": "Müşteri Memnuniyeti", "d": "Teslimat gecikmelerini önleme"},
+        "cost": {"t": "Maliyet Kontrolü", "d": "Erken müdahale ile kayıpları önleme"},
+        "quality": {"t": "Kalite Garantisi", "d": "Kökten çözüm sağlanana kadar destek"}
+      },
+      "scopeTitle": "Hizmet Kapsamı",
+      "scope": {
+        "s1": {"t": "İlk Değerlendirme (0–4 saat)", "i": [
+          "Problemin tanımlanması ve risk değerlendirmesi",
+          "Acil containment aksiyonlarının belirlenmesi",
+          "Müdahale ekibi ve kaynak planlaması",
+          "Müşteri iletişim protokolünün kurulması"
+        ]},
+        "s2": {"t": "Sahada Müdahale (4–24 saat)", "i": [
+          "Deneyimli mühendislerin sahaya ulaşması",
+          "Kök neden analizi ve detaylı inceleme",
+          "Geçici çözümler (containment) uygulaması",
+          "Sürekli durum raporlaması"
+        ]},
+        "s3": {"t": "Çözüm Uygulama (24–72 saat)", "i": [
+          "Kalıcı çözümlerin geliştirilmesi",
+          "Uygulama planı ve devreye alma",
+          "Test ve doğrulama",
+          "Personel eğitimi ve bilgi transferi"
+        ]}
+      },
+      "highlightsTitle": "Hizmet Özellikleri",
+      "highlights": {
+        "h1": "Avrupa genelinde hizmet",
+        "h2": "Deneyimli uzman ekip",
+        "h3": "Hızlı mobilizasyon",
+        "h4": "Detaylı raporlama",
+        "h5": "Sürekli destek"
+      },
+      "customerRatingTitle": "Müşteri Değerlendirmesi",
+      "customerReviewsLabel": "müşteri değerlendirmesi",
+      "faqTitle": "Sık Sorulan Sorular",
+      "faq": {
+        "q1": {"q": "Hizmet kapsamınız hangi ülkeleri içeriyor?", "a": "Avrupa genelinde 15 ülkede hizmet veriyoruz. Almanya, Fransa, İtalya, İspanya ve Türkiye dahil ana pazarlarda yerleşik ekiplerimiz bulunmaktadır."},
+        "q2": {"q": "Acil durumlarda ne kadar sürede müdahale edebiliyorsunuz?", "a": "Kritik durumlar için 6–12 saat içinde sahadayız. Normal projeler için 24–72 saat müdahale süremiz vardır."},
+        "q3": {"q": "Hangi sektörlerde deneyiminiz var?", "a": "Öncelikle otomotiv; Tier1, OEM, e‑mobility, havacılık ve ağır taşıtlarda kapsamlı deneyim."}
+      },
+      "relatedTitle": "İlgili Hizmetler",
+      "casesTitle": "Başarı Hikayeleri",
+      "pricingTitle": "Ücretlendirme ve Başlangıç",
+      "emergencyLine": "Acil Hat",
+      "email": "emergency@qronex.com"
     },
     "sortingContainment": {
       "title": "Sorting & Containment",
-      "description": "Hatalı parçaları ayırarak üretim hattınızın devamını sağlıyoruz",
-      "feature1": "%100 kontrol",
-      "feature2": "Hızlı ayırma",
-      "feature3": "Risk yönetimi"
+      "intro": "Hatalı parçaları hızla ayırıp kontrol ederek üretim hattı duruşlarını önler, müşterinizin hattını koruruz.",
+      "whyTitle": "Neden Sorting & Containment?",
+      "why": {
+        "line": {"t": "Hat Sürekliliği", "d": "Duruşları ve kesintileri önleme"},
+        "quality": {"t": "Kalite Koruması", "d": "Hataların müşteriye ulaşmasını engelleme"},
+        "trace": {"t": "İzlenebilirlik", "d": "Kontrollü karantina ve raporlama"},
+        "speed": {"t": "Hız", "d": "Avrupa genelinde hızlı mobilizasyon"}
+      },
+      "scopeTitle": "Hizmet Kapsamı",
+      "scope": {
+        "s1": {"t": "Containment Kurulumu", "i": ["Ayırma alanı planlama", "İş talimatı ve güvenlik", "Hata kriterleri ve etiketleme", "Karantina lojistiği"]},
+        "s2": {"t": "Sorting & Rework", "i": ["%100 görsel/fonksiyonel kontrol", "Ölçüm ve mastar", "Sahada küçük rework", "Günlük hurda analizi"]},
+        "s3": {"t": "Raporlama ve Teslim", "i": ["Lot bazlı raporlar", "Fotoğraf kanıtları", "Parça izlenebilirlik listesi", "Müşteri onayı"]}
+      },
+      "highlightsTitle": "Hizmet Özellikleri",
+      "highlights": {"h1": "%100 kontrol", "h2": "Hızlı mobilizasyon", "h3": "Sertifikalı prosedürler", "h4": "Şeffaf raporlama", "h5": "Müşteri koruması"},
+      "customerRatingTitle": "Müşteri Değerlendirmesi",
+      "customerReviewsLabel": "müşteri değerlendirmesi",
+      "faqTitle": "Sık Sorulan Sorular",
+      "faq": {
+        "q1": {"q": "Hangi kontrol yöntemlerini kullanıyorsunuz?", "a": "Müşteri kriterlerine göre görsel, fonksiyonel ve ölçüm kontrolleri; gerekirse mastar/fikstür sağlarız."},
+        "q2": {"q": "Hatalı parçaları rework edebiliyor musunuz?", "a": "Evet, sahada mutabakata bağlı küçük rework işlemleri (ör. çapak alma, temizlik, ayar) ile parçaları kurtarırız."},
+        "q3": {"q": "Sonuçları nasıl raporluyorsunuz?", "a": "Günlük lot bazlı raporlarla adetler, hata kodları ve fotoğraf kanıtları; ayrıca kapanış özeti paylaşırız."}
+      },
+      "relatedTitle": "İlgili Hizmetler"
     },
     "rework": {
       "title": "Rework",
@@ -81,10 +150,31 @@
     },
     "qualityEngineering": {
       "title": "Kalite Mühendisliği",
-      "description": "Kalite süreçlerinizi optimize ediyoruz",
-      "feature1": "Süreç iyileştirme",
-      "feature2": "Kalite sistemleri",
-      "feature3": "Analiz"
+      "intro": "APQP/PPAP, katmanlı denetimler ve SPC ile ölçeklenebilir kalite sistemleri tasarlar ve geliştirir, varyasyonu azaltır ve performansı yükseltiriz.",
+      "whyTitle": "Neden Kalite Mühendisliği?",
+      "why": {
+        "stability": {"t": "Süreç Stabilitesi", "d": "Daha az varyasyon, daha yüksek OEE"},
+        "compliance": {"t": "Uygunluk", "d": "IATF/ISO uyumlu pratikler"},
+        "insight": {"t": "İçgörü", "d": "SPC ile veri odaklı kararlar"},
+        "speed": {"t": "Çözüm Hızı", "d": "Yapılandırılmış problem çözme (8D, QRQC)"}
+      },
+      "scopeTitle": "Hizmet Kapsamı",
+      "scope": {
+        "s1": {"t": "Sistem Kurulumu", "i": ["APQP / PPAP hazırlığı", "Kontrol planı & FMEA iyileştirme", "Denetim rutinleri (LPA)", "İş talimatları"]},
+        "s2": {"t": "SPC & Analitik", "i": ["Kritik karakteristikler & mastarlar", "SPC kurulumu ve panolar", "Yeterlilik analizi", "Raporlama ritmi"]},
+        "s3": {"t": "Problem Çözme", "i": ["8D koçluğu ve fasilitasyon", "QRQC rutinleri", "Kök neden doğrulama", "Standardizasyon ve devretme"]}
+      },
+      "highlightsTitle": "Hizmet Özellikleri",
+      "highlights": {"h1": "Süreç optimizasyonu", "h2": "Sağlam kalite sistemleri", "h3": "SPC panoları", "h4": "8D/QRQC yetkinliği", "h5": "Ölçülebilir sonuçlar"},
+      "customerRatingTitle": "Müşteri Değerlendirmesi",
+      "customerReviewsLabel": "müşteri değerlendirmesi",
+      "faqTitle": "Sık Sorulan Sorular",
+      "faq": {
+        "q1": {"q": "IATF denetimlerine bizi hazırlayabilir misiniz?", "a": "Evet. Dokümantasyon, denetimler ve eğitim dahil IATF/ISO gerekliliklerine uyumlandırırız."},
+        "q2": {"q": "SPC panoları kuruyor musunuz?", "a": "SPC’yi panolar ve uyarılarla kurar, sürdürülebilirlik için ekiplerinizi eğitiriz."},
+        "q3": {"q": "Sonuçları nasıl garanti ediyorsunuz?", "a": "Sizinle KPI’ları belirleyip (hurda, rework, şikayet, OEE) iyileşmeleri takip ederiz."}
+      },
+      "relatedTitle": "İlgili Hizmetler"
     },
     "supplierReadiness": {
       "title": "Tedarikçi Hazırlığı",
@@ -95,10 +185,31 @@
     },
     "technicalRepresentation": {
       "title": "Teknik Temsilcilik",
-      "description": "Sahanızda sürekli kalite desteği sağlıyoruz",
-      "feature1": "Yerinde destek",
-      "feature2": "Sürekli izleme",
-      "feature3": "Danışmanlık"
+      "intro": "OEM ve Tier1 müşterilerinizle sahada sizin adınıza kalite arayüzü olur, günlük rutinleri, eskalasyonları ve anında containment’i kapanışa kadar yönetiriz.",
+      "whyTitle": "Neden Teknik Temsilcilik?",
+      "why": {
+        "interface": {"t": "Saha Arayüzü", "d": "Müşteride tek temas noktası"},
+        "speed": {"t": "Hızlı Yanıt", "d": "Anında containment ve eskalasyon"},
+        "visibility": {"t": "Görünürlük", "d": "Günlük rutinler ve şeffaf raporlar"},
+        "launch": {"t": "Lansman Desteği", "d": "Ramp‑up kalitesi ve stabilizasyon"}
+      },
+      "scopeTitle": "Hizmet Kapsamı",
+      "scope": {
+        "s1": {"t": "Günlük Rutinler", "i": ["QRQC / 8D takibi", "Shopfloor turları", "Müşteri toplantıları", "Konu takibi & eskalasyon"]},
+        "s2": {"t": "Containment & Koordinasyon", "i": ["Sahada anında aksiyonlar", "Sorting/rework koordinasyonu", "Tedarikçi/müşteri hizalaması", "Durum iletişimi"]},
+        "s3": {"t": "Stabilizasyon", "i": ["Aksiyon planı ve doğrulama", "Dokümantasyon ve raporlama", "Resident ekibe devretme", "Kazanımların kalıcılaştırılması"]}
+      },
+      "highlightsTitle": "Hizmet Özellikleri",
+      "highlights": {"h1": "Sahada varlık", "h2": "8D/QRQC rutinleri", "h3": "Hızlı containment", "h4": "Net raporlama", "h5": "Müşteri hizalaması"},
+      "customerRatingTitle": "Müşteri Değerlendirmesi",
+      "customerReviewsLabel": "müşteri değerlendirmesi",
+      "faqTitle": "Sık Sorulan Sorular",
+      "faq": {
+        "q1": {"q": "Müşteri toplantılarında bizi temsil eder misiniz?", "a": "Evet, günlük ve eskalasyon toplantılarına sahada arayüz olarak katılırız."},
+        "q2": {"q": "Containment’i koordine eder misiniz?", "a": "Kararlılık sağlanana kadar anlık aksiyonları, sorting/rework ve iletişimi yönetiriz."},
+        "q3": {"q": "Geçici mi uzun vadeli mi?", "a": "Her ikisi de. Kriz dönemlerinde geçici olarak veya uzun vadeli resident rolünde destek veririz."}
+      },
+      "relatedTitle": "İlgili Hizmetler"
     },
     "auditsTraining": {
       "title": "Denetim & Eğitim",
@@ -498,7 +609,8 @@
     "getStarted": "Hemen Başla",
     "requestQuote": "Teklif İste",
     "contactUsToday": "Bugün İletişime Geçin",
-    "viewAllServices": "Tüm Hizmetleri Gör"
+    "viewAllServices": "Tüm Hizmetleri Gör",
+    "viewDetails": "İncele"
   },
   "footer": {
     "quickLinks": "Hızlı Bağlantılar",

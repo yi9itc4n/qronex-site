@@ -212,7 +212,7 @@ export function Header({ locale }: HeaderProps) {
                   <span className="sr-only">Open menu</span>
                 </Button>
               </SheetTrigger>
-              <SheetContent side="right" className="w-[300px] sm:w-[400px]">
+              <SheetContent side="right" className="w-[300px] sm:w-[400px] flex flex-col h-full">
                 <nav className="flex flex-col space-y-4">
                   <Link
                     href="/about"
@@ -255,16 +255,7 @@ export function Header({ locale }: HeaderProps) {
                   >
                     {t("career")}
                   </Link>
-                  <div className="pt-4">
-                    <Button asChild variant="outline" className="w-full border-2 border-white text-white bg-transparent hover:bg-white hover:text-slate-900">
-                      <Link
-                        href="/pricing"
-                        onClick={() => setMobileMenuOpen(false)}
-                      >
-                        {t("getOffer")}
-                      </Link>
-                    </Button>
-                  </div>
+                  
                   <Link
                     href="/contact"
                     className="text-lg font-medium"
@@ -273,6 +264,25 @@ export function Header({ locale }: HeaderProps) {
                     {t("contact")}
                   </Link>
                 </nav>
+                {/* Bottom actions */}
+                <div className="mt-auto space-y-3 pt-4">
+                  <Button asChild className="w-full">
+                    <Link
+                      href="/pricing"
+                      onClick={() => setMobileMenuOpen(false)}
+                    >
+                      {t("getOffer")}
+                    </Link>
+                  </Button>
+                  <Link
+                    href={pathname}
+                    locale={locale === "en" ? "tr" : "en"}
+                    className="inline-flex justify-center items-center w-full rounded-md border px-4 py-2 text-base font-medium"
+                    onClick={() => setMobileMenuOpen(false)}
+                  >
+                    {locale === "en" ? "TR" : "EN"}
+                  </Link>
+                </div>
               </SheetContent>
             </Sheet>
           </div>

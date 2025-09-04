@@ -54,6 +54,7 @@
     "advancedPhaseLaunchDesc": "Advanced phase support and launch services for new products and processes"
   },
   "services": {
+    "relatedTitle": "Related Services",
     "title": "Our Services",
     "subtitle": "Fast solutions to your quality problems with our field engineers based in Europe",
     "processTitle": "Our Process",
@@ -61,16 +62,84 @@
     "onSiteRapidResponse": {
       "title": "On-Site Rapid Response",
       "description": "24/7 field support for immediate response to your quality issues",
-      "feature1": "24-72h response",
-      "feature2": "24/7 support",
-      "feature3": "Emergency intervention"
+      "intro": "When unexpected quality issues hit your production line, every hour matters. With QroneX's On‑Site Rapid Response, our experienced engineers arrive within 24–72 hours and resolve the problem on site.",
+      "whyTitle": "Why Rapid Response Is Critical",
+      "why": {
+        "downtime": {"t": "Downtime", "d": "Every hour matters"},
+        "customer": {"t": "Customer Satisfaction", "d": "Prevent delivery delays"},
+        "cost": {"t": "Cost Control", "d": "Avoid major losses with early action"},
+        "quality": {"t": "Quality Assurance", "d": "Support until root-cause is fixed"}
+      },
+      "scopeTitle": "Scope of Service",
+      "scope": {
+        "s1": {"t": "Initial Assessment (0–4h)", "i": [
+          "Define the issue and assess risk",
+          "Decide immediate containment actions",
+          "Plan response team and resources",
+          "Set customer communication protocol"
+        ]},
+        "s2": {"t": "On‑Site Intervention (4–24h)", "i": [
+          "Engineers on site",
+          "Root‑cause analysis",
+          "Temporary containment",
+          "Continuous status reporting"
+        ]},
+        "s3": {"t": "Solution Implementation (24–72h)", "i": [
+          "Develop permanent fixes",
+          "Implementation and ramp‑up",
+          "Test and verification",
+          "Training and knowledge transfer"
+        ]}
+      },
+      "highlightsTitle": "Key Highlights",
+      "highlights": {
+        "h1": "Europe‑wide service",
+        "h2": "Experienced expert team",
+        "h3": "Rapid mobilization",
+        "h4": "Detailed reporting",
+        "h5": "Continuous support"
+      },
+      "customerRatingTitle": "Customer Rating",
+      "customerReviewsLabel": "customer reviews",
+      "faqTitle": "Frequently Asked Questions",
+      "faq": {
+        "q1": {"q": "Which countries do you cover?", "a": "We operate across 15 countries in Europe with on‑site teams in all major markets including Germany, France, Italy, Spain and Turkey."},
+        "q2": {"q": "How fast can you intervene in emergencies?", "a": "For critical cases, we can be on site within 6–12 hours. For standard projects, our response time is 24–72 hours."},
+        "q3": {"q": "Which industries do you serve?", "a": "Primarily automotive; extensive experience with Tier1 suppliers, OEMs, e‑mobility, aerospace and heavy vehicles."}
+      },
+      "relatedTitle": "Related Services",
+      "casesTitle": "Success Stories",
+      "pricingTitle": "Pricing and Getting Started",
+      "emergencyLine": "Emergency Line",
+      "email": "emergency@qronex.com"
     },
     "sortingContainment": {
       "title": "Sorting & Containment",
-      "description": "Separating defective parts to ensure production line continuity",
-      "feature1": "100% inspection",
-      "feature2": "Fast sorting",
-      "feature3": "Risk management"
+      "intro": "We prevent line stoppages by quickly separating and controlling defective parts, safeguarding your customer's production.",
+      "whyTitle": "Why Sorting & Containment?",
+      "why": {
+        "line": {"t": "Line Continuity", "d": "Avoid disruptions and downtime"},
+        "quality": {"t": "Quality Protection", "d": "Block defects from reaching the customer"},
+        "trace": {"t": "Traceability", "d": "Controlled quarantine and reporting"},
+        "speed": {"t": "Speed", "d": "Rapid mobilization across Europe"}
+      },
+      "scopeTitle": "Scope of Service",
+      "scope": {
+        "s1": {"t": "Containment Setup", "i": ["Segregation area planning", "Work instructions & safety", "Defect criteria & tagging", "Quarantine logistics"]},
+        "s2": {"t": "Sorting & Rework", "i": ["100% visual/functional checks", "Measurement & gauging", "Minor rework on site", "Daily scrap analysis"]},
+        "s3": {"t": "Reporting & Handover", "i": ["Lot‑based reports", "Photo evidence", "Part traceability list", "Customer sign‑off"]}
+      },
+      "highlightsTitle": "Key Highlights",
+      "highlights": {"h1": "100% inspection", "h2": "Fast mobilization", "h3": "Certified procedures", "h4": "Transparent reporting", "h5": "Customer protection"},
+      "customerRatingTitle": "Customer Rating",
+      "customerReviewsLabel": "customer reviews",
+      "faqTitle": "Frequently Asked Questions",
+      "faq": {
+        "q1": {"q": "What inspection methods do you use?", "a": "Visual, functional and measurement checks according to customer criteria; we provide gauges and fixtures if needed."},
+        "q2": {"q": "Can you rework defective parts?", "a": "Yes, we perform agreed minor rework on site (e.g. deburring, cleaning, adjustments) to recover parts."},
+        "q3": {"q": "How do you report results?", "a": "We share daily lot‑based reports with counts, defect codes and photo evidence, plus a final summary."}
+      },
+      "relatedTitle": "Related Services"
     },
     "rework": {
       "title": "Rework",
@@ -81,10 +150,31 @@
     },
     "qualityEngineering": {
       "title": "Quality Engineering",
-      "description": "Optimizing your quality processes",
-      "feature1": "Process improvement",
-      "feature2": "Quality systems",
-      "feature3": "Analysis"
+      "intro": "We design and improve scalable quality systems using APQP/PPAP, layered audits and SPC to reduce variation and elevate performance.",
+      "whyTitle": "Why Quality Engineering?",
+      "why": {
+        "stability": {"t": "Process Stability", "d": "Lower variation, higher OEE"},
+        "compliance": {"t": "Compliance", "d": "IATF/ISO ready practices"},
+        "insight": {"t": "Insight", "d": "Data‑driven decisions with SPC"},
+        "speed": {"t": "Resolution Speed", "d": "Structured problem solving (8D, QRQC)"}
+      },
+      "scopeTitle": "Scope of Service",
+      "scope": {
+        "s1": {"t": "System Build‑up", "i": ["APQP / PPAP readiness", "Control plan & FMEA enhancement", "Audit routines (LPA)", "Work instructions"]},
+        "s2": {"t": "SPC & Analytics", "i": ["Critical characteristics & gauges", "SPC setup and dashboards", "Capability analysis", "Reporting cadence"]},
+        "s3": {"t": "Problem Solving", "i": ["8D coaching and facilitation", "QRQC routines", "Root cause verification", "Standardization & handover"]}
+      },
+      "highlightsTitle": "Key Highlights",
+      "highlights": {"h1": "Process optimization", "h2": "Robust quality systems", "h3": "SPC dashboards", "h4": "8D/QRQC enablement", "h5": "Measurable results"},
+      "customerRatingTitle": "Customer Rating",
+      "customerReviewsLabel": "customer reviews",
+      "faqTitle": "Frequently Asked Questions",
+      "faq": {
+        "q1": {"q": "Can you prepare us for IATF audits?", "a": "Yes. We align your system with IATF/ISO requirements, including documentation, audits and training."},
+        "q2": {"q": "Do you build SPC dashboards?", "a": "We set up SPC with dashboards and alerts, and train your teams to sustain it."},
+        "q3": {"q": "How do you ensure results?", "a": "We define KPIs with you and track improvements (scrap, rework, claims, OEE)."}
+      },
+      "relatedTitle": "Related Services"
     },
     "supplierReadiness": {
       "title": "Supplier Readiness",
@@ -95,10 +185,31 @@
     },
     "technicalRepresentation": {
       "title": "Technical Representation",
-      "description": "Providing continuous quality support on-site",
-      "feature1": "On-site support",
-      "feature2": "Continuous monitoring",
-      "feature3": "Consultancy"
+      "intro": "We act as your on‑site quality interface with OEMs and Tier1s, steering daily routines, escalation and immediate containment until closure.",
+      "whyTitle": "Why Technical Representation?",
+      "why": {
+        "interface": {"t": "On‑site Interface", "d": "Single point of contact at customer"},
+        "speed": {"t": "Response Speed", "d": "Immediate containment and escalation"},
+        "visibility": {"t": "Visibility", "d": "Daily routines and transparent reports"},
+        "launch": {"t": "Launch Support", "d": "Ramp‑up quality and stabilization"}
+      },
+      "scopeTitle": "Scope of Service",
+      "scope": {
+        "s1": {"t": "Daily Routines", "i": ["QRQC / 8D follow‑up", "Shopfloor walks", "Customer meetings", "Issue tracking & escalation"]},
+        "s2": {"t": "Containment & Coordination", "i": ["Immediate actions on site", "Sorting/rework coordination", "Supplier/customer alignment", "Status communication"]},
+        "s3": {"t": "Stabilization", "i": ["Action plan and verification", "Documentation and reporting", "Handover to resident team", "Lessons learned"]}
+      },
+      "highlightsTitle": "Key Highlights",
+      "highlights": {"h1": "On‑site presence", "h2": "8D/QRQC routines", "h3": "Fast containment", "h4": "Clear reporting", "h5": "Customer alignment"},
+      "customerRatingTitle": "Customer Rating",
+      "customerReviewsLabel": "customer reviews",
+      "faqTitle": "Frequently Asked Questions",
+      "faq": {
+        "q1": {"q": "Do you represent us at customer meetings?", "a": "Yes, we act as your on‑site interface, joining daily and escalation meetings."},
+        "q2": {"q": "Can you coordinate containment?", "a": "We lead immediate actions, sorting/rework and communication until stable."},
+        "q3": {"q": "Is this temporary or long‑term?", "a": "Both. We can support temporary crises or long‑term resident roles."}
+      },
+      "relatedTitle": "Related Services"
     },
     "auditsTraining": {
       "title": "Audits & Training",
@@ -498,7 +609,8 @@
     "getStarted": "Get Started",
     "requestQuote": "Request Quote",
     "contactUsToday": "Contact Us Today",
-    "viewAllServices": "View All Services"
+    "viewAllServices": "View All Services",
+    "viewDetails": "View Details"
   },
   "footer": {
     "quickLinks": "Quick Links",
@@ -544,7 +656,7 @@
   }
   ,
   "about": {
-    "heroTitle": "Who are we!",
+    "heroTitle": "Who we are!",
     "heroSubtitle": "QroneX is a leading quality consultancy providing fast and accurate on-site solutions to quality problems experienced by Tier 1 suppliers with OEMs, with field-ready engineers based in Europe.",
     "visionMission": "Our Vision and Mission",
     "visionTitle": "Our Vision",
