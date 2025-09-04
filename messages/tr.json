@@ -37,7 +37,7 @@
     "turkish": "Türkçe",
     "english": "English",
     "company": "Şirket",
-    "competencies": "Yeterlilikler",
+    "competencies": "Sektörler",
     "news": "Haberler",
     "career": "Kariyer",
     "getOffer": "Teklif Al",
@@ -210,6 +210,10 @@
         "q3": {"q": "Geçici mi uzun vadeli mi?", "a": "Her ikisi de. Kriz dönemlerinde geçici olarak veya uzun vadeli resident rolünde destek veririz."}
       },
       "relatedTitle": "İlgili Hizmetler"
+    },
+    "consulting": {
+      "title": "Danışmanlık & Eğitim",
+      "description": "Kalite yönetimi yetkinliklerinizi geliştirmek için uzman danışmanlık ve profesyonel eğitim"
     },
     "auditsTraining": {
       "title": "Denetim & Eğitim",

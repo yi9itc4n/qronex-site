@@ -409,10 +409,6 @@ export default function ContactPage() {
               </CardHeader>
               <CardContent className="space-y-3">
                 <div className="flex items-center justify-between text-sm">
-                  <span>Acil durumlar:</span>
-                  <Badge variant="destructive">15 dakika</Badge>
-                </div>
-                <div className="flex items-center justify-between text-sm">
                   <span>Normal talepler:</span>
                   <Badge variant="secondary">24 saat</Badge>
                 </div>
