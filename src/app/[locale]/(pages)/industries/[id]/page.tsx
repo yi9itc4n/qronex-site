@@ -4,7 +4,6 @@ import { useParams } from "next/navigation";
 import { useTranslations } from "next-intl";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
-import { Badge } from "@/components/ui/badge";
 import { Link } from "@/i18n";
 import { 
   Car, 
@@ -15,12 +14,7 @@ import {
   Building2,
   ArrowRight,
   CheckCircle,
-  Users,
-  MapPin,
-  Clock,
-  Award,
-  Target,
-  TrendingUp
+  Award
 } from "lucide-react";
 
 const industryData = {
@@ -138,7 +132,6 @@ export default function IndustryDetailPage() {
   const params = useParams();
   const industryId = params.id as string;
   const t = useTranslations();
-  const c = useTranslations("common");
   
   const industry = industryData[industryId as keyof typeof industryData];
   
@@ -190,7 +183,7 @@ export default function IndustryDetailPage() {
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {t.raw(industry.servicesKey).map((service: any, index: number) => (
+            {t.raw(industry.servicesKey).map((service: {title: string, description: string, features: string[]}, index: number) => (
               <Card key={index} className={`${colors.bg} ${colors.border} card-hover`}>
                 <CardHeader>
                   <div className="flex items-center space-x-3 mb-4">
@@ -234,7 +227,7 @@ export default function IndustryDetailPage() {
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {t.raw(industry.benefitsKey).map((benefit: any, index: number) => (
+            {t.raw(industry.benefitsKey).map((benefit: {title: string, description: string}, index: number) => (
               <div key={index} className="text-center">
                 <div className={`w-16 h-16 ${colors.bg} rounded-full flex items-center justify-center mx-auto mb-4`}>
                   <Award className={`h-8 w-8 ${colors.icon}`} />
@@ -264,7 +257,7 @@ export default function IndustryDetailPage() {
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
-            {t.raw(industry.statsKey).map((stat: any, index: number) => (
+            {t.raw(industry.statsKey).map((stat: {value: string, label: string}, index: number) => (
               <div key={index} className="text-center">
                 <div className={`text-4xl font-bold ${colors.icon} mb-2`}>
                   {stat.value}
@@ -307,3 +300,4 @@ export default function IndustryDetailPage() {
     </div>
   );
 }
+

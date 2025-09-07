@@ -10,7 +10,6 @@ import {
   Users, 
   Globe, 
   CheckCircle,
-  Phone,
   ChevronLeft,
   ChevronRight,
   Wrench,

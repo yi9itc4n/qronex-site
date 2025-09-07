@@ -10,7 +10,6 @@ import {
   Twitter, 
   Facebook,
   Youtube,
-  Clock,
   Globe
 } from "lucide-react";
 

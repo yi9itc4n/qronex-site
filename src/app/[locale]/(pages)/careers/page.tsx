@@ -16,7 +16,7 @@ import { z } from 'zod';
 import { Link } from '@/i18n';
 import { useTranslations } from 'next-intl';
 
-const createApplicationSchema = (t: any) => z.object({
+const createApplicationSchema = (t: (key: string) => string) => z.object({
   roleId: z.string().min(1, t('dialog.fields.validation.role')),
   firstName: z.string().min(2, t('dialog.fields.validation.firstName')),
   lastName: z.string().min(2, t('dialog.fields.validation.lastName')),
@@ -30,7 +30,7 @@ const createApplicationSchema = (t: any) => z.object({
 
 type ApplicationFormData = z.infer<ReturnType<typeof createApplicationSchema>>;
 
-const createJobs = (t: any) => [
+const createJobs = (t: (key: string) => string) => [
   {
     id: 'senior-quality-engineer-munich',
     title: 'Senior Quality Engineer',
@@ -219,7 +219,7 @@ const createJobs = (t: any) => [
   }
 ];
 
-const createBenefits = (t: any) => [
+const createBenefits = (t: (key: string) => string) => [
   {
     icon: Heart,
     title: t("benefits.items.0.title"),
@@ -245,7 +245,18 @@ const createBenefits = (t: any) => [
 export default function CareersPage() {
   const t = useTranslations("careers");
   const [isClient, setIsClient] = useState(false);
-  const [selectedJob, setSelectedJob] = useState<typeof jobs[0] | null>(null);
+  const [selectedJob, setSelectedJob] = useState<{
+    id: string;
+    title: string;
+    department: string;
+    location: string;
+    type: string;
+    experience: string;
+    description: string;
+    requirements: string[];
+    responsibilities: string[];
+    benefits: string[];
+  } | null>(null);
   const [isApplicationOpen, setIsApplicationOpen] = useState(false);
   const [submitSuccess, setSubmitSuccess] = useState(false);
   const [isSubmitting, setIsSubmitting] = useState(false);
@@ -288,7 +299,18 @@ export default function CareersPage() {
     }
   };
 
-  const handleApplyClick = (job: typeof jobs[0]) => {
+  const handleApplyClick = (job: {
+    id: string;
+    title: string;
+    department: string;
+    location: string;
+    type: string;
+    experience: string;
+    description: string;
+    requirements: string[];
+    responsibilities: string[];
+    benefits: string[];
+  }) => {
     setSelectedJob(job);
     setValue('roleId', job.id);
     setIsApplicationOpen(true);

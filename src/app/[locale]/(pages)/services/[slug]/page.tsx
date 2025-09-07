@@ -12,8 +12,6 @@ import {
   CheckCircle,
   Star,
   Target,
-  Headphones,
-  MapPin
 } from "lucide-react";
 import { getTranslations } from "next-intl/server";
 import fs from "fs";

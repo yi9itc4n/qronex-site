@@ -76,44 +76,6 @@ export default function ContactPage() {
     }
   };
 
-  const regionalManagers = [
-    {
-      name: "Mehmet Yılmaz",
-      title: "Türkiye & Balkanlar Bölge Sorumlusu",
-      phone: "+90 532 123 4567",
-      email: "mehmet.yilmaz@qronex.com",
-      region: "TR, BG, RO, GR",
-      flag: "🇹🇷",
-      available: true,
-    },
-    {
-      name: "Hans Müller", 
-      title: "DACH Bölge Sorumlusu",
-      phone: "+49 170 987 6543",
-      email: "hans.mueller@qronex.com",
-      region: "DE, AT, CH",
-      flag: "🇩🇪",
-      available: true,
-    },
-    {
-      name: "Pierre Dubois",
-      title: "Fransa & BeNeLux Bölge Sorumlusu", 
-      phone: "+33 6 12 34 56 78",
-      email: "pierre.dubois@qronex.com",
-      region: "FR, BE, NL, LU",
-      flag: "🇫🇷",
-      available: false,
-    },
-    {
-      name: "Alessandro Rossi",
-      title: "İtalya & İspanya Bölge Sorumlusu",
-      phone: "+39 333 123 4567", 
-      email: "alessandro.rossi@qronex.com",
-      region: "IT, ES, PT",
-      flag: "🇮🇹",
-      available: true,
-    },
-  ];
 
   const urgencyOptions = [
     { value: "asap", label: t("urgencyOptions.asap") },
