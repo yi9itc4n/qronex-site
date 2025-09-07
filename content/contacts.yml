@@ -2,7 +2,7 @@ regionalManagers:
   - id: "mehmet-yilmaz"
     name: "Mehmet Yılmaz"
     title: "Türkiye & Balkanlar Bölge Sorumlusu"
-    phone: "+90 532 123 4567"
+    phone: "+49 15234649852"
     email: "mehmet.yilmaz@qronex.com"
     region: "Turkey & Balkans"
     countries: ["Türkiye", "Bulgaristan", "Romanya", "Yunanistan"]
@@ -10,7 +10,7 @@ regionalManagers:
   - id: "hans-mueller"
     name: "Hans Müller"
     title: "DACH Bölge Sorumlusu"
-    phone: "+49 170 987 6543"
+    phone: "+49 15234649852"
     email: "hans.mueller@qronex.com"
     region: "DACH"
     countries: ["Almanya", "Avusturya", "İsviçre"]
@@ -18,7 +18,7 @@ regionalManagers:
   - id: "pierre-dubois"
     name: "Pierre Dubois"
     title: "Fransa & BeNeLux Bölge Sorumlusu"
-    phone: "+33 6 12 34 56 78"
+    phone: "+49 15234649852"
     email: "pierre.dubois@qronex.com"
     region: "France & BeNeLux"
     countries: ["Fransa", "Belçika", "Hollanda", "Lüksemburg"]
@@ -26,7 +26,7 @@ regionalManagers:
   - id: "alessandro-rossi"
     name: "Alessandro Rossi"
     title: "İtalya & İspanya Bölge Sorumlusu"
-    phone: "+39 333 123 4567"
+    phone: "+49 15234649852"
     email: "alessandro.rossi@qronex.com"
     region: "Southern Europe"
     countries: ["İtalya", "İspanya", "Portekiz"]
@@ -34,7 +34,7 @@ regionalManagers:
   - id: "jan-kowalski"
     name: "Jan Kowalski"
     title: "Doğu Avrupa Bölge Sorumlusu"
-    phone: "+48 601 234 567"
+    phone: "+49 15234649852"
     email: "jan.kowalski@qronex.com"
     region: "Eastern Europe"
     countries: ["Polonya", "Çek Cumhuriyeti", "Slovakya", "Macaristan"]
@@ -42,8 +42,8 @@ regionalManagers:
 offices:
   - id: "munich"
     name: "München Merkez Ofis"
-    address: "Maximilianstrasse 35, 80539 München, Germany"
-    phone: "+49 89 123 456 789"
+    address: "Jahn Str. 46A hirsdhaid 96114"
+    phone: "+49 15234649852"
     email: "munich@qronex.com"
     coordinates:
       lat: 48.1351
@@ -51,8 +51,8 @@ offices:
       
   - id: "paris"
     name: "Paris Ofis"
-    address: "25 Avenue des Champs-Élysées, 75008 Paris, France"
-    phone: "+33 1 42 12 34 56"
+    address: "Jahn Str. 46A hirsdhaid 96114"
+    phone: "+49 15234649852"
     email: "paris@qronex.com"
     coordinates:
       lat: 48.8566

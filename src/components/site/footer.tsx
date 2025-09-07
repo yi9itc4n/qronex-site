@@ -134,12 +134,11 @@ export function Footer() {
                 {t("home.contact.munichHeadOffice")}
               </h4>
               <div className="text-slate-300 space-y-2 text-sm">
-                <p>Maximilianstraße 35</p>
-                <p>80539 München, Germany</p>
+                <p>Jahn Str. 46A hirsdhaid 96114</p>
                 <div className="flex items-center space-x-2">
                   <Phone className="h-3 w-3" />
-                  <a href="tel:+498912345678" className="hover:text-white transition-colors">
-                    +49 89 123 456 789
+                  <a href="tel:+4915234649852" className="hover:text-white transition-colors">
+                    +49 15234649852
                   </a>
                 </div>
                 <div className="flex items-center space-x-2">

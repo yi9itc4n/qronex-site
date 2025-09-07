@@ -682,7 +682,7 @@
         "name": "Ad Soyad",
         "company": "Şirket Adı",
         "email": "ornek@sirket.com",
-        "phone": "+90 532 123 4567",
+        "phone": "+49 15234649852",
         "city": "Şehir",
         "message": "Kalite probleminizi detaylı olarak açıklayın..."
       },
@@ -706,8 +706,8 @@
     "office": {
       "title": "Merkez Ofis",
       "location": "München, Almanya",
-      "address": "Maximilianstraße 35<br />80539 München",
-      "phone": "+49 89 123 456 789",
+      "address": "Jahn Str. 46A hirsdhaid 96114",
+      "phone": "+49 15234649852",
       "email": "info@qronex.net",
       "hours": "09:00 - 18:00 (CET)"
     },
@@ -1133,6 +1133,9 @@
     "latestArticles": "Son Makaleler",
     "tags": "Etiketler",
     "author": "Yazar",
+    "ctaTitle": "QroneX ile Güncel Kalın",
+    "ctaSubtitle": "En son içgörüler, vaka çalışmaları ve sektör trendlerini e-posta kutunuza alın",
+    "contactOurTeam": "Ekibimizle İletişime Geçin",
     "publishDate": "Yayın Tarihi",
     "readTime": "Okuma Süresi",
     "categories": {

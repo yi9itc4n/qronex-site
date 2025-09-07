@@ -682,7 +682,7 @@
         "name": "Full Name",
         "company": "Company Name",
         "email": "example@company.com",
-        "phone": "+90 532 123 4567",
+        "phone": "+49 15234649852",
         "city": "City",
         "message": "Please describe your quality problem in detail..."
       },
@@ -706,8 +706,8 @@
     "office": {
       "title": "Head Office",
       "location": "Munich, Germany",
-      "address": "Maximilianstraße 35<br />80539 München",
-      "phone": "+49 89 123 456 789",
+      "address": "Jahn Str. 46A hirsdhaid 96114",
+      "phone": "+49 15234649852",
       "email": "info@qronex.net",
       "hours": "09:00 - 18:00 (CET)"
     },
@@ -1133,6 +1133,9 @@
     "latestArticles": "Latest Articles",
     "tags": "Tags",
     "author": "Author",
+    "ctaTitle": "Stay Updated with QroneX",
+    "ctaSubtitle": "Get the latest insights, case studies, and industry trends delivered to your inbox",
+    "contactOurTeam": "Contact Our Team",
     "publishDate": "Publish Date",
     "readTime": "Read Time",
     "categories": {
