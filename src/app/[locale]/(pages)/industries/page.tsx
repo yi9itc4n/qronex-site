@@ -1,6 +1,5 @@
 import { Metadata } from 'next';
-import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
-import { Badge } from '@/components/ui/badge';
+import { Card, CardContent, CardTitle } from '@/components/ui/card';
 import { Building2, Car, Truck, Plane, Zap, Factory } from 'lucide-react';
 import { Link } from '@/i18n';
 import { useTranslations } from 'next-intl';
@@ -14,80 +13,38 @@ const industries = [
   {
     id: 'automotive-oem',
     title: 'industries.automotiveOem.title',
-    description: 'industries.automotiveOem.description',
     icon: Car,
-    services: ['navigation.onSiteRapidResponse', 'navigation.sortingContainment', 'navigation.qualityEngineering'],
-    color: 'blue',
-    stats: {
-      projects: '150+',
-      clients: '25',
-      locations: '8'
-    }
+    color: 'blue'
   },
   {
     id: 'tier1',
     title: 'industries.tier1.title',
-    description: 'industries.tier1.description',
     icon: Factory,
-    services: ['navigation.supplierReadiness', 'navigation.technicalRepresentation', 'services.qualityEngineering.title'],
-    color: 'green',
-    stats: {
-      projects: '200+',
-      clients: '35',
-      locations: '12'
-    }
+    color: 'green'
   },
   {
     id: 'e-mobility',
     title: 'industries.eMobility.title',
-    description: 'industries.eMobility.description',
     icon: Zap,
-    services: ['services.rework.title', 'services.supplierReadiness.title', 'services.qualityEngineering.title'],
-    color: 'purple',
-    stats: {
-      projects: '75+',
-      clients: '15',
-      locations: '6'
-    }
+    color: 'purple'
   },
   {
     id: 'heavy-transport',
     title: 'industries.heavyTransport.title',
-    description: 'industries.heavyTransport.description',
     icon: Truck,
-    services: ['services.auditsTraining.title', 'services.aftersalesSupport.title', 'services.qualityEngineering.title'],
-    color: 'orange',
-    stats: {
-      projects: '90+',
-      clients: '18',
-      locations: '5'
-    }
+    color: 'orange'
   },
   {
     id: 'aerospace',
     title: 'industries.aerospace.title',
-    description: 'industries.aerospace.description',
     icon: Plane,
-    services: ['services.consulting.title', 'services.auditsTraining.title', 'services.qualityEngineering.title'],
-    color: 'indigo',
-    stats: {
-      projects: '45+',
-      clients: '12',
-      locations: '4'
-    }
+    color: 'indigo'
   },
   {
     id: 'industrial',
     title: 'industries.title',
-    description: 'industries.subtitle',
     icon: Building2,
-    services: ['services.technicalRepresentation.title', 'services.qualityEngineering.title', 'services.supplierReadiness.title'],
-    color: 'teal',
-    stats: {
-      projects: '120+',
-      clients: '40',
-      locations: '10'
-    }
+    color: 'teal'
   }
 ];
 
@@ -165,65 +122,24 @@ export default function IndustriesPage() {
             </p>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+          <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-6">
             {industries.map((industry) => {
               const Icon = industry.icon;
               const colors = getColorClasses(industry.color);
               
               return (
-                <Card key={industry.id} className={`${colors.bg} ${colors.border} card-hover`}>
-                  <CardHeader>
-                    <div className="flex items-center space-x-3 mb-4">
-                      <div className={`p-3 rounded-lg bg-white shadow-sm`}>
+                <Link key={industry.id} href={`/industries/${industry.id}`}>
+                  <Card className={`${colors.bg} ${colors.border} card-hover h-full cursor-pointer transition-all duration-200 hover:shadow-lg hover:scale-105`}>
+                    <CardContent className="p-6 text-center">
+                      <div className={`p-4 rounded-lg bg-white shadow-sm mx-auto mb-4 w-fit`}>
                         <Icon className={`h-8 w-8 ${colors.icon}`} />
                       </div>
-                      <div>
-                        <CardTitle className="text-xl font-bold text-gray-900">
-                          {t(industry.title)}
-                        </CardTitle>
-                      </div>
-                    </div>
-                    <CardDescription className="text-gray-600 leading-relaxed">
-                      {t(industry.description)}
-                    </CardDescription>
-                  </CardHeader>
-                  
-                  <CardContent className="space-y-6">
-                    {/* Services */}
-                    <div>
-                      <h4 className="font-semibold text-gray-900 mb-3">{ts('servicesHighlight')}</h4>
-                      <div className="flex flex-wrap gap-2">
-                        {industry.services.map((serviceKey) => (
-                          <Badge key={serviceKey} className={colors.badge}>
-                            {t(serviceKey)}
-                          </Badge>
-                        ))}
-                      </div>
-                    </div>
-
-                    {/* Stats */}
-                    <div className="grid grid-cols-3 gap-4 pt-4 border-t border-gray-200">
-                      <div className="text-center">
-                        <div className={`text-lg font-bold ${colors.icon}`}>
-                          {industry.stats.projects}
-                        </div>
-                        <div className="text-xs text-gray-500">{ts('stats.projects')}</div>
-                      </div>
-                      <div className="text-center">
-                        <div className={`text-lg font-bold ${colors.icon}`}>
-                          {industry.stats.clients}
-                        </div>
-                        <div className="text-xs text-gray-500">{ts('stats.clients')}</div>
-                      </div>
-                      <div className="text-center">
-                        <div className={`text-lg font-bold ${colors.icon}`}>
-                          {industry.stats.locations}
-                        </div>
-                        <div className="text-xs text-gray-500">{ts('stats.locations')}</div>
-                      </div>
-                    </div>
-                  </CardContent>
-                </Card>
+                      <CardTitle className="text-lg font-bold text-gray-900">
+                        {t(industry.title)}
+                      </CardTitle>
+                    </CardContent>
+                  </Card>
+                </Link>
               );
             })}
           </div>

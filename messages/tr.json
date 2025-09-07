@@ -44,10 +44,8 @@
     "viewAllServices": "Tüm Hizmetleri Görüntüle",
     "residentEngineering": "Yerleşik Mühendislik",
     "residentEngineeringDesc": "Müşteri Hızlı Yanıt Faaliyetleri, 8D Yönetimi ve Problem Çözme Sürecini Yönlendirme",
-    "qualityInspectionCustomer": "Kalite Kontrolü ve Düzeltme @ Müşteri",
-    "qualityInspectionCustomerDesc": "Müşteri lokasyonlarında kapsamlı kalite kontrolü ve düzeltme hizmetleri",
-    "qualityInspectionTier1": "Kalite Kontrolü ve Düzeltme @ Tier1",
-    "qualityInspectionTier1Desc": "Tier1 tedarikçi lokasyonlarında kalite kontrolü ve düzeltme hizmetleri",
+    "qualityInspectionRework": "Kalite Kontrol ve Yeniden İşleme",
+    "qualityInspectionReworkDesc": "Müşteri ve tedarikçi lokasyonlarında kapsamlı kalite kontrol ve yeniden işleme hizmetleri",
     "consultingTraining": "Danışmanlık ve Eğitim",
     "consultingTrainingDesc": "Kalite iyileştirme için profesyonel danışmanlık ve eğitim hizmetleri",
     "advancedPhaseLaunch": "Gelişmiş Faz ve Lansman Hizmetleri",
@@ -234,23 +232,285 @@
     "subtitle": "Farklı sektörlerdeki deneyimimizle size özel çözümler geliştiriyoruz",
     "automotiveOem": {
       "title": "Otomotiv OEM",
-      "description": "Ana otomotiv üreticileri için kapsamlı kalite çözümleri"
+      "description": "Ana otomotiv üreticileri için kapsamlı kalite çözümleri",
+      "services": [
+        {
+          "title": "On-Site Hızlı Müdahale",
+          "description": "Otomotiv üretim hatlarında kalite sorunları için 24-72 saat sahada müdahale",
+          "features": ["Anında kontrol", "Kök neden analizi", "8D süreç yönetimi", "Müşteri iletişimi"]
+        },
+        {
+          "title": "Kalite Mühendisliği",
+          "description": "Otomotiv standartları için gelişmiş kalite süreçleri ve sürekli iyileştirme",
+          "features": ["ISO/TS 16949 uyumluluğu", "Süreç optimizasyonu", "Kalite sistemi geliştirme", "Eğitim programları"]
+        },
+        {
+          "title": "Teknik Temsilcilik",
+          "description": "Yerinde teknik destek ve müşteri arayüz yönetimi",
+          "features": ["Günlük kalite rutinleri", "Müşteri toplantıları", "Eskalasyon yönetimi", "İlerleme raporlama"]
+        }
+      ],
+      "benefits": [
+        {
+          "title": "OEM Standartları",
+          "description": "Otomotiv OEM kalite gereksinimleri ve standartlarına tam uyumluluk"
+        },
+        {
+          "title": "Hızlı Müdahale",
+          "description": "Kritik kalite sorunları ve acil durumlar için 24-72 saat müdahale süresi"
+        },
+        {
+          "title": "Uzman Ekip",
+          "description": "Derin sektör bilgisine sahip deneyimli otomotiv kalite mühendisleri"
+        }
+      ],
+      "stats": [
+        {"value": "150+", "label": "Tamamlanan Proje"},
+        {"value": "25", "label": "OEM Müşteri"},
+        {"value": "8", "label": "Hizmet Verilen Ülke"},
+        {"value": "%98", "label": "Başarı Oranı"}
+      ],
+      "cta": {
+        "title": "Otomotiv Kalitenizi İyileştirmeye Hazır mısınız?",
+        "subtitle": "Otomotiv uzmanlarımızın üretiminizde en yüksek kalite standartlarını yakalamanıza yardımcı olmasına izin verin",
+        "primary": "Otomotiv Teklifi Al",
+        "secondary": "Tüm Hizmetleri Görüntüle"
+      }
     },
     "tier1": {
       "title": "Tier 1 Tedarikçiler",
-      "description": "Birinci kademe tedarikçiler için özelleşmiş hizmetler"
+      "description": "Birinci kademe tedarikçiler için özelleşmiş hizmetler",
+      "services": [
+        {
+          "title": "Tedarikçi Hazırlığı",
+          "description": "Tier 1 tedarikçiler için hazırlık ve geliştirme hizmetleri",
+          "features": ["Kalite sistemi kurulumu", "Süreç optimizasyonu", "Eğitim programları", "Denetim hazırlığı"]
+        },
+        {
+          "title": "Kalite Kontrol ve Yeniden İşleme",
+          "description": "Tedarikçi lokasyonlarında yerinde kalite kontrol ve yeniden işleme hizmetleri",
+          "features": ["Görsel kontrol", "Hata tespiti", "Yeniden işleme hizmetleri", "Kalite raporlama"]
+        },
+        {
+          "title": "Teknik Temsilcilik",
+          "description": "Tedarikçiler için yerinde teknik destek ve müşteri arayüzü",
+          "features": ["Müşteri irtibatı", "Teknik destek", "Kalite koordinasyonu", "İlerleme takibi"]
+        }
+      ],
+      "benefits": [
+        {
+          "title": "Tedarikçi Geliştirme",
+          "description": "Tier 1 tedarikçi geliştirme ve iyileştirme için kapsamlı destek"
+        },
+        {
+          "title": "Kalite Güvencesi",
+          "description": "Tedarikçi ağınızda tutarlı kalite standartlarının sağlanması"
+        },
+        {
+          "title": "Maliyet Optimizasyonu",
+          "description": "Kalite maliyetlerini azaltma ve tedarikçi performansını iyileştirme"
+        }
+      ],
+      "stats": [
+        {"value": "200+", "label": "Tedarikçi Projesi"},
+        {"value": "35", "label": "Tier 1 Müşteri"},
+        {"value": "12", "label": "Hizmet Verilen Ülke"},
+        {"value": "%95", "label": "İyileştirme Oranı"}
+      ],
+      "cta": {
+        "title": "Tedarikçi Ağınızı Optimize Edin",
+        "subtitle": "Yüksek kaliteli Tier 1 tedarikçiler geliştirmenize ve sürdürmenize yardımcı olalım",
+        "primary": "Tedarikçi Teklifi Al",
+        "secondary": "Tüm Hizmetleri Görüntüle"
+      }
     },
     "eMobility": {
       "title": "e-Mobility / EV",
-      "description": "Elektrikli araç teknolojileri için gelişmiş kalite süreçleri"
+      "description": "Elektrikli araç teknolojileri için gelişmiş kalite süreçleri",
+      "services": [
+        {
+          "title": "EV Kalite Mühendisliği",
+          "description": "Elektrikli araç bileşenleri ve sistemleri için özelleşmiş kalite süreçleri",
+          "features": ["Batarya kalite kontrolü", "Motor sistemi doğrulama", "Şarj sistemi testi", "Güvenlik uyumluluğu"]
+        },
+        {
+          "title": "Gelişmiş Faz ve Lansman",
+          "description": "EV ürün lansmanları ve gelişmiş faz geliştirme desteği",
+          "features": ["Lansman hazırlığı", "Faz yönetimi", "Risk değerlendirmesi", "Pazara giriş desteği"]
+        },
+        {
+          "title": "Danışmanlık ve Eğitim",
+          "description": "EV kalite süreçleri için uzman danışmanlık ve eğitim",
+          "features": ["Süreç tasarımı", "Ekip eğitimi", "En iyi uygulamalar", "Uyumluluk desteği"]
+        }
+      ],
+      "benefits": [
+        {
+          "title": "EV Uzmanlığı",
+          "description": "Elektrikli araç teknolojileri ve kalite gereksinimleri konusunda derin bilgi"
+        },
+        {
+          "title": "Geleceğe Hazır",
+          "description": "Hızla gelişen e-mobility sektörü için tasarlanmış çözümler"
+        },
+        {
+          "title": "Güvenlik Odaklı",
+          "description": "EV kalite süreçlerinde güvenlik ve güvenilirlik vurgusu"
+        }
+      ],
+      "stats": [
+        {"value": "75+", "label": "EV Projesi"},
+        {"value": "15", "label": "EV Müşteri"},
+        {"value": "6", "label": "Hizmet Verilen Ülke"},
+        {"value": "%100", "label": "Güvenlik Rekoru"}
+      ],
+      "cta": {
+        "title": "EV Devrimine Öncülük Edin",
+        "subtitle": "Elektrikli araç projelerinizde kalite mükemmelliğini sağlamak için bizimle ortak olun",
+        "primary": "EV Teklifi Al",
+        "secondary": "Tüm Hizmetleri Görüntüle"
+      }
     },
     "heavyTransport": {
       "title": "Ağır Nakliye",
-      "description": "Kamyon ve otobüs sektörü için güçlü çözümler"
+      "description": "Kamyon ve otobüs sektörü için güçlü çözümler",
+      "services": [
+        {
+          "title": "Ağır Araç Kalitesi",
+          "description": "Kamyon, otobüs ve ağır araçlar için özelleşmiş kalite süreçleri",
+          "features": ["Araç kontrolü", "Bileşen testi", "Güvenlik doğrulama", "Performans optimizasyonu"]
+        },
+        {
+          "title": "Denetim ve Eğitim",
+          "description": "Ağır nakliye kalitesi için kapsamlı denetim ve eğitim hizmetleri",
+          "features": ["Kalite denetimleri", "Süreç eğitimi", "Uyumluluk kontrolleri", "En iyi uygulamalar"]
+        },
+        {
+          "title": "Satış Sonrası Destek",
+          "description": "Ağır araç satış sonrası ve bakım için kalite desteği",
+          "features": ["Hizmet kalitesi", "Parça doğrulama", "Müşteri desteği", "Garanti yönetimi"]
+        }
+      ],
+      "benefits": [
+        {
+          "title": "Ağır Araç Odaklı",
+          "description": "Ağır nakliye kalite gereksinimleri konusunda özelleşmiş uzmanlık"
+        },
+        {
+          "title": "Dayanıklılık Odaklı",
+          "description": "Zorlu ağır nakliye ortamı için tasarlanmış çözümler"
+        },
+        {
+          "title": "Güvenlik Önceliği",
+          "description": "Ağır araç operasyonlarında güvenlik ve güvenilirlik vurgusu"
+        }
+      ],
+      "stats": [
+        {"value": "90+", "label": "Ağır Araç Projesi"},
+        {"value": "18", "label": "Nakliye Müşteri"},
+        {"value": "5", "label": "Hizmet Verilen Ülke"},
+        {"value": "%97", "label": "Güvenilirlik Oranı"}
+      ],
+      "cta": {
+        "title": "Ağır Nakliye Kalitenizi Güçlendirin",
+        "subtitle": "Ağır nakliyede en yüksek kalite standartlarını korumanıza yardımcı olalım",
+        "primary": "Nakliye Teklifi Al",
+        "secondary": "Tüm Hizmetleri Görüntüle"
+      }
     },
     "aerospace": {
       "title": "Havacılık",
-      "description": "Havacılık sektörü için yüksek standart kalite hizmetleri"
+      "description": "Havacılık sektörü için yüksek standart kalite hizmetleri",
+      "services": [
+        {
+          "title": "Havacılık Kalite Mühendisliği",
+          "description": "Havacılık bileşenleri ve sistemleri için özelleşmiş kalite süreçleri",
+          "features": ["AS9100 uyumluluğu", "Kritik bileşen testi", "Güvenlik doğrulama", "Dokümantasyon yönetimi"]
+        },
+        {
+          "title": "Danışmanlık ve Eğitim",
+          "description": "Havacılık kalite standartları için uzman danışmanlık ve eğitim",
+          "features": ["Süreç tasarımı", "Ekip eğitimi", "Uyumluluk desteği", "En iyi uygulamalar"]
+        },
+        {
+          "title": "Denetim ve Eğitim",
+          "description": "Havacılık kalitesi için kapsamlı denetim ve eğitim hizmetleri",
+          "features": ["Kalite denetimleri", "Süreç eğitimi", "Uyumluluk kontrolleri", "Sertifikasyon desteği"]
+        }
+      ],
+      "benefits": [
+        {
+          "title": "Havacılık Standartları",
+          "description": "Katı havacılık kalite ve güvenlik standartlarına tam uyumluluk"
+        },
+        {
+          "title": "Güvenlik Kritik",
+          "description": "Güvenlik kritik süreçlere ve sıfır hata zihniyetine odaklanma"
+        },
+        {
+          "title": "Sertifikasyon Desteği",
+          "description": "Havacılık sertifikasyonları ve uyumluluk için kapsamlı destek"
+        }
+      ],
+      "stats": [
+        {"value": "45+", "label": "Havacılık Projesi"},
+        {"value": "12", "label": "Havacılık Müşteri"},
+        {"value": "4", "label": "Hizmet Verilen Ülke"},
+        {"value": "%100", "label": "Güvenlik Rekoru"}
+      ],
+      "cta": {
+        "title": "Havacılık Mükemmelliğini Yakalayın",
+        "subtitle": "En yüksek havacılık kalite ve güvenlik standartlarını karşılamak için bizimle ortak olun",
+        "primary": "Havacılık Teklifi Al",
+        "secondary": "Tüm Hizmetleri Görüntüle"
+      }
+    },
+    "industrial": {
+      "title": "Endüstriyel",
+      "description": "Endüstriyel üretim için kapsamlı kalite çözümleri",
+      "services": [
+        {
+          "title": "Endüstriyel Kalite Mühendisliği",
+          "description": "Endüstriyel üretim için gelişmiş kalite süreçleri",
+          "features": ["Süreç optimizasyonu", "Kalite sistemi geliştirme", "Sürekli iyileştirme", "Eğitim programları"]
+        },
+        {
+          "title": "Teknik Temsilcilik",
+          "description": "Endüstriyel operasyonlar için yerinde teknik destek",
+          "features": ["Süreç izleme", "Kalite koordinasyonu", "Müşteri irtibatı", "İlerleme takibi"]
+        },
+        {
+          "title": "Tedarikçi Hazırlığı",
+          "description": "Endüstriyel tedarikçiler için geliştirme ve destek hizmetleri",
+          "features": ["Tedarikçi geliştirme", "Kalite eğitimi", "Süreç iyileştirme", "Uyumluluk desteği"]
+        }
+      ],
+      "benefits": [
+        {
+          "title": "Endüstriyel Odak",
+          "description": "Endüstriyel üretim kalite gereksinimleri konusunda özelleşmiş uzmanlık"
+        },
+        {
+          "title": "Süreç Optimizasyonu",
+          "description": "Endüstriyel süreçlerin sürekli iyileştirme ve optimizasyonu"
+        },
+        {
+          "title": "Maliyet Verimliliği",
+          "description": "Kaliteyi iyileştirirken maliyetleri azaltmak için tasarlanmış çözümler"
+        }
+      ],
+      "stats": [
+        {"value": "120+", "label": "Endüstriyel Proje"},
+        {"value": "40", "label": "Endüstriyel Müşteri"},
+        {"value": "10", "label": "Hizmet Verilen Ülke"},
+        {"value": "%96", "label": "Verimlilik Artışı"}
+      ],
+      "cta": {
+        "title": "Endüstriyel Kalitenizi Optimize Edin",
+        "subtitle": "Endüstriyel üretim kalitesinde mükemmelliği yakalamanıza yardımcı olalım",
+        "primary": "Endüstriyel Teklif Al",
+        "secondary": "Tüm Hizmetleri Görüntüle"
+      }
     },
     "hero": {
       "title": "Sektörler",
@@ -258,6 +518,12 @@
     },
     "sections": {
       "expertiseTitle": "Uzmanlık Alanlarımız",
+      "servicesTitle": "Hizmetlerimiz",
+      "servicesSubtitle": "Sektörünüze özel kapsamlı kalite çözümleri",
+      "benefitsTitle": "Neden Bizi Seçmelisiniz",
+      "benefitsSubtitle": "Sektöre özel faydalar ve avantajlar",
+      "statsTitle": "Geçmişimiz",
+      "statsSubtitle": "Farklı sektörlerde kanıtlanmış sonuçlar",
       "servicesHighlight": "Öne Çıkan Hizmetler",
       "stats": {
         "projects": "Proje",
@@ -392,6 +658,7 @@
   },
   "contact": {
     "title": "İletişim",
+    "subtitle": "Kalite problemleriniz için 7/24 erişilebilir uzman ekibimizle iletişime geçin.",
     "regionalManagers": "Bölge Sorumluları",
     "quickQuote": "Hızlı Teklif",
     "form": {
@@ -405,12 +672,63 @@
       "urgency": "Aciliyet",
       "message": "Mesaj",
       "submit": "Gönder",
-      "success": "Mesajınız başarıyla gönderildi!"
+      "success": "Mesajınız başarıyla gönderildi!",
+      "description": "Formu doldurun, 24 saat içinde size dönelim. Acil durumlar için direkt arayabilirsiniz.",
+      "successDescription": "Uzman ekibimiz en kısa sürede sizinle iletişime geçecektir.",
+      "newMessage": "Yeni Mesaj Gönder",
+      "loading": "Yükleniyor...",
+      "submitting": "Gönderiliyor...",
+      "placeholders": {
+        "name": "Ad Soyad",
+        "company": "Şirket Adı",
+        "email": "ornek@sirket.com",
+        "phone": "+90 532 123 4567",
+        "city": "Şehir",
+        "message": "Kalite probleminizi detaylı olarak açıklayın..."
+      },
+      "selectOptions": {
+        "country": "Ülke Seçin",
+        "package": "Paket Seçin (Opsiyonel)",
+        "urgency": "Aciliyet Seçin"
+      }
     },
     "urgencyOptions": {
       "asap": "Acil (ASAP)",
       "48h": "48 Saat İçinde",
       "thisWeek": "Bu Hafta"
+    },
+    "packageOptions": {
+      "starter": "Starter - On-Site Hızlı Müdahale",
+      "growth": "Growth - Teknik Temsilcilik",
+      "pro": "Pro - Kalite Ortaklığı",
+      "enterprise": "Enterprise - Özel Çözümler"
+    },
+    "office": {
+      "title": "Merkez Ofis",
+      "location": "München, Almanya",
+      "address": "Maximilianstraße 35<br />80539 München",
+      "phone": "+49 89 123 456 789",
+      "email": "info@qronex.net",
+      "hours": "09:00 - 18:00 (CET)"
+    },
+    "responseTimes": {
+      "title": "Yanıt Süreleri",
+      "normal": "Normal talepler:",
+      "quotes": "Teklifler:",
+      "normalTime": "24 saat",
+      "quoteTime": "48 saat"
+    },
+    "countries": {
+      "TR": "Türkiye",
+      "DE": "Almanya", 
+      "FR": "Fransa",
+      "IT": "İtalya",
+      "ES": "İspanya",
+      "NL": "Hollanda",
+      "BE": "Belçika",
+      "AT": "Avusturya",
+      "CH": "İsviçre",
+      "PL": "Polonya"
     }
   },
   "pricing": {
@@ -488,17 +806,17 @@
       "title": "Neden Enterprise Çözümler?",
       "subtitle": "Büyük ölçekli projelerde sizin için neden doğru seçim olduğumuzu öğrenin",
       "expertise": "Kanutlanmış Uzmanlık",
-      "expertiseBullets": [
-        "15+ yıllık sektör deneyimi ile otomotiv kalite standartlarında uzmanız",
-        "Fortune 500 şirketleri ile çalışma tecrübesi",
-        "Uluslararası sertifikalar ve akreditasyonlar"
-      ],
+      "expertiseBullets": {
+        "0": "15+ yıllık sektör deneyimi ile otomotiv kalite standartlarında uzmanız",
+        "1": "Fortune 500 şirketleri ile çalışma tecrübesi",
+        "2": "Uluslararası sertifikalar ve akreditasyonlar"
+      },
       "team": "Dedicated Ekip",
-      "teamBullets": [
-        "Projenize özel atanmış uzman ekip",
-        "24/7 müşteri hizmetleri ve destek",
-        "Proje yöneticisi ataması ve düzenli raporlama"
-      ],
+      "teamBullets": {
+        "0": "Projenize özel atanmış uzman ekip",
+        "1": "24/7 müşteri hizmetleri ve destek",
+        "2": "Proje yöneticisi ataması ve düzenli raporlama"
+      },
       "ctaTitle": "Özel Teklifinizi Alalım",
       "ctaSubtitle": "Her enterprise müşterimiz için özel çözümler geliştiriyoruz. İhtiyaçlarınızı analiz edip size özel bir teklif hazırlayalım.",
       "ctaRequest": "Detaylı Teklif Talep Et",
@@ -577,7 +895,18 @@
         "availability": "Başlama Tarihi *",
         "availabilityPlaceholder": "Başlama tarihi",
         "coverLetter": "Ön Yazı *",
-        "coverLetterPlaceholder": "Neden bu pozisyon için uygun olduğunuzu ve QroneX'e neler katabileceğinizi kısaca açıklayın..."
+        "coverLetterPlaceholder": "Neden bu pozisyon için uygun olduğunuzu ve QroneX'e neler katabileceğinizi kısaca açıklayın...",
+        "validation": {
+          "role": "Pozisyon seçiniz",
+          "firstName": "Ad en az 2 karakter olmalı",
+          "lastName": "Soyad en az 2 karakter olmalı",
+          "email": "Geçerli e-posta adresi giriniz",
+          "phone": "Geçerli telefon numarası giriniz",
+          "linkedin": "Geçerli LinkedIn profil linki giriniz",
+          "experience": "Deneyim seviyesi seçiniz",
+          "availability": "Başlama tarihi seçiniz",
+          "coverLetter": "Ön yazı en az 100 karakter olmalı"
+        }
       },
       "experienceOptions": {
         "entry": "Entry Level (0-2 yıl)",
@@ -602,7 +931,165 @@
       "primary": "CV Gönderin",
       "secondary": "Şirket Hakkında"
     },
-    "loading": "Yükleniyor..."
+    "loading": "Yükleniyor...",
+    "jobs": {
+      "seniorQualityEngineer": {
+        "department": "Kalite Mühendisliği",
+        "location": "München, Almanya",
+        "type": "Tam Zamanlı",
+        "experience": "Senior (5+ yıl)",
+        "description": "Otomotiv sektöründe senior kalite mühendisi arıyoruz. BMW ve Mercedes projelerinde çalışma fırsatı.",
+        "requirements": [
+          "Makine/Endüstri Mühendisliği mezunu",
+          "5+ yıl otomotiv kalite deneyimi",
+          "ISO 9001, IATF 16949 bilgisi",
+          "Almanca (B2) ve İngilizce (C1)",
+          "Six Sigma sertifikası tercih edilir"
+        ],
+        "responsibilities": [
+          "Kalite kontrol süreçlerini yönetmek",
+          "Müşteri auditlerinde destek vermek",
+          "Kalite iyileştirme projelerini yürütmek",
+          "Ekip liderliği yapmak"
+        ],
+        "benefits": [
+          "Rekabetçi maaş + performans primi",
+          "Sağlık sigortası",
+          "Eğitim desteği",
+          "25 gün yıllık izin"
+        ]
+      },
+      "fieldEngineer": {
+        "department": "Saha Operasyonları",
+        "location": "Stuttgart, Almanya",
+        "type": "Tam Zamanlı",
+        "experience": "Mid-level (3+ yıl)",
+        "description": "Bosch ve Continental projelerinde on-site çalışacak saha mühendisi aranıyor.",
+        "requirements": [
+          "Mühendislik mezunu (tercihen Makine/Endüstri)",
+          "3+ yıl saha deneyimi",
+          "Otomotiv tedarik zinciri bilgisi",
+          "Almanca (B2) ve İngilizce (B2)",
+          "Esnek çalışma saatleri"
+        ],
+        "responsibilities": [
+          "Müşteri lokasyonlarında kalite desteği",
+          "Problem çözme ve containment",
+          "Günlük raporlama",
+          "Müşteri iletişimi"
+        ],
+        "benefits": [
+          "Araç + yakıt desteği",
+          "Esnek çalışma saatleri",
+          "Uluslararası proje fırsatları",
+          "Kariyer gelişim programı"
+        ]
+      },
+      "qualityConsultant": {
+        "department": "Danışmanlık",
+        "location": "Paris, Fransa",
+        "type": "Tam Zamanlı",
+        "experience": "Senior (5+ yıl)",
+        "description": "Havacılık ve otomotiv sektörlerinde danışmanlık hizmetleri verecek uzman aranıyor.",
+        "requirements": [
+          "Mühendislik veya İşletme mezunu",
+          "5+ yıl kalite danışmanlığı deneyimi",
+          "AS9100 ve IATF 16949 uzmanlığı",
+          "Fransızca (Native) ve İngilizce (C1)",
+          "Güçlü sunum becerileri"
+        ],
+        "responsibilities": [
+          "Müşteri kalite sistemlerini değerlendirmek",
+          "İyileştirme önerileri geliştirmek",
+          "Eğitim programları vermek",
+          "Proje yönetimi"
+        ],
+        "benefits": [
+          "Yüksek müşteri etkileşimi",
+          "Uluslararası projeler",
+          "Profesyonel gelişim",
+          "Bonus sistemi"
+        ]
+      },
+      "evSpecialist": {
+        "department": "e-Mobility",
+        "location": "Milano, İtalya",
+        "type": "Tam Zamanlı",
+        "experience": "Mid-level (3+ yıl)",
+        "description": "Elektrikli araç teknolojileri alanında uzmanlaşmış mühendis aranıyor.",
+        "requirements": [
+          "Elektrik/Elektronik Mühendisliği mezunu",
+          "3+ yıl EV/batarya deneyimi",
+          "Elektrikli araç sistemleri bilgisi",
+          "İtalyanca (B2) ve İngilizce (B2)",
+          "Yenilikçi düşünce yapısı"
+        ],
+        "responsibilities": [
+          "EV kalite süreçlerini geliştirmek",
+          "Batarya test süreçleri",
+          "Teknik dokümantasyon",
+          "R&D projelerine katılım"
+        ],
+        "benefits": [
+          "Cutting-edge teknoloji",
+          "İnovasyon projeleri",
+          "Eğitim ve sertifikasyon",
+          "Hybrid çalışma modeli"
+        ]
+      },
+      "projectManager": {
+        "department": "Proje Yönetimi",
+        "location": "Remote (Avrupa)",
+        "type": "Tam Zamanlı",
+        "experience": "Senior (5+ yıl)",
+        "description": "Uluslararası kalite projelerini yönetecek deneyimli proje yöneticisi aranıyor.",
+        "requirements": [
+          "Mühendislik veya İşletme mezunu",
+          "5+ yıl proje yönetimi deneyimi",
+          "PMP veya PRINCE2 sertifikası",
+          "İngilizce (C1), Almanca (B1+)",
+          "Agile/Scrum bilgisi"
+        ],
+        "responsibilities": [
+          "Proje planlaması ve yürütmesi",
+          "Risk yönetimi",
+          "Stakeholder iletişimi",
+          "Budget ve timeline kontrolü"
+        ],
+        "benefits": [
+          "Tam remote çalışma",
+          "Uluslararası takım",
+          "Yüksek sorumluluk",
+          "Performans bonusu"
+        ]
+      },
+      "graduateTrainee": {
+        "department": "Eğitim Programı",
+        "location": "Çoklu Lokasyon",
+        "type": "Tam Zamanlı",
+        "experience": "Entry Level (0-2 yıl)",
+        "description": "18 aylık rotasyonel eğitim programı ile kariyer başlangıcı fırsatı.",
+        "requirements": [
+          "Mühendislik mezunu (2023-2024)",
+          "GPA 3.0+",
+          "İngilizce (B2+)",
+          "Öğrenmeye açık yaklaşım",
+          "Takım çalışması becerileri"
+        ],
+        "responsibilities": [
+          "Farklı departmanlarda rotasyon",
+          "Mentor eşliğinde öğrenim",
+          "Proje katılımları",
+          "Sunum ve raporlama"
+        ],
+        "benefits": [
+          "Kapsamlı eğitim programı",
+          "Mentorship",
+          "Hızlı kariyer gelişimi",
+          "Uluslararası deneyim"
+        ]
+      }
+    }
   },
   "common": {
     "getQuote": "Teklif Al",
@@ -1082,6 +1569,103 @@
         "b3Title": "Uzman Ekip",
         "b3Desc": "Gelişmiş faz yönetimi konusunda derin uzmanlığa sahip deneyimli profesyoneller"
       }
+    },
+    "qir": {
+      "heroTitle": "Kalite Kontrol ve Yeniden İşleme",
+      "heroSubtitle": "Müşteri ve tedarikçi lokasyonlarında kapsamlı kalite kontrol ve yeniden işleme hizmetleri",
+      "serviceTypesTitle": "Hizmet Türleri",
+      "serviceTypesSubtitle": "Hem müşteri hem de Tier1 tedarikçi lokasyonlarında kalite kontrol ve yeniden işleme hizmetleri sunuyoruz",
+      "customer": {
+        "title": "Kalite Kontrol ve Yeniden İşleme @ Müşteri",
+        "subtitle": "Müşteri Lokasyonlarında",
+        "description": "Müşteri lokasyonlarında kapsamlı kalite kontrol ve yeniden işleme hizmetleri",
+        "f1": "Yerinde kalite kontrol ekipleri",
+        "f2": "Anında hata tespiti ve kontrolü",
+        "f3": "Profesyonel yeniden işleme ve restorasyon hizmetleri",
+        "f4": "Gerçek zamanlı kalite izleme ve raporlama"
+      },
+      "tier1": {
+        "title": "Kalite Kontrol ve Yeniden İşleme @ Tier1",
+        "subtitle": "Tedarikçi Lokasyonlarında",
+        "description": "Tier1 tedarikçi lokasyonlarında kalite kontrol ve yeniden işleme hizmetleri",
+        "f1": "Tedarikçi kalite değerlendirmesi ve iyileştirme",
+        "f2": "Tedarik zinciri kalite optimizasyonu",
+        "f3": "Tier1 tedarikçi ilişkileri yönetimi",
+        "f4": "Kalite standartları uygulama ve izleme"
+      },
+      "servicesTitle": "Kalite Hizmetlerimiz",
+      "servicesSubtitle": "Lokasyonunuzda sunulan profesyonel kalite kontrol ve yeniden işleme hizmetleri",
+      "featuresTitle": "Temel Özellikler:",
+      "service1": {
+        "title": "Görsel Kontrol",
+        "description": "Hata ve kalite sorunlarını tespit etmek için ürün ve bileşenlerin kapsamlı görsel kontrolü",
+        "f1": "Detaylı görsel inceleme",
+        "f2": "Hata sınıflandırması ve dokümantasyonu",
+        "f3": "Kalite standardı uyumluluk kontrolü",
+        "f4": "Gerçek zamanlı kontrol raporlama"
+      },
+      "service2": {
+        "title": "Yeniden İşleme Hizmetleri",
+        "description": "Ürünleri kalite standartlarına geri getirmek için profesyonel yeniden işleme ve restorasyon hizmetleri",
+        "f1": "Hata düzeltme ve onarım",
+        "f2": "Kalite restorasyon süreçleri",
+        "f3": "Yeniden kontrol ve doğrulama",
+        "f4": "Kalite güvence dokümantasyonu"
+      },
+      "service3": {
+        "title": "Kalite Analizi",
+        "description": "Sürekli iyileştirme için kalite sorunlarının derinlemesine analizi ve kök neden tespiti",
+        "f1": "Kök neden analizi",
+        "f2": "Kalite trend analizi",
+        "f3": "Süreç iyileştirme önerileri",
+        "f4": "Kalite metrikleri ve raporlama"
+      },
+      "service4": {
+        "title": "Hızlı Müdahale",
+        "description": "Kalite sorunları ve acil durumlara hızlı devreye alma ve anında müdahale",
+        "f1": "24-72 saat müdahale süresi",
+        "f2": "Acil kalite müdahalesi",
+        "f3": "Anında kontrol eylemleri",
+        "f4": "Hızlı ekip devreye alma"
+      },
+      "processTitle": "Sürecimiz",
+      "processSubtitle": "Kalite kontrol ve yeniden işleme hizmetleri için sistematik yaklaşım",
+      "process": {
+        "s1Title": "Sorun Tespiti",
+        "s1Desc": "Kalite sorunlarının hızlı değerlendirmesi ve anında kontrol",
+        "s2Title": "Ekip Devreye Alma",
+        "s2Desc": "Kalite kontrol ve yeniden işleme ekiplerinin hızlı devreye alınması",
+        "s3Title": "Kalite Değerlendirmesi",
+        "s3Desc": "Kapsamlı kontrol ve hata sınıflandırması",
+        "s4Title": "Yeniden İşleme Uygulaması",
+        "s4Desc": "Profesyonel yeniden işleme ve kalite restorasyonu",
+        "s5Title": "Doğrulama ve Teslim",
+        "s5Desc": "Kalite doğrulaması ve müşteri teslimi"
+      },
+      "benefitsTitle": "Kalite Hizmetlerimizi Neden Seçmelisiniz?",
+      "benefits": {
+        "b1Title": "Yerinde Hizmet",
+        "b1Desc": "Kalite kontrol ve yeniden işleme hizmetleri doğrudan lokasyonunuzda sunulur",
+        "b2Title": "Hızlı Müdahale",
+        "b2Desc": "Kalite sorunlarına hızlı devreye alma ve anında müdahale",
+        "b3Title": "Uzman Ekip",
+        "b3Desc": "Geniş deneyime sahip profesyonel kalite mühendisleri"
+      },
+      "highlightsTitle": "Hizmet Özellikleri",
+      "highlights": {
+        "responseTime": "Müdahale Süresi",
+        "responseTimeValue": "24-72 Saat",
+        "serviceLocation": "Hizmet Lokasyonu",
+        "serviceLocationValue": "Yerinde",
+        "teamSize": "Ekip Büyüklüğü",
+        "teamSizeValue": "2-8 Mühendis",
+        "qualityStandards": "Kalite Standartları",
+        "qualityStandardsValue": "ISO/TS 16949"
+      },
+      "ctaTitle": "Kalitenizi İyileştirmeye Hazır mısınız?",
+      "ctaSubtitle": "Kalite kontrol ve yeniden işleme ekibimizin lokasyonunuzda yüksek standartları korumanıza yardımcı olmasına izin verin",
+      "ctaButton1": "Bugün İletişime Geçin",
+      "ctaButton2": "Tüm Hizmetleri Görüntüle"
     }
   }
 }

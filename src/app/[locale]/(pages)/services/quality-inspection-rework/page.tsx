@@ -14,12 +14,41 @@ import {
   Eye,
   Wrench,
   MapPin,
-  BarChart3
+  BarChart3,
+  Building,
+  Filter
 } from "lucide-react";
 
-export default function QualityInspectionCustomerPage() {
+export default function QualityInspectionReworkPage() {
   const c = useTranslations("common");
-  const t = useTranslations("servicesDetails.qic");
+  const t = useTranslations("servicesDetails.qir");
+
+  const serviceTypes = [
+    {
+      icon: Building,
+      title: t("customer.title"),
+      subtitle: t("customer.subtitle"),
+      description: t("customer.description"),
+      features: [
+        t("customer.f1"),
+        t("customer.f2"),
+        t("customer.f3"),
+        t("customer.f4")
+      ]
+    },
+    {
+      icon: Filter,
+      title: t("tier1.title"),
+      subtitle: t("tier1.subtitle"),
+      description: t("tier1.description"),
+      features: [
+        t("tier1.f1"),
+        t("tier1.f2"),
+        t("tier1.f3"),
+        t("tier1.f4")
+      ]
+    }
+  ];
 
   const services = [
     {
@@ -69,31 +98,11 @@ export default function QualityInspectionCustomerPage() {
   ];
 
   const processSteps = [
-    {
-      step: "01",
-      title: "Issue Identification",
-      description: "Quick assessment of quality problems and immediate containment"
-    },
-    {
-      step: "02",
-      title: "Team Deployment",
-      description: "Rapid deployment of quality inspection and rework teams"
-    },
-    {
-      step: "03",
-      title: "Quality Assessment",
-      description: "Comprehensive inspection and defect classification"
-    },
-    {
-      step: "04",
-      title: "Rework Execution",
-      description: "Professional rework and quality restoration"
-    },
-    {
-      step: "05",
-      title: "Verification & Handover",
-      description: "Quality verification and customer handover"
-    }
+    { step: "01", title: t("process.s1Title"), description: t("process.s1Desc") },
+    { step: "02", title: t("process.s2Title"), description: t("process.s2Desc") },
+    { step: "03", title: t("process.s3Title"), description: t("process.s3Desc") },
+    { step: "04", title: t("process.s4Title"), description: t("process.s4Desc") },
+    { step: "05", title: t("process.s5Title"), description: t("process.s5Desc") }
   ];
 
   return (
@@ -120,6 +129,51 @@ export default function QualityInspectionCustomerPage() {
                 </Link>
               </Button>
             </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Service Types section */}
+      <section className="section-padding bg-white">
+        <div className="container mx-auto container-padding">
+          <div className="text-center mb-16">
+            <h2 className="text-3xl lg:text-4xl font-bold text-gray-900 mb-4">{t("serviceTypesTitle")}</h2>
+            <p className="text-xl text-gray-600 max-w-3xl mx-auto">{t("serviceTypesSubtitle")}</p>
+          </div>
+
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
+            {serviceTypes.map((serviceType, index) => {
+              const Icon = serviceType.icon;
+              return (
+                <Card key={index} className="bg-white shadow-lg border-gray-200 hover:shadow-xl transition-shadow">
+                  <CardHeader className="text-center pb-6">
+                    <div className="w-20 h-20 bg-blue-green-gradient rounded-lg flex items-center justify-center mx-auto mb-4">
+                      <Icon className="h-10 w-10 text-white" />
+                    </div>
+                    <CardTitle className="text-2xl font-bold text-gray-900 mb-2">
+                      {serviceType.title}
+                    </CardTitle>
+                    <CardDescription className="text-lg font-medium text-blue-600 mb-4">
+                      {serviceType.subtitle}
+                    </CardDescription>
+                    <p className="text-gray-600 leading-relaxed">
+                      {serviceType.description}
+                    </p>
+                  </CardHeader>
+                  <CardContent>
+                    <div className="space-y-3">
+                      <h4 className="font-semibold text-gray-900">{t("featuresTitle")}</h4>
+                      {serviceType.features.map((feature, featureIndex) => (
+                        <div key={featureIndex} className="flex items-center text-sm text-gray-600">
+                          <CheckCircle className="h-4 w-4 text-green-600 mr-2 flex-shrink-0" />
+                          {feature}
+                        </div>
+                      ))}
+                    </div>
+                  </CardContent>
+                </Card>
+              );
+            })}
           </div>
         </div>
       </section>
@@ -237,7 +291,7 @@ export default function QualityInspectionCustomerPage() {
                 </div>
                 <div className="flex items-center justify-between">
                   <span className="text-gray-600">{t("highlights.teamSize")}</span>
-                  <Badge className="bg紫-100 text-purple-800">{t("highlights.teamSizeValue")}</Badge>
+                  <Badge className="bg-purple-100 text-purple-800">{t("highlights.teamSizeValue")}</Badge>
                 </div>
                 <div className="flex items-center justify-between">
                   <span className="text-gray-600">{t("highlights.qualityStandards")}</span>
@@ -253,20 +307,20 @@ export default function QualityInspectionCustomerPage() {
       <section className="section-padding bg-blue-green-gradient text-white">
         <div className="container mx-auto container-padding text-center">
           <h2 className="text-3xl lg:text-4xl font-bold mb-4">
-            Ready to Improve Your Quality?
+            {t("ctaTitle")}
           </h2>
           <p className="text-xl text-blue-100 mb-8 max-w-3xl mx-auto">
-            Let our quality inspection and rework team help you maintain high standards at customer locations
+            {t("ctaSubtitle")}
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Button size="lg" className="bg-white text-blue-green hover:bg-gray-100" asChild>
               <Link href="/contact">
-                Contact Us Today
+                {t("ctaButton1")}
               </Link>
             </Button>
-            <Button size="lg" variant="outline" className="border-white text-white hover:bg-white hover:text-blue-green" asChild>
+            <Button size="lg" className="bg-transparent border-2 border-white text-white hover:bg-white hover:text-blue-green" asChild>
               <Link href="/services">
-                View All Services
+                {t("ctaButton2")}
               </Link>
             </Button>
           </div>

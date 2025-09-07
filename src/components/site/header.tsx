@@ -34,14 +34,9 @@ export function Header({ locale }: HeaderProps) {
       href: "/services/resident-engineering"
     },
     {
-      title: t("qualityInspectionCustomer"),
-      description: t("qualityInspectionCustomerDesc"),
-      href: "/services/quality-inspection-customer"
-    },
-    {
-      title: t("qualityInspectionTier1"),
-      description: t("qualityInspectionTier1Desc"),
-      href: "/services/quality-inspection-tier1"
+      title: t("qualityInspectionRework"),
+      description: t("qualityInspectionReworkDesc"),
+      href: "/services/quality-inspection-rework"
     },
     {
       title: t("consultingTraining"),

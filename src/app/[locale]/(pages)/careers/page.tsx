@@ -14,234 +14,236 @@ import { useForm } from 'react-hook-form';
 import { zodResolver } from '@hookform/resolvers/zod';
 import { z } from 'zod';
 import { Link } from '@/i18n';
+import { useTranslations } from 'next-intl';
 
-const applicationSchema = z.object({
-  roleId: z.string().min(1, 'Pozisyon seçiniz'),
-  firstName: z.string().min(2, 'Ad en az 2 karakter olmalı'),
-  lastName: z.string().min(2, 'Soyad en az 2 karakter olmalı'),
-  email: z.string().email('Geçerli e-posta adresi giriniz'),
-  phone: z.string().min(10, 'Geçerli telefon numarası giriniz'),
-  linkedin: z.string().url('Geçerli LinkedIn profil linki giriniz').optional().or(z.literal('')),
-  coverLetter: z.string().min(100, 'Ön yazı en az 100 karakter olmalı'),
-  experience: z.string().min(1, 'Deneyim seviyesi seçiniz'),
-  availability: z.string().min(1, 'Başlama tarihi seçiniz')
+const createApplicationSchema = (t: any) => z.object({
+  roleId: z.string().min(1, t('dialog.fields.validation.role')),
+  firstName: z.string().min(2, t('dialog.fields.validation.firstName')),
+  lastName: z.string().min(2, t('dialog.fields.validation.lastName')),
+  email: z.string().email(t('dialog.fields.validation.email')),
+  phone: z.string().min(10, t('dialog.fields.validation.phone')),
+  linkedin: z.string().url(t('dialog.fields.validation.linkedin')).optional().or(z.literal('')),
+  coverLetter: z.string().min(100, t('dialog.fields.validation.coverLetter')),
+  experience: z.string().min(1, t('dialog.fields.validation.experience')),
+  availability: z.string().min(1, t('dialog.fields.validation.availability'))
 });
 
-type ApplicationFormData = z.infer<typeof applicationSchema>;
+type ApplicationFormData = z.infer<ReturnType<typeof createApplicationSchema>>;
 
-const jobs = [
+const createJobs = (t: any) => [
   {
     id: 'senior-quality-engineer-munich',
     title: 'Senior Quality Engineer',
-    department: 'Kalite Mühendisliği',
-    location: 'München, Almanya',
-    type: 'Tam Zamanlı',
-    experience: 'Senior (5+ yıl)',
+    department: t('jobs.seniorQualityEngineer.department'),
+    location: t('jobs.seniorQualityEngineer.location'),
+    type: t('jobs.seniorQualityEngineer.type'),
+    experience: t('jobs.seniorQualityEngineer.experience'),
     salary: '€65,000 - €85,000',
     remote: false,
     featured: true,
-    description: 'Otomotiv sektöründe senior kalite mühendisi arıyoruz. BMW ve Mercedes projelerinde çalışma fırsatı.',
+    description: t('jobs.seniorQualityEngineer.description'),
     requirements: [
-      'Makine/Endüstri Mühendisliği mezunu',
-      '5+ yıl otomotiv kalite deneyimi',
-      'ISO 9001, IATF 16949 bilgisi',
-      'Almanca (B2) ve İngilizce (C1)',
-      'Six Sigma sertifikası tercih edilir'
+      t('jobs.seniorQualityEngineer.requirements.0'),
+      t('jobs.seniorQualityEngineer.requirements.1'),
+      t('jobs.seniorQualityEngineer.requirements.2'),
+      t('jobs.seniorQualityEngineer.requirements.3'),
+      t('jobs.seniorQualityEngineer.requirements.4')
     ],
     responsibilities: [
-      'Kalite kontrol süreçlerini yönetmek',
-      'Müşteri auditlerinde destek vermek',
-      'Kalite iyileştirme projelerini yürütmek',
-      'Ekip liderliği yapmak'
+      t('jobs.seniorQualityEngineer.responsibilities.0'),
+      t('jobs.seniorQualityEngineer.responsibilities.1'),
+      t('jobs.seniorQualityEngineer.responsibilities.2'),
+      t('jobs.seniorQualityEngineer.responsibilities.3')
     ],
     benefits: [
-      'Rekabetçi maaş + performans primi',
-      'Sağlık sigortası',
-      'Eğitim desteği',
-      '25 gün yıllık izin'
+      t('jobs.seniorQualityEngineer.benefits.0'),
+      t('jobs.seniorQualityEngineer.benefits.1'),
+      t('jobs.seniorQualityEngineer.benefits.2'),
+      t('jobs.seniorQualityEngineer.benefits.3')
     ]
   },
   {
     id: 'field-engineer-stuttgart',
     title: 'Field Engineer',
-    department: 'Saha Operasyonları',
-    location: 'Stuttgart, Almanya',
-    type: 'Tam Zamanlı',
-    experience: 'Mid-level (3+ yıl)',
+    department: t('jobs.fieldEngineer.department'),
+    location: t('jobs.fieldEngineer.location'),
+    type: t('jobs.fieldEngineer.type'),
+    experience: t('jobs.fieldEngineer.experience'),
     salary: '€50,000 - €65,000',
     remote: false,
     featured: true,
-    description: 'Bosch ve Continental projelerinde on-site çalışacak saha mühendisi aranıyor.',
+    description: t('jobs.fieldEngineer.description'),
     requirements: [
-      'Mühendislik mezunu (tercihen Makine/Endüstri)',
-      '3+ yıl saha deneyimi',
-      'Otomotiv tedarik zinciri bilgisi',
-      'Almanca (B2) ve İngilizce (B2)',
-      'Esnek çalışma saatleri'
+      t('jobs.fieldEngineer.requirements.0'),
+      t('jobs.fieldEngineer.requirements.1'),
+      t('jobs.fieldEngineer.requirements.2'),
+      t('jobs.fieldEngineer.requirements.3'),
+      t('jobs.fieldEngineer.requirements.4')
     ],
     responsibilities: [
-      'Müşteri lokasyonlarında kalite desteği',
-      'Problem çözme ve containment',
-      'Günlük raporlama',
-      'Müşteri iletişimi'
+      t('jobs.fieldEngineer.responsibilities.0'),
+      t('jobs.fieldEngineer.responsibilities.1'),
+      t('jobs.fieldEngineer.responsibilities.2'),
+      t('jobs.fieldEngineer.responsibilities.3')
     ],
     benefits: [
-      'Araç + yakıt desteği',
-      'Esnek çalışma saatleri',
-      'Uluslararası proje fırsatları',
-      'Kariyer gelişim programı'
+      t('jobs.fieldEngineer.benefits.0'),
+      t('jobs.fieldEngineer.benefits.1'),
+      t('jobs.fieldEngineer.benefits.2'),
+      t('jobs.fieldEngineer.benefits.3')
     ]
   },
   {
     id: 'quality-consultant-paris',
     title: 'Quality Consultant',
-    department: 'Danışmanlık',
-    location: 'Paris, Fransa',
-    type: 'Tam Zamanlı',
-    experience: 'Senior (5+ yıl)',
+    department: t('jobs.qualityConsultant.department'),
+    location: t('jobs.qualityConsultant.location'),
+    type: t('jobs.qualityConsultant.type'),
+    experience: t('jobs.qualityConsultant.experience'),
     salary: '€60,000 - €75,000',
     remote: false,
     featured: false,
-    description: 'Havacılık ve otomotiv sektörlerinde danışmanlık hizmetleri verecek uzman aranıyor.',
+    description: t('jobs.qualityConsultant.description'),
     requirements: [
-      'Mühendislik veya İşletme mezunu',
-      '5+ yıl kalite danışmanlığı deneyimi',
-      'AS9100 ve IATF 16949 uzmanlığı',
-      'Fransızca (Native) ve İngilizce (C1)',
-      'Güçlü sunum becerileri'
+      t('jobs.qualityConsultant.requirements.0'),
+      t('jobs.qualityConsultant.requirements.1'),
+      t('jobs.qualityConsultant.requirements.2'),
+      t('jobs.qualityConsultant.requirements.3'),
+      t('jobs.qualityConsultant.requirements.4')
     ],
     responsibilities: [
-      'Müşteri kalite sistemlerini değerlendirmek',
-      'İyileştirme önerileri geliştirmek',
-      'Eğitim programları vermek',
-      'Proje yönetimi'
+      t('jobs.qualityConsultant.responsibilities.0'),
+      t('jobs.qualityConsultant.responsibilities.1'),
+      t('jobs.qualityConsultant.responsibilities.2'),
+      t('jobs.qualityConsultant.responsibilities.3')
     ],
     benefits: [
-      'Yüksek müşteri etkileşimi',
-      'Uluslararası projeler',
-      'Profesyonel gelişim',
-      'Bonus sistemi'
+      t('jobs.qualityConsultant.benefits.0'),
+      t('jobs.qualityConsultant.benefits.1'),
+      t('jobs.qualityConsultant.benefits.2'),
+      t('jobs.qualityConsultant.benefits.3')
     ]
   },
   {
     id: 'ev-specialist-milan',
     title: 'e-Mobility Specialist',
-    department: 'e-Mobility',
-    location: 'Milano, İtalya',
-    type: 'Tam Zamanlı',
-    experience: 'Mid-level (3+ yıl)',
+    department: t('jobs.evSpecialist.department'),
+    location: t('jobs.evSpecialist.location'),
+    type: t('jobs.evSpecialist.type'),
+    experience: t('jobs.evSpecialist.experience'),
     salary: '€55,000 - €70,000',
     remote: false,
     featured: true,
-    description: 'Elektrikli araç teknolojileri alanında uzmanlaşmış mühendis aranıyor.',
+    description: t('jobs.evSpecialist.description'),
     requirements: [
-      'Elektrik/Elektronik Mühendisliği mezunu',
-      '3+ yıl EV/batarya deneyimi',
-      'Elektrikli araç sistemleri bilgisi',
-      'İtalyanca (B2) ve İngilizce (B2)',
-      'Yenilikçi düşünce yapısı'
+      t('jobs.evSpecialist.requirements.0'),
+      t('jobs.evSpecialist.requirements.1'),
+      t('jobs.evSpecialist.requirements.2'),
+      t('jobs.evSpecialist.requirements.3'),
+      t('jobs.evSpecialist.requirements.4')
     ],
     responsibilities: [
-      'EV kalite süreçlerini geliştirmek',
-      'Batarya test süreçleri',
-      'Teknik dokümantasyon',
-      'R&D projelerine katılım'
+      t('jobs.evSpecialist.responsibilities.0'),
+      t('jobs.evSpecialist.responsibilities.1'),
+      t('jobs.evSpecialist.responsibilities.2'),
+      t('jobs.evSpecialist.responsibilities.3')
     ],
     benefits: [
-      'Cutting-edge teknoloji',
-      'İnovasyon projeleri',
-      'Eğitim ve sertifikasyon',
-      'Hybrid çalışma modeli'
+      t('jobs.evSpecialist.benefits.0'),
+      t('jobs.evSpecialist.benefits.1'),
+      t('jobs.evSpecialist.benefits.2'),
+      t('jobs.evSpecialist.benefits.3')
     ]
   },
   {
     id: 'project-manager-remote',
     title: 'Project Manager',
-    department: 'Proje Yönetimi',
-    location: 'Remote (Avrupa)',
-    type: 'Tam Zamanlı',
-    experience: 'Senior (5+ yıl)',
+    department: t('jobs.projectManager.department'),
+    location: t('jobs.projectManager.location'),
+    type: t('jobs.projectManager.type'),
+    experience: t('jobs.projectManager.experience'),
     salary: '€70,000 - €90,000',
     remote: true,
     featured: false,
-    description: 'Uluslararası kalite projelerini yönetecek deneyimli proje yöneticisi aranıyor.',
+    description: t('jobs.projectManager.description'),
     requirements: [
-      'Mühendislik veya İşletme mezunu',
-      '5+ yıl proje yönetimi deneyimi',
-      'PMP veya PRINCE2 sertifikası',
-      'İngilizce (C1), Almanca (B1+)',
-      'Agile/Scrum bilgisi'
+      t('jobs.projectManager.requirements.0'),
+      t('jobs.projectManager.requirements.1'),
+      t('jobs.projectManager.requirements.2'),
+      t('jobs.projectManager.requirements.3'),
+      t('jobs.projectManager.requirements.4')
     ],
     responsibilities: [
-      'Proje planlaması ve yürütmesi',
-      'Risk yönetimi',
-      'Stakeholder iletişimi',
-      'Budget ve timeline kontrolü'
+      t('jobs.projectManager.responsibilities.0'),
+      t('jobs.projectManager.responsibilities.1'),
+      t('jobs.projectManager.responsibilities.2'),
+      t('jobs.projectManager.responsibilities.3')
     ],
     benefits: [
-      'Tam remote çalışma',
-      'Uluslararası takım',
-      'Yüksek sorumluluk',
-      'Performans bonusu'
+      t('jobs.projectManager.benefits.0'),
+      t('jobs.projectManager.benefits.1'),
+      t('jobs.projectManager.benefits.2'),
+      t('jobs.projectManager.benefits.3')
     ]
   },
   {
     id: 'graduate-trainee',
     title: 'Graduate Trainee Program',
-    department: 'Eğitim Programı',
-    location: 'Çoklu Lokasyon',
-    type: 'Tam Zamanlı',
-    experience: 'Entry Level (0-2 yıl)',
+    department: t('jobs.graduateTrainee.department'),
+    location: t('jobs.graduateTrainee.location'),
+    type: t('jobs.graduateTrainee.type'),
+    experience: t('jobs.graduateTrainee.experience'),
     salary: '€45,000 - €55,000',
     remote: false,
     featured: true,
-    description: '18 aylık rotasyonel eğitim programı ile kariyer başlangıcı fırsatı.',
+    description: t('jobs.graduateTrainee.description'),
     requirements: [
-      'Mühendislik mezunu (2023-2024)',
-      'GPA 3.0+',
-      'İngilizce (B2+)',
-      'Öğrenmeye açık yaklaşım',
-      'Takım çalışması becerileri'
+      t('jobs.graduateTrainee.requirements.0'),
+      t('jobs.graduateTrainee.requirements.1'),
+      t('jobs.graduateTrainee.requirements.2'),
+      t('jobs.graduateTrainee.requirements.3'),
+      t('jobs.graduateTrainee.requirements.4')
     ],
     responsibilities: [
-      'Farklı departmanlarda rotasyon',
-      'Mentor eşliğinde öğrenim',
-      'Proje katılımları',
-      'Sunum ve raporlama'
+      t('jobs.graduateTrainee.responsibilities.0'),
+      t('jobs.graduateTrainee.responsibilities.1'),
+      t('jobs.graduateTrainee.responsibilities.2'),
+      t('jobs.graduateTrainee.responsibilities.3')
     ],
     benefits: [
-      'Kapsamlı eğitim programı',
-      'Mentorship',
-      'Hızlı kariyer gelişimi',
-      'Uluslararası deneyim'
+      t('jobs.graduateTrainee.benefits.0'),
+      t('jobs.graduateTrainee.benefits.1'),
+      t('jobs.graduateTrainee.benefits.2'),
+      t('jobs.graduateTrainee.benefits.3')
     ]
   }
 ];
 
-const benefits = [
+const createBenefits = (t: any) => [
   {
     icon: Heart,
-    title: 'Sağlık & Refah',
-    description: 'Kapsamlı sağlık sigortası, fitness üyeliği ve mental sağlık desteği'
+    title: t("benefits.items.0.title"),
+    description: t("benefits.items.0.description")
   },
   {
     icon: TrendingUp,
-    title: 'Kariyer Gelişimi',
-    description: 'Eğitim programları, sertifikasyon desteği ve mentorship fırsatları'
+    title: t("benefits.items.1.title"),
+    description: t("benefits.items.1.description")
   },
   {
     icon: Globe,
-    title: 'Uluslararası Fırsatlar',
-    description: 'Avrupa genelinde proje deneyimi ve kültürlerarası çalışma ortamı'
+    title: t("benefits.items.2.title"),
+    description: t("benefits.items.2.description")
   },
   {
     icon: Award,
-    title: 'Ödüller & Tanınma',
-    description: 'Performans bonusu, başarı ödülleri ve takdir programları'
+    title: t("benefits.items.3.title"),
+    description: t("benefits.items.3.description")
   }
 ];
 
 export default function CareersPage() {
+  const t = useTranslations("careers");
   const [isClient, setIsClient] = useState(false);
   const [selectedJob, setSelectedJob] = useState<typeof jobs[0] | null>(null);
   const [isApplicationOpen, setIsApplicationOpen] = useState(false);
@@ -260,7 +262,7 @@ export default function CareersPage() {
     watch,
     reset
   } = useForm<ApplicationFormData>({
-    resolver: zodResolver(applicationSchema)
+    resolver: zodResolver(createApplicationSchema(t))
   });
 
   const watchedRoleId = watch('roleId');
@@ -296,7 +298,7 @@ export default function CareersPage() {
     return (
       <div className="min-h-screen flex items-center justify-center">
         <div className="animate-pulse text-center">
-          <div className="text-lg text-gray-600">Yükleniyor...</div>
+          <div className="text-lg text-gray-600">{t("loading")}</div>
         </div>
       </div>
     );
@@ -309,10 +311,10 @@ export default function CareersPage() {
         <div className="container mx-auto container-padding">
           <div className="text-center">
             <h1 className="text-4xl lg:text-5xl font-bold mb-6">
-              Kariyer Fırsatları
+              {t("hero.title")}
             </h1>
             <p className="text-xl lg:text-2xl text-blue-100 max-w-3xl mx-auto leading-relaxed">
-              QroneX ailesine katılın ve kalite mühendisliği alanında kariyerinizi şekillendirin
+              {t("hero.subtitle")}
             </p>
           </div>
 
@@ -320,19 +322,19 @@ export default function CareersPage() {
           <div className="grid grid-cols-2 md:grid-cols-4 gap-8 mt-16">
             <div className="text-center">
               <div className="text-3xl lg:text-4xl font-bold mb-2">50+</div>
-              <div className="text-blue-200">Takım Üyesi</div>
+              <div className="text-blue-200">{t("stats.team")}</div>
             </div>
             <div className="text-center">
               <div className="text-3xl lg:text-4xl font-bold mb-2">15</div>
-              <div className="text-blue-200">Farklı Ülke</div>
+              <div className="text-blue-200">{t("stats.countries")}</div>
             </div>
             <div className="text-center">
               <div className="text-3xl lg:text-4xl font-bold mb-2">98%</div>
-              <div className="text-blue-200">Çalışan Memnuniyeti</div>
+              <div className="text-blue-200">{t("stats.satisfaction")}</div>
             </div>
             <div className="text-center">
               <div className="text-3xl lg:text-4xl font-bold mb-2">4.8</div>
-              <div className="text-blue-200">Glassdoor Puanı</div>
+              <div className="text-blue-200">{t("stats.glassdoor")}</div>
             </div>
           </div>
         </div>
@@ -343,15 +345,15 @@ export default function CareersPage() {
         <div className="container mx-auto container-padding">
           <div className="text-center mb-16">
             <h2 className="text-3xl lg:text-4xl font-bold text-gray-900 mb-4">
-              Neden QroneX?
+              {t("benefits.title")}
             </h2>
             <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-              Çalışanlarımızın gelişimi ve mutluluğu için sunduğumuz kapsamlı imkanlar
+              {t("benefits.subtitle")}
             </p>
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-            {benefits.map((benefit, index) => {
+            {createBenefits(t).map((benefit, index) => {
               const Icon = benefit.icon;
               return (
                 <Card key={index} className="text-center p-6 card-hover bg-white shadow-md border-gray-200">
@@ -380,15 +382,15 @@ export default function CareersPage() {
         <div className="container mx-auto container-padding">
           <div className="text-center mb-16">
             <h2 className="text-3xl lg:text-4xl font-bold text-gray-900 mb-4">
-              Açık Pozisyonlar
+              {t("positions.title")}
             </h2>
             <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-              Size uygun pozisyonu bulun ve kariyerinizde yeni bir sayfa açın
+              {t("positions.subtitle")}
             </p>
           </div>
 
           <div className="space-y-6">
-            {jobs.map((job) => (
+            {createJobs(t).map((job) => (
               <Card key={job.id} className={`p-6 card-hover bg-white shadow-md border-gray-200 ${job.featured ? 'border-blue-500 border-2' : ''}`}>
                 <div className="flex flex-col lg:flex-row lg:items-center lg:justify-between">
                   <div className="flex-1">
@@ -398,7 +400,7 @@ export default function CareersPage() {
                           <h3 className="text-xl font-bold text-gray-900">{job.title}</h3>
                           {job.featured && (
                             <Badge className="bg-orange-100 text-orange-800">
-                              Öne Çıkan
+                              {t("positions.featured")}
                             </Badge>
                           )}
                           {job.remote && (
@@ -450,7 +452,7 @@ export default function CareersPage() {
                       onClick={() => handleApplyClick(job)}
                       className="w-full lg:w-auto"
                     >
-                      Başvur
+                      {t("positions.apply")}
                     </Button>
                   </div>
                 </div>
@@ -465,36 +467,36 @@ export default function CareersPage() {
         <DialogContent className="max-w-2xl max-h-[90vh] overflow-y-auto">
           <DialogHeader>
             <DialogTitle>
-              {selectedJob ? `${selectedJob.title} - Başvuru Formu` : 'İş Başvurusu'}
+              {selectedJob ? `${selectedJob.title} - ${t("dialog.defaultTitle")}` : t("dialog.defaultTitle")}
             </DialogTitle>
             <DialogDescription>
-              Lütfen aşağıdaki formu eksiksiz doldurunuz. CV&apos;nizi e-posta ile gönderebilirsiniz.
+              {t("dialog.subtitle")}
             </DialogDescription>
           </DialogHeader>
 
           {submitSuccess ? (
             <div className="text-center py-8">
               <div className="text-green-600 text-lg font-semibold mb-2">
-                ✅ Başvurunuz başarıyla gönderildi!
+                ✅ {t("dialog.successTitle")}
               </div>
               <p className="text-gray-600">
-                En kısa sürede size dönüş yapacağız.
+                {t("dialog.successSubtitle")}
               </p>
             </div>
           ) : (
             <form onSubmit={handleSubmit(onSubmit)} className="space-y-6">
               {/* Role Selection */}
               <div>
-                <Label htmlFor="roleId">Pozisyon *</Label>
+                <Label htmlFor="roleId">{t("dialog.fields.role.label")} *</Label>
                 <Select 
                   value={watchedRoleId} 
                   onValueChange={(value) => setValue('roleId', value)}
                 >
                   <SelectTrigger>
-                    <SelectValue placeholder="Pozisyon seçiniz" />
+                    <SelectValue placeholder={t("dialog.fields.role.placeholder")} />
                   </SelectTrigger>
                   <SelectContent>
-                    {jobs.map((job) => (
+                    {createJobs(t).map((job) => (
                       <SelectItem key={job.id} value={job.id}>
                         {job.title} - {job.location}
                       </SelectItem>
@@ -509,22 +511,22 @@ export default function CareersPage() {
               {/* Personal Info */}
               <div className="grid grid-cols-2 gap-4">
                 <div>
-                  <Label htmlFor="firstName">Ad *</Label>
+                  <Label htmlFor="firstName">{t("dialog.fields.firstName.label")} *</Label>
                   <Input
                     id="firstName"
                     {...register('firstName')}
-                    placeholder="Adınız"
+                    placeholder={t("dialog.fields.firstName.placeholder")}
                   />
                   {errors.firstName && (
                     <p className="text-red-600 text-sm mt-1">{errors.firstName.message}</p>
                   )}
                 </div>
                 <div>
-                  <Label htmlFor="lastName">Soyad *</Label>
+                  <Label htmlFor="lastName">{t("dialog.fields.lastName.label")} *</Label>
                   <Input
                     id="lastName"
                     {...register('lastName')}
-                    placeholder="Soyadınız"
+                    placeholder={t("dialog.fields.lastName.placeholder")}
                   />
                   {errors.lastName && (
                     <p className="text-red-600 text-sm mt-1">{errors.lastName.message}</p>
@@ -535,23 +537,23 @@ export default function CareersPage() {
               {/* Contact Info */}
               <div className="grid grid-cols-2 gap-4">
                 <div>
-                  <Label htmlFor="email">E-posta *</Label>
+                  <Label htmlFor="email">{t("dialog.fields.email.label")} *</Label>
                   <Input
                     id="email"
                     type="email"
                     {...register('email')}
-                    placeholder="ornek@email.com"
+                    placeholder={t("dialog.fields.email.placeholder")}
                   />
                   {errors.email && (
                     <p className="text-red-600 text-sm mt-1">{errors.email.message}</p>
                   )}
                 </div>
                 <div>
-                  <Label htmlFor="phone">Telefon *</Label>
+                  <Label htmlFor="phone">{t("dialog.fields.phone.label")} *</Label>
                   <Input
                     id="phone"
                     {...register('phone')}
-                    placeholder="+49 123 456 7890"
+                    placeholder={t("dialog.fields.phone.placeholder")}
                   />
                   {errors.phone && (
                     <p className="text-red-600 text-sm mt-1">{errors.phone.message}</p>
@@ -561,11 +563,11 @@ export default function CareersPage() {
 
               {/* LinkedIn */}
               <div>
-                <Label htmlFor="linkedin">LinkedIn Profili</Label>
+                <Label htmlFor="linkedin">{t("dialog.fields.linkedin.label")}</Label>
                 <Input
                   id="linkedin"
                   {...register('linkedin')}
-                  placeholder="https://linkedin.com/in/profiliniz"
+                  placeholder={t("dialog.fields.linkedin.placeholder")}
                 />
                 {errors.linkedin && (
                   <p className="text-red-600 text-sm mt-1">{errors.linkedin.message}</p>
@@ -575,15 +577,15 @@ export default function CareersPage() {
               {/* Experience & Availability */}
               <div className="grid grid-cols-2 gap-4">
                 <div>
-                  <Label htmlFor="experience">Deneyim Seviyesi *</Label>
+                  <Label htmlFor="experience">{t("dialog.fields.experience.label")} *</Label>
                   <Select onValueChange={(value) => setValue('experience', value)}>
                     <SelectTrigger>
-                      <SelectValue placeholder="Deneyim seviyesi" />
+                      <SelectValue placeholder={t("dialog.fields.experience.placeholder")} />
                     </SelectTrigger>
                     <SelectContent>
-                      <SelectItem value="entry">Entry Level (0-2 yıl)</SelectItem>
-                      <SelectItem value="mid">Mid-level (3-5 yıl)</SelectItem>
-                      <SelectItem value="senior">Senior (5+ yıl)</SelectItem>
+                      <SelectItem value="entry">{t("dialog.experienceOptions.entry")}</SelectItem>
+                      <SelectItem value="mid">{t("dialog.experienceOptions.mid")}</SelectItem>
+                      <SelectItem value="senior">{t("dialog.experienceOptions.senior")}</SelectItem>
                     </SelectContent>
                   </Select>
                   {errors.experience && (
@@ -591,16 +593,16 @@ export default function CareersPage() {
                   )}
                 </div>
                 <div>
-                  <Label htmlFor="availability">Başlama Tarihi *</Label>
+                  <Label htmlFor="availability">{t("dialog.fields.availability.label")} *</Label>
                   <Select onValueChange={(value) => setValue('availability', value)}>
                     <SelectTrigger>
-                      <SelectValue placeholder="Başlama tarihi" />
+                      <SelectValue placeholder={t("dialog.fields.availability.placeholder")} />
                     </SelectTrigger>
                     <SelectContent>
-                      <SelectItem value="asap">Hemen</SelectItem>
-                      <SelectItem value="1month">1 Ay İçinde</SelectItem>
-                      <SelectItem value="2months">2 Ay İçinde</SelectItem>
-                      <SelectItem value="3months">3 Ay İçinde</SelectItem>
+                      <SelectItem value="asap">{t("dialog.availabilityOptions.asap")}</SelectItem>
+                      <SelectItem value="1month">{t("dialog.availabilityOptions.1month")}</SelectItem>
+                      <SelectItem value="2months">{t("dialog.availabilityOptions.2months")}</SelectItem>
+                      <SelectItem value="3months">{t("dialog.availabilityOptions.3months")}</SelectItem>
                     </SelectContent>
                   </Select>
                   {errors.availability && (
@@ -611,11 +613,11 @@ export default function CareersPage() {
 
               {/* Cover Letter */}
               <div>
-                <Label htmlFor="coverLetter">Ön Yazı *</Label>
+                <Label htmlFor="coverLetter">{t("dialog.fields.coverLetter.label")} *</Label>
                 <Textarea
                   id="coverLetter"
                   {...register('coverLetter')}
-                  placeholder="Neden bu pozisyon için uygun olduğunuzu ve QroneX'e neler katabileceğinizi kısaca açıklayın..."
+                  placeholder={t("dialog.fields.coverLetter.placeholder")}
                   rows={6}
                 />
                 {errors.coverLetter && (
@@ -629,10 +631,10 @@ export default function CareersPage() {
                   variant="outline"
                   onClick={() => setIsApplicationOpen(false)}
                 >
-                  İptal
+                  {t("dialog.actions.cancel")}
                 </Button>
                 <Button type="submit" disabled={isSubmitting}>
-                  {isSubmitting ? 'Gönderiliyor...' : 'Başvuru Gönder'}
+                  {isSubmitting ? t("dialog.actions.submitting") : t("dialog.actions.submit")}
                 </Button>
               </div>
             </form>
@@ -645,23 +647,23 @@ export default function CareersPage() {
         <div className="container mx-auto container-padding">
           <div className="bg-gradient-to-r from-blue-600 to-purple-600 rounded-2xl p-8 lg:p-12 text-center text-white">
             <h2 className="text-3xl lg:text-4xl font-bold mb-4">
-              Aradığınız Pozisyonu Bulamadınız mı?
+              {t("cta.title")}
             </h2>
             <p className="text-xl text-blue-100 mb-8 max-w-2xl mx-auto">
-              CV&apos;nizi gönderin, uygun fırsat çıktığında sizinle iletişime geçelim
+              {t("cta.subtitle")}
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Link
                 href="/contact"
                 className="inline-flex items-center justify-center px-8 py-4 bg-white text-blue-600 font-semibold rounded-lg hover:bg-gray-100 transition-colors"
               >
-                CV Gönderin
+                {t("cta.primary")}
               </Link>
               <Link
                 href="/about"
                 className="inline-flex items-center justify-center px-8 py-4 border-2 border-white text-white font-semibold rounded-lg hover:bg-white hover:text-blue-600 transition-colors"
               >
-                Şirket Hakkında
+                {t("cta.secondary")}
               </Link>
             </div>
           </div>

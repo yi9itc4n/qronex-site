@@ -9,6 +9,13 @@ import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/com
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
 import { 
+  Select, 
+  SelectContent, 
+  SelectItem, 
+  SelectTrigger, 
+  SelectValue 
+} from "@/components/ui/select";
+import { 
   Phone, 
   Mail, 
   MapPin, 
@@ -115,10 +122,10 @@ export default function ContactPage() {
   ];
 
   const packageOptions = [
-    { value: "starter", label: "Starter - On-Site Hızlı Müdahale" },
-    { value: "growth", label: "Growth - Teknik Temsilcilik" },
-    { value: "pro", label: "Pro - Kalite Ortaklığı" },
-    { value: "enterprise", label: "Enterprise - Özel Çözümler" },
+    { value: "starter", label: t("packageOptions.starter") },
+    { value: "growth", label: t("packageOptions.growth") },
+    { value: "pro", label: t("packageOptions.pro") },
+    { value: "enterprise", label: t("packageOptions.enterprise") },
   ];
 
   return (
@@ -131,7 +138,7 @@ export default function ContactPage() {
               {t("title")}
             </h1>
             <p className="text-xl lg:text-2xl text-slate-200 mb-8">
-              Kalite problemleriniz için 7/24 erişilebilir uzman ekibimizle iletişime geçin.
+              {t("subtitle")}
             </p>
           </div>
         </div>
@@ -148,13 +155,13 @@ export default function ContactPage() {
                   {t("quickQuote")}
                 </CardTitle>
                 <CardDescription>
-                  Formu doldurun, 24 saat içinde size dönelim. Acil durumlar için direkt arayabilirsiniz.
+                  {t("form.description")}
                 </CardDescription>
               </CardHeader>
               <CardContent>
                 {!isClient ? (
                   <div className="text-center py-8">
-                    <div className="animate-pulse">Yükleniyor...</div>
+                    <div className="animate-pulse">{t("form.loading")}</div>
                   </div>
                 ) : submitSuccess ? (
                   <div className="text-center py-8">
@@ -163,10 +170,10 @@ export default function ContactPage() {
                       {t("form.success")}
                     </h3>
                     <p className="text-gray-600 mb-6">
-                      Uzman ekibimiz en kısa sürede sizinle iletişime geçecektir.
+                      {t("form.successDescription")}
                     </p>
                     <Button onClick={() => setSubmitSuccess(false)}>
-                      Yeni Mesaj Gönder
+                      {t("form.newMessage")}
                     </Button>
                   </div>
                 ) : (
@@ -181,7 +188,7 @@ export default function ContactPage() {
                           <input
                             {...register("name")}
                             className="w-full pl-10 pr-4 py-2 border border-gray-300 rounded-md focus:ring-2 focus:ring-blue-500 focus:border-transparent"
-                            placeholder="Ad Soyad"
+                            placeholder={t("form.placeholders.name")}
                           />
                         </div>
                         {errors.name && (
@@ -198,7 +205,7 @@ export default function ContactPage() {
                           <input
                             {...register("company")}
                             className="w-full pl-10 pr-4 py-2 border border-gray-300 rounded-md focus:ring-2 focus:ring-blue-500 focus:border-transparent"
-                            placeholder="Şirket Adı"
+                            placeholder={t("form.placeholders.company")}
                           />
                         </div>
                         {errors.company && (
@@ -218,7 +225,7 @@ export default function ContactPage() {
                             {...register("email")}
                             type="email"
                             className="w-full pl-10 pr-4 py-2 border border-gray-300 rounded-md focus:ring-2 focus:ring-blue-500 focus:border-transparent"
-                            placeholder="ornek@sirket.com"
+                            placeholder={t("form.placeholders.email")}
                           />
                         </div>
                         {errors.email && (
@@ -235,7 +242,7 @@ export default function ContactPage() {
                           <input
                             {...register("phone")}
                             className="w-full pl-10 pr-4 py-2 border border-gray-300 rounded-md focus:ring-2 focus:ring-blue-500 focus:border-transparent"
-                            placeholder="+90 532 123 4567"
+                            placeholder={t("form.placeholders.phone")}
                           />
                         </div>
                         {errors.phone && (
@@ -250,23 +257,28 @@ export default function ContactPage() {
                           {t("form.country")} *
                         </label>
                         <div className="relative">
-                          <Globe className="absolute left-3 top-3 h-4 w-4 text-gray-400" />
-                          <select
-                            {...register("country")}
-                            className="w-full pl-10 pr-4 py-2 border border-gray-300 rounded-md focus:ring-2 focus:ring-blue-500 focus:border-transparent"
-                          >
-                            <option value="">Ülke Seçin</option>
-                            <option value="TR">Türkiye</option>
-                            <option value="DE">Almanya</option>
-                            <option value="FR">Fransa</option>
-                            <option value="IT">İtalya</option>
-                            <option value="ES">İspanya</option>
-                            <option value="NL">Hollanda</option>
-                            <option value="BE">Belçika</option>
-                            <option value="AT">Avusturya</option>
-                            <option value="CH">İsviçre</option>
-                            <option value="PL">Polonya</option>
-                          </select>
+                          <Globe className="absolute left-3 top-3 h-4 w-4 text-gray-400 z-10" />
+                          <Select onValueChange={(value) => {
+                            // React Hook Form ile entegrasyon
+                            const event = { target: { value, name: "country" } };
+                            register("country").onChange(event);
+                          }}>
+                            <SelectTrigger className="w-full pl-10 pr-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500 transition-all duration-200 hover:border-gray-400">
+                              <SelectValue placeholder={t("form.selectOptions.country")} />
+                            </SelectTrigger>
+                            <SelectContent>
+                              <SelectItem value="TR">{t("countries.TR")}</SelectItem>
+                              <SelectItem value="DE">{t("countries.DE")}</SelectItem>
+                              <SelectItem value="FR">{t("countries.FR")}</SelectItem>
+                              <SelectItem value="IT">{t("countries.IT")}</SelectItem>
+                              <SelectItem value="ES">{t("countries.ES")}</SelectItem>
+                              <SelectItem value="NL">{t("countries.NL")}</SelectItem>
+                              <SelectItem value="BE">{t("countries.BE")}</SelectItem>
+                              <SelectItem value="AT">{t("countries.AT")}</SelectItem>
+                              <SelectItem value="CH">{t("countries.CH")}</SelectItem>
+                              <SelectItem value="PL">{t("countries.PL")}</SelectItem>
+                            </SelectContent>
+                          </Select>
                         </div>
                         {errors.country && (
                           <p className="text-red-600 text-sm mt-1">{errors.country.message}</p>
@@ -282,7 +294,7 @@ export default function ContactPage() {
                           <input
                             {...register("city")}
                             className="w-full pl-10 pr-4 py-2 border border-gray-300 rounded-md focus:ring-2 focus:ring-blue-500 focus:border-transparent"
-                            placeholder="Şehir"
+                            placeholder={t("form.placeholders.city")}
                           />
                         </div>
                         {errors.city && (
@@ -296,34 +308,42 @@ export default function ContactPage() {
                         <label className="block text-sm font-medium mb-2">
                           {t("form.package")}
                         </label>
-                        <select
-                          {...register("package")}
-                          className="w-full px-4 py-2 border border-gray-300 rounded-md focus:ring-2 focus:ring-blue-500 focus:border-transparent"
-                        >
-                          <option value="">Paket Seçin (Opsiyonel)</option>
-                          {packageOptions.map((option) => (
-                            <option key={option.value} value={option.value}>
-                              {option.label}
-                            </option>
-                          ))}
-                        </select>
+                        <Select onValueChange={(value) => {
+                          const event = { target: { value, name: "package" } };
+                          register("package").onChange(event);
+                        }}>
+                          <SelectTrigger className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500 transition-all duration-200 hover:border-gray-400">
+                            <SelectValue placeholder={t("form.selectOptions.package")} />
+                          </SelectTrigger>
+                          <SelectContent>
+                            {packageOptions.map((option) => (
+                              <SelectItem key={option.value} value={option.value}>
+                                {option.label}
+                              </SelectItem>
+                            ))}
+                          </SelectContent>
+                        </Select>
                       </div>
 
                       <div>
                         <label className="block text-sm font-medium mb-2">
                           {t("form.urgency")} *
                         </label>
-                        <select
-                          {...register("urgency")}
-                          className="w-full px-4 py-2 border border-gray-300 rounded-md focus:ring-2 focus:ring-blue-500 focus:border-transparent"
-                        >
-                          <option value="">Aciliyet Seçin</option>
-                          {urgencyOptions.map((option) => (
-                            <option key={option.value} value={option.value}>
-                              {option.label}
-                            </option>
-                          ))}
-                        </select>
+                        <Select onValueChange={(value) => {
+                          const event = { target: { value, name: "urgency" } };
+                          register("urgency").onChange(event);
+                        }}>
+                          <SelectTrigger className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500 transition-all duration-200 hover:border-gray-400">
+                            <SelectValue placeholder={t("form.selectOptions.urgency")} />
+                          </SelectTrigger>
+                          <SelectContent>
+                            {urgencyOptions.map((option) => (
+                              <SelectItem key={option.value} value={option.value}>
+                                {option.label}
+                              </SelectItem>
+                            ))}
+                          </SelectContent>
+                        </Select>
                         {errors.urgency && (
                           <p className="text-red-600 text-sm mt-1">{errors.urgency.message}</p>
                         )}
@@ -338,7 +358,7 @@ export default function ContactPage() {
                         {...register("message")}
                         rows={5}
                         className="w-full px-4 py-2 border border-gray-300 rounded-md focus:ring-2 focus:ring-blue-500 focus:border-transparent"
-                        placeholder="Kalite probleminizi detaylı olarak açıklayın..."
+                        placeholder={t("form.placeholders.message")}
                       />
                       {errors.message && (
                         <p className="text-red-600 text-sm mt-1">{errors.message.message}</p>
@@ -351,7 +371,7 @@ export default function ContactPage() {
                       disabled={isSubmitting}
                     >
                       {isSubmitting ? (
-                        "Gönderiliyor..."
+                        t("form.submitting")
                       ) : (
                         <>
                           <Send className="h-4 w-4 mr-2" />
@@ -373,28 +393,26 @@ export default function ContactPage() {
               <CardHeader>
                 <CardTitle className="flex items-center">
                   <MapPin className="h-5 w-5 mr-2" />
-                  Merkez Ofis
+                  {t("office.title")}
                 </CardTitle>
               </CardHeader>
               <CardContent className="space-y-4">
                 <div>
-                  <h4 className="font-medium mb-2">München, Germany</h4>
-                  <p className="text-sm text-gray-600">
-                    Maximilianstraße 35<br />
-                    80539 München
+                  <h4 className="font-medium mb-2">{t("office.location")}</h4>
+                  <p className="text-sm text-gray-600" dangerouslySetInnerHTML={{ __html: t("office.address") }}>
                   </p>
                 </div>
                 <div className="space-y-2">
                   <a href="tel:+4989123456789" className="text-blue-600 hover:underline text-sm block">
-                    +49 89 123 456 789
+                    {t("office.phone")}
                   </a>
                   <a href="mailto:info@qronex.net" className="text-blue-600 hover:underline text-sm block">
-                    info@qronex.net
+                    {t("office.email")}
                   </a>
                 </div>
                 <div className="flex items-center text-sm text-gray-600">
                   <Clock className="h-4 w-4 mr-2" />
-                  <span>09:00 - 18:00 (CET)</span>
+                  <span>{t("office.hours")}</span>
                 </div>
               </CardContent>
             </Card>
@@ -404,17 +422,17 @@ export default function ContactPage() {
               <CardHeader>
                 <CardTitle className="flex items-center">
                   <Clock className="h-5 w-5 mr-2" />
-                  Yanıt Süreleri
+                  {t("responseTimes.title")}
                 </CardTitle>
               </CardHeader>
               <CardContent className="space-y-3">
                 <div className="flex items-center justify-between text-sm">
-                  <span>Normal talepler:</span>
-                  <Badge variant="secondary">24 saat</Badge>
+                  <span>{t("responseTimes.normal")}</span>
+                  <Badge variant="secondary">{t("responseTimes.normalTime")}</Badge>
                 </div>
                 <div className="flex items-center justify-between text-sm">
-                  <span>Teklifler:</span>
-                  <Badge variant="outline">48 saat</Badge>
+                  <span>{t("responseTimes.quotes")}</span>
+                  <Badge variant="outline">{t("responseTimes.quoteTime")}</Badge>
                 </div>
               </CardContent>
             </Card>

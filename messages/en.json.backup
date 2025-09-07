@@ -7,7 +7,6 @@
     "about": "About",
     "careers": "Careers",
     "contact": "Contact",
-    "pricing": "Pricing",
     "getQuote": "Get Quote",
     "startService": "Start Service",
     "onSiteRapidResponse": "On-Site Rapid Response",
@@ -44,8 +43,10 @@
     "viewAllServices": "View All Services",
     "residentEngineering": "Resident Engineering",
     "residentEngineeringDesc": "Customer Quick Response Activities, 8D Management, and Steering Problem-Solving Process",
-    "qualityInspectionRework": "Quality Inspection & Rework",
-    "qualityInspectionReworkDesc": "Comprehensive quality inspection and rework services at customer and supplier locations",
+    "qualityInspectionCustomer": "Quality Inspection & Rework @ Customer",
+    "qualityInspectionCustomerDesc": "Comprehensive quality inspection and rework services at customer locations",
+    "qualityInspectionTier1": "Quality Inspection & Rework @ Tier1",
+    "qualityInspectionTier1Desc": "Quality inspection and rework services at Tier1 supplier locations",
     "consultingTraining": "Consulting & Training",
     "consultingTrainingDesc": "Professional consulting and training services for quality improvement",
     "advancedPhaseLaunch": "Advanced Phase & Launch Services",
@@ -232,285 +233,23 @@
     "subtitle": "Developing customized solutions with our experience across different sectors",
     "automotiveOem": {
       "title": "Automotive OEM",
-      "description": "Comprehensive quality solutions for automotive manufacturers",
-      "services": [
-        {
-          "title": "On-Site Rapid Response",
-          "description": "24-72 hour field intervention for quality issues at automotive production lines",
-          "features": ["Immediate containment", "Root cause analysis", "8D process management", "Customer communication"]
-        },
-        {
-          "title": "Quality Engineering",
-          "description": "Advanced quality processes and continuous improvement for automotive standards",
-          "features": ["ISO/TS 16949 compliance", "Process optimization", "Quality system development", "Training programs"]
-        },
-        {
-          "title": "Technical Representation",
-          "description": "On-site technical support and customer interface management",
-          "features": ["Daily quality routines", "Customer meetings", "Escalation management", "Progress reporting"]
-        }
-      ],
-      "benefits": [
-        {
-          "title": "OEM Standards",
-          "description": "Full compliance with automotive OEM quality requirements and standards"
-        },
-        {
-          "title": "Rapid Response",
-          "description": "24-72 hour response time for critical quality issues and emergencies"
-        },
-        {
-          "title": "Expert Team",
-          "description": "Experienced automotive quality engineers with deep industry knowledge"
-        }
-      ],
-      "stats": [
-        {"value": "150+", "label": "Projects Completed"},
-        {"value": "25", "label": "OEM Clients"},
-        {"value": "8", "label": "Countries Served"},
-        {"value": "98%", "label": "Success Rate"}
-      ],
-      "cta": {
-        "title": "Ready to Improve Your Automotive Quality?",
-        "subtitle": "Let our automotive experts help you achieve the highest quality standards in your production",
-        "primary": "Get Automotive Quote",
-        "secondary": "View All Services"
-      }
+      "description": "Comprehensive quality solutions for automotive manufacturers"
     },
     "tier1": {
       "title": "Tier 1 Suppliers",
-      "description": "Specialized services for first-tier suppliers",
-      "services": [
-        {
-          "title": "Supplier Readiness",
-          "description": "Preparation and development services for Tier 1 suppliers",
-          "features": ["Quality system setup", "Process optimization", "Training programs", "Audit preparation"]
-        },
-        {
-          "title": "Quality Inspection & Rework",
-          "description": "On-site quality control and rework services at supplier locations",
-          "features": ["Visual inspection", "Defect identification", "Rework services", "Quality reporting"]
-        },
-        {
-          "title": "Technical Representation",
-          "description": "On-site technical support and customer interface for suppliers",
-          "features": ["Customer liaison", "Technical support", "Quality coordination", "Progress tracking"]
-        }
-      ],
-      "benefits": [
-        {
-          "title": "Supplier Development",
-          "description": "Comprehensive support for Tier 1 supplier development and improvement"
-        },
-        {
-          "title": "Quality Assurance",
-          "description": "Ensuring consistent quality standards across your supplier network"
-        },
-        {
-          "title": "Cost Optimization",
-          "description": "Reducing quality costs and improving supplier performance"
-        }
-      ],
-      "stats": [
-        {"value": "200+", "label": "Supplier Projects"},
-        {"value": "35", "label": "Tier 1 Clients"},
-        {"value": "12", "label": "Countries Served"},
-        {"value": "95%", "label": "Improvement Rate"}
-      ],
-      "cta": {
-        "title": "Optimize Your Supplier Network",
-        "subtitle": "Let us help you develop and maintain high-quality Tier 1 suppliers",
-        "primary": "Get Supplier Quote",
-        "secondary": "View All Services"
-      }
+      "description": "Specialized services for first-tier suppliers"
     },
     "eMobility": {
       "title": "e-Mobility / EV",
-      "description": "Advanced quality processes for electric vehicle technologies",
-      "services": [
-        {
-          "title": "EV Quality Engineering",
-          "description": "Specialized quality processes for electric vehicle components and systems",
-          "features": ["Battery quality control", "Motor system validation", "Charging system testing", "Safety compliance"]
-        },
-        {
-          "title": "Advanced Phase & Launch",
-          "description": "Support for EV product launches and advanced phase development",
-          "features": ["Launch readiness", "Phase management", "Risk assessment", "Go-to-market support"]
-        },
-        {
-          "title": "Consulting & Training",
-          "description": "Expert consulting and training for EV quality processes",
-          "features": ["Process design", "Team training", "Best practices", "Compliance support"]
-        }
-      ],
-      "benefits": [
-        {
-          "title": "EV Expertise",
-          "description": "Deep knowledge of electric vehicle technologies and quality requirements"
-        },
-        {
-          "title": "Future-Ready",
-          "description": "Solutions designed for the rapidly evolving e-mobility sector"
-        },
-        {
-          "title": "Safety Focus",
-          "description": "Emphasis on safety and reliability in EV quality processes"
-        }
-      ],
-      "stats": [
-        {"value": "75+", "label": "EV Projects"},
-        {"value": "15", "label": "EV Clients"},
-        {"value": "6", "label": "Countries Served"},
-        {"value": "100%", "label": "Safety Record"}
-      ],
-      "cta": {
-        "title": "Lead the EV Revolution",
-        "subtitle": "Partner with us to ensure quality excellence in your electric vehicle projects",
-        "primary": "Get EV Quote",
-        "secondary": "View All Services"
-      }
+      "description": "Advanced quality processes for electric vehicle technologies"
     },
     "heavyTransport": {
       "title": "Heavy Transport",
-      "description": "Robust solutions for truck and bus sectors",
-      "services": [
-        {
-          "title": "Heavy Vehicle Quality",
-          "description": "Specialized quality processes for trucks, buses, and heavy vehicles",
-          "features": ["Vehicle inspection", "Component testing", "Safety validation", "Performance optimization"]
-        },
-        {
-          "title": "Audits & Training",
-          "description": "Comprehensive audit and training services for heavy transport quality",
-          "features": ["Quality audits", "Process training", "Compliance checks", "Best practices"]
-        },
-        {
-          "title": "Aftersales Support",
-          "description": "Quality support for heavy vehicle aftersales and maintenance",
-          "features": ["Service quality", "Parts validation", "Customer support", "Warranty management"]
-        }
-      ],
-      "benefits": [
-        {
-          "title": "Heavy Vehicle Focus",
-          "description": "Specialized expertise in heavy transport quality requirements"
-        },
-        {
-          "title": "Durability Focus",
-          "description": "Solutions designed for the demanding heavy transport environment"
-        },
-        {
-          "title": "Safety Priority",
-          "description": "Emphasis on safety and reliability in heavy vehicle operations"
-        }
-      ],
-      "stats": [
-        {"value": "90+", "label": "Heavy Vehicle Projects"},
-        {"value": "18", "label": "Transport Clients"},
-        {"value": "5", "label": "Countries Served"},
-        {"value": "97%", "label": "Reliability Rate"}
-      ],
-      "cta": {
-        "title": "Strengthen Your Heavy Transport Quality",
-        "subtitle": "Let us help you maintain the highest quality standards in heavy transport",
-        "primary": "Get Transport Quote",
-        "secondary": "View All Services"
-      }
+      "description": "Robust solutions for truck and bus sectors"
     },
     "aerospace": {
       "title": "Aerospace",
-      "description": "High-standard quality services for the aerospace sector",
-      "services": [
-        {
-          "title": "Aerospace Quality Engineering",
-          "description": "Specialized quality processes for aerospace components and systems",
-          "features": ["AS9100 compliance", "Critical component testing", "Safety validation", "Documentation management"]
-        },
-        {
-          "title": "Consulting & Training",
-          "description": "Expert consulting and training for aerospace quality standards",
-          "features": ["Process design", "Team training", "Compliance support", "Best practices"]
-        },
-        {
-          "title": "Audits & Training",
-          "description": "Comprehensive audit and training services for aerospace quality",
-          "features": ["Quality audits", "Process training", "Compliance checks", "Certification support"]
-        }
-      ],
-      "benefits": [
-        {
-          "title": "Aerospace Standards",
-          "description": "Full compliance with strict aerospace quality and safety standards"
-        },
-        {
-          "title": "Safety Critical",
-          "description": "Focus on safety-critical processes and zero-defect mentality"
-        },
-        {
-          "title": "Certification Support",
-          "description": "Comprehensive support for aerospace certifications and compliance"
-        }
-      ],
-      "stats": [
-        {"value": "45+", "label": "Aerospace Projects"},
-        {"value": "12", "label": "Aerospace Clients"},
-        {"value": "4", "label": "Countries Served"},
-        {"value": "100%", "label": "Safety Record"}
-      ],
-      "cta": {
-        "title": "Achieve Aerospace Excellence",
-        "subtitle": "Partner with us to meet the highest aerospace quality and safety standards",
-        "primary": "Get Aerospace Quote",
-        "secondary": "View All Services"
-      }
-    },
-    "industrial": {
-      "title": "Industrial",
-      "description": "Comprehensive quality solutions for industrial manufacturing",
-      "services": [
-        {
-          "title": "Industrial Quality Engineering",
-          "description": "Advanced quality processes for industrial manufacturing",
-          "features": ["Process optimization", "Quality system development", "Continuous improvement", "Training programs"]
-        },
-        {
-          "title": "Technical Representation",
-          "description": "On-site technical support for industrial operations",
-          "features": ["Process monitoring", "Quality coordination", "Customer liaison", "Progress tracking"]
-        },
-        {
-          "title": "Supplier Readiness",
-          "description": "Development and support services for industrial suppliers",
-          "features": ["Supplier development", "Quality training", "Process improvement", "Compliance support"]
-        }
-      ],
-      "benefits": [
-        {
-          "title": "Industrial Focus",
-          "description": "Specialized expertise in industrial manufacturing quality requirements"
-        },
-        {
-          "title": "Process Optimization",
-          "description": "Continuous improvement and optimization of industrial processes"
-        },
-        {
-          "title": "Cost Efficiency",
-          "description": "Solutions designed to improve quality while reducing costs"
-        }
-      ],
-      "stats": [
-        {"value": "120+", "label": "Industrial Projects"},
-        {"value": "40", "label": "Industrial Clients"},
-        {"value": "10", "label": "Countries Served"},
-        {"value": "96%", "label": "Efficiency Gain"}
-      ],
-      "cta": {
-        "title": "Optimize Your Industrial Quality",
-        "subtitle": "Let us help you achieve excellence in industrial manufacturing quality",
-        "primary": "Get Industrial Quote",
-        "secondary": "View All Services"
-      }
+      "description": "High-standard quality services for the aerospace sector"
     },
     "hero": {
       "title": "Industries",
@@ -518,12 +257,6 @@
     },
     "sections": {
       "expertiseTitle": "Our Expertise Areas",
-      "servicesTitle": "Our Services",
-      "servicesSubtitle": "Comprehensive quality solutions tailored to your industry",
-      "benefitsTitle": "Why Choose Us",
-      "benefitsSubtitle": "Industry-specific benefits and advantages",
-      "statsTitle": "Our Track Record",
-      "statsSubtitle": "Proven results across different industries",
       "servicesHighlight": "Featured Services",
       "stats": {
         "projects": "Projects",
@@ -732,9 +465,100 @@
     }
   },
   "pricing": {
+    "hero": {
+      "title": "Enterprise Solutions",
+      "subtitle": "Customized quality engineering services for large-scale projects",
+      "primary": "Get Custom Quote",
+      "secondary": "Talk to Experts"
+    },
+    "why": {
+      "title": "Why Enterprise Solutions?",
+      "subtitle": "Learn why we are the right choice for your large-scale projects",
+      "expertise": {
+        "title": "Proven Expertise",
+        "bullet1": "15+ years of industry experience with automotive quality standards",
+        "bullet2": "Experience working with Fortune 500 companies",
+        "bullet3": "International certifications and accreditations"
+      },
+      "team": {
+        "title": "Dedicated Team",
+        "bullet1": "Expert team assigned to your project",
+        "bullet2": "24/7 customer service and support",
+        "bullet3": "Project manager assignment and regular reporting"
+      }
+    },
+    "cta": {
+      "title": "Get Your Custom Offer",
+      "subtitle": "We develop custom solutions for every enterprise customer. Let's analyze your needs and prepare a tailored offer.",
+      "primary": "Request Detailed Quote",
+      "secondary": "Schedule a Call"
+    },
+    "faq": {
+      "title": "FAQ About Enterprise Solutions",
+      "q1": "How are enterprise solutions priced?",
+      "a1": "Every enterprise project is unique. We prepare a custom price offer based on your project scope, duration, location and needs. Minimum investment levels apply.",
+      "q2": "What is the minimum contract duration?",
+      "a2": "For enterprise projects, the minimum contract duration is 24 months. For large projects, longer-term strategic partnerships are possible.",
+      "q3": "Which countries do you serve?",
+      "a3": "We operate across Europe. We can deploy on-site teams in Turkey, Germany, France, Italy, Spain and other EU countries.",
+      "q4": "How soon can a project start?",
+      "a4": "After contract signing, we can assemble your project team and start operations within 2-4 weeks. For urgent projects, faster starts are possible."
+    },
+    "ctaSection": {
+      "title": "Let's Launch Your Enterprise Project",
+      "subtitle": "We are ready to develop custom solutions for your large-scale quality projects. Let's plan your project with our expert team.",
+      "primary": "Request Enterprise Quote",
+      "phone": "+49 89 123 456 789"
+    }
+  },
     "title": "Enterprise Solutions",
     "subtitle": "Customized quality engineering services for large-scale projects",
     "contactSales": "Contact Sales Team",
+    "hero": {
+      "title": "Enterprise Solutions",
+      "subtitle": "Customized quality engineering services for large-scale projects",
+      "primary": "Get Custom Quote",
+      "secondary": "Talk to Experts"
+    },
+    "why": {
+      "title": "Why Enterprise Solutions?",
+      "subtitle": "Learn why we are the right choice for your large-scale projects",
+      "expertise": {
+        "title": "Proven Expertise",
+        "bullet1": "15+ years of industry experience with automotive quality standards",
+        "bullet2": "Experience working with Fortune 500 companies",
+        "bullet3": "International certifications and accreditations"
+      },
+      "team": {
+        "title": "Dedicated Team",
+        "bullet1": "Expert team assigned to your project",
+        "bullet2": "24/7 customer service and support",
+        "bullet3": "Project manager assignment and regular reporting"
+      }
+    },
+    "cta": {
+      "title": "Get Your Custom Offer",
+      "subtitle": "We develop custom solutions for every enterprise customer. Let's analyze your needs and prepare a tailored offer.",
+      "primary": "Request Detailed Quote",
+      "secondary": "Schedule a Call"
+    },
+    "faq": {
+      "title": "FAQ About Enterprise Solutions",
+      "q1": "How are enterprise solutions priced?",
+      "a1": "Every enterprise project is unique. We prepare a custom price offer based on your project scope, duration, location and needs. Minimum investment levels apply.",
+      "q2": "What is the minimum contract duration?",
+      "a2": "For enterprise projects, the minimum contract duration is 24 months. For large projects, longer-term strategic partnerships are possible.",
+      "q3": "Which countries do you serve?",
+      "a3": "We operate across Europe. We can deploy on-site teams in Turkey, Germany, France, Italy, Spain and other EU countries.",
+      "q4": "How soon can a project start?",
+      "a4": "After contract signing, we can assemble your project team and start operations within 2-4 weeks. For urgent projects, faster starts are possible."
+    },
+    "ctaSection": {
+      "title": "Let's Launch Your Enterprise Project",
+      "subtitle": "We are ready to develop custom solutions for your large-scale quality projects. Let's plan your project with our expert team.",
+      "primary": "Request Enterprise Quote",
+      "phone": "+49 89 123 456 789"
+    },
     "starter": {
       "title": "Starter",
       "subtitle": "On-Site Rapid Response",
@@ -806,17 +630,17 @@
       "title": "Why Enterprise Solutions?",
       "subtitle": "Learn why we are the right choice for large-scale projects",
       "expertise": "Proven Expertise",
-      "expertiseBullets": {
-        "0": "15+ years of industry experience with automotive quality standards",
-        "1": "Experience working with Fortune 500 companies",
-        "2": "International certifications and accreditations"
-      },
+      "expertiseBullets": [
+        "15+ years of industry experience with automotive quality standards",
+        "Experience working with Fortune 500 companies",
+        "International certifications and accreditations"
+      ],
       "team": "Dedicated Team",
-      "teamBullets": {
-        "0": "Expert team assigned to your project",
-        "1": "24/7 customer service and support",
-        "2": "Project manager assignment and regular reporting"
-      },
+      "teamBullets": [
+        "Expert team assigned to your project",
+        "24/7 customer service and support",
+        "Project manager assignment and regular reporting"
+      ],
       "ctaTitle": "Get Your Custom Offer",
       "ctaSubtitle": "We develop custom solutions for every enterprise customer. Let's analyze your needs and prepare a tailored offer.",
       "ctaRequest": "Request Detailed Quote",
@@ -1432,7 +1256,7 @@
         "certification": "Certification",
         "consultingDurationValue": "Flexible",
         "trainingFormatValue": "On-site/Remote",
-        "teamSizeValue": "1-5+ People",
+        "teamSizeValue": "1-50+ People",
         "certificationValue": "ISO Support"
       },
       "service1": {
@@ -1569,103 +1393,6 @@
         "b3Title": "Expert Team",
         "b3Desc": "Experienced professionals with deep expertise in advanced phase management"
       }
-    },
-    "qir": {
-      "heroTitle": "Quality Inspection & Rework",
-      "heroSubtitle": "Comprehensive quality inspection and rework services at customer and supplier locations",
-      "serviceTypesTitle": "Service Types",
-      "serviceTypesSubtitle": "We provide quality inspection and rework services at both customer and Tier1 supplier locations",
-      "customer": {
-        "title": "Quality Inspection & Rework @ Customer",
-        "subtitle": "At Customer Locations",
-        "description": "Comprehensive quality inspection and rework services at customer locations",
-        "f1": "On-site quality inspection teams",
-        "f2": "Immediate defect identification and containment",
-        "f3": "Professional rework and restoration services",
-        "f4": "Real-time quality monitoring and reporting"
-      },
-      "tier1": {
-        "title": "Quality Inspection & Rework @ Tier1",
-        "subtitle": "At Supplier Locations",
-        "description": "Quality inspection and rework services at Tier1 supplier locations",
-        "f1": "Supplier quality assessment and improvement",
-        "f2": "Supply chain quality optimization",
-        "f3": "Tier1 supplier relationship management",
-        "f4": "Quality standards implementation and monitoring"
-      },
-      "servicesTitle": "Our Quality Services",
-      "servicesSubtitle": "Professional quality inspection and rework services delivered at your location",
-      "featuresTitle": "Key Features:",
-      "service1": {
-        "title": "Visual Inspection",
-        "description": "Comprehensive visual inspection of products and components to identify defects and quality issues",
-        "f1": "Detailed visual examination",
-        "f2": "Defect classification and documentation",
-        "f3": "Quality standard compliance checking",
-        "f4": "Real-time inspection reporting"
-      },
-      "service2": {
-        "title": "Rework Services",
-        "description": "Professional rework and restoration services to bring products back to quality standards",
-        "f1": "Defect correction and repair",
-        "f2": "Quality restoration processes",
-        "f3": "Re-inspection and verification",
-        "f4": "Quality assurance documentation"
-      },
-      "service3": {
-        "title": "Quality Analysis",
-        "description": "In-depth analysis of quality issues and root cause identification for continuous improvement",
-        "f1": "Root cause analysis",
-        "f2": "Quality trend analysis",
-        "f3": "Process improvement recommendations",
-        "f4": "Quality metrics and reporting"
-      },
-      "service4": {
-        "title": "Rapid Response",
-        "description": "Quick deployment and immediate response to quality issues and emergencies",
-        "f1": "24-72 hour response time",
-        "f2": "Emergency quality intervention",
-        "f3": "Immediate containment actions",
-        "f4": "Rapid team deployment"
-      },
-      "processTitle": "Our Process",
-      "processSubtitle": "Systematic approach to quality inspection and rework services",
-      "process": {
-        "s1Title": "Issue Identification",
-        "s1Desc": "Quick assessment of quality problems and immediate containment",
-        "s2Title": "Team Deployment",
-        "s2Desc": "Rapid deployment of quality inspection and rework teams",
-        "s3Title": "Quality Assessment",
-        "s3Desc": "Comprehensive inspection and defect classification",
-        "s4Title": "Rework Execution",
-        "s4Desc": "Professional rework and quality restoration",
-        "s5Title": "Verification & Handover",
-        "s5Desc": "Quality verification and customer handover"
-      },
-      "benefitsTitle": "Why Choose Our Quality Services?",
-      "benefits": {
-        "b1Title": "On-Site Service",
-        "b1Desc": "Quality inspection and rework services delivered directly at your location",
-        "b2Title": "Rapid Response",
-        "b2Desc": "Quick deployment and immediate response to quality issues",
-        "b3Title": "Expert Team",
-        "b3Desc": "Professional quality engineers with extensive experience"
-      },
-      "highlightsTitle": "Service Highlights",
-      "highlights": {
-        "responseTime": "Response Time",
-        "responseTimeValue": "24-72 Hours",
-        "serviceLocation": "Service Location",
-        "serviceLocationValue": "On-Site",
-        "teamSize": "Team Size",
-        "teamSizeValue": "2-8 Engineers",
-        "qualityStandards": "Quality Standards",
-        "qualityStandardsValue": "ISO/TS 16949"
-      },
-      "ctaTitle": "Ready to Improve Your Quality?",
-      "ctaSubtitle": "Let our quality inspection and rework team help you maintain high standards at your location",
-      "ctaButton1": "Contact Us Today",
-      "ctaButton2": "View All Services"
     }
   }
 }
