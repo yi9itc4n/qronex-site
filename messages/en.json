@@ -649,6 +649,15 @@
       "title": "Explore Our Services",
       "subtitle": "Comprehensive services and industry experience to solve your quality problems",
       "viewDetails": "View Details",
+      "custom": {
+        "welcomeTitle": "Welcome — A New Competitor in Quality Services",
+        "welcomeDesc": "We deliver fast, reliable and data-driven quality solutions across Europe.",
+        "servicesTitle": "Services — End-to-End Quality Support",
+        "servicesDesc": "Tap a service to learn more and get started instantly.",
+        "locationsTitle": "Locations — On-site in Hours",
+        "locationsDesc": "Paris, Lyon, Nürnberg/Bamberg and expanding across Europe.",
+        "markersNote": "Markers: Paris, Lyon, Nürnberg/Bamberg"
+      },
       "s1": { "title": "On-Site Rapid Response", "description": "Resolve quality problems quickly with field intervention within 24-72 hours" },
       "s2": { "title": "Sorting & Containment", "description": "Secure your production with defective part sorting and inspection" },
       "s3": { "title": "Automotive Industry", "description": "Experience working with premium brands like BMW and Mercedes" },

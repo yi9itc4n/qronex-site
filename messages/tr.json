@@ -649,6 +649,15 @@
       "title": "Hizmetlerimizi Keşfedin",
       "subtitle": "Kalite problemlerinizi çözmek için sunduğumuz kapsamlı hizmetler ve sektör deneyimimiz",
       "viewDetails": "Detayları Gör",
+      "custom": {
+        "welcomeTitle": "Hoş Geldiniz — Kalite Hizmetlerinde Yeni Bir Rakip",
+        "welcomeDesc": "Avrupa genelinde hızlı, güvenilir ve veri odaklı kalite çözümleri sunuyoruz.",
+        "servicesTitle": "Hizmetler — Uçtan Uca Kalite Desteği",
+        "servicesDesc": "Bir hizmete dokunarak detayları öğrenin ve hemen başlayın.",
+        "locationsTitle": "Lokasyonlar — Saatler İçinde Sahada",
+        "locationsDesc": "Paris, Lyon, Nürnberg/Bamberg ve Avrupa genelinde büyüyoruz.",
+        "markersNote": "İşaretler: Paris, Lyon, Nürnberg/Bamberg"
+      },
       "s1": { "title": "Yerinde Hızlı Müdahale", "description": "24-72 saat içinde sahada müdahale ile kalite problemlerinizi hızla çözün" },
       "s2": { "title": "Sorting & Containment", "description": "Hatalı parçaları ayırma ve kontrol ile üretim süreçlerinizi güvenli hale getirin" },
       "s3": { "title": "Otomotiv Sektörü", "description": "BMW, Mercedes gibi premium markalarla çalışma deneyimi" },

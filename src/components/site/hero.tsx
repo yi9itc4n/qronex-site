@@ -11,66 +11,52 @@ import {
   Globe, 
   CheckCircle,
   ChevronLeft,
-  ChevronRight,
-  Wrench,
-  Factory,
-  Award,
-  TrendingUp,
-  Shield
+  ChevronRight
 } from "lucide-react";
+import Image from "next/image";
 import { useState, useEffect } from "react";
 
 export function Hero() {
   const t = useTranslations("home.hero");
   const s = useTranslations("home.slideshow");
+  const sc = useTranslations("home.slideshow.custom");
+  const nav = useTranslations("navigation");
   const [currentSlide, setCurrentSlide] = useState(0);
   const [animationKey, setAnimationKey] = useState(0);
 
   const slides = [
     {
       id: 1,
-      title: s("s1.title"),
-      description: s("s1.description"),
-      icon: Wrench,
-      link: "/services/on-site-rapid-response",
-      color: "from-blue-600/20 to-blue-800/20",
-      iconColor: "text-blue-400"
+      type: "welcome" as const,
+      title: sc("welcomeTitle"),
+      description: sc("welcomeDesc"),
+      link: "/about",
+      image: {
+        src: "/images/hero/welcome.jpg",
+        alt: "Modern industrial environment"
+      }
     },
     {
       id: 2,
-      title: s("s2.title"),
-      description: s("s2.description"),
-      icon: Shield,
-      link: "/services/sorting-containment",
-      color: "from-teal-600/20 to-teal-800/20",
-      iconColor: "text-teal-400"
+      type: "services" as const,
+      title: sc("servicesTitle"),
+      description: sc("servicesDesc"),
+      link: "/services",
+      image: {
+        src: "/images/hero/services.jpg",
+        alt: "Engineers collaborating in factory"
+      }
     },
     {
       id: 3,
-      title: s("s3.title"),
-      description: s("s3.description"),
-      icon: Factory,
-      link: "/industries/automotive-oem",
-      color: "from-cyan-600/20 to-cyan-800/20",
-      iconColor: "text-cyan-400"
-    },
-    {
-      id: 4,
-      title: s("s4.title"),
-      description: s("s4.description"),
-      icon: Award,
-      link: "/services/quality-engineering",
-      color: "from-emerald-600/20 to-emerald-800/20",
-      iconColor: "text-emerald-400"
-    },
-    {
-      id: 5,
-      title: s("s5.title"),
-      description: s("s5.description"),
-      icon: TrendingUp,
-      link: "/case-studies",
-      color: "from-sky-600/20 to-sky-800/20",
-      iconColor: "text-sky-400"
+      type: "locations" as const,
+      title: sc("locationsTitle"),
+      description: sc("locationsDesc"),
+      link: "/contact",
+      image: {
+        src: "/images/hero/3d-rendering-planet-earth.jpg",
+        alt: "3D Earth with European locations"
+      }
     }
   ];
 
@@ -89,64 +75,113 @@ export function Hero() {
     setAnimationKey(prev => prev + 1);
   };
 
-  // Auto-advance slides every 5 seconds
+  // Auto-advance slides (slower)
   useEffect(() => {
     const timer = setInterval(() => {
       setCurrentSlide((prev) => (prev + 1) % slides.length);
       setAnimationKey(prev => prev + 1);
-    }, 5000);
+    }, 9000);
     return () => clearInterval(timer);
   }, [slides.length]);
 
   return (
     <>
           {/* Slideshow Section - Top Position */}
-    <section className="bg-gradient-to-br from-slate-900 via-blue-900 to-teal-900">
+    <section className="bg-slate-950">
         <div className="w-full">
 
           {/* Slideshow Container - Full Width */}
           <div className="relative w-full">
             {/* Slide */}
             <div className="relative overflow-hidden">
-                          <div 
+              <div 
               className="flex transition-transform duration-500 ease-in-out"
               style={{ transform: `translateX(-${currentSlide * 100}%)` }}
             >
-                            {slides.map((slide) => (
+                {slides.map((slide) => (
                 <div key={`${slide.id}-${currentSlide}`} className="w-full flex-shrink-0">
-                  <div className={`relative p-8 lg:p-12 bg-gradient-to-br ${slide.color} border-y border-white/20 min-h-[420px] lg:min-h-[560px]`}>
-                    <div className="container mx-auto min-h-[420px] lg:min-h-[560px] flex items-center">
-                      <div className="grid grid-cols-1 lg:grid-cols-2 gap-10 lg:gap-16 items-center w-full">
+                  <div className={`relative border-y border-white/10 min-h-[420px] lg:min-h-[560px]`}>
+                    <div className="absolute inset-0 overflow-hidden">
+                      <Image
+                        src={slide.image.src}
+                        alt={slide.image.alt}
+                        fill
+                        priority
+                        sizes="100vw"
+                        className="object-cover will-change-transform animate-slow-zoom"
+                      />
+                      <div className="absolute inset-0 bg-gradient-to-r from-black/70 via-black/50 to-transparent" />
+                      
+                      {/* Location markers that move with the image */}
+                      {slide.type === "locations" && (
+                        <div className="absolute inset-0">
+                          {/* Paris marker */}
+                          <span className="absolute left-[49.5%] top-[58.2%] -translate-x-1/2 -translate-y-1/2 z-10">
+                            <span className="block w-5 h-5 rounded-full bg-rose-500 ring-2 ring-white/90 shadow-xl animate-pulse" title="Paris, France" />
+                          </span>
+                          {/* Lyon marker */}
+                          <span className="absolute left-[49.4%] top-[63.0%] -translate-x-1/2 -translate-y-1/2 z-10">
+                            <span className="block w-5 h-5 rounded-full bg-emerald-400 ring-2 ring-white/90 shadow-xl animate-pulse" title="Lyon, France" />
+                          </span>
+                          {/* Nuremberg marker */}
+                          <span className="absolute left-[52.0%] top-[59.2%] -translate-x-1/2 -translate-y-1/2 z-10">
+                            <span className="block w-5 h-5 rounded-full bg-sky-400 ring-2 ring-white/90 shadow-xl animate-pulse" title="Nürnberg/Bamberg, Germany" />
+                          </span>
+                        </div>
+                      )}
+                    </div>
+                    <div className="relative container mx-auto min-h-[420px] lg:min-h-[560px] flex items-end px-8 lg:px-12 pb-10 lg:pb-14">
+                      <div className="grid grid-cols-1 lg:grid-cols-2 gap-10 lg:gap-16 items-end w-full">
                         {/* Content - Left Side */}
-                        <div className="space-y-6 lg:pr-8">
-                          <div key={`icon-${animationKey}`} className={`inline-flex p-3 rounded-xl bg-white/10 ${slide.iconColor} animate-fadeIn`}>
-                            <slide.icon className="h-8 w-8" />
-                          </div>
-                          <h3 key={`title-${animationKey}`} className="text-2xl lg:text-4xl font-bold text-white animate-fadeIn animation-delay-100">
+                        <div className="space-y-6 lg:pr-8 max-w-2xl">
+                          <h3 key={`title-${animationKey}`} className={`text-2xl lg:text-4xl font-bold text-white ${currentSlide % 2 === 0 ? 'animate-slideInLeft' : 'animate-blurIn'} animation-delay-100`}>
                             {slide.title}
                           </h3>
-                          <p key={`desc-${animationKey}`} className="text-lg lg:text-xl text-gray-200 leading-relaxed animate-fadeIn animation-delay-200">
+                          <p key={`desc-${animationKey}`} className={`text-lg lg:text-xl text-gray-200 leading-relaxed ${currentSlide % 2 === 0 ? 'animate-fadeInUp' : 'animate-blurIn'} animation-delay-200`}>
                             {slide.description}
                           </p>
-                          <div key={`button-${animationKey}`} className="animate-fadeIn animation-delay-300">
-                            <Button 
-                              size="lg" 
-                              className="bg-white text-gray-900 hover:bg-white/90"
-                              asChild
-                            >
-                              <Link href={slide.link} className="flex items-center">
-                                {s("viewDetails")}
-                                <ArrowRight className="ml-2 h-4 w-4" />
-                              </Link>
-                            </Button>
-                          </div>
+                          {/* Per-slide content */}
+                          {slide.type === "welcome" && (
+                            <div key={`button-${animationKey}`} className="animate-fadeIn animation-delay-300">
+                              <Button size="lg" className="bg-white text-gray-900 hover:bg-white/90" asChild>
+                                <Link href={slide.link} className="flex items-center">
+                                  {nav("about")}
+                                  <ArrowRight className="ml-2 h-4 w-4" />
+                                </Link>
+                              </Button>
+                            </div>
+                          )}
+                          {slide.type === "services" && (
+                            <div className="grid grid-cols-2 sm:grid-cols-3 gap-3 max-w-xl animate-fadeIn animation-delay-300">
+                              {[
+                                { label: nav("onSiteRapidResponse"), href: "/services/on-site-rapid-response" },
+                                { label: nav("sortingContainment"), href: "/services/sorting-containment" },
+                                { label: nav("qualityEngineering"), href: "/services/quality-engineering" },
+                                { label: nav("residentEngineering"), href: "/services/resident-engineering" },
+                                { label: nav("consultingTraining"), href: "/services/consulting-training" },
+                                { label: nav("caseStudies"), href: "/case-studies" },
+                              ].map((svc) => (
+                                <Link key={svc.href} href={svc.href} className="bg-white/10 hover:bg-white/20 text-white text-sm px-3 py-2 rounded-md border border-white/20">
+                                  {svc.label}
+                                </Link>
+                              ))}
+                            </div>
+                          )}
+                          {slide.type === "locations" && (
+                            <div className="animate-fadeIn animation-delay-300 space-y-3">
+                              <Button size="lg" className="bg-white text-gray-900 hover:bg-white/90" asChild>
+                                <Link href={slide.link} className="flex items-center">
+                                  {nav("contact")}
+                                  <ArrowRight className="ml-2 h-4 w-4" />
+                                </Link>
+                              </Button>
+                            </div>
+                          )}
                         </div>
                         
-                        {/* Visual Element - Right Side */}
-                        <div key={`visual-${animationKey}`} className="hidden lg:flex justify-center animate-fadeIn animation-delay-150">
-                          <div className={`w-56 h-56 rounded-full bg-gradient-to-br ${slide.color.replace('/20', '/40')} flex items-center justify-center`}>
-                            <slide.icon className={`h-32 w-32 ${slide.iconColor}`} />
-                          </div>
+                        {/* Right side: empty for locations slide - markers now on image */}
+                        <div className="hidden lg:block relative min-h-[320px]">
+                          {/* Markers moved to image overlay */}
                         </div>
                       </div>
                     </div>
@@ -179,44 +214,30 @@ export function Hero() {
                 </button>
               </div>
             </div>
-            <div className="flex justify-center space-x-3 py-6">
-              {slides.map((_, index) => (
-                <button
-                  key={index}
-                  onClick={() => goToSlide(index)}
-                  className={`w-4 h-4 rounded-full transition-colors ${
-                    index === currentSlide 
-                      ? 'bg-white' 
-                      : 'bg-white/40 hover:bg-white/60'
-                  }`}
-                  aria-label={`Go to slide ${index + 1}`}
-                />
-              ))}
-            </div>
+            {/* Slide selection bar removed as requested */}
           </div>
         </div>
       </section>
 
-      <section className="relative hero-gradient text-white">
-      {/* Background pattern */}
-      <div className="absolute inset-0 bg-grid-white/[0.05] bg-grid-16" />
+      <section className="relative hero-gradient text-slate-900">
+      {/* Background pattern removed */}
       
       <div className="relative container mx-auto px-4 py-24 lg:py-32">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
           {/* Left content */}
           <div className="space-y-8">
             {/* Badge */}
-            <Badge variant="secondary" className="bg-blue-600/20 text-blue-300 border-blue-600/30">
+            <Badge variant="secondary" className="bg-blue-600/10 text-blue-600 border-blue-600/20">
               <Users className="h-3 w-3 mr-1" />
               {t("fieldEngineersEurope")}
             </Badge>
 
             {/* Main heading */}
             <div className="space-y-4">
-              <h1 className="text-4xl lg:text-6xl font-bold leading-tight hero-title">
+              <h1 className="text-4xl lg:text-6xl font-bold leading-tight hero-title text-slate-900" style={{ textShadow: 'none' }}>
                 {t("title")}
               </h1>
-              <p className="text-xl lg:text-2xl text-slate-200 leading-relaxed max-w-2xl">
+              <p className="text-xl lg:text-2xl text-slate-600 leading-relaxed max-w-2xl" style={{ textShadow: 'none' }}>
                 {t("subtitle")}
               </p>
             </div>
@@ -224,16 +245,16 @@ export function Hero() {
             {/* Key benefits */}
             <div className="grid grid-cols-1 sm:grid-cols-3 gap-4">
               <div className="flex items-center space-x-2">
-                <CheckCircle className="h-5 w-5 text-green-400 flex-shrink-0" />
-                <span className="text-sm">{t("responseTime24")}</span>
+                <CheckCircle className="h-5 w-5 text-green-600 flex-shrink-0" />
+                <span className="text-sm text-slate-700">{t("responseTime24")}</span>
               </div>
               <div className="flex items-center space-x-2">
-                <CheckCircle className="h-5 w-5 text-green-400 flex-shrink-0" />
-                <span className="text-sm">{t("countryCoverage")}</span>
+                <CheckCircle className="h-5 w-5 text-green-600 flex-shrink-0" />
+                <span className="text-sm text-slate-700">{t("countryCoverage")}</span>
               </div>
               <div className="flex items-center space-x-2">
-                <CheckCircle className="h-5 w-5 text-green-400 flex-shrink-0" />
-                <span className="text-sm">{t("successRate")}</span>
+                <CheckCircle className="h-5 w-5 text-green-600 flex-shrink-0" />
+                <span className="text-sm text-slate-700">{t("successRate")}</span>
               </div>
             </div>
 
@@ -245,7 +266,7 @@ export function Hero() {
                   <ArrowRight className="ml-2 h-4 w-4" />
                 </Link>
               </Button>
-              <Button size="lg" variant="outline" className="bg-transparent border-white text-white hover:bg-white hover:text-slate-900" asChild>
+              <Button size="lg" variant="outline" className="bg-transparent border-slate-300 text-slate-700 hover:bg-slate-50 hover:text-slate-900" asChild>
                 <Link href="/contact?service=start">
                   {t("cta2")}
                 </Link>
@@ -258,46 +279,38 @@ export function Hero() {
           {/* Right content - Stats */}
           <div className="grid grid-cols-2 gap-6">
             {/* Stat 1 */}
-            <div className="bg-white/10 rounded-xl p-6 border border-white/20">
-              <Clock className="h-8 w-8 text-blue-400 mb-4" />
-              <div className="text-3xl font-bold mb-2">24h</div>
-              <div className="text-sm text-slate-300">{t("responseTimeAvg")}</div>
+            <div className="bg-slate-50 rounded-xl p-6 border border-slate-200">
+              <Clock className="h-8 w-8 text-blue-600 mb-4" />
+              <div className="text-3xl font-bold mb-2 text-slate-900">24h</div>
+              <div className="text-sm text-slate-600">{t("responseTimeAvg")}</div>
             </div>
 
             {/* Stat 2 */}
-            <div className="bg-white/10 rounded-xl p-6 border border-white/20">
-              <Users className="h-8 w-8 text-green-400 mb-4" />
-              <div className="text-3xl font-bold mb-2">50+</div>
-              <div className="text-sm text-slate-300">{t("activeFieldEngineers")}</div>
+            <div className="bg-slate-50 rounded-xl p-6 border border-slate-200">
+              <Users className="h-8 w-8 text-green-600 mb-4" />
+              <div className="text-3xl font-bold mb-2 text-slate-900">50+</div>
+              <div className="text-sm text-slate-600">{t("activeFieldEngineers")}</div>
             </div>
 
             {/* Stat 3 */}
-            <div className="bg-white/10 rounded-xl p-6 border border-white/20">
-              <Globe className="h-8 w-8 text-purple-400 mb-4" />
-              <div className="text-3xl font-bold mb-2">15</div>
-              <div className="text-sm text-slate-300">{t("countriesServed")}</div>
+            <div className="bg-slate-50 rounded-xl p-6 border border-slate-200">
+              <Globe className="h-8 w-8 text-purple-600 mb-4" />
+              <div className="text-3xl font-bold mb-2 text-slate-900">15</div>
+              <div className="text-sm text-slate-600">{t("countriesServed")}</div>
             </div>
 
             {/* Stat 4 */}
-            <div className="bg-white/10 rounded-xl p-6 border border-white/20">
-              <CheckCircle className="h-8 w-8 text-yellow-400 mb-4" />
-              <div className="text-3xl font-bold mb-2">48h</div>
-              <div className="text-sm text-slate-300">{t("solutionTimeAvg")}</div>
+            <div className="bg-slate-50 rounded-xl p-6 border border-slate-200">
+              <CheckCircle className="h-8 w-8 text-yellow-600 mb-4" />
+              <div className="text-3xl font-bold mb-2 text-slate-900">48h</div>
+              <div className="text-sm text-slate-600">{t("solutionTimeAvg")}</div>
             </div>
           </div>
         </div>
 
-        {/* Scroll indicator */}
-        <div className="absolute bottom-8 left-1/2 transform -translate-x-1/2 animate-bounce">
-          <div className="w-6 h-10 border-2 border-white/50 rounded-full flex justify-center">
-            <div className="w-1 h-3 bg-white/50 rounded-full mt-2 animate-pulse" />
-          </div>
-        </div>
       </div>
 
-      {/* Background shapes */}
-      <div className="absolute top-20 right-20 w-72 h-72 bg-blue-600/10 rounded-full blur-3xl" />
-      <div className="absolute bottom-20 left-20 w-96 h-96 bg-purple-600/10 rounded-full blur-3xl" />
+      {/* Background shapes removed */}
     </section>
 
     
