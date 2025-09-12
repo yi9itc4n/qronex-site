@@ -1,7 +1,7 @@
 "use client";
 
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
-import { Target, Shield, Heart, Lightbulb } from 'lucide-react';
+import { Target, Shield, Heart, Lightbulb, Users, Leaf, Zap } from 'lucide-react';
 import { Link } from '@/i18n';
 import { useTranslations } from 'next-intl';
 
@@ -9,8 +9,10 @@ import { useTranslations } from 'next-intl';
 const values = [
   { icon: Target, color: 'blue', titleKey: 'values.items.excellence.title', descKey: 'values.items.excellence.description' },
   { icon: Shield, color: 'green', titleKey: 'values.items.reliability.title', descKey: 'values.items.reliability.description' },
-  { icon: Lightbulb, color: 'purple', titleKey: 'values.items.innovation.title', descKey: 'values.items.innovation.description' },
-  { icon: Heart, color: 'orange', titleKey: 'values.items.customerFocus.title', descKey: 'values.items.customerFocus.description' }
+  { icon: Users, color: 'purple', titleKey: 'values.items.collaboration.title', descKey: 'values.items.collaboration.description' },
+  { icon: Heart, color: 'orange', titleKey: 'values.items.customerFocus.title', descKey: 'values.items.customerFocus.description' },
+  { icon: Leaf, color: 'teal', titleKey: 'values.items.sustainability.title', descKey: 'values.items.sustainability.description' },
+  { icon: Zap, color: 'yellow', titleKey: 'values.items.quickMobility.title', descKey: 'values.items.quickMobility.description' }
 ];
 
 
@@ -19,7 +21,9 @@ const getColorClasses = (color: string) => {
     blue: 'text-blue-green bg-blue-green-light',
     green: 'text-blue-green bg-teal-light',
     purple: 'text-blue-green bg-blue-green-light',
-    orange: 'text-blue-green bg-teal-light'
+    orange: 'text-blue-green bg-teal-light',
+    teal: 'text-teal-600 bg-teal-50',
+    yellow: 'text-yellow-600 bg-yellow-50'
   };
   return colors[color as keyof typeof colors] || colors.blue;
 };
@@ -67,7 +71,7 @@ export default function AboutPage() {
             <p className="text-xl text-gray-600 max-w-3xl mx-auto">{t('values.subtitle')}</p>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {values.map((value, index) => {
               const Icon = value.icon;
               const colorClasses = getColorClasses(value.color);

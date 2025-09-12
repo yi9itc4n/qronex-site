@@ -650,8 +650,8 @@
       "subtitle": "Comprehensive services and industry experience to solve your quality problems",
       "viewDetails": "View Details",
       "custom": {
-        "welcomeTitle": "Welcome — A New Competitor in Quality Services",
-        "welcomeDesc": "We deliver fast, reliable and data-driven quality solutions across Europe.",
+        "welcomeTitle": "Introducing QroneX — European Quality Engineering",
+        "welcomeDesc": "A new force in European quality solutions. QroneX delivers precision engineering and rapid response through our experienced field teams across Europe.",
         "servicesTitle": "Services — End-to-End Quality Support",
         "servicesDesc": "Tap a service to learn more and get started instantly.",
         "locationsTitle": "Locations — On-site in Hours",
@@ -1163,9 +1163,9 @@
     "heroSubtitle": "QroneX is a leading quality consultancy providing fast and accurate on-site solutions to quality problems experienced by Tier 1 suppliers with OEMs, with field-ready engineers based in Europe.",
     "visionMission": "Our Vision and Mission",
     "visionTitle": "Our Vision",
-    "visionText": "To be the most trusted quality consulting partner in Europe, an indispensable guide in our customers' journey to quality excellence.",
+    "visionText": "To be the trusted partner for Tier 1 companies on all kind of customer quality services—setting the standard for excellence, driving the quality",
     "missionTitle": "Our Mission",
-    "missionText": "With the deep expertise of our field engineers and up-to-date technological solutions, we enable our customers to achieve their quality goals and support sustainable success.",
+    "missionText": "We empower Turkey's leading automotive Tier-1 manufacturers with European-quality resident engineering solutions. Our mission is simple: deliver the reliable and fastest service—safely and sustainably.",
     "stats": {
       "countries": "Countries Served",
       "engineers": "Field Engineers",
@@ -1175,12 +1175,14 @@
     "values": {
       "title": "Our Values",
       "subtitle": "The core values that shape our work culture and customer relationships at QroneX",
-      "items": {
-        "excellence": { "title": "Excellence", "description": "We aim for the highest quality standards in every project and focus on exceeding our customers' expectations." },
-        "reliability": { "title": "Reliability", "description": "We provide consistent, timely, and effective solutions to earn our customers' trust." },
-        "innovation": { "title": "Innovation", "description": "We ensure continuous improvement by using the latest technologies and methodologies." },
-        "customerFocus": { "title": "Customer Focus", "description": "Our customers' success is our success. Understanding their needs is our priority." }
-      }
+        "items": {
+          "excellence": { "title": "Excellence", "description": "We aim for the highest quality standards in every project and focus on exceeding our customers' expectations." },
+          "reliability": { "title": "A Reliable Partner", "description": "We provide consistent, timely, and effective solutions to earn our customers' trust." },
+          "collaboration": { "title": "Built on Collaboration", "description": "Quality is a team sport. We work shoulder-to-shoulder with devs, ops, and clients to deliver seamless, defect-free experiences." },
+          "customerFocus": { "title": "Customer-Focused Quality", "description": "We engineer quality that customers can feel—from first click to final release." },
+          "sustainability": { "title": "Sustainability", "description": "Building quality solutions that last, with environmental responsibility and long-term value creation." },
+          "quickMobility": { "title": "Quick Mobility", "description": "Rapid response and agile solutions for fast-moving quality challenges." }
+        }
     },
     "leadership": {
       "title": "Our Leadership Team",

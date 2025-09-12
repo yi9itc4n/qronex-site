@@ -55,7 +55,7 @@ export function Hero() {
       description: sc("locationsDesc"),
       link: "/contact",
       image: {
-        src: "/images/hero/locations.jpg",
+        src: "/images/hero/world.jpg",
         alt: "European locations map"
       }
     }
@@ -142,15 +142,15 @@ export function Hero() {
                       <div className="grid grid-cols-1 lg:grid-cols-2 gap-10 lg:gap-16 items-end w-full">
                         {/* Content - Left Side */}
                         <div className="space-y-6 lg:pr-8 max-w-2xl">
-                          <h3 key={`title-${animationKey}`} className={`text-2xl lg:text-4xl font-bold text-white ${currentSlide % 2 === 0 ? 'animate-slideInLeft' : 'animate-blurIn'} animation-delay-100`}>
+                          <h3 key={`title-${animationKey}`} className={`text-2xl lg:text-4xl font-bold text-white opacity-0 ${currentSlide % 2 === 0 ? 'animate-slideInLeft' : 'animate-blurIn'} animation-delay-100`}>
                             {slide.title}
                           </h3>
-                          <p key={`desc-${animationKey}`} className={`text-lg lg:text-xl text-gray-200 leading-relaxed ${currentSlide % 2 === 0 ? 'animate-fadeInUp' : 'animate-blurIn'} animation-delay-200`}>
+                          <p key={`desc-${animationKey}`} className={`text-lg lg:text-xl text-gray-200 leading-relaxed opacity-0 ${currentSlide % 2 === 0 ? 'animate-fadeInUp' : 'animate-blurIn'} animation-delay-200`}>
                             {slide.description}
                           </p>
                           {/* Per-slide content */}
                           {slide.type === "welcome" && (
-                            <div key={`button-${animationKey}`} className="animate-fadeIn animation-delay-300">
+                            <div key={`button-${animationKey}`} className="opacity-0 animate-fadeIn animation-delay-300">
                               <Button size="lg" className="bg-white text-gray-900 hover:bg-white/90" asChild>
                                 <Link href={slide.link} className="flex items-center">
                                   {nav("about")}
@@ -160,7 +160,7 @@ export function Hero() {
                             </div>
                           )}
                           {slide.type === "services" && (
-                            <div className="grid grid-cols-2 sm:grid-cols-3 gap-3 max-w-xl animate-fadeIn animation-delay-300">
+                            <div className="grid grid-cols-2 sm:grid-cols-3 gap-3 max-w-xl opacity-0 animate-fadeIn animation-delay-300">
                               {[
                                 { label: nav("onSiteRapidResponse"), href: "/services/on-site-rapid-response" },
                                 { label: nav("sortingContainment"), href: "/services/sorting-containment" },
@@ -176,7 +176,7 @@ export function Hero() {
                             </div>
                           )}
                           {slide.type === "locations" && (
-                            <div className="animate-fadeIn animation-delay-300 space-y-3">
+                            <div className="opacity-0 animate-fadeIn animation-delay-300 space-y-3">
                               <Button size="lg" className="bg-white text-gray-900 hover:bg-white/90" asChild>
                                 <Link href={slide.link} className="flex items-center">
                                   {nav("contact")}
@@ -227,7 +227,7 @@ export function Hero() {
         </div>
       </section>
 
-      <section className="relative hero-gradient text-slate-900">
+      <section className="relative about-background text-slate-900">
       {/* Background pattern removed */}
       
       <div className="relative container mx-auto px-4 py-24 lg:py-32">

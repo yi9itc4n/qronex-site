@@ -96,6 +96,10 @@
 
 /* Custom styles for QroneX */
 .hero-gradient {
+  background: linear-gradient(135deg, #0f172a 0%, #1e3a8a 50%, #0d9488 100%);
+}
+
+.about-background {
   background: #ffffff;
 }
 
@@ -269,39 +273,39 @@
 }
 
 .animate-slideInLeft {
-  animation: slideInLeft 0.6s ease-out forwards;
+  animation: slideInLeft 1.2s ease-out forwards;
 }
 
 .animate-slideInRight {
-  animation: slideInRight 0.6s ease-out forwards;
+  animation: slideInRight 1.2s ease-out forwards;
 }
 
 .animate-fadeInUp {
-  animation: fadeInUp 0.6s ease-out forwards;
+  animation: fadeInUp 1.2s ease-out forwards;
 }
 
 .animate-fadeIn {
-  animation: fadeIn 0.6s ease-out forwards;
+  animation: fadeIn 1.2s ease-out forwards;
 }
 
 .animate-blurIn {
-  animation: blurIn 700ms ease-out forwards;
+  animation: blurIn 1.4s ease-out forwards;
 }
 
 .animation-delay-100 {
-  animation-delay: 100ms;
-}
-
-.animation-delay-150 {
-  animation-delay: 150ms;
-}
-
-.animation-delay-200 {
   animation-delay: 200ms;
 }
 
-.animation-delay-300 {
+.animation-delay-150 {
   animation-delay: 300ms;
+}
+
+.animation-delay-200 {
+  animation-delay: 400ms;
+}
+
+.animation-delay-300 {
+  animation-delay: 600ms;
 }
 
 .animation-delay-400 {

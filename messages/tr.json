@@ -650,8 +650,8 @@
       "subtitle": "Kalite problemlerinizi çözmek için sunduğumuz kapsamlı hizmetler ve sektör deneyimimiz",
       "viewDetails": "Detayları Gör",
       "custom": {
-        "welcomeTitle": "Hoş Geldiniz — Kalite Hizmetlerinde Yeni Bir Rakip",
-        "welcomeDesc": "Avrupa genelinde hızlı, güvenilir ve veri odaklı kalite çözümleri sunuyoruz.",
+        "welcomeTitle": "QroneX'i Tanıyın — Avrupa Kalite Mühendisliği",
+        "welcomeDesc": "Avrupa kalite çözümlerinde yeni bir güç. QroneX, deneyimli saha ekiplerimiz aracılığıyla hassas mühendislik ve hızlı müdahale sunar.",
         "servicesTitle": "Hizmetler — Uçtan Uca Kalite Desteği",
         "servicesDesc": "Bir hizmete dokunarak detayları öğrenin ve hemen başlayın.",
         "locationsTitle": "Lokasyonlar — Saatler İçinde Sahada",
@@ -1163,9 +1163,9 @@
     "heroSubtitle": "QroneX; Avrupa'da yerleşik, sahada görev almaya hazır tecrübeli mühendis kadrosuyla Tier 1 tedarikçilerin OEM ile yaşadığı kalite problemlerine yerinde hızlı ve doğru çözümler sunan lider kalite danışmanlık şirketidir.",
     "visionMission": "Vizyonumuz ve Misyonumuz",
     "visionTitle": "Vizyonumuz",
-    "visionText": "Avrupa'nın en güvenilir kalite danışmanlık partneri olarak, müşterilerimizin kalite mükemmeliyeti yolculuğunda vazgeçilmez bir rehber olmak.",
+    "visionText": "Tier 1 şirketlerin tüm müşteri kalite hizmetlerinde güvenilir partneri olmak—mükemmellik standardını belirlemek, kaliteyi yönlendirmek",
     "missionTitle": "Misyonumuz",
-    "missionText": "Saha mühendislerimizin derin uzmanlığı ve güncel teknolojik çözümlerle, müşterilerimizin kalite hedeflerine ulaşmalarını sağlamak ve sürdürülebilir başarı elde etmelerini desteklemek.",
+    "missionText": "Türkiye'nin önde gelen otomotiv Tier-1 üreticilerini Avrupa kalitesinde resident mühendislik çözümleriyle güçlendiriyoruz. Misyonumuz basit: güvenilir ve en hızlı hizmeti—güvenli ve sürdürülebilir şekilde sunmak.",
     "stats": {
       "countries": "Ülkede Hizmet",
       "engineers": "Saha Mühendisi",
@@ -1175,12 +1175,14 @@
     "values": {
       "title": "Değerlerimiz",
       "subtitle": "QroneX olarak çalışma kültürümüzü ve müşteri ilişkilerimizi şekillendiren temel değerlerimiz",
-      "items": {
-        "excellence": { "title": "Mükemmellik", "description": "Her projede en yüksek kalite standartlarını hedefliyoruz ve müşterilerimizin beklentilerini aşmaya odaklanıyoruz." },
-        "reliability": { "title": "Güvenilirlik", "description": "Müşterilerimizin güvenini kazanmak için tutarlı, zamanında ve etkili çözümler sunuyoruz." },
-        "innovation": { "title": "İnovasyon", "description": "Sektördeki en son teknolojileri ve metodolojileri kullanarak sürekli gelişim sağlıyoruz." },
-        "customerFocus": { "title": "Müşteri Odaklılık", "description": "Müşterilerimizin başarısı bizim başarımızdır. Onların ihtiyaçlarını anlamak önceliğimizdir." }
-      }
+        "items": {
+          "excellence": { "title": "Mükemmellik", "description": "Her projede en yüksek kalite standartlarını hedefliyoruz ve müşterilerimizin beklentilerini aşmaya odaklanıyoruz." },
+          "reliability": { "title": "Güvenilir Partner", "description": "Müşterilerimizin güvenini kazanmak için tutarlı, zamanında ve etkili çözümler sunuyoruz." },
+          "collaboration": { "title": "İşbirliği Üzerine Kurulu", "description": "Kalite bir takım oyunudur. Geliştiriciler, operasyonlar ve müşterilerle omuz omuza çalışarak sorunsuz, hatasız deneyimler sunuyoruz." },
+          "customerFocus": { "title": "Müşteri Odaklı Kalite", "description": "Müşterilerin hissedebileceği kaliteyi mühendislikle üretiyoruz—ilk tıklamadan son sürüme kadar." },
+          "sustainability": { "title": "Sürdürülebilirlik", "description": "Uzun ömürlü kalite çözümleri inşa ediyoruz, çevresel sorumluluk ve uzun vadeli değer yaratma ile." },
+          "quickMobility": { "title": "Hızlı Hareketlilik", "description": "Hızla değişen kalite zorlukları için hızlı yanıt ve çevik çözümler." }
+        }
     },
     "leadership": {
       "title": "Liderlik Ekibimiz",
