@@ -40,14 +40,14 @@ regionalManagers:
     countries: ["Polonya", "Çek Cumhuriyeti", "Slovakya", "Macaristan"]
 
 offices:
-  - id: "munich"
-    name: "München Merkez Ofis"
+  - id: "nurnberg"
+    name: "Nürnberg Merkez Ofis"
     address: "Jahn Str. 46A hirsdhaid 96114"
     phone: "+49 15234649852"
-    email: "munich@qronex.com"
+    email: "nurnberg@qronex.com"
     coordinates:
-      lat: 48.1351
-      lng: 11.5820
+      lat: 49.4521
+      lng: 11.0767
       
   - id: "paris"
     name: "Paris Ofis"

@@ -160,14 +160,12 @@ export function Hero() {
                             </div>
                           )}
                           {slide.type === "services" && (
-                            <div className="grid grid-cols-2 sm:grid-cols-3 gap-3 max-w-xl opacity-0 animate-fadeIn animation-delay-300">
+                            <div className="grid grid-cols-2 sm:grid-cols-2 gap-3 max-w-xl opacity-0 animate-fadeIn animation-delay-300">
                               {[
-                                { label: nav("onSiteRapidResponse"), href: "/services/on-site-rapid-response" },
-                                { label: nav("sortingContainment"), href: "/services/sorting-containment" },
-                                { label: nav("qualityEngineering"), href: "/services/quality-engineering" },
                                 { label: nav("residentEngineering"), href: "/services/resident-engineering" },
-                                { label: nav("consultingTraining"), href: "/services/consulting-training" },
-                                { label: nav("caseStudies"), href: "/case-studies" },
+                                { label: nav("qualityInspectionRework"), href: "/services/quality-inspection-rework" },
+                                { label: nav("operationalExcellence"), href: "/services/operational-excellence" },
+                                { label: nav("advancedProjectOperationalSupport"), href: "/services/advanced-project-operational-support" },
                               ].map((svc) => (
                                 <Link key={svc.href} href={svc.href} className="bg-white/10 hover:bg-white/20 text-white text-sm px-3 py-2 rounded-md border border-white/20">
                                   {svc.label}

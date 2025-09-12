@@ -10,7 +10,7 @@ const inter = Inter({
 });
 
 export const metadata: Metadata = {
-  title: "QroneX - Precision in Motion",
+  title: "QroneX - Precise Engineering and Quick Response",
   description: "European quality engineering solutions for automotive and industrial sectors. On-site rapid response, sorting & containment, and quality engineering services.",
 };
 

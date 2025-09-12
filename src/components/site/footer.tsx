@@ -101,28 +101,23 @@ export function Footer() {
             <h3 className="text-lg font-semibold mb-6">{t("footer.services")}</h3>
             <ul className="space-y-3">
               <li>
-                <Link href="/services/on-site-rapid-response" className="text-slate-300 hover:text-white transition-colors">
-                  On-Site Hızlı Müdahale
+                <Link href="/services/resident-engineering" className="text-slate-300 hover:text-white transition-colors">
+                  {t("navigation.residentEngineering")}
                 </Link>
               </li>
               <li>
-                <Link href="/services/sorting-containment" className="text-slate-300 hover:text-white transition-colors">
-                  Sorting & Containment
+                <Link href="/services/quality-inspection-rework" className="text-slate-300 hover:text-white transition-colors">
+                  {t("navigation.qualityInspectionRework")}
                 </Link>
               </li>
               <li>
-                <Link href="/services/quality-engineering" className="text-slate-300 hover:text-white transition-colors">
-                  Quality Engineering
+                <Link href="/services/operational-excellence" className="text-slate-300 hover:text-white transition-colors">
+                  {t("navigation.operationalExcellence")}
                 </Link>
               </li>
               <li>
-                <Link href="/services/technical-representation" className="text-slate-300 hover:text-white transition-colors">
-                  Technical Representation
-                </Link>
-              </li>
-              <li>
-                <Link href="/services/supplier-readiness" className="text-slate-300 hover:text-white transition-colors">
-                  Supplier Readiness
+                <Link href="/services/advanced-project-operational-support" className="text-slate-300 hover:text-white transition-colors">
+                  {t("navigation.advancedProjectOperationalSupport")}
                 </Link>
               </li>
             </ul>
@@ -132,11 +127,11 @@ export function Footer() {
           <div>
             <h3 className="text-lg font-semibold mb-6">{t("navigation.contact")}</h3>
             
-            {/* Munich Office */}
+            {/* Nürnberg Office */}
             <div className="mb-6">
               <h4 className="font-medium mb-3 flex items-center">
                 <MapPin className="h-4 w-4 mr-2" />
-                {t("home.contact.munichHeadOffice")}
+                {t("home.contact.nurnbergHeadOffice")}
               </h4>
               <div className="text-slate-300 space-y-2 text-sm">
                 <p>Jahn Str. 46A hirsdhaid 96114</p>

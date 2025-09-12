@@ -25,4 +25,4 @@ public/
     README.md ← This file
 ```
 
-The logo will appear in the top-left corner of the header with the "Precision in Motion" motto displayed elegantly below it.
+The logo will appear in the top-left corner of the header with the "precise engineering and quick response" motto displayed elegantly below it.

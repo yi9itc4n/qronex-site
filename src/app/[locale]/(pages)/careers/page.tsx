@@ -340,25 +340,6 @@ export default function CareersPage() {
             </p>
           </div>
 
-          {/* Quick Stats */}
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-8 mt-16">
-            <div className="text-center">
-              <div className="text-3xl lg:text-4xl font-bold mb-2">50+</div>
-              <div className="text-blue-200">{t("stats.team")}</div>
-            </div>
-            <div className="text-center">
-              <div className="text-3xl lg:text-4xl font-bold mb-2">15</div>
-              <div className="text-blue-200">{t("stats.countries")}</div>
-            </div>
-            <div className="text-center">
-              <div className="text-3xl lg:text-4xl font-bold mb-2">98%</div>
-              <div className="text-blue-200">{t("stats.satisfaction")}</div>
-            </div>
-            <div className="text-center">
-              <div className="text-3xl lg:text-4xl font-bold mb-2">4.8</div>
-              <div className="text-blue-200">{t("stats.glassdoor")}</div>
-            </div>
-          </div>
         </div>
       </section>
 
@@ -411,75 +392,35 @@ export default function CareersPage() {
             </p>
           </div>
 
-          <div className="space-y-6">
-            {createJobs(t).map((job) => (
-              <Card key={job.id} className={`p-6 card-hover bg-white shadow-md border-gray-200 ${job.featured ? 'border-blue-500 border-2' : ''}`}>
-                <div className="flex flex-col lg:flex-row lg:items-center lg:justify-between">
-                  <div className="flex-1">
-                    <div className="flex items-start justify-between mb-4">
-                      <div>
-                        <div className="flex items-center space-x-3 mb-2">
-                          <h3 className="text-xl font-bold text-gray-900">{job.title}</h3>
-                          {job.featured && (
-                            <Badge className="bg-orange-100 text-orange-800">
-                              {t("positions.featured")}
-                            </Badge>
-                          )}
-                          {job.remote && (
-                            <Badge className="bg-green-100 text-green-800">
-                              Remote
-                            </Badge>
-                          )}
-                        </div>
-                        <p className="text-blue-600 font-semibold mb-2">{job.department}</p>
-                        <p className="text-gray-600 leading-relaxed">{job.description}</p>
-                      </div>
-                    </div>
-
-                    <div className="grid grid-cols-2 md:grid-cols-4 gap-4 text-sm text-gray-600 mb-4">
-                      <div className="flex items-center">
-                        <MapPin className="h-4 w-4 mr-2" />
-                        {job.location}
-                      </div>
-                      <div className="flex items-center">
-                        <Clock className="h-4 w-4 mr-2" />
-                        {job.type}
-                      </div>
-                      <div className="flex items-center">
-                        <Users className="h-4 w-4 mr-2" />
-                        {job.experience}
-                      </div>
-                      <div className="flex items-center">
-                        <Briefcase className="h-4 w-4 mr-2" />
-                        {job.salary}
-                      </div>
-                    </div>
-
-                    <div className="flex flex-wrap gap-2">
-                      {job.requirements.slice(0, 3).map((req, index) => (
-                        <Badge key={index} variant="outline" className="text-xs">
-                          {req}
-                        </Badge>
-                      ))}
-                      {job.requirements.length > 3 && (
-                        <Badge variant="outline" className="text-xs">
-                          +{job.requirements.length - 3} daha
-                        </Badge>
-                      )}
-                    </div>
-                  </div>
-
-                  <div className="lg:ml-8 mt-4 lg:mt-0">
-                    <Button 
-                      onClick={() => handleApplyClick(job)}
-                      className="w-full lg:w-auto"
-                    >
-                      {t("positions.apply")}
-                    </Button>
-                  </div>
+          {/* No Current Openings Message */}
+          <div className="max-w-2xl mx-auto">
+            <Card className="p-12 text-center bg-white shadow-lg border-gray-200">
+              <div className="mb-6">
+                <div className="w-20 h-20 bg-gray-100 rounded-full flex items-center justify-center mx-auto mb-4">
+                  <Briefcase className="h-10 w-10 text-gray-400" />
                 </div>
-              </Card>
-            ))}
+                <h3 className="text-2xl font-bold text-gray-900 mb-4">
+                  No Current Openings
+                </h3>
+                <p className="text-lg text-gray-600 mb-6">
+                  We don't have any open positions at the moment, but we're always looking for talented individuals to join our team.
+                </p>
+                <p className="text-gray-500 mb-8">
+                  Feel free to send us your resume and we'll keep it on file for future opportunities.
+                </p>
+              </div>
+              
+              <div className="space-y-4">
+                <Button asChild className="w-full sm:w-auto">
+                  <Link href="/contact" className="inline-flex items-center">
+                    Send Your Resume
+                  </Link>
+                </Button>
+                <p className="text-sm text-gray-400">
+                  We'll notify you when new positions become available
+                </p>
+              </div>
+            </Card>
           </div>
         </div>
       </section>

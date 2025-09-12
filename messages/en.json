@@ -46,10 +46,10 @@
     "residentEngineeringDesc": "Customer Quick Response Activities, 8D Management, and Steering Problem-Solving Process",
     "qualityInspectionRework": "Quality Inspection & Rework",
     "qualityInspectionReworkDesc": "Comprehensive quality inspection and rework services at customer and supplier locations",
-    "consultingTraining": "Consulting & Training",
-    "consultingTrainingDesc": "Professional consulting and training services for quality improvement",
-    "advancedPhaseLaunch": "Advanced Phase & Launch Services",
-    "advancedPhaseLaunchDesc": "Advanced phase support and launch services for new products and processes"
+    "operationalExcellence": "Operational Excellence",
+    "operationalExcellenceDesc": "Professional consulting and training services for operational improvement",
+    "advancedProjectOperationalSupport": "Advanced Project & Operational Support",
+    "advancedProjectOperationalSupportDesc": "Advanced project support and operational excellence services"
   },
   "services": {
     "relatedTitle": "Related Services",
@@ -209,9 +209,12 @@
       },
       "relatedTitle": "Related Services"
     },
-    "consulting": {
-      "title": "Consulting & Training",
-      "description": "Expert consulting and professional training to elevate your quality management"
+    "operationalExcellence": {
+      "title": "Operational Excellence",
+      "description": "Expert consulting and professional training to elevate your operational management",
+      "feature1": "Quality consulting services",
+      "feature2": "Professional training programs", 
+      "feature3": "Process improvement guidance"
     },
     "auditsTraining": {
       "title": "Audits & Training",
@@ -603,7 +606,7 @@
       "description4": "German, English, Turkish, French language support",
       "description5": "Automotive, aerospace, e-mobility sector expertise",
       "description6": "Cost-effective solutions with up to 90% savings",
-      "experienceDescription": "Discover the unique advantages we offer with our 15 years of experience and strong network across Europe.",
+      "experienceDescription": "Discover the unique advantages we offer with our experienced and strong network across Europe.",
       "trustedPartnerBrands": "Trusted partner brands",
       "certificationsStandards": "Our Certifications & Standards",
       "qualityManagementSystem": "Quality Management System",
@@ -643,7 +646,7 @@
       "response24h": "24h response",
       "freeInitialAssessment": "Free initial assessment",
       "officeLocations": "Office Locations",
-      "munichHeadOffice": "Munich Head Office",
+      "nurnbergHeadOffice": "Nürnberg Head Office",
       "parisOffice": "Paris Office"
     },
     "slideshow": {
@@ -715,7 +718,7 @@
     },
     "office": {
       "title": "Head Office",
-      "location": "Munich, Germany",
+      "location": "Nürnberg, Germany",
       "address": "Jahn Str. 46A hirsdhaid 96114",
       "phone": "+49 15234649852",
       "email": "info@qronex.net",
@@ -965,7 +968,7 @@
     "jobs": {
       "seniorQualityEngineer": {
         "department": "Quality Engineering",
-        "location": "Munich, Germany",
+        "location": "Nürnberg, Germany",
         "type": "Full Time",
         "experience": "Senior (5+ years)",
         "description": "We are looking for a senior quality engineer in the automotive sector. Opportunity to work on BMW and Mercedes projects.",
@@ -1202,7 +1205,7 @@
           "collaboration": { "title": "Built on Collaboration", "description": "Quality is a team sport. We work shoulder-to-shoulder with devs, ops, and clients to deliver seamless, defect-free experiences." },
           "customerFocus": { "title": "Customer-Focused Quality", "description": "We engineer quality that customers can feel—from first click to final release." },
           "sustainability": { "title": "Sustainability", "description": "Building quality solutions that last, with environmental responsibility and long-term value creation." },
-          "quickMobility": { "title": "Quick Mobility", "description": "Rapid response and agile solutions for fast-moving quality challenges." }
+          "quickMobility": { "title": "Agility", "description": "Quick response and agile solutions for fast-moving quality challenges." }
         }
     },
     "leadership": {
@@ -1450,11 +1453,11 @@
         "b3Desc": "Focus on supplier development and long-term improvement"
       }
     },
-    "consulting": {
-      "heroTitle": "Consulting & Training",
-      "heroSubtitle": "Expert consulting and professional training to elevate your quality management capabilities",
-      "servicesTitle": "Our Consulting & Training Services",
-      "servicesSubtitle": "Comprehensive consulting and training solutions to transform your quality management approach",
+    "operationalExcellence": {
+      "heroTitle": "Operational Excellence",
+      "heroSubtitle": "Expert consulting and professional training to elevate your operational management capabilities",
+      "servicesTitle": "Our Operational Excellence Services",
+      "servicesSubtitle": "Comprehensive consulting and training solutions to transform your operational management approach",
       "featuresTitle": "Key Features:",
       "programsTitle": "Training Programs",
       "programsSubtitle": "Professional training programs designed to develop your team's quality management expertise",
@@ -1530,11 +1533,16 @@
       },
       "learnMore": "Learn More"
     },
-    "launch": {
-      "heroTitle": "Advanced Phase & Launch Services",
-      "heroSubtitle": "Expert support for advanced development phases and successful product launches",
-      "servicesTitle": "Our Advanced Services",
-      "servicesSubtitle": "Comprehensive support for advanced development phases and successful product launches",
+    "advancedProjectOperationalSupport": {
+      "title": "Advanced Project & Operational Support",
+      "description": "Advanced project support and operational excellence services",
+      "feature1": "Advanced project support",
+      "feature2": "Operational excellence consulting",
+      "feature3": "Process validation",
+      "heroTitle": "Advanced Project & Operational Support",
+      "heroSubtitle": "Expert support for advanced projects and operational excellence",
+      "servicesTitle": "Our Advanced Project Services",
+      "servicesSubtitle": "Comprehensive support for advanced projects and operational excellence",
       "featuresTitle": "Key Features:",
       "phasesTitle": "Our Process Phases",
       "phasesSubtitle": "Systematic approach to advanced phase management and product launch",

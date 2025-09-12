@@ -46,10 +46,10 @@
     "residentEngineeringDesc": "Müşteri Hızlı Yanıt Faaliyetleri, 8D Yönetimi ve Problem Çözme Sürecini Yönlendirme",
     "qualityInspectionRework": "Kalite Kontrol ve Yeniden İşleme",
     "qualityInspectionReworkDesc": "Müşteri ve tedarikçi lokasyonlarında kapsamlı kalite kontrol ve yeniden işleme hizmetleri",
-    "consultingTraining": "Danışmanlık ve Eğitim",
-    "consultingTrainingDesc": "Kalite iyileştirme için profesyonel danışmanlık ve eğitim hizmetleri",
-    "advancedPhaseLaunch": "Gelişmiş Faz ve Lansman Hizmetleri",
-    "advancedPhaseLaunchDesc": "Yeni ürünler ve süreçler için gelişmiş faz desteği ve lansman hizmetleri"
+    "operationalExcellence": "Operasyonel Mükemmellik",
+    "operationalExcellenceDesc": "Operasyonel iyileştirme için profesyonel danışmanlık ve eğitim hizmetleri",
+    "advancedProjectOperationalSupport": "Gelişmiş Proje ve Operasyonel Destek",
+    "advancedProjectOperationalSupportDesc": "Gelişmiş proje desteği ve operasyonel mükemmellik hizmetleri"
   },
   "services": {
     "relatedTitle": "İlgili Hizmetler",
@@ -209,9 +209,12 @@
       },
       "relatedTitle": "İlgili Hizmetler"
     },
-    "consulting": {
-      "title": "Danışmanlık & Eğitim",
-      "description": "Kalite yönetimi yetkinliklerinizi geliştirmek için uzman danışmanlık ve profesyonel eğitim"
+    "operationalExcellence": {
+      "title": "Operasyonel Mükemmellik",
+      "description": "Operasyonel yönetim yetkinliklerinizi geliştirmek için uzman danışmanlık ve profesyonel eğitim",
+      "feature1": "Kalite danışmanlık hizmetleri",
+      "feature2": "Profesyonel eğitim programları",
+      "feature3": "Süreç iyileştirme rehberliği"
     },
     "auditsTraining": {
       "title": "Denetim & Eğitim",
@@ -603,7 +606,7 @@
       "description4": "Almanca, İngilizce, Türkçe, Fransızca dil desteği",
       "description5": "Otomotiv, havacılık, e-mobility sektör uzmanlığı",
       "description6": "Maliyet etkin çözümlerle %90'a varan tasarruf",
-      "experienceDescription": "15 yıllık deneyimimiz ve Avrupa genelindeki güçlü ağımızla size sunduğumuz benzersiz avantajları keşfedin.",
+      "experienceDescription": "Deneyimimiz ve Avrupa genelindeki güçlü ağımızla size sunduğumuz benzersiz avantajları keşfedin.",
       "trustedPartnerBrands": "Güvenilen ortağımız olan markalar",
       "certificationsStandards": "Sertifikalarımız & Standartlarımız",
       "qualityManagementSystem": "Kalite Yönetim Sistemi",
@@ -643,7 +646,7 @@
       "response24h": "24h içinde yanıt",
       "freeInitialAssessment": "Ücretsiz ön değerlendirme",
       "officeLocations": "Ofis Lokasyonlarımız",
-      "munichHeadOffice": "München Merkez Ofis",
+      "nurnbergHeadOffice": "Nürnberg Merkez Ofis",
       "parisOffice": "Paris Ofis"
     },
     "slideshow": {
@@ -1202,7 +1205,7 @@
           "collaboration": { "title": "İşbirliği Üzerine Kurulu", "description": "Kalite bir takım oyunudur. Geliştiriciler, operasyonlar ve müşterilerle omuz omuza çalışarak sorunsuz, hatasız deneyimler sunuyoruz." },
           "customerFocus": { "title": "Müşteri Odaklı Kalite", "description": "Müşterilerin hissedebileceği kaliteyi mühendislikle üretiyoruz—ilk tıklamadan son sürüme kadar." },
           "sustainability": { "title": "Sürdürülebilirlik", "description": "Uzun ömürlü kalite çözümleri inşa ediyoruz, çevresel sorumluluk ve uzun vadeli değer yaratma ile." },
-          "quickMobility": { "title": "Hızlı Hareketlilik", "description": "Hızla değişen kalite zorlukları için hızlı yanıt ve çevik çözümler." }
+          "quickMobility": { "title": "Çeviklik", "description": "Hızla değişen kalite zorlukları için hızlı yanıt ve çevik çözümler." }
         }
     },
     "leadership": {
@@ -1450,11 +1453,11 @@
         "b3Desc": "Tedarikçi geliştirme ve uzun vadeli iyileştirmeye odaklanma"
       }
     },
-    "consulting": {
-      "heroTitle": "Danışmanlık ve Eğitim",
-      "heroSubtitle": "Kalite yönetimi yetkinliklerinizi geliştirmek için uzman danışmanlık ve profesyonel eğitim",
-      "servicesTitle": "Danışmanlık ve Eğitim Hizmetlerimiz",
-      "servicesSubtitle": "Kalite yönetimi yaklaşımınızı dönüştürmek için kapsamlı danışmanlık ve eğitim çözümleri",
+    "operationalExcellence": {
+      "heroTitle": "Operasyonel Mükemmellik",
+      "heroSubtitle": "Operasyonel yönetim yetkinliklerinizi geliştirmek için uzman danışmanlık ve profesyonel eğitim",
+      "servicesTitle": "Operasyonel Mükemmellik Hizmetlerimiz",
+      "servicesSubtitle": "Operasyonel yönetim yaklaşımınızı dönüştürmek için kapsamlı danışmanlık ve eğitim çözümleri",
       "featuresTitle": "Temel Özellikler:",
       "programsTitle": "Eğitim Programları",
       "programsSubtitle": "Ekibinizin kalite yönetimi uzmanlığını geliştirmek için tasarlanmış profesyonel eğitim programları",
@@ -1530,11 +1533,16 @@
       },
       "learnMore": "Detaylı Bilgi"
     },
-    "launch": {
-      "heroTitle": "Gelişmiş Faz ve Lansman Hizmetleri",
-      "heroSubtitle": "Gelişmiş geliştirme fazları ve başarılı ürün lansmanları için uzman destek",
-      "servicesTitle": "Gelişmiş Hizmetlerimiz",
-      "servicesSubtitle": "Gelişmiş geliştirme fazları ve başarılı ürün lansmanları için kapsamlı destek",
+    "advancedProjectOperationalSupport": {
+      "title": "Gelişmiş Proje ve Operasyonel Destek",
+      "description": "Gelişmiş proje desteği ve operasyonel mükemmellik hizmetleri",
+      "feature1": "Gelişmiş proje desteği",
+      "feature2": "Operasyonel mükemmellik danışmanlığı",
+      "feature3": "Süreç doğrulama",
+      "heroTitle": "Gelişmiş Proje ve Operasyonel Destek",
+      "heroSubtitle": "Gelişmiş projeler ve operasyonel mükemmellik için uzman destek",
+      "servicesTitle": "Gelişmiş Proje Hizmetlerimiz",
+      "servicesSubtitle": "Gelişmiş projeler ve operasyonel mükemmellik için kapsamlı destek",
       "featuresTitle": "Temel Özellikler:",
       "phasesTitle": "Süreç Fazlarımız",
       "phasesSubtitle": "Gelişmiş faz yönetimi ve ürün lansmanı için sistematik yaklaşım",

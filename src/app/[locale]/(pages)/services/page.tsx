@@ -71,11 +71,11 @@ export default function ServicesPage() {
       featured: true,
     },
     {
-      id: "consulting-training",
-      slug: "consulting-training",
+      id: "operational-excellence",
+      slug: "operational-excellence",
       icon: "graduationCap" as keyof typeof serviceIcons,
-      title: "Consulting & Training",
-      description: "Professional consulting and training services for quality improvement",
+      title: "Operational Excellence",
+      description: "Professional consulting and training services for operational improvement",
       features: [
         "Quality consulting services",
         "Professional training programs",
@@ -89,16 +89,16 @@ export default function ServicesPage() {
       featured: false,
     },
     {
-      id: "advanced-phase-launch",
-      slug: "advanced-phase-launch",
+      id: "advanced-project-operational-support",
+      slug: "advanced-project-operational-support",
       icon: "userCheck" as keyof typeof serviceIcons,
-      title: "Advanced Phase & Launch Services",
-      description: "Advanced phase support and launch services for new products and processes",
+      title: "Advanced Project & Operational Support",
+      description: "Advanced project support and operational excellence services",
       features: [
-        "Advanced phase support",
-        "Product launch services",
+        "Advanced project support",
+        "Operational excellence consulting",
         "Process validation",
-        "Launch readiness assessment"
+        "Project readiness assessment"
       ],
       sla: "2-8 hafta",
       color: "text-teal-600",
