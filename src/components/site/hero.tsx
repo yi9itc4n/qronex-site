@@ -14,7 +14,7 @@ import {
   ChevronRight
 } from "lucide-react";
 import Image from "next/image";
-import { useState, useEffect } from "react";
+import { useState, useEffect, useLayoutEffect } from "react";
 
 export function Hero() {
   const t = useTranslations("home.hero");
@@ -23,6 +23,7 @@ export function Hero() {
   const nav = useTranslations("navigation");
   const [currentSlide, setCurrentSlide] = useState(0);
   const [animationKey, setAnimationKey] = useState(0);
+  const [isClient, setIsClient] = useState(false);
 
   const slides = [
     {
@@ -54,8 +55,8 @@ export function Hero() {
       description: sc("locationsDesc"),
       link: "/contact",
       image: {
-        src: "/images/hero/3d-rendering-planet-earth.jpg",
-        alt: "3D Earth with European locations"
+        src: "/images/hero/locations.jpg",
+        alt: "European locations map"
       }
     }
   ];
@@ -75,14 +76,21 @@ export function Hero() {
     setAnimationKey(prev => prev + 1);
   };
 
-  // Auto-advance slides (slower)
+  // Client-side hydration check
   useEffect(() => {
+    setIsClient(true);
+  }, []);
+
+  // Auto-advance slides (slower) - only on client
+  useEffect(() => {
+    if (!isClient) return;
+    
     const timer = setInterval(() => {
       setCurrentSlide((prev) => (prev + 1) % slides.length);
       setAnimationKey(prev => prev + 1);
     }, 9000);
     return () => clearInterval(timer);
-  }, [slides.length]);
+  }, [slides.length, isClient]);
 
   return (
     <>
@@ -96,7 +104,7 @@ export function Hero() {
             <div className="relative overflow-hidden">
               <div 
               className="flex transition-transform duration-500 ease-in-out"
-              style={{ transform: `translateX(-${currentSlide * 100}%)` }}
+              style={{ transform: isClient ? `translateX(-${currentSlide * 100}%)` : 'translateX(0%)' }}
             >
                 {slides.map((slide) => (
                 <div key={`${slide.id}-${currentSlide}`} className="w-full flex-shrink-0">

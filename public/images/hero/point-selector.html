@@ -1,0 +1,279 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nokta Seçici - QroneX Locations</title>
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            margin: 0;
+            padding: 20px;
+            background: #f8fafc;
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        
+        h1 {
+            color: #1e293b;
+            margin-bottom: 20px;
+        }
+        
+        .image-container {
+            position: relative;
+            display: inline-block;
+            border: 2px solid #e2e8f0;
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+        }
+        
+        #earth-image {
+            display: block;
+            max-width: 100%;
+            height: auto;
+            cursor: crosshair;
+        }
+        
+        .point {
+            position: absolute;
+            width: 20px;
+            height: 20px;
+            border-radius: 50%;
+            border: 3px solid white;
+            box-shadow: 0 0 0 2px #3b82f6;
+            cursor: pointer;
+            transform: translate(-50%, -50%);
+            z-index: 10;
+        }
+        
+        .point.paris {
+            background: #ef4444;
+        }
+        
+        .point.lyon {
+            background: #10b981;
+        }
+        
+        .point.nuremberg {
+            background: #0ea5e9;
+        }
+        
+        .controls {
+            margin: 20px 0;
+            padding: 20px;
+            background: white;
+            border-radius: 8px;
+            box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+        }
+        
+        .point-list {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 15px;
+            margin: 20px 0;
+        }
+        
+        .point-item {
+            padding: 15px;
+            background: #f8fafc;
+            border-radius: 6px;
+            border: 1px solid #e2e8f0;
+        }
+        
+        .point-item h3 {
+            margin: 0 0 10px 0;
+            color: #1e293b;
+        }
+        
+        .coordinates {
+            font-family: 'Monaco', 'Menlo', monospace;
+            background: #1e293b;
+            color: #f1f5f9;
+            padding: 8px 12px;
+            border-radius: 4px;
+            font-size: 14px;
+            margin: 5px 0;
+        }
+        
+        .copy-btn {
+            background: #3b82f6;
+            color: white;
+            border: none;
+            padding: 8px 16px;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: 14px;
+            margin-top: 5px;
+        }
+        
+        .copy-btn:hover {
+            background: #2563eb;
+        }
+        
+        .instructions {
+            background: #fef3c7;
+            border: 1px solid #f59e0b;
+            border-radius: 6px;
+            padding: 15px;
+            margin-bottom: 20px;
+        }
+        
+        .instructions h3 {
+            margin: 0 0 10px 0;
+            color: #92400e;
+        }
+        
+        .instructions p {
+            margin: 5px 0;
+            color: #92400e;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>🌍 QroneX Locations - Nokta Seçici</h1>
+        
+        <div class="instructions">
+            <h3>📋 Nasıl Kullanılır:</h3>
+            <p>1. Resim üzerinde istediğiniz yere tıklayın</p>
+            <p>2. Nokta rengini seçin (Paris: Kırmızı, Lyon: Yeşil, Nuremberg: Mavi)</p>
+            <p>3. Koordinatları kopyalayın ve hero.tsx dosyasına yapıştırın</p>
+        </div>
+        
+        <div class="image-container">
+            <img id="earth-image" src="locations.jpg" alt="3D Earth">
+        </div>
+        
+        <div class="controls">
+            <h3>🎯 Nokta Kontrolleri</h3>
+            <button class="copy-btn" onclick="selectPoint('paris')">Paris Seç</button>
+            <button class="copy-btn" onclick="selectPoint('lyon')">Lyon Seç</button>
+            <button class="copy-btn" onclick="selectPoint('nuremberg')">Nuremberg Seç</button>
+            <button class="copy-btn" onclick="clearAllPoints()" style="background: #ef4444;">Tümünü Temizle</button>
+        </div>
+        
+        <div class="point-list" id="point-list">
+            <!-- Points will be added here -->
+        </div>
+    </div>
+
+    <script>
+        let currentPointType = 'paris';
+        let points = {
+            paris: null,
+            lyon: null,
+            nuremberg: null
+        };
+        
+        function selectPoint(type) {
+            currentPointType = type;
+            document.querySelectorAll('.point').forEach(p => p.style.borderColor = '#3b82f6');
+        }
+        
+        function clearAllPoints() {
+            points = { paris: null, lyon: null, nuremberg: null };
+            document.querySelectorAll('.point').forEach(p => p.remove());
+            updatePointList();
+        }
+        
+        function addPoint(x, y, type) {
+            // Remove existing point of this type
+            const existingPoint = document.querySelector(`.point.${type}`);
+            if (existingPoint) {
+                existingPoint.remove();
+            }
+            
+            // Create new point
+            const point = document.createElement('div');
+            point.className = `point ${type}`;
+            point.style.left = x + 'px';
+            point.style.top = y + 'px';
+            point.title = type.charAt(0).toUpperCase() + type.slice(1);
+            
+            // Add click handler to select this point type
+            point.onclick = (e) => {
+                e.stopPropagation();
+                selectPoint(type);
+            };
+            
+            document.querySelector('.image-container').appendChild(point);
+            
+            // Calculate percentage coordinates
+            const img = document.getElementById('earth-image');
+            const rect = img.getBoundingClientRect();
+            const containerRect = document.querySelector('.image-container').getBoundingClientRect();
+            
+            const relativeX = x - (containerRect.left - rect.left);
+            const relativeY = y - (containerRect.top - rect.top);
+            
+            const percentX = (relativeX / rect.width) * 100;
+            const percentY = (relativeY / rect.height) * 100;
+            
+            points[type] = {
+                x: percentX,
+                y: percentY,
+                pixelX: x,
+                pixelY: y
+            };
+            
+            updatePointList();
+        }
+        
+        function updatePointList() {
+            const pointList = document.getElementById('point-list');
+            pointList.innerHTML = '';
+            
+            Object.entries(points).forEach(([type, point]) => {
+                if (point) {
+                    const pointItem = document.createElement('div');
+                    pointItem.className = 'point-item';
+                    pointItem.innerHTML = `
+                        <h3>${type.charAt(0).toUpperCase() + type.slice(1)}</h3>
+                        <div class="coordinates">
+                            left-[${point.x.toFixed(1)}%] top-[${point.y.toFixed(1)}%]
+                        </div>
+                        <button class="copy-btn" onclick="copyCoordinates('${type}')">Koordinatları Kopyala</button>
+                        <button class="copy-btn" onclick="removePoint('${type}')" style="background: #ef4444; margin-left: 5px;">Kaldır</button>
+                    `;
+                    pointList.appendChild(pointItem);
+                }
+            });
+        }
+        
+        function copyCoordinates(type) {
+            const point = points[type];
+            if (point) {
+                const coords = `left-[${point.x.toFixed(1)}%] top-[${point.y.toFixed(1)}%]`;
+                navigator.clipboard.writeText(coords).then(() => {
+                    alert(`${type} koordinatları kopyalandı: ${coords}`);
+                });
+            }
+        }
+        
+        function removePoint(type) {
+            points[type] = null;
+            const point = document.querySelector(`.point.${type}`);
+            if (point) {
+                point.remove();
+            }
+            updatePointList();
+        }
+        
+        // Image click handler
+        document.getElementById('earth-image').addEventListener('click', function(e) {
+            const rect = this.getBoundingClientRect();
+            const x = e.clientX - rect.left;
+            const y = e.clientY - rect.top;
+            
+            addPoint(x, y, currentPointType);
+        });
+        
+        // Initialize
+        updatePointList();
+    </script>
+</body>
+</html>
