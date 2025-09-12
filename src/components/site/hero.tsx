@@ -14,11 +14,10 @@ import {
   ChevronRight
 } from "lucide-react";
 import Image from "next/image";
-import { useState, useEffect, useLayoutEffect } from "react";
+import { useState, useEffect } from "react";
 
 export function Hero() {
   const t = useTranslations("home.hero");
-  const s = useTranslations("home.slideshow");
   const sc = useTranslations("home.slideshow.custom");
   const nav = useTranslations("navigation");
   const [currentSlide, setCurrentSlide] = useState(0);
@@ -71,10 +70,6 @@ export function Hero() {
     setAnimationKey(prev => prev + 1);
   };
 
-  const goToSlide = (index: number) => {
-    setCurrentSlide(index);
-    setAnimationKey(prev => prev + 1);
-  };
 
   // Client-side hydration check
   useEffect(() => {

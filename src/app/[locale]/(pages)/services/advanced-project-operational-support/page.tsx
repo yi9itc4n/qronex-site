@@ -4,15 +4,12 @@ import { Link } from "@/i18n";
 import { useTranslations } from "next-intl";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
-import { Badge } from "@/components/ui/badge";
 import { 
   Rocket,
   Clock,
   Users,
   CheckCircle,
   ArrowRight,
-  Zap,
-  Settings,
   Star
 } from "lucide-react";
 

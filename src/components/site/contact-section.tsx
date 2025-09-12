@@ -1,7 +1,4 @@
-import { useTranslations } from "next-intl";
-
 export function ContactSection() {
-  const t = useTranslations("home.contact");
 
 
   return (

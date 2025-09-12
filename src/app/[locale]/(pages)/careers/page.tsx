@@ -2,14 +2,13 @@
 
 import { useState, useEffect } from 'react';
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
-import { Badge } from '@/components/ui/badge';
 import { Button } from '@/components/ui/button';
 import { Dialog, DialogContent, DialogDescription, DialogHeader, DialogTitle } from '@/components/ui/dialog';
 import { Input } from '@/components/ui/input';
 import { Label } from '@/components/ui/label';
 import { Textarea } from '@/components/ui/textarea';
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from '@/components/ui/select';
-import { MapPin, Clock, Users, Briefcase, Heart, TrendingUp, Globe, Award } from 'lucide-react';
+import { Briefcase, Heart, TrendingUp, Globe, Award } from 'lucide-react';
 import { useForm } from 'react-hook-form';
 import { zodResolver } from '@hookform/resolvers/zod';
 import { z } from 'zod';
@@ -245,7 +244,7 @@ const createBenefits = (t: (key: string) => string) => [
 export default function CareersPage() {
   const t = useTranslations("careers");
   const [isClient, setIsClient] = useState(false);
-  const [selectedJob, setSelectedJob] = useState<{
+  const [selectedJob] = useState<{
     id: string;
     title: string;
     department: string;
@@ -299,22 +298,6 @@ export default function CareersPage() {
     }
   };
 
-  const handleApplyClick = (job: {
-    id: string;
-    title: string;
-    department: string;
-    location: string;
-    type: string;
-    experience: string;
-    description: string;
-    requirements: string[];
-    responsibilities: string[];
-    benefits: string[];
-  }) => {
-    setSelectedJob(job);
-    setValue('roleId', job.id);
-    setIsApplicationOpen(true);
-  };
 
   if (!isClient) {
     return (
@@ -403,10 +386,10 @@ export default function CareersPage() {
                   No Current Openings
                 </h3>
                 <p className="text-lg text-gray-600 mb-6">
-                  We don't have any open positions at the moment, but we're always looking for talented individuals to join our team.
+                  We don&apos;t have any open positions at the moment, but we&apos;re always looking for talented individuals to join our team.
                 </p>
                 <p className="text-gray-500 mb-8">
-                  Feel free to send us your resume and we'll keep it on file for future opportunities.
+                  Feel free to send us your resume and we&apos;ll keep it on file for future opportunities.
                 </p>
               </div>
               
@@ -417,7 +400,7 @@ export default function CareersPage() {
                   </Link>
                 </Button>
                 <p className="text-sm text-gray-400">
-                  We'll notify you when new positions become available
+                  We&apos;ll notify you when new positions become available
                 </p>
               </div>
             </Card>
