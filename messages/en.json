@@ -556,6 +556,7 @@
     },
     "values": {
       "title": "Values We Add",
+      "subtitle": "Discover the unique advantages that working with QroneX offers you. We make a difference with our experience and expertise across Europe.",
       "value1": {
         "title": "Rapid Response",
         "description": "On-site within 24-72 hours",
@@ -597,7 +598,7 @@
       "reason5": "Industry-specialized teams",
       "reason6": "Cost-effective solutions",
       "description1": "50+ experienced engineers ready for you in 15 countries",
-      "description2": "BMW, Mercedes, Audi approved quality methodologies",
+      "description2": "OEM-approved processes and methodologies",
       "description3": "24-72 hour response, 48 hour average solution time",
       "description4": "German, English, Turkish, French language support",
       "description5": "Automotive, aerospace, e-mobility sector expertise",
@@ -888,23 +889,43 @@
       "subtitle": "Please fill out the form below completely. You can send your CV by email.",
       "successTitle": "✅ Your application has been sent successfully!",
       "successSubtitle": "We will get back to you as soon as possible.",
-      "fields": {
-        "role": "Position *",
-        "rolePlaceholder": "Select a position",
-        "firstName": "First Name *",
-        "firstNamePlaceholder": "Your first name",
-        "lastName": "Last Name *",
-        "lastNamePlaceholder": "Your last name",
-        "email": "Email *",
-        "phone": "Phone *",
-        "linkedin": "LinkedIn Profile",
-        "linkedinPlaceholder": "https://linkedin.com/in/yourprofile",
-        "experience": "Experience Level *",
-        "experiencePlaceholder": "Experience level",
-        "availability": "Start Date *",
-        "availabilityPlaceholder": "Start date",
-        "coverLetter": "Cover Letter *",
-        "coverLetterPlaceholder": "Briefly explain why you are suitable for this position and what you can bring to QroneX...",
+        "fields": {
+          "role": {
+            "label": "Position",
+            "placeholder": "Select a position"
+          },
+        "firstName": {
+          "label": "First Name",
+          "placeholder": "Your first name"
+        },
+        "lastName": {
+          "label": "Last Name",
+          "placeholder": "Your last name"
+        },
+        "email": {
+          "label": "Email",
+          "placeholder": "your.email@example.com"
+        },
+        "phone": {
+          "label": "Phone",
+          "placeholder": "+1 (555) 123-4567"
+        },
+        "linkedin": {
+          "label": "LinkedIn Profile",
+          "placeholder": "https://linkedin.com/in/yourprofile"
+        },
+        "experience": {
+          "label": "Experience Level",
+          "placeholder": "Experience level"
+        },
+        "availability": {
+          "label": "Start Date",
+          "placeholder": "Start date"
+        },
+        "coverLetter": {
+          "label": "Cover Letter",
+          "placeholder": "Briefly explain why you are suitable for this position and what you can bring to QroneX..."
+        },
         "validation": {
           "role": "Please select a position",
           "firstName": "First name must be at least 2 characters",

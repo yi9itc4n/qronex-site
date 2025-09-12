@@ -13,36 +13,42 @@ const industries = [
   {
     id: 'automotive-oem',
     title: 'industries.automotiveOem.title',
+    description: 'industries.automotiveOem.description',
     icon: Car,
     color: 'blue'
   },
   {
     id: 'tier1',
     title: 'industries.tier1.title',
+    description: 'industries.tier1.description',
     icon: Factory,
     color: 'green'
   },
   {
     id: 'e-mobility',
     title: 'industries.eMobility.title',
+    description: 'industries.eMobility.description',
     icon: Zap,
     color: 'purple'
   },
   {
     id: 'heavy-transport',
     title: 'industries.heavyTransport.title',
+    description: 'industries.heavyTransport.description',
     icon: Truck,
     color: 'orange'
   },
   {
     id: 'aerospace',
     title: 'industries.aerospace.title',
+    description: 'industries.aerospace.description',
     icon: Plane,
     color: 'indigo'
   },
   {
     id: 'industrial',
-    title: 'industries.title',
+    title: 'industries.industrial.title',
+    description: 'industries.industrial.description',
     icon: Building2,
     color: 'teal'
   }
@@ -122,21 +128,31 @@ export default function IndustriesPage() {
             </p>
           </div>
 
-          <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-6">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
             {industries.map((industry) => {
               const Icon = industry.icon;
               const colors = getColorClasses(industry.color);
               
               return (
                 <Link key={industry.id} href={`/industries/${industry.id}`}>
-                  <Card className={`${colors.bg} ${colors.border} card-hover h-full cursor-pointer transition-all duration-200 hover:shadow-lg hover:scale-105`}>
-                    <CardContent className="p-6 text-center">
-                      <div className={`p-4 rounded-lg bg-white shadow-sm mx-auto mb-4 w-fit`}>
-                        <Icon className={`h-8 w-8 ${colors.icon}`} />
+                  <Card className={`${colors.bg} ${colors.border} card-hover cursor-pointer transition-all duration-200 hover:shadow-lg hover:scale-[1.02]`}>
+                    <CardContent className="p-6">
+                      <div className="flex items-center space-x-4">
+                        <div className={`p-3 rounded-lg bg-white shadow-sm flex-shrink-0`}>
+                          <Icon className={`h-6 w-6 ${colors.icon}`} />
+                        </div>
+                        <div className="flex-1">
+                          <CardTitle className="text-xl font-bold text-gray-900 mb-2">
+                            {t(industry.title)}
+                          </CardTitle>
+                          <p className="text-gray-600 text-sm leading-relaxed">
+                            {t(industry.description)}
+                          </p>
+                        </div>
+                        <div className="flex-shrink-0">
+                          <div className="w-2 h-2 rounded-full bg-gray-400"></div>
+                        </div>
                       </div>
-                      <CardTitle className="text-lg font-bold text-gray-900">
-                        {t(industry.title)}
-                      </CardTitle>
                     </CardContent>
                   </Card>
                 </Link>

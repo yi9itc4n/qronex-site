@@ -13,7 +13,7 @@ import {
   NavigationMenuTrigger,
 } from "@/components/ui/navigation-menu";
 import { Sheet, SheetContent, SheetTrigger } from "@/components/ui/sheet";
-import { Menu, ArrowRight } from "lucide-react";
+import { Menu, ArrowRight, ChevronDown, ChevronUp } from "lucide-react";
 import { cn } from "@/lib/utils";
 
 interface HeaderProps {
@@ -24,6 +24,7 @@ export function Header({ locale }: HeaderProps) {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   const [isHeaderVisible, setIsHeaderVisible] = useState(true);
   const [lastScrollY, setLastScrollY] = useState(0);
+  const [servicesOpen, setServicesOpen] = useState(false);
   const pathname = usePathname();
   const t = useTranslations("navigation");
 
@@ -81,7 +82,7 @@ export function Header({ locale }: HeaderProps) {
       isHeaderVisible ? "translate-y-0" : "-translate-y-full"
     )}>
       <div className="container mx-auto px-4">
-        <div className="flex h-20 items-center justify-between">
+        <div className="flex h-24 items-center justify-between">
           {/* Logo */}
           <Link href="/" className="flex items-center space-x-4">
             <div className="relative">
@@ -94,9 +95,9 @@ export function Header({ locale }: HeaderProps) {
                 <Image 
                   src="/images/logo.jpg" 
                   alt="QroneX Logo" 
-                  width={64}
-                  height={64}
-                  className="h-16 w-16 rounded-xl object-cover shadow-2xl ring-2 ring-white/20"
+                  width={72}
+                  height={72}
+                  className="h-18 w-18 rounded-xl object-cover shadow-2xl ring-2 ring-white/20"
                   onError={(e) => {
                     // Fallback to text if image fails to load
                     const target = e.target as HTMLImageElement;
@@ -104,7 +105,7 @@ export function Header({ locale }: HeaderProps) {
                     target.nextElementSibling?.classList.remove('hidden');
                   }}
                 />
-                <div className="hidden h-16 w-16 rounded-xl bg-gradient-to-br from-blue-600 to-teal-600 flex items-center justify-center text-white font-bold text-2xl ring-2 ring-white/20">
+                <div className="hidden h-18 w-18 rounded-xl bg-gradient-to-br from-blue-600 to-teal-600 flex items-center justify-center text-white font-bold text-2xl ring-2 ring-white/20">
                   Q
                 </div>
               </div>
@@ -217,17 +218,31 @@ export function Header({ locale }: HeaderProps) {
                     {t("company")}
                   </Link>
                   <div className="space-y-2">
-                    <div className="text-lg font-medium text-gray-900">{t("services")}</div>
-                    {services.map((service) => (
-                      <Link
-                        key={service.href}
-                        href={service.href}
-                        className="block pl-4 text-base text-gray-600 hover:text-blue-600 transition-colors"
-                        onClick={() => setMobileMenuOpen(false)}
-                      >
-                        {service.title}
-                      </Link>
-                    ))}
+                    <button
+                      onClick={() => setServicesOpen(!servicesOpen)}
+                      className="flex items-center justify-between w-full text-lg font-medium text-gray-900 transition-colors"
+                    >
+                      {t("services")}
+                      {servicesOpen ? (
+                        <ChevronUp className="h-5 w-5" />
+                      ) : (
+                        <ChevronDown className="h-5 w-5" />
+                      )}
+                    </button>
+                    {servicesOpen && (
+                      <div className="pl-4 space-y-2">
+                        {services.map((service) => (
+                          <Link
+                            key={service.href}
+                            href={service.href}
+                            className="block text-base text-gray-600 hover:text-blue-600 transition-colors"
+                            onClick={() => setMobileMenuOpen(false)}
+                          >
+                            {service.title}
+                          </Link>
+                        ))}
+                      </div>
+                    )}
                   </div>
                   <Link
                     href="/industries"

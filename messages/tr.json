@@ -556,6 +556,7 @@
     },
     "values": {
       "title": "Kattığımız Değerler",
+      "subtitle": "QroneX ile çalışmanın size sunduğu benzersiz avantajları keşfedin. Avrupa genelindeki deneyimimiz ve uzmanlığımızla fark yaratıyoruz.",
       "value1": {
         "title": "Hızlı Müdahale",
         "description": "24-72 saat içinde sahada",
@@ -597,7 +598,7 @@
       "reason5": "Sektör özelinde uzmanlaşmış ekipler",
       "reason6": "Maliyet etkin çözümler",
       "description1": "50+ deneyimli mühendis 15 ülkede sizin için hazır",
-      "description2": "BMW, Mercedes, Audi onaylı kalite metodolojileri",
+      "description2": "OEM onaylı süreçler ve metodolojiler",
       "description3": "24-72 saat müdahale, 48 saat ortalama çözüm süresi",
       "description4": "Almanca, İngilizce, Türkçe, Fransızca dil desteği",
       "description5": "Otomotiv, havacılık, e-mobility sektör uzmanlığı",
@@ -889,22 +890,42 @@
       "successTitle": "✅ Başvurunuz başarıyla gönderildi!",
       "successSubtitle": "En kısa sürede size dönüş yapacağız.",
       "fields": {
-        "role": "Pozisyon *",
-        "rolePlaceholder": "Pozisyon seçiniz",
-        "firstName": "Ad *",
-        "firstNamePlaceholder": "Adınız",
-        "lastName": "Soyad *",
-        "lastNamePlaceholder": "Soyadınız",
-        "email": "E-posta *",
-        "phone": "Telefon *",
-        "linkedin": "LinkedIn Profili",
-        "linkedinPlaceholder": "https://linkedin.com/in/profiliniz",
-        "experience": "Deneyim Seviyesi *",
-        "experiencePlaceholder": "Deneyim seviyesi",
-        "availability": "Başlama Tarihi *",
-        "availabilityPlaceholder": "Başlama tarihi",
-        "coverLetter": "Ön Yazı *",
-        "coverLetterPlaceholder": "Neden bu pozisyon için uygun olduğunuzu ve QroneX'e neler katabileceğinizi kısaca açıklayın...",
+        "role": {
+          "label": "Pozisyon",
+          "placeholder": "Pozisyon seçiniz"
+        },
+        "firstName": {
+          "label": "Ad",
+          "placeholder": "Adınız"
+        },
+        "lastName": {
+          "label": "Soyad",
+          "placeholder": "Soyadınız"
+        },
+        "email": {
+          "label": "E-posta",
+          "placeholder": "email@example.com"
+        },
+        "phone": {
+          "label": "Telefon",
+          "placeholder": "+90 (555) 123-4567"
+        },
+        "linkedin": {
+          "label": "LinkedIn Profili",
+          "placeholder": "https://linkedin.com/in/profiliniz"
+        },
+        "experience": {
+          "label": "Deneyim Seviyesi",
+          "placeholder": "Deneyim seviyesi"
+        },
+        "availability": {
+          "label": "Başlama Tarihi",
+          "placeholder": "Başlama tarihi"
+        },
+        "coverLetter": {
+          "label": "Ön Yazı",
+          "placeholder": "Neden bu pozisyon için uygun olduğunuzu ve QroneX'e neler katabileceğinizi kısaca açıklayın..."
+        },
         "validation": {
           "role": "Pozisyon seçiniz",
           "firstName": "Ad en az 2 karakter olmalı",

@@ -73,8 +73,7 @@ export function ValueCards() {
             {t("title")}
           </h2>
           <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-            QroneX ile çalışmanın size sunduğu benzersiz avantajları keşfedin. 
-            Avrupa genelindeki deneyimimiz ve uzmanlığımızla fark yaratıyoruz.
+            {t("subtitle")}
           </p>
         </div>
 
