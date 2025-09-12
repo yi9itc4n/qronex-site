@@ -108,7 +108,7 @@ export function Hero() {
             >
                 {slides.map((slide) => (
                 <div key={`${slide.id}-${currentSlide}`} className="w-full flex-shrink-0">
-                  <div className={`relative border-y border-white/10 min-h-[420px] lg:min-h-[560px]`}>
+                  <div className={`relative border-y border-white/10 min-h-[calc(100vh-7.06rem)]`}>
                     <div className="absolute inset-0 overflow-hidden">
                       <Image
                         src={slide.image.src}
@@ -138,7 +138,7 @@ export function Hero() {
                         </div>
                       )}
                     </div>
-                    <div className="relative container mx-auto min-h-[420px] lg:min-h-[560px] flex items-end px-8 lg:px-12 pb-10 lg:pb-14">
+                    <div className="relative container mx-auto min-h-[calc(100vh-7.06rem)] flex items-end px-8 lg:px-12 pb-10 lg:pb-14">
                       <div className="grid grid-cols-1 lg:grid-cols-2 gap-10 lg:gap-16 items-end w-full">
                         {/* Content - Left Side */}
                         <div className="space-y-6 lg:pr-8 max-w-2xl">

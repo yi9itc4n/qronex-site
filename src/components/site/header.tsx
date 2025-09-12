@@ -81,8 +81,8 @@ export function Header({ locale }: HeaderProps) {
       "sticky top-0 z-50 w-full border-b bg-gradient-to-r from-slate-900 via-blue-900 to-teal-900 text-white transition-transform duration-300 ease-in-out",
       isHeaderVisible ? "translate-y-0" : "-translate-y-full"
     )}>
-      <div className="container mx-auto px-4">
-        <div className="flex h-24 items-center justify-between">
+      <div className="container mx-auto px-12 md:px-16 lg:px-20 max-w-none">
+        <div className="flex h-[7.06rem] items-center justify-between">
           {/* Logo */}
           <Link href="/" className="flex items-center space-x-4">
             <div className="relative">
@@ -95,9 +95,9 @@ export function Header({ locale }: HeaderProps) {
                 <Image 
                   src="/images/logo.jpg" 
                   alt="QroneX Logo" 
-                  width={72}
-                  height={72}
-                  className="h-18 w-18 rounded-xl object-cover shadow-2xl ring-2 ring-white/20"
+                  width={86}
+                  height={86}
+                  className="h-[86px] w-[86px] rounded-xl object-cover shadow-2xl ring-2 ring-white/20"
                   onError={(e) => {
                     // Fallback to text if image fails to load
                     const target = e.target as HTMLImageElement;
@@ -105,30 +105,30 @@ export function Header({ locale }: HeaderProps) {
                     target.nextElementSibling?.classList.remove('hidden');
                   }}
                 />
-                <div className="hidden h-18 w-18 rounded-xl bg-gradient-to-br from-blue-600 to-teal-600 flex items-center justify-center text-white font-bold text-2xl ring-2 ring-white/20">
+                <div className="hidden h-[86px] w-[86px] rounded-xl bg-gradient-to-br from-blue-600 to-teal-600 flex items-center justify-center text-white font-bold text-2xl ring-2 ring-white/20">
                   Q
                 </div>
               </div>
             </div>
             <div className="flex flex-col justify-center">
-              <span className="text-2xl font-bold text-white leading-tight">QroneX</span>
-              <span className="text-xs text-gray-300 font-light tracking-wider mt-1 opacity-80">
+              <span className="text-[28px] font-bold text-white leading-tight">QroneX</span>
+              <span className="text-sm text-gray-300 font-light tracking-wider mt-1 opacity-80">
                 Precision in Motion
               </span>
             </div>
           </Link>
 
           {/* Desktop Navigation - Simplified */}
-          <div className="hidden lg:flex lg:items-center lg:space-x-8">
+          <div className="hidden lg:flex lg:items-center lg:space-x-8 text-lg">
             {/* Simple Navigation Links */}
-            <Link href="/about" className="text-white hover:text-gray-300 transition-colors duration-200 font-medium">
+            <Link href="/about" className="relative inline-flex items-center px-3 py-2 rounded-md text-white/80 hover:text-blue-200 transition-colors duration-200 font-medium after:absolute after:left-1/2 after:-translate-x-1/2 after:w-[calc(100%-24px)] after:-bottom-0.5 after:h-0.5 after:bg-white after:scale-x-0 after:origin-center after:transition-transform after:duration-300 hover:after:scale-x-100">
               {t("company")}
             </Link>
             <NavigationMenu>
               <NavigationMenuList>
                 <NavigationMenuItem>
-                  <NavigationMenuTrigger className="text-white hover:text-gray-300 transition-colors duration-200 font-medium bg-transparent border-none p-0 h-auto text-base">
-                    <Link href="/services" className="hover:text-gray-300 transition-colors duration-200">
+                  <NavigationMenuTrigger className="bg-transparent border-none p-0 h-auto">
+                    <Link href="/services" className="relative inline-flex items-center px-3 py-2 rounded-md text-white/80 hover:text-blue-200 transition-colors duration-200 font-medium text-lg after:absolute after:left-1/2 after:-translate-x-1/2 after:w-[calc(100%-24px)] after:-bottom-0.5 after:h-0.5 after:bg-white after:scale-x-0 after:origin-center after:transition-transform after:duration-300 hover:after:scale-x-100">
                       {t("services")}
                     </Link>
                   </NavigationMenuTrigger>
@@ -169,22 +169,25 @@ export function Header({ locale }: HeaderProps) {
                 </NavigationMenuItem>
               </NavigationMenuList>
             </NavigationMenu>
-            <Link href="/industries" className="text-white hover:text-gray-300 transition-colors duration-200 font-medium">
+            <Link href="/industries" className="relative inline-flex items-center px-3 py-2 rounded-md text-white/80 hover:text-blue-200 transition-colors duration-200 font-medium after:absolute after:left-1/2 after:-translate-x-1/2 after:w-[calc(100%-24px)] after:-bottom-0.5 after:h-0.5 after:bg-white after:scale-x-0 after:origin-center after:transition-transform after:duration-300 hover:after:scale-x-100">
               {t("competencies")}
             </Link>
-            <Link href="/news" className="text-white hover:text-gray-300 transition-colors duration-200 font-medium">
+            <Link href="/news" className="relative inline-flex items-center px-3 py-2 rounded-md text-white/80 hover:text-blue-200 transition-colors duration-200 font-medium after:absolute after:left-1/2 after:-translate-x-1/2 after:w-[calc(100%-24px)] after:-bottom-0.5 after:h-0.5 after:bg-white after:scale-x-0 after:origin-center after:transition-transform after:duration-300 hover:after:scale-x-100">
               {t("news")}
             </Link>
-            <Link href="/careers" className="text-white hover:text-gray-300 transition-colors duration-200 font-medium">
+            <Link href="/careers" className="relative inline-flex items-center px-3 py-2 rounded-md text-white/80 hover:text-blue-200 transition-colors duration-200 font-medium after:absolute after:left-1/2 after:-translate-x-1/2 after:w-[calc(100%-24px)] after:-bottom-0.5 after:h-0.5 after:bg-white after:scale-x-0 after:origin-center after:transition-transform after:duration-300 hover:after:scale-x-100">
               {t("career")}
             </Link>
-            <Link href="/contact" className="text-white hover:text-gray-300 transition-colors duration-200 font-medium">
+            <Link href="/contact" className="relative inline-flex items-center px-3 py-2 rounded-md text-white/80 hover:text-blue-200 transition-colors duration-200 font-medium after:absolute after:left-1/2 after:-translate-x-1/2 after:w-[calc(100%-24px)] after:-bottom-0.5 after:h-0.5 after:bg-white after:scale-x-0 after:origin-center after:transition-transform after:duration-300 hover:after:scale-x-100">
               {t("contact")}
             </Link>
 
             {/* Get Offer CTA Button - left of language toggle */}
-            <Button asChild variant="outline" className="ml-4 border-2 border-white text-white bg-transparent hover:bg-white hover:text-slate-900">
-              <Link href="/pricing">
+            <Button
+              asChild
+              className="ml-4 bg-blue-600 hover:bg-blue-500 text-white font-semibold rounded-full shadow-md shadow-blue-500/20 px-4 py-1.5 border-0 text-lg"
+            >
+              <Link href="/pricing" className="inline-flex items-center">
                 {t("getOffer")}
               </Link>
             </Button>
@@ -193,7 +196,7 @@ export function Header({ locale }: HeaderProps) {
             <Link
               href={pathname}
               locale={locale === "en" ? "tr" : "en"}
-              className="ml-3 text-white hover:text-gray-300 transition-colors duration-200 font-medium"
+              className="ml-3 relative inline-flex items-center px-3 py-2 rounded-md text-white/80 hover:text-blue-200 transition-colors duration-200 font-medium text-lg after:absolute after:left-1/2 after:-translate-x-1/2 after:w-[calc(100%-24px)] after:-bottom-0.5 after:h-0.5 after:bg-white after:scale-x-0 after:origin-center after:transition-transform after:duration-300 hover:after:scale-x-100"
             >
               {locale === "en" ? "TR" : "EN"}
             </Link>
@@ -276,7 +279,7 @@ export function Header({ locale }: HeaderProps) {
                 </nav>
                 {/* Bottom actions */}
                 <div className="mt-auto space-y-3 pt-4">
-                  <Button asChild className="w-full">
+                  <Button asChild className="w-full bg-blue-600 hover:bg-blue-700 text-white font-semibold text-lg rounded-full py-3">
                     <Link
                       href="/pricing"
                       onClick={() => setMobileMenuOpen(false)}

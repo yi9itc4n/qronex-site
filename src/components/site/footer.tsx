@@ -2,6 +2,7 @@ import { useTranslations } from "next-intl";
 import { Link } from "@/i18n";
 import { Button } from "@/components/ui/button";
 import { Separator } from "@/components/ui/separator";
+import Image from "next/image";
 import { 
   Phone, 
   Mail, 
@@ -26,10 +27,14 @@ export function Footer() {
           {/* Company Info */}
           <div className="lg:col-span-1">
             <div className="mb-6">
-              <Link href="/" className="flex items-center space-x-2">
-                <div className="h-10 w-10 rounded bg-blue-600 text-white flex items-center justify-center font-bold text-lg">
-                  Q
-                </div>
+              <Link href="/" className="flex items-center space-x-3">
+                <Image
+                  src="/images/logo.jpg"
+                  alt="QroneX Logo"
+                  width={40}
+                  height={40}
+                  className="h-10 w-10 rounded object-cover ring-2 ring-white/10"
+                />
                 <span className="text-2xl font-bold">QroneX</span>
               </Link>
             </div>

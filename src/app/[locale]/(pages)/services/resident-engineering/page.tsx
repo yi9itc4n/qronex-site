@@ -232,7 +232,7 @@ export default function ResidentEngineeringPage() {
                 Contact Us Today
               </Link>
             </Button>
-            <Button size="lg" variant="outline" className="border-white text-white hover:bg-white hover:text-blue-green" asChild>
+            <Button size="lg" className="bg-white text-blue-green hover:bg-gray-100" asChild>
               <Link href="/services">
                 View All Services
               </Link>
