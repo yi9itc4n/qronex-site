@@ -13,7 +13,6 @@ import {
   GraduationCap,
   Headphones,
   ArrowRight,
-  Clock,
   Users,
   CheckCircle
 } from "lucide-react";
@@ -46,7 +45,6 @@ export default function ServicesPage() {
         "Steering Problem-Solving Process",
         "Daily quality routines on production floor"
       ],
-      sla: "Sürekli",
       color: "text-blue-600",
       bgColor: "bg-blue-50",
       borderColor: "border-blue-200",
@@ -64,7 +62,6 @@ export default function ServicesPage() {
         "Quality control procedures",
         "Immediate response to quality issues"
       ],
-      sla: "24-72 saat",
       color: "text-green-600",
       bgColor: "bg-green-50",
       borderColor: "border-green-200",
@@ -82,7 +79,6 @@ export default function ServicesPage() {
         "Process improvement guidance",
         "Best practices implementation"
       ],
-      sla: "1-4 hafta",
       color: "text-orange-600",
       bgColor: "bg-orange-50",
       borderColor: "border-orange-200",
@@ -100,7 +96,6 @@ export default function ServicesPage() {
         "Process validation",
         "Project readiness assessment"
       ],
-      sla: "2-8 hafta",
       color: "text-teal-600",
       bgColor: "bg-teal-50",
       borderColor: "border-teal-200",
@@ -140,7 +135,7 @@ export default function ServicesPage() {
       {/* Services grid */}
       <section className="section-padding">
         <div className="container mx-auto container-padding">
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-6xl mx-auto">
             {services.map((service) => {
               const IconComponent = serviceIcons[service.icon];
               
@@ -157,10 +152,6 @@ export default function ServicesPage() {
                       <IconComponent className="h-6 w-6 text-white" />
                     </div>
                     <CardTitle className="text-xl mb-2">{service.title}</CardTitle>
-                    <div className="flex items-center space-x-2 mb-2">
-                      <Clock className="h-4 w-4 text-gray-500" />
-                      <span className="text-sm text-gray-600">{c("sla")}: {service.sla}</span>
-                    </div>
                   </CardHeader>
                   
                   <CardContent className="space-y-4 flex-1 flex flex-col">
@@ -211,32 +202,32 @@ export default function ServicesPage() {
               <div className="w-16 h-16 bg-blue-green-subtle rounded-full flex items-center justify-center mx-auto mb-4">
                 <span className="text-2xl font-bold text-blue-green">1</span>
               </div>
-              <h3 className="font-semibold mb-2">İlk Değerlendirme</h3>
-              <p className="text-sm text-gray-600">Problem analizi ve acil aksiyonların belirlenmesi</p>
+              <h3 className="font-semibold mb-2">{t("processSteps.step1.title")}</h3>
+              <p className="text-sm text-gray-600">{t("processSteps.step1.description")}</p>
             </div>
             
             <div className="text-center">
               <div className="w-16 h-16 bg-blue-green-subtle rounded-full flex items-center justify-center mx-auto mb-4">
                 <span className="text-2xl font-bold text-blue-green">2</span>
               </div>
-              <h3 className="font-semibold mb-2">Ekip Mobilizasyonu</h3>
-              <p className="text-sm text-gray-600">Uzman ekip ve kaynakların sahaya sevkiyatı</p>
+              <h3 className="font-semibold mb-2">{t("processSteps.step2.title")}</h3>
+              <p className="text-sm text-gray-600">{t("processSteps.step2.description")}</p>
             </div>
             
             <div className="text-center">
               <div className="w-16 h-16 bg-blue-green-subtle rounded-full flex items-center justify-center mx-auto mb-4">
                 <span className="text-2xl font-bold text-blue-green">3</span>
               </div>
-              <h3 className="font-semibold mb-2">Çözüm Uygulama</h3>
-              <p className="text-sm text-gray-600">Sistematik yaklaşımla problemin çözümü</p>
+              <h3 className="font-semibold mb-2">{t("processSteps.step3.title")}</h3>
+              <p className="text-sm text-gray-600">{t("processSteps.step3.description")}</p>
             </div>
             
             <div className="text-center">
               <div className="w-16 h-16 bg-blue-green-subtle rounded-full flex items-center justify-center mx-auto mb-4">
                 <span className="text-2xl font-bold text-blue-green">4</span>
               </div>
-              <h3 className="font-semibold mb-2">Raporlama & İyileştirme</h3>
-              <p className="text-sm text-gray-600">Detaylı rapor ve gelecek önerileri</p>
+              <h3 className="font-semibold mb-2">{t("processSteps.step4.title")}</h3>
+              <p className="text-sm text-gray-600">{t("processSteps.step4.description")}</p>
             </div>
           </div>
         </div>
@@ -259,7 +250,7 @@ export default function ServicesPage() {
               </Link>
             </Button>
             <Button size="lg" className="bg-white text-blue-green hover:bg-gray-100" asChild>
-              <Link href="/news">
+              <Link href="/services">
                 <Users className="mr-2 h-4 w-4" />
                 {t("ctaSecondary")}
               </Link>

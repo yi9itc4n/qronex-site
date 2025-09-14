@@ -245,57 +245,36 @@ export default function QualityInspectionReworkPage() {
       {/* Benefits section */}
       <section className="section-padding bg-slate-100">
         <div className="container mx-auto container-padding">
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
-            <div>
+          <div className="max-w-4xl mx-auto">
+            <div className="text-center mb-16">
               <h2 className="text-3xl lg:text-4xl font-bold text-gray-900 mb-6">{t("benefitsTitle")}</h2>
-              <div className="space-y-6">
-                <div className="flex items-start space-x-4">
-                  <div className="w-12 h-12 bg-blue-green-gradient rounded-lg flex items-center justify-center flex-shrink-0">
-                    <MapPin className="h-6 w-6 text-white" />
-                  </div>
-                  <div>
-                    <h3 className="text-xl font-semibold text-gray-900 mb-2">{t("benefits.b1Title")}</h3>
-                    <p className="text-gray-600">{t("benefits.b1Desc")}</p>
-                  </div>
+            </div>
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+              <div className="flex items-start space-x-4">
+                <div className="w-12 h-12 bg-blue-green-gradient rounded-lg flex items-center justify-center flex-shrink-0">
+                  <MapPin className="h-6 w-6 text-white" />
                 </div>
-                <div className="flex items-start space-x-4">
-                  <div className="w-12 h-12 bg-blue-green-gradient rounded-lg flex items-center justify-center flex-shrink-0">
-                    <Clock className="h-6 w-6 text-white" />
-                  </div>
-                  <div>
-                    <h3 className="text-xl font-semibold text-gray-900 mb-2">{t("benefits.b2Title")}</h3>
-                    <p className="text-gray-600">{t("benefits.b2Desc")}</p>
-                  </div>
-                </div>
-                <div className="flex items-start space-x-4">
-                  <div className="w-12 h-12 bg-blue-green-gradient rounded-lg flex items-center justify-center flex-shrink-0">
-                    <Users className="h-6 w-6 text-white" />
-                  </div>
-                  <div>
-                    <h3 className="text-xl font-semibold text-gray-900 mb-2">{t("benefits.b3Title")}</h3>
-                    <p className="text-gray-600">{t("benefits.b3Desc")}</p>
-                  </div>
+                <div>
+                  <h3 className="text-xl font-semibold text-gray-900 mb-2">{t("benefits.b1Title")}</h3>
+                  <p className="text-gray-600">{t("benefits.b1Desc")}</p>
                 </div>
               </div>
-            </div>
-            <div className="bg-white p-8 rounded-lg shadow-lg">
-              <h3 className="text-2xl font-bold text-gray-900 mb-6">{t("highlightsTitle")}</h3>
-              <div className="space-y-4">
-                <div className="flex items-center justify-between">
-                  <span className="text-gray-600">{t("highlights.responseTime")}</span>
-                  <Badge className="bg-green-100 text-green-800">{t("highlights.responseTimeValue")}</Badge>
+              <div className="flex items-start space-x-4">
+                <div className="w-12 h-12 bg-blue-green-gradient rounded-lg flex items-center justify-center flex-shrink-0">
+                  <Clock className="h-6 w-6 text-white" />
                 </div>
-                <div className="flex items-center justify-between">
-                  <span className="text-gray-600">{t("highlights.serviceLocation")}</span>
-                  <Badge className="bg-blue-100 text-blue-800">{t("highlights.serviceLocationValue")}</Badge>
+                <div>
+                  <h3 className="text-xl font-semibold text-gray-900 mb-2">{t("benefits.b2Title")}</h3>
+                  <p className="text-gray-600">{t("benefits.b2Desc")}</p>
                 </div>
-                <div className="flex items-center justify-between">
-                  <span className="text-gray-600">{t("highlights.teamSize")}</span>
-                  <Badge className="bg-purple-100 text-purple-800">{t("highlights.teamSizeValue")}</Badge>
+              </div>
+              <div className="flex items-start space-x-4">
+                <div className="w-12 h-12 bg-blue-green-gradient rounded-lg flex items-center justify-center flex-shrink-0">
+                  <Users className="h-6 w-6 text-white" />
                 </div>
-                <div className="flex items-center justify-between">
-                  <span className="text-gray-600">{t("highlights.qualityStandards")}</span>
-                  <Badge className="bg-orange-100 text-orange-800">{t("highlights.qualityStandardsValue")}</Badge>
+                <div>
+                  <h3 className="text-xl font-semibold text-gray-900 mb-2">{t("benefits.b3Title")}</h3>
+                  <p className="text-gray-600">{t("benefits.b3Desc")}</p>
                 </div>
               </div>
             </div>

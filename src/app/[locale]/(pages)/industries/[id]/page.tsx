@@ -288,7 +288,7 @@ export default function IndustryDetailPage() {
                   <ArrowRight className="ml-2 h-4 w-4" />
                 </Link>
               </Button>
-              <Button size="lg" variant="outline" className="border-white text-white hover:bg-white hover:text-gray-900" asChild>
+              <Button size="lg" className="bg-white text-gray-900 hover:bg-gray-100" asChild>
                 <Link href="/services">
                   {t(industry.ctaKey + '.secondary')}
                 </Link>

@@ -10,8 +10,7 @@ import {
   Linkedin, 
   Twitter, 
   Facebook,
-  Youtube,
-  Globe
+  Youtube
 } from "lucide-react";
 
 export function Footer() {
@@ -175,13 +174,6 @@ export function Footer() {
             </div>
           </div>
 
-          {/* Global Presence */}
-          <div className="flex items-center space-x-4 text-sm text-slate-400">
-            <Globe className="h-4 w-4" />
-            <span>{t("home.statistics.countriesValue")} {t("home.statistics.countries")}</span>
-            <span>•</span>
-            <span>{t("home.statistics.engineersValue")} {t("home.statistics.engineers")}</span>
-          </div>
         </div>
       </div>
     </footer>

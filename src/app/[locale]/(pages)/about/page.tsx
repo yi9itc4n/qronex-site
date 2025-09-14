@@ -130,7 +130,7 @@ export default function AboutPage() {
                 {t('cta.primary')}
               </Link>
               <Link
-                href="/case-studies"
+                href="/services"
                 className="inline-flex items-center justify-center px-8 py-4 border-2 border-white text-white font-semibold rounded-lg hover:bg-white hover:text-blue-600 transition-colors"
               >
                 {t('cta.secondary')}

@@ -57,6 +57,24 @@
     "subtitle": "Fast solutions to your quality problems with our field engineers based in Europe",
     "processTitle": "Our Process",
     "processSubtitle": "The steps we follow to deliver consistent, high-quality results",
+    "processSteps": {
+      "step1": {
+        "title": "Initial Assessment",
+        "description": "Problem analysis and determination of urgent actions"
+      },
+      "step2": {
+        "title": "Team Mobilization",
+        "description": "Deployment of expert team and resources to the field"
+      },
+      "step3": {
+        "title": "Solution Implementation",
+        "description": "Systematic approach to problem resolution"
+      },
+      "step4": {
+        "title": "Reporting & Improvement",
+        "description": "Detailed reports and future recommendations"
+      }
+    },
     "onSiteRapidResponse": {
       "title": "On-Site Rapid Response",
       "description": "24/7 field support for immediate response to your quality issues",
@@ -566,30 +584,30 @@
         "stats": "24-72h"
       },
       "value2": {
-        "title": "Experienced Team",
-        "description": "15+ years of industry experience",
-        "stats": "15+ years"
+        "title": "Expert Team",
+        "description": "Specialized in automotive quality",
+        "stats": "Quality Focus"
       },
       "value3": {
         "title": "Europe-wide",
-        "description": "Service across wide geography",
-        "stats": "15 countries"
+        "description": "Service across Europe",
+        "stats": "EU Coverage"
       },
       "value4": {
-        "title": "Continuous Support",
-        "description": "24/7 accessible team",
-        "stats": "24/7"
+        "title": "Responsive Support",
+        "description": "Quick and reliable service",
+        "stats": "Fast Response"
       }
     ,
     "extraStats": {
-      "completedProjectsValue": "500+",
-      "completedProjects": "Completed Projects",
-      "customerSatisfactionValue": "98.5%",
-      "customerSatisfaction": "Customer Satisfaction",
-      "activeCustomersValue": "100+",
-      "activeCustomers": "Active Customers",
-      "preventedLossValue": "€50M+",
-      "preventedLoss": "Prevented Loss"
+      "completedProjectsValue": "Growing",
+      "completedProjects": "Active Projects",
+      "customerSatisfactionValue": "High",
+      "customerSatisfaction": "Quality Focus",
+      "activeCustomersValue": "New",
+      "activeCustomers": "Partnerships",
+      "preventedLossValue": "Value",
+      "preventedLoss": "Creation Focus"
     }
     },
     "whyQronex": {
@@ -816,22 +834,22 @@
       "cta": "Request Quote"
     },
     "why": {
-      "title": "Why Enterprise Solutions?",
-      "subtitle": "Learn why we are the right choice for large-scale projects",
-      "expertise": "Proven Expertise",
+      "title": "Why Choose QroneX?",
+      "subtitle": "Learn why we are the right choice for your quality engineering needs",
+      "expertise": "Quality Focus",
       "expertiseBullets": {
-        "0": "15+ years of industry experience with automotive quality standards",
-        "1": "Experience working with Fortune 500 companies",
-        "2": "International certifications and accreditations"
+        "0": "Specialized in automotive quality engineering",
+        "1": "Modern approach to quality management",
+        "2": "Agile and responsive service delivery"
       },
-      "team": "Dedicated Team",
+      "team": "Dedicated Support",
       "teamBullets": {
-        "0": "Expert team assigned to your project",
-        "1": "24/7 customer service and support",
-        "2": "Project manager assignment and regular reporting"
+        "0": "Expert team focused on your project",
+        "1": "Personalized customer service and support",
+        "2": "Direct communication and regular updates"
       },
       "ctaTitle": "Get Your Custom Offer",
-      "ctaSubtitle": "We develop custom solutions for every enterprise customer. Let's analyze your needs and prepare a tailored offer.",
+      "ctaSubtitle": "We develop custom solutions for every customer. Let's analyze your needs and prepare a tailored offer.",
       "ctaRequest": "Request Detailed Quote",
       "ctaSchedule": "Schedule a Call"
     },
@@ -1237,7 +1255,7 @@
       "title": "Let's Achieve Success Together",
       "subtitle": "Let us help you achieve your quality goals with our experienced team and proven methodologies",
       "primary": "Contact Us",
-      "secondary": "Explore Our Success Stories"
+      "secondary": "Explore Our Services"
     }
   }
   ,
@@ -1507,19 +1525,15 @@
       },
       "programs": {
         "p1Title": "Quality Management Fundamentals",
-        "p1Duration": "3 Days",
         "p1Level": "Beginner",
         "p1Desc": "Essential quality management principles and practices",
         "p2Title": "Advanced Process Improvement",
-        "p2Duration": "5 Days",
         "p2Level": "Advanced",
         "p2Desc": "Advanced methodologies for process optimization",
         "p3Title": "Leadership in Quality",
-        "p3Duration": "2 Days",
         "p3Level": "Management",
         "p3Desc": "Leadership skills for quality management",
         "p4Title": "ISO 9001 Implementation",
-        "p4Duration": "4 Days",
         "p4Level": "Intermediate",
         "p4Desc": "Complete ISO 9001 implementation guidance"
       },
@@ -1709,6 +1723,41 @@
       "ctaSubtitle": "Let our quality inspection and rework team help you maintain high standards at your location",
       "ctaButton1": "Contact Us Today",
       "ctaButton2": "View All Services"
+    }
+  },
+  "competencies": {
+    "heroTitle": "Our Competencies",
+    "heroSubtitle": "Expert quality engineering solutions across diverse industries and sectors",
+    "competenciesTitle": "Industry Expertise",
+    "competenciesSubtitle": "We provide specialized quality engineering services tailored to the unique requirements of each industry",
+    "learnMore": "Learn More",
+    "ctaTitle": "Ready to Work with Industry Experts?",
+    "ctaSubtitle": "Let our specialized teams help you achieve quality excellence in your industry",
+    "ctaPrimary": "Contact Us Today",
+    "ctaSecondary": "View All Services",
+    "automotiveOem": {
+      "title": "Automotive OEM",
+      "description": "Comprehensive quality engineering solutions for automotive manufacturers, ensuring production excellence and compliance with industry standards."
+    },
+    "tier1Suppliers": {
+      "title": "Tier 1 Suppliers",
+      "description": "Specialized support for Tier 1 automotive suppliers, focusing on quality management, process optimization, and supplier development programs."
+    },
+    "emobility": {
+      "title": "e-Mobility",
+      "description": "Advanced quality solutions for electric vehicle manufacturers, including battery systems, charging infrastructure, and EV component validation."
+    },
+    "heavyTransport": {
+      "title": "Heavy Transport",
+      "description": "Quality engineering services for commercial vehicles, trucks, and heavy machinery manufacturers, ensuring reliability and safety standards."
+    },
+    "aerospace": {
+      "title": "Aerospace",
+      "description": "Precision quality solutions for aerospace manufacturers, meeting strict aviation standards and ensuring safety-critical component reliability."
+    },
+    "industrial": {
+      "title": "Industrial Manufacturing",
+      "description": "Comprehensive quality services for industrial manufacturers across various sectors, optimizing production processes and ensuring product excellence."
     }
   }
 }

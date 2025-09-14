@@ -169,7 +169,7 @@ export function Header({ locale }: HeaderProps) {
                 </NavigationMenuItem>
               </NavigationMenuList>
             </NavigationMenu>
-            <Link href="/industries" className="relative inline-flex items-center px-2 py-2 rounded-md text-white/80 hover:text-blue-200 transition-colors duration-200 font-medium after:absolute after:left-1/2 after:-translate-x-1/2 after:w-[calc(100%-16px)] after:-bottom-0.5 after:h-0.5 after:bg-white after:scale-x-0 after:origin-center after:transition-transform after:duration-300 hover:after:scale-x-100 whitespace-nowrap">
+            <Link href="/competencies" className="relative inline-flex items-center px-2 py-2 rounded-md text-white/80 hover:text-blue-200 transition-colors duration-200 font-medium after:absolute after:left-1/2 after:-translate-x-1/2 after:w-[calc(100%-16px)] after:-bottom-0.5 after:h-0.5 after:bg-white after:scale-x-0 after:origin-center after:transition-transform after:duration-300 hover:after:scale-x-100 whitespace-nowrap">
               {t("competencies")}
             </Link>
             <Link href="/careers" className="relative inline-flex items-center px-2 py-2 rounded-md text-white/80 hover:text-blue-200 transition-colors duration-200 font-medium after:absolute after:left-1/2 after:-translate-x-1/2 after:w-[calc(100%-16px)] after:-bottom-0.5 after:h-0.5 after:bg-white after:scale-x-0 after:origin-center after:transition-transform after:duration-300 hover:after:scale-x-100 whitespace-nowrap">
@@ -247,7 +247,7 @@ export function Header({ locale }: HeaderProps) {
                       )}
                     </div>
                     <Link
-                      href="/industries"
+                      href="/competencies"
                       className="text-lg font-medium"
                       onClick={() => setMobileMenuOpen(false)}
                     >

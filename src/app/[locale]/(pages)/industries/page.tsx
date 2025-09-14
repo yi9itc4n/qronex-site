@@ -134,28 +134,23 @@ export default function IndustriesPage() {
               const colors = getColorClasses(industry.color);
               
               return (
-                <Link key={industry.id} href={`/industries/${industry.id}`}>
-                  <Card className={`${colors.bg} ${colors.border} card-hover cursor-pointer transition-all duration-200 hover:shadow-lg hover:scale-[1.02]`}>
-                    <CardContent className="p-6">
-                      <div className="flex items-center space-x-4">
-                        <div className={`p-3 rounded-lg bg-white shadow-sm flex-shrink-0`}>
-                          <Icon className={`h-6 w-6 ${colors.icon}`} />
-                        </div>
-                        <div className="flex-1">
-                          <CardTitle className="text-xl font-bold text-gray-900 mb-2">
-                            {t(industry.title)}
-                          </CardTitle>
-                          <p className="text-gray-600 text-sm leading-relaxed">
-                            {t(industry.description)}
-                          </p>
-                        </div>
-                        <div className="flex-shrink-0">
-                          <div className="w-2 h-2 rounded-full bg-gray-400"></div>
-                        </div>
+                <Card key={industry.id} className={`${colors.bg} ${colors.border} transition-all duration-200`}>
+                  <CardContent className="p-6">
+                    <div className="flex items-center space-x-4">
+                      <div className={`p-3 rounded-lg bg-white shadow-sm flex-shrink-0`}>
+                        <Icon className={`h-6 w-6 ${colors.icon}`} />
                       </div>
-                    </CardContent>
-                  </Card>
-                </Link>
+                      <div className="flex-1">
+                        <CardTitle className="text-xl font-bold text-gray-900 mb-2">
+                          {t(industry.title)}
+                        </CardTitle>
+                        <p className="text-gray-600 text-sm leading-relaxed">
+                          {t(industry.description)}
+                        </p>
+                      </div>
+                    </div>
+                  </CardContent>
+                </Card>
               );
             })}
           </div>

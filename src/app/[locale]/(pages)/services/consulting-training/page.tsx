@@ -71,25 +71,21 @@ export default function ConsultingTrainingPage() {
   const trainingPrograms = [
     {
       title: t("programs.p1Title"),
-      duration: t("programs.p1Duration"),
       level: t("programs.p1Level"),
       description: t("programs.p1Desc")
     },
     {
       title: t("programs.p2Title"),
-      duration: t("programs.p2Duration"),
       level: t("programs.p2Level"),
       description: t("programs.p2Desc")
     },
     {
       title: t("programs.p3Title"),
-      duration: t("programs.p3Duration"),
       level: t("programs.p3Level"),
       description: t("programs.p3Desc")
     },
     {
       title: t("programs.p4Title"),
-      duration: t("programs.p4Duration"),
       level: t("programs.p4Level"),
       description: t("programs.p4Desc")
     }
@@ -175,20 +171,19 @@ export default function ConsultingTrainingPage() {
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
             {trainingPrograms.map((program, index) => (
-              <Card key={index} className="bg-white shadow-md border-gray-200 hover:shadow-lg transition-shadow">
+              <Card key={index} className="bg-white shadow-md border-gray-200 hover:shadow-lg transition-shadow flex flex-col h-full">
                 <CardHeader>
                   <div className="flex items-center justify-between mb-2">
                     <Badge className="bg-blue-green-gradient text-white">
                       {program.level}
                     </Badge>
-                    <span className="text-sm text-gray-500">{program.duration}</span>
                   </div>
                   <CardTitle className="text-lg font-bold text-gray-900">
                     {program.title}
                   </CardTitle>
                 </CardHeader>
-                <CardContent>
-                  <p className="text-gray-600 text-sm mb-4">
+                <CardContent className="flex flex-col flex-grow">
+                  <p className="text-gray-600 text-sm mb-4 flex-grow">
                     {program.description}
                   </p>
                   <Button className="w-full btn-blue-green" size="sm" asChild>
@@ -277,7 +272,7 @@ export default function ConsultingTrainingPage() {
                 {c("contactUsToday")}
               </Link>
             </Button>
-            <Button size="lg" variant="outline" className="border-white text-white hover:bg-white hover:text-blue-green" asChild>
+            <Button size="lg" className="bg-white text-blue-green hover:bg-gray-100" asChild>
               <Link href="/services">
                 {c("viewAllServices")}
               </Link>

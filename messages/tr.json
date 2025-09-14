@@ -57,6 +57,24 @@
     "subtitle": "Avrupa'da yerleşik saha mühendislerimizle kalite problemlerinize hızlı çözümler sunuyoruz",
     "processTitle": "Sürecimiz",
     "processSubtitle": "Tutarlı ve yüksek kaliteli sonuçlar için izlediğimiz adımlar",
+    "processSteps": {
+      "step1": {
+        "title": "İlk Değerlendirme",
+        "description": "Problem analizi ve acil aksiyonların belirlenmesi"
+      },
+      "step2": {
+        "title": "Ekip Mobilizasyonu",
+        "description": "Uzman ekip ve kaynakların sahaya sevkiyatı"
+      },
+      "step3": {
+        "title": "Çözüm Uygulama",
+        "description": "Sistematik yaklaşımla problemin çözümü"
+      },
+      "step4": {
+        "title": "Raporlama & İyileştirme",
+        "description": "Detaylı rapor ve gelecek önerileri"
+      }
+    },
     "onSiteRapidResponse": {
       "title": "On-Site Hızlı Müdahale",
       "description": "Kalite problemleriniz için 7/24 hızlı müdahale saha desteği",
@@ -566,30 +584,30 @@
         "stats": "24-72h"
       },
       "value2": {
-        "title": "Deneyimli Ekip",
-        "description": "15+ yıl sektör tecrübesi",
-        "stats": "15+ yıl"
+        "title": "Uzman Ekip",
+        "description": "Otomotiv kalitesinde uzmanlaşmış",
+        "stats": "Kalite Odaklı"
       },
       "value3": {
         "title": "Avrupa Geneli",
-        "description": "Geniş coğrafi kapsamda hizmet",
-        "stats": "15 ülke"
+        "description": "Avrupa genelinde hizmet",
+        "stats": "AB Kapsamı"
       },
       "value4": {
-        "title": "Sürekli Destek",
-        "description": "7/24 erişilebilir ekip",
-        "stats": "7/24"
+        "title": "Hızlı Destek",
+        "description": "Hızlı ve güvenilir hizmet",
+        "stats": "Hızlı Yanıt"
       }
     ,
     "extraStats": {
-      "completedProjectsValue": "500+",
-      "completedProjects": "Tamamlanan Proje",
-      "customerSatisfactionValue": "%98.5",
-      "customerSatisfaction": "Müşteri Memnuniyeti",
-      "activeCustomersValue": "100+",
-      "activeCustomers": "Aktif Müşteri",
-      "preventedLossValue": "€50M+",
-      "preventedLoss": "Önlenen Kayıp"
+      "completedProjectsValue": "Büyüyen",
+      "completedProjects": "Aktif Projeler",
+      "customerSatisfactionValue": "Yüksek",
+      "customerSatisfaction": "Kalite Odağı",
+      "activeCustomersValue": "Yeni",
+      "activeCustomers": "Ortaklıklar",
+      "preventedLossValue": "Değer",
+      "preventedLoss": "Yaratma Odağı"
     }
     },
     "whyQronex": {
@@ -816,23 +834,23 @@
       "cta": "Teklif Talep Et"
     },
     "why": {
-      "title": "Neden Enterprise Çözümler?",
-      "subtitle": "Büyük ölçekli projelerde sizin için neden doğru seçim olduğumuzu öğrenin",
-      "expertise": "Kanutlanmış Uzmanlık",
+      "title": "Neden QroneX?",
+      "subtitle": "Kalite mühendisliği ihtiyaçlarınız için neden doğru seçim olduğumuzu öğrenin",
+      "expertise": "Kalite Odaklılık",
       "expertiseBullets": {
-        "0": "15+ yıllık sektör deneyimi ile otomotiv kalite standartlarında uzmanız",
-        "1": "Fortune 500 şirketleri ile çalışma tecrübesi",
-        "2": "Uluslararası sertifikalar ve akreditasyonlar"
+        "0": "Otomotiv kalite mühendisliğinde uzmanlaşmış",
+        "1": "Kalite yönetiminde modern yaklaşım",
+        "2": "Çevik ve hızlı hizmet sunumu"
       },
-      "team": "Dedicated Ekip",
+      "team": "Özel Destek",
       "teamBullets": {
-        "0": "Projenize özel atanmış uzman ekip",
-        "1": "24/7 müşteri hizmetleri ve destek",
-        "2": "Proje yöneticisi ataması ve düzenli raporlama"
+        "0": "Projenize odaklanmış uzman ekip",
+        "1": "Kişiselleştirilmiş müşteri hizmetleri ve destek",
+        "2": "Doğrudan iletişim ve düzenli güncellemeler"
       },
-      "ctaTitle": "Özel Teklifinizi Alalım",
-      "ctaSubtitle": "Her enterprise müşterimiz için özel çözümler geliştiriyoruz. İhtiyaçlarınızı analiz edip size özel bir teklif hazırlayalım.",
-      "ctaRequest": "Detaylı Teklif Talep Et",
+      "ctaTitle": "Özel Teklifinizi Alın",
+      "ctaSubtitle": "Her müşteri için özel çözümler geliştiriyoruz. İhtiyaçlarınızı analiz edelim ve size özel bir teklif hazırlayalım.",
+      "ctaRequest": "Detaylı Teklif İsteyin",
       "ctaSchedule": "Görüşme Planlayın"
     },
     "addOns": {
@@ -1237,7 +1255,7 @@
       "title": "Birlikte Başarıya Ulaşalım",
       "subtitle": "Deneyimli ekibimiz ve kanıtlanmış metodolojilerimizle kalite hedeflerinize ulaşmanızı sağlayalım",
       "primary": "İletişime Geçin",
-      "secondary": "Başarı Hikayelerimizi İnceleyin"
+      "secondary": "Servislerimizi İnceleyin"
     }
   }
   ,
@@ -1507,19 +1525,15 @@
       },
       "programs": {
         "p1Title": "Kalite Yönetimi Temelleri",
-        "p1Duration": "3 Gün",
         "p1Level": "Başlangıç",
         "p1Desc": "Temel kalite yönetimi prensipleri ve uygulamaları",
         "p2Title": "İleri Düzey Süreç İyileştirme",
-        "p2Duration": "5 Gün",
         "p2Level": "İleri",
         "p2Desc": "Süreç optimizasyonu için ileri metodolojiler",
         "p3Title": "Kalitede Liderlik",
-        "p3Duration": "2 Gün",
         "p3Level": "Yönetim",
         "p3Desc": "Kalite yönetimi için liderlik becerileri",
         "p4Title": "ISO 9001 Uygulama",
-        "p4Duration": "4 Gün",
         "p4Level": "Orta",
         "p4Desc": "ISO 9001 uygulamasına yönelik kapsamlı rehberlik"
       },
@@ -1709,6 +1723,41 @@
       "ctaSubtitle": "Kalite kontrol ve yeniden işleme ekibimizin lokasyonunuzda yüksek standartları korumanıza yardımcı olmasına izin verin",
       "ctaButton1": "Bugün İletişime Geçin",
       "ctaButton2": "Tüm Hizmetleri Görüntüle"
+    }
+  },
+  "competencies": {
+    "heroTitle": "Yetkinliklerimiz",
+    "heroSubtitle": "Çeşitli endüstriler ve sektörlerde uzman kalite mühendisliği çözümleri",
+    "competenciesTitle": "Endüstri Uzmanlığı",
+    "competenciesSubtitle": "Her endüstrinin benzersiz gereksinimlerine uygun özelleştirilmiş kalite mühendisliği hizmetleri sunuyoruz",
+    "learnMore": "Daha Fazla Bilgi",
+    "ctaTitle": "Endüstri Uzmanlarıyla Çalışmaya Hazır mısınız?",
+    "ctaSubtitle": "Uzman ekiplerimizin endüstrinizde kalite mükemmelliği elde etmenize yardımcı olmasına izin verin",
+    "ctaPrimary": "Bugün İletişime Geçin",
+    "ctaSecondary": "Tüm Hizmetleri Görüntüle",
+    "automotiveOem": {
+      "title": "Otomotiv OEM",
+      "description": "Otomotiv üreticileri için kapsamlı kalite mühendisliği çözümleri, üretim mükemmelliği ve endüstri standartlarına uyum sağlama."
+    },
+    "tier1Suppliers": {
+      "title": "Tier 1 Tedarikçiler",
+      "description": "Tier 1 otomotiv tedarikçileri için özelleştirilmiş destek, kalite yönetimi, süreç optimizasyonu ve tedarikçi geliştirme programlarına odaklanma."
+    },
+    "emobility": {
+      "title": "e-Mobilite",
+      "description": "Elektrikli araç üreticileri için gelişmiş kalite çözümleri, batarya sistemleri, şarj altyapısı ve EV bileşen doğrulama dahil."
+    },
+    "heavyTransport": {
+      "title": "Ağır Taşımacılık",
+      "description": "Ticari araçlar, kamyonlar ve ağır makine üreticileri için kalite mühendisliği hizmetleri, güvenilirlik ve güvenlik standartlarını sağlama."
+    },
+    "aerospace": {
+      "title": "Havacılık",
+      "description": "Havacılık üreticileri için hassas kalite çözümleri, katı havacılık standartlarını karşılama ve güvenlik kritik bileşen güvenilirliğini sağlama."
+    },
+    "industrial": {
+      "title": "Endüstriyel Üretim",
+      "description": "Çeşitli sektörlerdeki endüstriyel üreticiler için kapsamlı kalite hizmetleri, üretim süreçlerini optimize etme ve ürün mükemmelliğini sağlama."
     }
   }
 }
