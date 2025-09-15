@@ -37,13 +37,13 @@ export default function ServicesPage() {
       id: "resident-engineering",
       slug: "resident-engineering",
       icon: "zap" as keyof typeof serviceIcons,
-      title: "Resident Engineering",
-      description: "Customer Quick Response Activities, 8D Management, and Steering Problem-Solving Process",
+      title: t("residentEngineering.title"),
+      description: t("residentEngineering.description"),
       features: [
-        "Customer Quick Response Activities",
-        "8D Management", 
-        "Steering Problem-Solving Process",
-        "Daily quality routines on production floor"
+        t("residentEngineering.feature1"),
+        t("residentEngineering.feature2"), 
+        t("residentEngineering.feature3"),
+        t("residentEngineering.feature4")
       ],
       color: "text-blue-600",
       bgColor: "bg-blue-50",
@@ -54,13 +54,13 @@ export default function ServicesPage() {
       id: "quality-inspection-rework",
       slug: "quality-inspection-rework",
       icon: "shield" as keyof typeof serviceIcons,
-      title: "Quality Inspection & Rework",
-      description: "Comprehensive quality inspection and rework services at customer and supplier locations",
+      title: t("qualityInspectionRework.title"),
+      description: t("qualityInspectionRework.description"),
       features: [
-        "On-site quality inspection",
-        "Customer & supplier location rework",
-        "Quality control procedures",
-        "Immediate response to quality issues"
+        t("qualityInspectionRework.feature1"),
+        t("qualityInspectionRework.feature2"),
+        t("qualityInspectionRework.feature3"),
+        t("qualityInspectionRework.feature4")
       ],
       color: "text-green-600",
       bgColor: "bg-green-50",
@@ -71,13 +71,13 @@ export default function ServicesPage() {
       id: "operational-excellence",
       slug: "operational-excellence",
       icon: "graduationCap" as keyof typeof serviceIcons,
-      title: "Operational Excellence",
-      description: "Professional consulting and training services for operational improvement",
+      title: t("operationalExcellence.title"),
+      description: t("operationalExcellence.description"),
       features: [
-        "Quality consulting services",
-        "Professional training programs",
-        "Process improvement guidance",
-        "Best practices implementation"
+        t("operationalExcellence.feature1"),
+        t("operationalExcellence.feature2"),
+        t("operationalExcellence.feature3"),
+        t("operationalExcellence.feature4")
       ],
       color: "text-orange-600",
       bgColor: "bg-orange-50",
@@ -88,13 +88,13 @@ export default function ServicesPage() {
       id: "advanced-project-operational-support",
       slug: "advanced-project-operational-support",
       icon: "userCheck" as keyof typeof serviceIcons,
-      title: "Advanced Project & Operational Support",
-      description: "Advanced project support and operational excellence services",
+      title: t("advancedProjectOperationalSupport.title"),
+      description: t("advancedProjectOperationalSupport.description"),
       features: [
-        "Advanced project support",
-        "Operational excellence consulting",
-        "Process validation",
-        "Project readiness assessment"
+        t("advancedProjectOperationalSupport.feature1"),
+        t("advancedProjectOperationalSupport.feature2"),
+        t("advancedProjectOperationalSupport.feature3"),
+        t("advancedProjectOperationalSupport.feature4")
       ],
       color: "text-teal-600",
       bgColor: "bg-teal-50",

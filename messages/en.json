@@ -229,10 +229,35 @@
     },
     "operationalExcellence": {
       "title": "Operational Excellence",
-      "description": "Expert consulting and professional training to elevate your operational management",
+      "description": "Professional consulting and training services for operational improvement",
       "feature1": "Quality consulting services",
       "feature2": "Professional training programs", 
-      "feature3": "Process improvement guidance"
+      "feature3": "Process improvement guidance",
+      "feature4": "Best practices implementation"
+    },
+    "residentEngineering": {
+      "title": "Resident Engineering",
+      "description": "Customer Quick Response Activities, 8D Management, and Steering Problem-Solving Process",
+      "feature1": "Customer Quick Response Activities",
+      "feature2": "8D Management",
+      "feature3": "Steering Problem-Solving Process",
+      "feature4": "Daily quality routines on production floor"
+    },
+    "qualityInspectionRework": {
+      "title": "Quality Inspection & Rework",
+      "description": "Comprehensive quality inspection and rework services at customer and supplier locations",
+      "feature1": "On-site quality inspection",
+      "feature2": "Customer & supplier location rework",
+      "feature3": "Quality control procedures",
+      "feature4": "Immediate response to quality issues"
+    },
+    "advancedProjectOperationalSupport": {
+      "title": "Advanced Project & Operational Support",
+      "description": "Advanced project support and operational excellence services",
+      "feature1": "Advanced project support",
+      "feature2": "Operational excellence consulting",
+      "feature3": "Process validation",
+      "feature4": "Project readiness assessment"
     },
     "auditsTraining": {
       "title": "Audits & Training",
@@ -904,6 +929,13 @@
       "more": "+{count} more",
       "apply": "Apply"
     },
+    "noOpenings": {
+      "title": "No Current Openings",
+      "description": "We don't have any open positions at the moment, but we're always looking for talented individuals to join our team.",
+      "subDescription": "Feel free to send us your resume and we'll keep it on file for future opportunities.",
+      "cta": "Send Your Resume",
+      "notification": "We'll notify you when new positions become available"
+    },
     "dialog": {
       "title": "{role} - Application Form",
       "defaultTitle": "Job Application",
@@ -1323,6 +1355,12 @@
         "b2Desc": "Experienced engineers with deep industry knowledge and problem-solving expertise",
         "b3Title": "Continuous Improvement",
         "b3Desc": "Ongoing optimization of processes and quality systems"
+      },
+      "cta": {
+        "title": "Ready to Get Started?",
+        "subtitle": "Let our resident engineering team help you optimize your quality processes and solve complex problems",
+        "primary": "Contact Us Today",
+        "secondary": "View All Services"
       }
     },
     "qic": {

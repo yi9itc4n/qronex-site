@@ -229,10 +229,35 @@
     },
     "operationalExcellence": {
       "title": "Operasyonel Mükemmellik",
-      "description": "Operasyonel yönetim yetkinliklerinizi geliştirmek için uzman danışmanlık ve profesyonel eğitim",
+      "description": "Operasyonel iyileştirme için profesyonel danışmanlık ve eğitim hizmetleri",
       "feature1": "Kalite danışmanlık hizmetleri",
       "feature2": "Profesyonel eğitim programları",
-      "feature3": "Süreç iyileştirme rehberliği"
+      "feature3": "Süreç iyileştirme rehberliği",
+      "feature4": "En iyi uygulamaların hayata geçirilmesi"
+    },
+    "residentEngineering": {
+      "title": "Yerleşik Mühendislik",
+      "description": "Müşteri Hızlı Yanıt Faaliyetleri, 8D Yönetimi ve Problem Çözme Sürecini Yönlendirme",
+      "feature1": "Müşteri Hızlı Yanıt Faaliyetleri",
+      "feature2": "8D Yönetimi",
+      "feature3": "Problem Çözme Sürecini Yönlendirme",
+      "feature4": "Üretim sahasında günlük kalite rutinleri"
+    },
+    "qualityInspectionRework": {
+      "title": "Kalite Kontrol ve Yeniden İşleme",
+      "description": "Müşteri ve tedarikçi lokasyonlarında kapsamlı kalite kontrol ve yeniden işleme hizmetleri",
+      "feature1": "Yerinde kalite kontrol",
+      "feature2": "Müşteri ve tedarikçi lokasyonunda yeniden işleme",
+      "feature3": "Kalite kontrol prosedürleri",
+      "feature4": "Kalite sorunlarına anında müdahale"
+    },
+    "advancedProjectOperationalSupport": {
+      "title": "Gelişmiş Proje ve Operasyonel Destek",
+      "description": "Gelişmiş proje desteği ve operasyonel mükemmellik hizmetleri",
+      "feature1": "Gelişmiş proje desteği",
+      "feature2": "Operasyonel mükemmellik danışmanlığı",
+      "feature3": "Süreç doğrulama",
+      "feature4": "Proje hazırlık değerlendirmesi"
     },
     "auditsTraining": {
       "title": "Denetim & Eğitim",
@@ -904,6 +929,13 @@
       "more": "+{count} daha",
       "apply": "Başvur"
     },
+    "noOpenings": {
+      "title": "Şu Anda Açık Pozisyon Yok",
+      "description": "Şu anda açık pozisyonumuz bulunmuyor, ancak ekibimize katılmak isteyen yetenekli bireyleri her zaman arıyoruz.",
+      "subDescription": "CV'nizi göndermekten çekinmeyin, gelecekteki fırsatlar için dosyamızda saklayacağız.",
+      "cta": "CV'nizi Gönderin",
+      "notification": "Yeni pozisyonlar açıldığında sizi bilgilendireceğiz"
+    },
     "dialog": {
       "title": "{role} - Başvuru Formu",
       "defaultTitle": "İş Başvurusu",
@@ -1323,6 +1355,12 @@
         "b2Desc": "Derin sektör bilgisi ve problem çözme yetkinliği olan deneyimli mühendisler",
         "b3Title": "Sürekli İyileştirme",
         "b3Desc": "Süreçlerin ve kalite sistemlerinin sürekli optimizasyonu"
+      },
+      "cta": {
+        "title": "Başlamaya Hazır mısınız?",
+        "subtitle": "Yerleşik mühendislik ekibimizin kalite süreçlerinizi optimize etmenize ve karmaşık problemleri çözmenize yardımcı olmasına izin verin",
+        "primary": "Bugün İletişime Geçin",
+        "secondary": "Tüm Hizmetleri Görüntüle"
       }
     },
     "qic": {

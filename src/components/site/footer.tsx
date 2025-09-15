@@ -26,15 +26,24 @@ export function Footer() {
           {/* Company Info */}
           <div className="lg:col-span-1">
             <div className="mb-6">
-              <Link href="/" className="flex items-center space-x-3">
-                <Image
-                  src="/images/logo.jpg"
-                  alt="QroneX Logo"
-                  width={40}
-                  height={40}
-                  className="h-10 w-10 rounded object-cover ring-2 ring-white/10"
-                />
-                <span className="text-2xl font-bold">QroneX</span>
+              <Link href="/" className="flex items-center space-x-4">
+                {/* Characterful Q Logo */}
+                <div className="relative">
+                  <span className="text-4xl font-black bg-gradient-to-r from-[#34D399] to-[#60A5FA] bg-clip-text text-transparent font-serif tracking-tight">
+                    Q
+                  </span>
+                </div>
+                
+                {/* Gradient Text */}
+                <div className="flex flex-col space-y-1">
+                  <h1 className="text-2xl font-bold bg-gradient-to-r from-[#34D399] to-[#60A5FA] bg-clip-text text-transparent">
+                    QroneX
+                  </h1>
+                  <p className="text-sm font-light tracking-wider opacity-90 bg-gradient-to-r from-[#34D399] to-[#60A5FA] bg-clip-text text-transparent italic leading-tight">
+                    Precise Engineering<br />
+                    and Quick Response
+                  </p>
+                </div>
               </Link>
             </div>
             <p className="text-slate-300 mb-6 leading-relaxed">

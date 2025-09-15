@@ -201,20 +201,20 @@ export default function ResidentEngineeringPage() {
       <section className="section-padding bg-blue-green-gradient text-white">
         <div className="container mx-auto container-padding text-center">
           <h2 className="text-3xl lg:text-4xl font-bold mb-4">
-            Ready to Get Started?
+            {t("cta.title")}
           </h2>
           <p className="text-xl text-blue-100 mb-8 max-w-3xl mx-auto">
-            Let our resident engineering team help you optimize your quality processes and solve complex problems
+            {t("cta.subtitle")}
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Button size="lg" className="bg-white text-blue-green hover:bg-gray-100" asChild>
               <Link href="/contact">
-                Contact Us Today
+                {t("cta.primary")}
               </Link>
             </Button>
             <Button size="lg" className="bg-white text-blue-green hover:bg-gray-100" asChild>
               <Link href="/services">
-                View All Services
+                {t("cta.secondary")}
               </Link>
             </Button>
           </div>

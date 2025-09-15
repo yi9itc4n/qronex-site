@@ -383,24 +383,24 @@ export default function CareersPage() {
                   <Briefcase className="h-10 w-10 text-gray-400" />
                 </div>
                 <h3 className="text-2xl font-bold text-gray-900 mb-4">
-                  No Current Openings
+                  {t("noOpenings.title")}
                 </h3>
                 <p className="text-lg text-gray-600 mb-6">
-                  We don&apos;t have any open positions at the moment, but we&apos;re always looking for talented individuals to join our team.
+                  {t("noOpenings.description")}
                 </p>
                 <p className="text-gray-500 mb-8">
-                  Feel free to send us your resume and we&apos;ll keep it on file for future opportunities.
+                  {t("noOpenings.subDescription")}
                 </p>
               </div>
               
               <div className="space-y-4">
                 <Button asChild className="w-full sm:w-auto">
                   <Link href="/contact" className="inline-flex items-center">
-                    Send Your Resume
+                    {t("noOpenings.cta")}
                   </Link>
                 </Button>
                 <p className="text-sm text-gray-400">
-                  We&apos;ll notify you when new positions become available
+                  {t("noOpenings.notification")}
                 </p>
               </div>
             </Card>

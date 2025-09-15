@@ -83,38 +83,24 @@ export function Header({ locale }: HeaderProps) {
     )}>
       <div className="container mx-auto px-4 sm:px-6 md:px-8 lg:px-12 xl:px-16 max-w-none">
         <div className="flex h-16 sm:h-20 lg:h-[7.06rem] items-center justify-between min-w-0">
-          {/* Logo - Responsive sizing */}
-          <Link href="/" className="flex items-center space-x-2 sm:space-x-3 lg:space-x-4 min-w-0 flex-shrink-0">
+          {/* Logo Group - Characterful Design */}
+          <Link href="/" className="flex items-center space-x-3 sm:space-x-4 lg:space-x-5 min-w-0 flex-shrink-0">
+            {/* Characterful Q Logo */}
             <div className="relative">
-              {/* Cinematic lighting effect */}
-              <div className="absolute inset-0 bg-gradient-to-r from-cyan-400/20 via-transparent to-emerald-400/20 rounded-lg sm:rounded-xl blur-xl animate-pulse"></div>
-              <div className="absolute inset-0 bg-gradient-to-br from-blue-500/10 via-transparent to-teal-500/10 rounded-lg sm:rounded-xl blur-lg"></div>
-              
-              {/* Logo container with glow effect */}
-              <div className="relative bg-gradient-to-br from-blue-600/20 to-teal-600/20 rounded-lg sm:rounded-xl p-0.5 sm:p-1 backdrop-blur-sm">
-                <Image 
-                  src="/images/logo.jpg" 
-                  alt="QroneX Logo" 
-                  width={48}
-                  height={48}
-                  className="h-8 w-8 sm:h-12 sm:w-12 lg:h-[86px] lg:w-[86px] rounded-lg sm:rounded-xl object-cover shadow-2xl ring-1 sm:ring-2 ring-white/20"
-                  onError={(e) => {
-                    // Fallback to text if image fails to load
-                    const target = e.target as HTMLImageElement;
-                    target.style.display = 'none';
-                    target.nextElementSibling?.classList.remove('hidden');
-                  }}
-                />
-                <div className="hidden h-8 w-8 sm:h-12 sm:w-12 lg:h-[86px] lg:w-[86px] rounded-lg sm:rounded-xl bg-gradient-to-br from-blue-600 to-teal-600 flex items-center justify-center text-white font-bold text-sm sm:text-lg lg:text-2xl ring-1 sm:ring-2 ring-white/20">
-                  Q
-                </div>
-              </div>
-            </div>
-            <div className="flex flex-col justify-center min-w-0">
-              <span className="text-lg sm:text-xl lg:text-[28px] font-bold text-white leading-tight truncate">QroneX</span>
-              <span className="text-xs sm:text-sm text-gray-300 font-light tracking-wider mt-0.5 sm:mt-1 opacity-80 hidden sm:block">
-                Precise Engineering and Quick Response
+              <span className="text-4xl sm:text-5xl lg:text-6xl font-black bg-gradient-to-r from-[#34D399] to-[#60A5FA] bg-clip-text text-transparent font-serif tracking-tight">
+                Q
               </span>
+            </div>
+            
+            {/* Gradient Text */}
+            <div className="flex flex-col justify-center min-w-0 space-y-1">
+              <h1 className="text-2xl sm:text-3xl lg:text-4xl font-bold bg-gradient-to-r from-[#34D399] to-[#60A5FA] bg-clip-text text-transparent">
+                QroneX
+              </h1>
+              <p className="text-xs sm:text-sm font-light tracking-wider opacity-90 hidden sm:block bg-gradient-to-r from-[#34D399] to-[#60A5FA] bg-clip-text text-transparent italic leading-tight">
+                Precise Engineering<br />
+                and Quick Response
+              </p>
             </div>
           </Link>
 
