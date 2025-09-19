@@ -103,8 +103,7 @@ export function Header({ locale }: HeaderProps) {
                 QroneX
               </h1>
               <p className="text-xs sm:text-sm font-light tracking-wider opacity-90 hidden sm:block bg-gradient-to-r from-[#34D399] to-[#60A5FA] bg-clip-text text-transparent italic leading-tight">
-                Precise Engineering<br />
-                and Quick Response
+                Precision in Motion
               </p>
             </div>
           </Link>
