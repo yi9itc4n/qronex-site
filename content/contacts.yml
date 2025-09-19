@@ -42,7 +42,7 @@ regionalManagers:
 offices:
   - id: "nurnberg"
     name: "Nürnberg Merkez Ofis"
-    address: "Jahn Str. 46A hirsdhaid 96114"
+    address: "Jahn Str. 46A Hirsdhaid 96114"
     phone: "+49 15234649852"
     email: "nurnberg@qronex.com"
     coordinates:
@@ -51,7 +51,7 @@ offices:
       
   - id: "paris"
     name: "Paris Ofis"
-    address: "Jahn Str. 46A hirsdhaid 96114"
+    address: "Jahn Str. 46A Hirsdhaid 96114"
     phone: "+49 15234649852"
     email: "paris@qronex.com"
     coordinates:

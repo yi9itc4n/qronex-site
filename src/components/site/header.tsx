@@ -85,11 +85,16 @@ export function Header({ locale }: HeaderProps) {
         <div className="flex h-16 sm:h-20 lg:h-[7.06rem] items-center justify-between min-w-0">
           {/* Logo Group - Characterful Design */}
           <Link href="/" className="flex items-center space-x-3 sm:space-x-4 lg:space-x-5 min-w-0 flex-shrink-0">
-            {/* Characterful Q Logo */}
+            {/* Logo Image */}
             <div className="relative">
-              <span className="text-4xl sm:text-5xl lg:text-6xl font-black bg-gradient-to-r from-[#34D399] to-[#60A5FA] bg-clip-text text-transparent font-serif tracking-tight">
-                Q
-              </span>
+              <Image
+                src="/images/logo.png"
+                alt="QroneX Logo"
+                width={48}
+                height={48}
+                className="h-12 w-12 sm:h-14 sm:w-14 lg:h-16 lg:w-16 object-contain"
+                priority
+              />
             </div>
             
             {/* Gradient Text */}

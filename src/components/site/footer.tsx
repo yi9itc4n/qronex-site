@@ -27,11 +27,15 @@ export function Footer() {
           <div className="lg:col-span-1">
             <div className="mb-6">
               <Link href="/" className="flex items-center space-x-4">
-                {/* Characterful Q Logo */}
+                {/* Logo Image */}
                 <div className="relative">
-                  <span className="text-4xl font-black bg-gradient-to-r from-[#34D399] to-[#60A5FA] bg-clip-text text-transparent font-serif tracking-tight">
-                    Q
-                  </span>
+                  <Image
+                    src="/images/logo.png"
+                    alt="QroneX Logo"
+                    width={48}
+                    height={48}
+                    className="h-12 w-12 object-contain"
+                  />
                 </div>
                 
                 {/* Gradient Text */}
@@ -142,7 +146,7 @@ export function Footer() {
                 {t("home.contact.nurnbergHeadOffice")}
               </h4>
               <div className="text-slate-300 space-y-2 text-sm">
-                <p>Jahn Str. 46A hirsdhaid 96114</p>
+                <p>Jahn Str. 46A Hirsdhaid 96114</p>
                 <div className="flex items-center space-x-2">
                   <Phone className="h-3 w-3" />
                   <a href="tel:+4915234649852" className="hover:text-white transition-colors">

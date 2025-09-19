@@ -762,10 +762,14 @@
     "office": {
       "title": "Merkez Ofis",
       "location": "München, Almanya",
-      "address": "Jahn Str. 46A hirsdhaid 96114",
+      "address": "Jahn Str. 46A Hirschaid 96114",
       "phone": "+49 15234649852",
       "email": "info@qronex.net",
-      "hours": "09:00 - 18:00 (CET)"
+      "hours": "09:00 - 18:00 (CET)",
+      "locationTitle": "Konum",
+      "contactTitle": "İletişim",
+      "businessHoursTitle": "Çalışma Saatleri",
+      "emergencyNote": "Acil durumlar için 7/24 erişilebilir"
     },
     "responseTimes": {
       "title": "Yanıt Süreleri",
