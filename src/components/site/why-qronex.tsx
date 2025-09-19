@@ -77,19 +77,14 @@ export function WhyQronex() {
             
             return (
               <Card key={index} className="card-hover border-0 shadow-lg group">
-                <CardContent className="p-6">
-                  <div className="flex items-start space-x-4">
-                    <div className={`w-12 h-12 ${reason.bgColor} rounded-lg flex items-center justify-center flex-shrink-0 group-hover:scale-110 transition-transform`}>
-                      <IconComponent className={`h-6 w-6 ${reason.color}`} />
+                <CardContent className="p-8">
+                  <div className="flex flex-col items-center text-center space-y-4">
+                    <div className={`w-14 h-14 ${reason.bgColor} rounded-lg flex items-center justify-center group-hover:scale-110 transition-transform`}>
+                      <IconComponent className={`h-7 w-7 ${reason.color}`} />
                     </div>
-                    <div className="space-y-2">
-                      <h3 className="font-semibold text-gray-900 leading-tight">
-                        {reason.title}
-                      </h3>
-                      <p className="text-sm text-gray-600 leading-relaxed">
-                        {reason.description}
-                      </p>
-                    </div>
+                    <h3 className="font-semibold text-gray-900 leading-tight text-lg">
+                      {reason.title}
+                    </h3>
                   </div>
                 </CardContent>
               </Card>

@@ -3,12 +3,8 @@
 import { useTranslations } from "next-intl";
 import { Link } from "@/i18n";
 import { Button } from "@/components/ui/button";
-import { Badge } from "@/components/ui/badge";
 import { 
   ArrowRight, 
-  Clock, 
-  Users, 
-  Globe, 
   CheckCircle,
   ChevronLeft,
   ChevronRight
@@ -227,11 +223,7 @@ export function Hero() {
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
           {/* Left content */}
           <div className="space-y-8">
-            {/* Badge */}
-            <Badge variant="secondary" className="bg-blue-600/10 text-blue-600 border-blue-600/20">
-              <Users className="h-3 w-3 mr-1" />
-              {t("fieldEngineersEurope")}
-            </Badge>
+            {/* Badge removed as requested */}
 
             {/* Main heading */}
             <div className="space-y-4">
@@ -277,36 +269,7 @@ export function Hero() {
             {/* Emergency contact removed as requested */}
           </div>
 
-          {/* Right content - Stats */}
-          <div className="grid grid-cols-2 gap-6">
-            {/* Stat 1 */}
-            <div className="bg-slate-50 rounded-xl p-6 border border-slate-200">
-              <Clock className="h-8 w-8 text-blue-600 mb-4" />
-              <div className="text-3xl font-bold mb-2 text-slate-900">24h</div>
-              <div className="text-sm text-slate-600">{t("responseTimeAvg")}</div>
-            </div>
-
-            {/* Stat 2 */}
-            <div className="bg-slate-50 rounded-xl p-6 border border-slate-200">
-              <Users className="h-8 w-8 text-green-600 mb-4" />
-              <div className="text-3xl font-bold mb-2 text-slate-900">50+</div>
-              <div className="text-sm text-slate-600">{t("activeFieldEngineers")}</div>
-            </div>
-
-            {/* Stat 3 */}
-            <div className="bg-slate-50 rounded-xl p-6 border border-slate-200">
-              <Globe className="h-8 w-8 text-purple-600 mb-4" />
-              <div className="text-3xl font-bold mb-2 text-slate-900">15</div>
-              <div className="text-sm text-slate-600">{t("countriesServed")}</div>
-            </div>
-
-            {/* Stat 4 */}
-            <div className="bg-slate-50 rounded-xl p-6 border border-slate-200">
-              <CheckCircle className="h-8 w-8 text-yellow-600 mb-4" />
-              <div className="text-3xl font-bold mb-2 text-slate-900">48h</div>
-              <div className="text-sm text-slate-600">{t("solutionTimeAvg")}</div>
-            </div>
-          </div>
+          {/* Right content removed as requested */}
         </div>
 
       </div>

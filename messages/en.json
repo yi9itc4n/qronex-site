@@ -586,8 +586,8 @@
   },
   "home": {
     "hero": {
-      "title": "Fast Solutions to Quality Problems with Field Engineers Based in Europe",
-      "subtitle": "QroneX provides fast and accurate on-site solutions to quality problems experienced by Tier 1 suppliers with OEMs through its experienced engineering team ready to work in the field, based in Europe.",
+      "title": "",
+      "subtitle": "QroneX provides fast and accurate on-site solutions through its experienced engineering team ready to work in the field, based in Europe.",
       "cta1": "Get Quote",
       "cta2": "Start Service",
       "fieldEngineersEurope": "50+ Field Engineers Across Europe",
@@ -698,7 +698,7 @@
       "viewDetails": "View Details",
       "custom": {
         "welcomeTitle": "Introducing QroneX — European Quality Engineering",
-        "welcomeDesc": "A new force in European quality solutions. QroneX delivers precision engineering and rapid response through our experienced field teams across Europe.",
+        "welcomeDesc": "A new force in European quality solutions. QroneX delivers precision engineering and quick response through our experienced field teams across Europe.",
         "servicesTitle": "Services — End-to-End Quality Support",
         "servicesDesc": "Tap a service to learn more and get started instantly.",
         "locationsTitle": "Locations — On-site in Hours",
@@ -1238,7 +1238,7 @@
   ,
   "about": {
     "heroTitle": "Who we are!",
-    "heroSubtitle": "QroneX is a leading quality consultancy providing fast and accurate on-site solutions to quality problems experienced by Tier 1 suppliers with OEMs, with field-ready engineers based in Europe.",
+    "heroSubtitle": "QroneX is a leading quality consultancy providing fast and accurate on-site solutions with field-ready engineers based in Europe.",
     "visionMission": "Our Vision and Mission",
     "visionTitle": "Our Vision",
     "visionText": "To be the trusted partner for Tier 1 companies on all kind of customer quality services—setting the standard for excellence, driving the quality",
